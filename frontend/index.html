@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>yearl-e — daily history puzzle</title>
+<meta name="description" content="Each day, a random year between 1000 BCE and today. Click the globe where you'd want to live. Score based on actual living conditions that year, with cited sources." />
+
+<meta property="og:title" content="yearl-e — where on Earth would you want to live that year?" />
+<meta property="og:description" content="A daily history game. Same year for everyone. Cited sources, real data." />
+<meta property="og:type" content="website" />
+
+<link href="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.css" rel="stylesheet" />
+<link rel="preload" as="fetch" href="/api/today" crossorigin />
+<link rel="preload" as="fetch" href="/api/regions" crossorigin />
+<link href="/static/style.css?v=1" rel="stylesheet" />
+</head>
+<body>
+
+<div id="map"></div>
+
+<div id="topbar">
+  <span id="brand">yearl-e</span>
+  <span id="day-tag"></span>
+</div>
+
+<div id="hud" class="hidden">
+  <div id="year-prompt">
+    <span class="hud-label">where would you want to live in</span>
+    <span id="year-label"></span>
+  </div>
+  <div id="era-summary"></div>
+</div>
+
+<div id="overlay">
+
+  <div id="start-card" class="card">
+    <h1>yearl-e</h1>
+    <p class="tagline">Each day, one historical year. Click the globe where you'd want to live.<br/>
+    Score based on actual living conditions — peace, health, economy, governance, religious tolerance.<br/>
+    Every score cites real sources.</p>
+    <div id="start-year"></div>
+    <div id="start-era"></div>
+    <button id="btn-start">Spin the globe →</button>
+    <p class="credit">by <a href="https://roei-michael-portfolio.vercel.app/" target="_blank" rel="noopener">Roei Michael</a> · same year for everyone, resets 00:00 IL</p>
+  </div>
+
+  <div id="reveal-card" class="card hidden">
+    <h2 id="reveal-score"></h2>
+    <div id="reveal-pick"></div>
+    <div id="reveal-pick-factors" class="factors"></div>
+    <div id="reveal-pick-sources" class="sources"></div>
+    <h3 class="best-h">Best place that year</h3>
+    <div id="reveal-top"></div>
+    <div id="reveal-top-factors" class="factors"></div>
+    <div id="reveal-top-sources" class="sources"></div>
+    <button id="btn-explore">Explore the globe →</button>
+  </div>
+
+  <div id="explore-card" class="card hidden">
+    <h3>Explore <span id="explore-year"></span></h3>
+    <p class="muted">Click any region to see its ranking + sources.</p>
+    <div id="explore-detail"></div>
+    <button id="btn-explore-close" class="link-btn">close</button>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.js"></script>
+<script src="/static/app.js?v=1"></script>
+</body>
+</html>
