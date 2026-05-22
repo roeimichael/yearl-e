@@ -46,17 +46,18 @@ Overall `score` is a weighted mean. No physical-distance penalty — what matter
 | Region polygons | Hand-curated bbox stubs for v1; will swap to Natural Earth admin-0 |
 | Year data | JSON per year under `data/year_scores/`. Hybrid: dataset anchors + LLM gap-fill |
 
-## Data sources (planned)
+## Data sources (live in v0.2)
 
-| Source | Use |
-|---|---|
-| Seshat Global History Databank | governance, economy, safety per NGA per century |
-| Maddison Project | GDP/capita 1 CE → present |
-| UCDP/PRIO + Brecke catalogs | conflict-driven safety scores |
-| CLIO-INFRA | life expectancy, height, literacy |
-| LLM gap-fill (Claude) | for (year, region) cells not covered, with mandatory citations |
+| Source | Used for | Status |
+|---|---|---|
+| [Maddison Project 2023](https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023) | economy (GDP/cap, normalized within year) | **wired** — XLSX, 4.7 MB, 169 countries, 1 CE → 2022 |
+| [Brecke Conflict Catalog](https://brecke.inta.gatech.edu/research/conflict/) | safety (active conflicts in year, fatality-weighted) | **wired** — XLSX, 301 KB, 886 conflicts 1400–2000 |
+| Wikipedia per-region URLs | governance + religious tolerance + ruler (manual) | **wired** — cited inline |
+| [Seshat Global History Databank](http://seshatdatabank.info) | governance/economy NGA per century | planned |
+| CLIO-INFRA | life expectancy, height, literacy | planned |
+| LLM gap-fill (Claude) | (year, region) cells without anchors | planned |
 
-See [`scripts/README.md`](scripts/README.md) for the pipeline plan.
+See [`scripts/rank_year.py`](scripts/rank_year.py) for the scoring formula.
 
 ## Local dev
 
@@ -96,7 +97,22 @@ vercel.json     Vercel static deploy + /api/* rewrite to Railway
 
 ## Status
 
-**v1 scaffold.** Two hand-written years (`1 CE`, `1453 CE`) × 18 regions as proof of schema. The dataset is the actual hard work — see `scripts/README.md`.
+**v0.2 — one fully-pipelined year.** 1719 CE × 18 regions, scored from real datasets:
+
+```bash
+pip install -r scripts/requirements.txt
+python scripts/fetch_sources.py           # ~5 MB raw, cached
+python scripts/fetch_year.py 1719         # → data/raw/1719_extract.json
+python scripts/rank_year.py 1719          # → data/year_scores/1719.json
+FORCE_YEAR=1719 uvicorn backend.main:app  # play it
+```
+
+Top 5 for 1719 (Kangxi China #1, Tokugawa Japan #3, Tulip-era Istanbul #4, Hanoverian England #5).
+Bottom: Sweden (Great Northern War devastation), fragmented Italy, collapsing Safavid Persia.
+
+See `scripts/rank_year.py` for the exact formula. Manual context (governance + religious tolerance + ruler) is inline + sourced via Wikipedia links per region.
+
+Two stubbed sample years also ship: `1 CE` and `1453 CE` (hand-written, no data pipeline).
 
 ## License
 

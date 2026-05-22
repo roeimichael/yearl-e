@@ -58,7 +58,13 @@ def _day_number(d_iso: str) -> int:
 
 def _roll_year(d_iso: str) -> int:
     """Deterministic year pick from available year_scores files.
-    Same date → same year for every player."""
+    Same date → same year for every player.
+
+    Override with FORCE_YEAR env var while the dataset is being built —
+    so we can demo a specific year before all 500 are scored."""
+    forced = os.environ.get("FORCE_YEAR", "").strip()
+    if forced:
+        return int(forced)
     years = regions_mod.available_years()
     if not years:
         raise HTTPException(500, "no year data on disk")
