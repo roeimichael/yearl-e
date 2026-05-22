@@ -1,195 +1,50 @@
 {
   "year": 1719,
   "label": "1719 CE",
-  "era_summary": "Great Northern War ending (Charles XII killed late 1718). War of the Quadruple Alliance ongoing (Spain vs Britain/France/Austria/Netherlands). Ottoman Tulip Period of peace + reform. Kangxi Emperor's final years in Qing China. Mughal succession chaos under Sayyid Brothers. Tokugawa Japan stable + closed.",
+  "region_set": "early_modern",
+  "era_summary": "Great Northern War in its final months (Charles XII killed Dec 1718, Treaty of Nystad two years away) while the War of the Quadruple Alliance pits Spain against Britain, France, Austria and the Dutch. The Ottoman Tulip Period brings cultural flowering under Ahmed III; the Safavids are collapsing as Mahmud Hotaki's Afghans push toward Isfahan. In India the Mughals limp under Muhammad Shah and the Sayyid Brothers while the Marathas under Peshwa Balaji Vishwanath consolidate the Deccan. Qing China prospers in Kangxi's final years, Tokugawa Japan is closed and stable, and Yarubid Oman is pushing the Portuguese off the Swahili coast.",
   "regions": {
     "rome_italy": {
-      "score": 35,
-      "summary": "Fragmented: Papal States, Venice (post-Karlowitz peace), Savoy, Spanish then Austrian Naples (Treaty of London 1718 transferred Sicily/Sardinia). No unified leadership. Active conflicts: Sweden-Saxony, Poland, 1709-19; Sweden-Denmark, 1709-20; Britain-Sweden, 1715-19 Religion: Inquisition still active in many states; Jewish ghettos enforced.",
+      "score": 59,
+      "summary": "Fragmented patchwork: Papal States, Venice (post-Karlowitz peace), Savoy, Spanish-then-Austrian Naples. Treaty of London 1718 has just transferred Sicily/Sardinia between the powers; no unified leadership. Religion: Roman Inquisition still active in many states; Jewish ghettos enforced in Rome, Venice, Ferrara, Mantua.",
       "factors": {
-        "safety": 5,
+        "safety": 85,
         "health": 45,
         "economy": 50,
         "governance": 55,
         "religious_tolerance": 40
       },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Treaty of London 1718 (Wikipedia)",
+          "label": "Treaty of London (1718)",
           "url": "https://en.wikipedia.org/wiki/Treaty_of_London_(1718)"
-        }
-      ],
-      "ruler": "Pope Clement XI; multiple secular rulers",
-      "_debug": {
-        "conflicts": [
-          "Sweden-Saxony, Poland, 1709-19",
-          "Sweden-Denmark, 1709-20",
-          "Britain-Sweden, 1715-19",
-          "Prussia-Sweden, 1715-20",
-          "Spain-Austria, Britain, France, United Provinces, 1717-20",
-          "Hanover-Sweden, 1719-21",
-          "Sweden (succession), 1719"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
-    },
-    "han_china": {
-      "score": 61,
-      "summary": "Kangxi Emperor's final years (d. 1722). Stable centralized rule, mature bureaucracy, peaceful interior. Tibet expedition (1718-20) active. Active conflicts: Afghanistan-Persia, 1717-19; China-Tibet, 1718-20 Religion: Rites Controversy ongoing; Christian missions tolerated but restricted.",
-      "factors": {
-        "safety": 61,
-        "health": 50,
-        "economy": 50,
-        "governance": 85,
-        "religious_tolerance": 55
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
-          "label": "Kangxi Emperor (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Kangxi_Emperor"
-        }
-      ],
-      "ruler": "Kangxi Emperor (Qing)",
-      "_debug": {
-        "conflicts": [
-          "Afghanistan-Persia, 1717-19",
-          "China-Tibet, 1718-20"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
-    },
-    "gupta_india": {
-      "score": 52,
-      "summary": "Mughal Empire under Muhammad Shah, dominated by Sayyid Brothers. Aurangzeb's death (1707) triggered ongoing succession chaos and noble revolts. Active conflicts: Kakonda-Portugal (Angola), 1716-22 Religion: Post-Aurangzeb, jizya repealed 1712-19; Hindu tolerance improving from prior decades but Marathas rising in opposition.",
-      "factors": {
-        "safety": 73,
-        "health": 40,
-        "economy": 50,
-        "governance": 35,
-        "religious_tolerance": 45
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Pope Clement XI",
+          "url": "https://en.wikipedia.org/wiki/Pope_Clement_XI"
         },
         {
-          "label": "Sayyid Brothers (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Sayyid_brothers"
-        }
-      ],
-      "ruler": "Muhammad Shah (Mughal), real power: Sayyid Brothers",
-      "_debug": {
-        "conflicts": [
-          "Kakonda-Portugal (Angola), 1716-22"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
-    },
-    "persia": {
-      "score": 42,
-      "summary": "Safavid Empire collapsing. Sultan Husayn weak; Afghan Hotaki invasion (1717-22) underway, will sack Isfahan 1722. Active conflicts: Afghanistan-Persia, 1717-19; Oman, 1719-47 Religion: Shia state hostile to Sunni Afghans + Christians + Zoroastrians.",
-      "factors": {
-        "safety": 61,
-        "health": 35,
-        "economy": 50,
-        "governance": 20,
-        "religious_tolerance": 30
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Republic of Venice",
+          "url": "https://en.wikipedia.org/wiki/Republic_of_Venice"
         },
         {
-          "label": "Fall of Safavid Empire (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Fall_of_the_Safavid_dynasty"
+          "label": "Duchy of Savoy",
+          "url": "https://en.wikipedia.org/wiki/Duchy_of_Savoy"
         }
       ],
-      "ruler": "Sultan Husayn (Safavid)",
-      "_debug": {
-        "conflicts": [
-          "Afghanistan-Persia, 1717-19",
-          "Oman, 1719-47"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
-    },
-    "egypt_nile": {
-      "score": 52,
-      "summary": "Ottoman province, Mamluk beys ascendant in practice. Stable but with periodic Mamluk power struggles. Active conflicts: Algiers-United Provinces, 1715-26; Oman, 1719-47 Religion: Ottoman millet system: Copts + Jews protected as dhimmis with restrictions.",
-      "factors": {
-        "safety": 61,
-        "health": 40,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Ottoman Egypt (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Ottoman_Egypt"
-        }
-      ],
-      "ruler": "Ottoman appointee + Mamluk beys (de facto)",
-      "_debug": {
-        "conflicts": [
-          "Algiers-United Provinces, 1715-26",
-          "Oman, 1719-47"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
-    },
-    "constantinople_balkans": {
-      "score": 54,
-      "summary": "Ottoman Tulip Period under Ahmed III + Grand Vizier Damat Ibrahim. Peace, cultural flowering, Westernizing reforms. Post-Passarowitz (1718). Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Oman, 1719-47 Religion: Millet system: Greek Orthodox, Armenians, Jews tolerated. Best European environment for Jews in this era.",
-      "factors": {
-        "safety": 48,
-        "health": 45,
-        "economy": 50,
-        "governance": 70,
-        "religious_tolerance": 60
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Tulip Period (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Tulip_period"
-        }
-      ],
-      "ruler": "Sultan Ahmed III (Ottoman)",
-      "_debug": {
-        "conflicts": [
-          "Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21",
-          "Oman, 1719-47"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
+      "ruler": "Pope Clement XI; multiple secular rulers (Savoy, Venice, Habsburg, etc.)",
+      "sparse_data": false
     },
     "andalusia_iberia": {
       "score": 50,
-      "summary": "Spain under Philip V, in War of Quadruple Alliance vs Britain/France/Austria/Netherlands. Recently defeated at Cape Passaro (1718). Cardinal Alberoni's adventurism collapsing. Active conflicts: Kakonda-Portugal (Angola), 1716-22; Spain-Austria, Britain, France, United Provinces, 1717-20 Religion: Spanish Inquisition active; forced conversions, Moriscos already expelled.",
+      "summary": "Spain under Philip V, embroiled in the War of the Quadruple Alliance (1718-20) versus Britain/France/Austria/Netherlands after defeat at Cape Passaro 1718. Cardinal Alberoni's adventurism collapsing; Bourbon reforms beginning. Portugal stable under João V's gold-fed reign. Active conflicts: Kakonda-Portugal (Angola), 1716-22; Spain-Austria, Britain, France, United Provinces, 1717-20 Religion: Spanish + Portuguese Inquisitions active; Moriscos long-expelled; New Christians (conversos) prosecuted. Catholicism compulsory.",
       "factors": {
         "safety": 61,
         "health": 45,
@@ -197,7 +52,30 @@
         "governance": 45,
         "religious_tolerance": 20
       },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
       "sources": [
+        {
+          "label": "War of the Quadruple Alliance",
+          "url": "https://en.wikipedia.org/wiki/War_of_the_Quadruple_Alliance"
+        },
+        {
+          "label": "Philip V of Spain",
+          "url": "https://en.wikipedia.org/wiki/Philip_V_of_Spain"
+        },
+        {
+          "label": "John V of Portugal",
+          "url": "https://en.wikipedia.org/wiki/John_V_of_Portugal"
+        },
+        {
+          "label": "Giulio Alberoni",
+          "url": "https://en.wikipedia.org/wiki/Giulio_Alberoni"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
@@ -205,33 +83,45 @@
         {
           "label": "Maddison Project 2023 — PRT 1719 gdppc=1776",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "War of the Quadruple Alliance (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/War_of_the_Quadruple_Alliance"
         }
       ],
-      "ruler": "Philip V (Bourbon)",
-      "_debug": {
-        "conflicts": [
-          "Kakonda-Portugal (Angola), 1716-22",
-          "Spain-Austria, Britain, France, United Provinces, 1717-20"
-        ],
-        "gdppc_iso": "PRT",
-        "gdppc": 1775.9855138025
-      }
+      "ruler": "Philip V (Spain, Bourbon); João V (Portugal, Braganza)",
+      "sparse_data": false
     },
     "francia": {
-      "score": 44,
-      "summary": "France under Louis XV (age 9), regency of Philippe II d'Orléans. Stable but financially strained (John Law's bubble brewing). Allied with Britain in Quadruple Alliance. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Saxony, Poland, 1709-19; Sweden-Denmark, 1709-20 Religion: Revocation of Edict of Nantes (1685) still in force; Huguenots persecuted/exiled. Catholic mandatory.",
+      "score": 61,
+      "summary": "France under Louis XV (age 9) with Philippe II d'Orléans as regent. Domestically stable but financially strained; John Law's Mississippi scheme inflating. Allied with Britain in the Quadruple Alliance; French troops cross into Spain in 1719. Dutch Republic stable under Stadtholderless rule. Active conflicts: Algiers-United Provinces, 1715-26; Spain-Austria, Britain, France, United Provinces, 1717-20 Religion: Revocation of the Edict of Nantes (1685) still in force — Huguenots persecuted, exiled or underground (Camisard war ended 1710). Catholicism mandatory. Dutch Republic notably tolerant.",
       "factors": {
-        "safety": 5,
+        "safety": 61,
         "health": 45,
         "economy": 90,
         "governance": 65,
         "religious_tolerance": 30
       },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
       "sources": [
+        {
+          "label": "Régence",
+          "url": "https://en.wikipedia.org/wiki/R%C3%A9gence"
+        },
+        {
+          "label": "Louis XV",
+          "url": "https://en.wikipedia.org/wiki/Louis_XV"
+        },
+        {
+          "label": "John Law (economist)",
+          "url": "https://en.wikipedia.org/wiki/John_Law_(economist)"
+        },
+        {
+          "label": "Dutch Republic",
+          "url": "https://en.wikipedia.org/wiki/Dutch_Republic"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
@@ -239,40 +129,41 @@
         {
           "label": "Maddison Project 2023 — NLD 1719 gdppc=3452",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "Régence of Philippe d'Orléans (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/R%C3%A9gence"
         }
       ],
-      "ruler": "Louis XV (regency of Philippe II d'Orléans)",
-      "_debug": {
-        "conflicts": [
-          "Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21",
-          "Sweden-Saxony, Poland, 1709-19",
-          "Sweden-Denmark, 1709-20",
-          "Britain-Sweden, 1715-19",
-          "Prussia-Sweden, 1715-20",
-          "Algiers-United Provinces, 1715-26",
-          "Spain-Austria, Britain, France, United Provinces, 1717-20",
-          "Hanover-Sweden, 1719-21",
-          "Sweden (succession), 1719"
-        ],
-        "gdppc_iso": "NLD",
-        "gdppc": 3451.8716577540104
-      }
+      "ruler": "Louis XV under Régence of Philippe II d'Orléans",
+      "sparse_data": false
     },
     "england": {
-      "score": 53,
-      "summary": "George I, post-Jacobite-1715 stable. Whig supremacy, parliamentary government, Walpole's rise. Allied with France in Quadruple Alliance. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Britain-Sweden, 1715-19; Spain-Austria, Britain, France, United Provinces, 1717-20 Religion: Toleration Act 1689 — Protestant Dissenters tolerated; Catholics excluded from public life. No state persecution of Jews.",
+      "score": 54,
+      "summary": "Great Britain under George I (Hanover), post-Jacobite-1715 and post-1719 Glenshiel Spanish landing failure. Whig supremacy; Robert Walpole's ascent imminent. Allied with France in the Quadruple Alliance; sea power dominant. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Britain-Sweden, 1715-19; Spain-Austria, Britain, France, United Provinces, 1717-20 Religion: Toleration Act 1689 — Protestant Dissenters tolerated; Catholics barred from public life by Test/Penal Laws. Jews resettled and de-facto tolerated in London.",
       "factors": {
         "safety": 24,
         "health": 50,
-        "economy": 77,
+        "economy": 84,
         "governance": 75,
         "religious_tolerance": 50
       },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
       "sources": [
+        {
+          "label": "George I of Great Britain",
+          "url": "https://en.wikipedia.org/wiki/George_I_of_Great_Britain"
+        },
+        {
+          "label": "Battle of Glen Shiel",
+          "url": "https://en.wikipedia.org/wiki/Battle_of_Glen_Shiel"
+        },
+        {
+          "label": "Toleration Act 1688",
+          "url": "https://en.wikipedia.org/wiki/Toleration_Act_1688"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
@@ -280,277 +171,364 @@
         {
           "label": "Maddison Project 2023 — GBR 1719 gdppc=2542",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "George I of Great Britain (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/George_I_of_Great_Britain"
         }
       ],
-      "ruler": "George I (Hanover)",
-      "_debug": {
-        "conflicts": [
-          "Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21",
-          "Britain-Sweden, 1715-19",
-          "Spain-Austria, Britain, France, United Provinces, 1717-20",
-          "Pirates-England (Gambia), 1719"
-        ],
-        "gdppc_iso": "GBR",
-        "gdppc": 2542.0
-      }
-    },
-    "scandinavia": {
-      "score": 34,
-      "summary": "Sweden: Charles XII killed Dec 1718, succession to Ulrika Eleonora + parliamentary 'Age of Liberty' beginning. Devastated by Great Northern War. Denmark stable under Frederick IV. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Saxony, Poland, 1709-19; Sweden-Denmark, 1709-20 Religion: Lutheran state churches; Catholics + Jews excluded or restricted.",
-      "factors": {
-        "safety": 5,
-        "health": 45,
-        "economy": 51,
-        "governance": 50,
-        "religious_tolerance": 35
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Maddison Project 2023 — SWE 1719 gdppc=1683",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "Age of Liberty (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Age_of_Liberty"
-        }
-      ],
-      "ruler": "Ulrika Eleonora (Sweden); Frederick IV (Denmark)",
-      "_debug": {
-        "conflicts": [
-          "Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21",
-          "Sweden-Saxony, Poland, 1709-19",
-          "Sweden-Denmark, 1709-20",
-          "Britain-Sweden, 1715-19",
-          "Prussia-Sweden, 1715-20",
-          "Hanover-Sweden, 1719-21",
-          "Sweden (succession), 1719"
-        ],
-        "gdppc_iso": "SWE",
-        "gdppc": 1683.0
-      }
+      "ruler": "George I (House of Hanover)",
+      "sparse_data": false
     },
     "rus": {
-      "score": 45,
-      "summary": "Peter the Great near end of Great Northern War (Nystad 1721 imminent). Massive centralizing reforms, new capital St Petersburg. Heavy taxation + conscription. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Saxony, Poland, 1709-19; Prussia-Sweden, 1715-20 Religion: Orthodox state, Old Believers persecuted (double tax 1716). Western tolerance only for foreign experts.",
+      "score": 48,
+      "summary": "Peter the Great in the closing phase of the Great Northern War; St Petersburg the new capital since 1712; sweeping centralizing reforms (Senate 1711, Colleges 1717-21, Table of Ranks 1722 incoming). Heavy conscription and taxation; tsarevich Alexei executed 1718. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Prussia-Sweden, 1715-20 Religion: Russian Orthodox state; Holy Synod replacing the Patriarchate 1721. Old Believers double-taxed since 1716. Western experts tolerated; Jews barred from interior.",
       "factors": {
-        "safety": 36,
+        "safety": 48,
         "health": 40,
         "economy": 50,
         "governance": 70,
         "religious_tolerance": 25
       },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
       "sources": [
+        {
+          "label": "Peter the Great",
+          "url": "https://en.wikipedia.org/wiki/Peter_the_Great"
+        },
+        {
+          "label": "Tsardom of Russia",
+          "url": "https://en.wikipedia.org/wiki/Tsardom_of_Russia"
+        },
+        {
+          "label": "Most Holy Synod",
+          "url": "https://en.wikipedia.org/wiki/Most_Holy_Synod"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Peter the Great (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Peter_the_Great"
         }
       ],
-      "ruler": "Peter I (Romanov)",
-      "_debug": {
-        "conflicts": [
-          "Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21",
-          "Sweden-Saxony, Poland, 1709-19",
-          "Prussia-Sweden, 1715-20"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
+      "ruler": "Peter I 'the Great' (Romanov)",
+      "sparse_data": false
+    },
+    "constantinople_balkans": {
+      "score": 58,
+      "summary": "Ottoman Tulip Period (Lale Devri) under Ahmed III and Grand Vizier Damat Ibrahim Pasha after the costly Treaty of Passarowitz 1718. Peace, court culture, the first Ottoman Turkish printing press (Müteferrika, 1727). Loss of Banat/Belgrade to Austria absorbed. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21 Religion: Millet system: Greek Orthodox, Armenian Apostolic, Jewish communities self-govern under their own law; non-Muslims pay cizye but practice openly. Among the most tolerant European-edge regimes for Jews.",
+      "factors": {
+        "safety": 60,
+        "health": 45,
+        "economy": 50,
+        "governance": 70,
+        "religious_tolerance": 65
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Tulip period",
+          "url": "https://en.wikipedia.org/wiki/Tulip_period"
+        },
+        {
+          "label": "Ahmed III",
+          "url": "https://en.wikipedia.org/wiki/Ahmed_III"
+        },
+        {
+          "label": "Nevşehirli Damat İbrahim Pasha",
+          "url": "https://en.wikipedia.org/wiki/Nev%C5%9Fehirli_Damat_%C4%B0brahim_Pasha"
+        },
+        {
+          "label": "Treaty of Passarowitz",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Passarowitz"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Sultan Ahmed III; Grand Vizier Damat Ibrahim Pasha",
+      "sparse_data": false
+    },
+    "persia": {
+      "score": 44,
+      "summary": "Safavid Empire in terminal collapse. Sultan Husayn weak and pious; Mahmud Hotaki's Ghilzai Afghans, having sacked Kerman 1719, are pushing toward Isfahan (sacked 1722). Russian Caspian campaign and Ottoman incursions follow. Active conflicts: Afghanistan-Persia, 1717-19 Religion: Twelver Shia state, hostile to Sunnis (which fuels the Afghan revolt), Christians and Zoroastrians. Armenian merchants of New Julfa partially protected.",
+      "factors": {
+        "safety": 73,
+        "health": 35,
+        "economy": 50,
+        "governance": 15,
+        "religious_tolerance": 25
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Fall of the Safavid Empire",
+          "url": "https://en.wikipedia.org/wiki/Fall_of_the_Safavid_dynasty"
+        },
+        {
+          "label": "Sultan Husayn",
+          "url": "https://en.wikipedia.org/wiki/Sultan_Husayn"
+        },
+        {
+          "label": "Hotak dynasty",
+          "url": "https://en.wikipedia.org/wiki/Hotak_dynasty"
+        },
+        {
+          "label": "Mahmud Hotak",
+          "url": "https://en.wikipedia.org/wiki/Mahmud_Hotak"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Sultan Husayn (Safavid)",
+      "sparse_data": false
     },
     "central_asia": {
       "score": 51,
-      "summary": "Khanates of Khiva, Bukhara, Kokand — small unstable states. Junghar Khanate strong further east, in conflict with Qing. Active conflicts: China-Tibet, 1718-20 Religion: Predominantly Sunni Muslim. Sufi orders influential. Minorities restricted.",
+      "summary": "Three Uzbek khanates (Bukhara under the late Ashtarkhanids, Khiva, Kokand emerging) — small, factional, frequently raided. The Dzungar Khanate to the east is the regional military power, fighting both Qing China (Tibet expedition 1718-20) and the Kazakhs. Active conflicts: China-Tibet, 1718-20 Religion: Sunni Hanafi Islam dominant with strong Naqshbandi Sufi influence. Small dhimmi Jewish (Bukharian) communities. Dzungars are Tibetan Buddhist.",
       "factors": {
         "safety": 73,
         "health": 40,
         "economy": 50,
         "governance": 30,
-        "religious_tolerance": 50
+        "religious_tolerance": 45
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Khanate of Bukhara (Wikipedia)",
+          "label": "Khanate of Bukhara",
           "url": "https://en.wikipedia.org/wiki/Khanate_of_Bukhara"
-        }
-      ],
-      "ruler": "Various khans",
-      "_debug": {
-        "conflicts": [
-          "China-Tibet, 1718-20"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
-    },
-    "japan": {
-      "score": 58,
-      "summary": "Tokugawa shogunate under Yoshimune (Kyōhō Reforms underway since 1716). Famously peaceful Edo period — no wars, urban Edo > 1M. Active conflicts: Afghanistan-Persia, 1717-19 Religion: Sakoku in full force; Christianity banned, brutal persecution. Buddhism + Shinto state-aligned.",
-      "factors": {
-        "safety": 73,
-        "health": 55,
-        "economy": 50,
-        "governance": 80,
-        "religious_tolerance": 15
-      },
-      "sources": [
+        },
+        {
+          "label": "Khanate of Khiva",
+          "url": "https://en.wikipedia.org/wiki/Khanate_of_Khiva"
+        },
+        {
+          "label": "Dzungar Khanate",
+          "url": "https://en.wikipedia.org/wiki/Dzungar_Khanate"
+        },
+        {
+          "label": "Tsewang Rabtan",
+          "url": "https://en.wikipedia.org/wiki/Tsewang_Rabtan"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Kyōhō Reforms (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Ky%C5%8Dh%C5%8D_Reforms"
         }
       ],
-      "ruler": "Tokugawa Yoshimune (8th Shogun)",
-      "_debug": {
-        "conflicts": [
-          "Afghanistan-Persia, 1717-19"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
+      "ruler": "Abu'l-Fayz Khan (Bukhara, Ashtarkhanid); Shir Ghazi Khan (Khiva); Tsewang Rabtan (Dzungar)",
+      "sparse_data": false
     },
-    "mesoamerica": {
-      "score": 53,
-      "summary": "Spanish Viceroyalty of New Spain. Stable colonial admin, silver mining wealth. Indigenous societies devastated by prior epidemics + encomienda decline. Religion: Catholic compulsory; Inquisition prosecutes heresy + syncretism.",
+    "egypt_nile": {
+      "score": 59,
+      "summary": "Ottoman eyalet of Egypt with Mamluk beys increasingly autonomous; provincial Levant (Damascus, Aleppo, Sidon, Jerusalem) under Ottoman governors. Periodic Mamluk faction fights but no major revolt in 1719. Religion: Ottoman millet system: Copts, Greek Orthodox, Maronites, Druze, Jews self-govern as dhimmis under jizya. Holy sites in Jerusalem disputed.",
       "factors": {
         "safety": 85,
-        "health": 35,
-        "economy": 38,
-        "governance": 55,
-        "religious_tolerance": 25
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Maddison Project 2023 — MEX 1719 gdppc=1557",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "Viceroyalty of New Spain (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/New_Spain"
-        }
-      ],
-      "ruler": "Viceroy Baltasar de Zúñiga (Spain)",
-      "_debug": {
-        "conflicts": [],
-        "gdppc_iso": "MEX",
-        "gdppc": 1557.0
-      }
-    },
-    "andes": {
-      "score": 50,
-      "summary": "Spanish Viceroyalty of Peru. Potosí silver still flowing, mita labor system brutal. Stable colonial rule. Religion: Catholic compulsory; Andean traditional religion suppressed but syncretism widespread.",
-      "factors": {
-        "safety": 85,
-        "health": 35,
-        "economy": 25,
-        "governance": 55,
-        "religious_tolerance": 25
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Maddison Project 2023 — PER 1719 gdppc=1101",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "Viceroyalty of Peru (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"
-        }
-      ],
-      "ruler": "Viceroy Diego Morcillo Rubio de Auñón",
-      "_debug": {
-        "conflicts": [],
-        "gdppc_iso": "PER",
-        "gdppc": 1101.0
-      }
-    },
-    "sahel_west_africa": {
-      "score": 49,
-      "summary": "Decline of Mali; rise of Bambara states (Segou under Mamari Coulibaly from 1712). Asante Empire consolidating in Gold Coast. Atlantic slave trade peaking — coastal raids destabilizing interior. Active conflicts: Algiers-United Provinces, 1715-26; Kakonda-Portugal (Angola), 1716-22; Pirates-England (Gambia), 1719 Religion: Islam dominant in Sahel, traditional African religions widespread further south. Coexistence outside slave-trade zones.",
-      "factors": {
-        "safety": 49,
-        "health": 35,
+        "health": 40,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 60
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Ottoman Egypt",
+          "url": "https://en.wikipedia.org/wiki/Egypt_Eyalet"
         },
         {
-          "label": "Atlantic slave trade (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Atlantic_slave_trade"
+          "label": "Mamluks of Egypt",
+          "url": "https://en.wikipedia.org/wiki/Mamluks_(Ottoman_Egypt)"
+        },
+        {
+          "label": "Ottoman Syria",
+          "url": "https://en.wikipedia.org/wiki/Ottoman_Syria"
         }
       ],
-      "ruler": "Various — Asantehene Osei Tutu, Bambara king Mamari Coulibaly",
-      "_debug": {
-        "conflicts": [
-          "Algiers-United Provinces, 1715-26",
-          "Kakonda-Portugal (Angola), 1716-22",
-          "Pirates-England (Gambia), 1719"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
+      "ruler": "Ottoman pasha + Mamluk beys (de facto); Sultan Ahmed III above",
+      "sparse_data": false
     },
-    "ethiopia": {
-      "score": 51,
-      "summary": "Gondarine period under Dawit III (deposed/poisoned 1721). Court intrigues, regional warlords growing. Decline of imperial authority. Active conflicts: Pirates-England (Gambia), 1719 Religion: Ethiopian Orthodox state church; Muslims + traditional religions restricted but tolerated regionally.",
+    "arabia": {
+      "score": 48,
+      "summary": "Hejaz nominally Ottoman under the Sharif of Mecca; Najd tribal/fragmented (pre-Wahhabi, founded 1744). Oman under Yarubid Sultan bin Saif II expanding aggressively into the Swahili coast, capturing Portuguese forts and starting the 1719-47 wars with Persia and Portugal. Yemen Zaidi imamate of al-Mutawakkil Qasim. Active conflicts: Oman, 1719-47 Religion: Sunni dominant (Shafi'i/Hanbali); Zaidi Shia in Yemen; Ibadi Islam state-sponsored in Oman. Non-Muslims barred from Mecca/Medina; dhimmis tolerated elsewhere.",
       "factors": {
         "safety": 73,
         "health": 40,
         "economy": 50,
         "governance": 35,
-        "religious_tolerance": 40
+        "religious_tolerance": 20
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Yaruba dynasty",
+          "url": "https://en.wikipedia.org/wiki/Yaruba_dynasty"
         },
         {
-          "label": "Dawit III of Ethiopia (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Dawit_III"
+          "label": "Sultan bin Saif II",
+          "url": "https://en.wikipedia.org/wiki/Sultan_bin_Saif_II"
+        },
+        {
+          "label": "Sharifate of Mecca",
+          "url": "https://en.wikipedia.org/wiki/Sharifate_of_Mecca"
+        },
+        {
+          "label": "Zaydi imams of Yemen",
+          "url": "https://en.wikipedia.org/wiki/Zaydi_imams_of_Yemen"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
         }
       ],
-      "ruler": "Emperor Dawit III",
-      "_debug": {
-        "conflicts": [
-          "Pirates-England (Gambia), 1719"
-        ],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
+      "ruler": "Sultan bin Saif II (Oman, Yarubid); Sharif Abdullah ibn Sa'id (Mecca); Imam al-Mutawakkil Qasim (Yemen)",
+      "sparse_data": false
+    },
+    "ethiopia": {
+      "score": 54,
+      "summary": "Gondarine period under Emperor Dawit III; court intrigue intense (he will be poisoned 1721). Regional rases gaining at the expense of imperial authority — onset of the Zemene Mesafint trajectory. Religion: Ethiopian Orthodox Tewahedo state church; Muslims and traditional religions tolerated regionally; Beta Israel/Falasha present but pressured; European Catholic missions excluded since the 1632 expulsion.",
+      "factors": {
+        "safety": 85,
+        "health": 40,
+        "economy": 50,
+        "governance": 35,
+        "religious_tolerance": 35
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Dawit III of Ethiopia",
+          "url": "https://en.wikipedia.org/wiki/Dawit_III"
+        },
+        {
+          "label": "Gondarine period",
+          "url": "https://en.wikipedia.org/wiki/Gondarine_period"
+        },
+        {
+          "label": "Ethiopian Empire",
+          "url": "https://en.wikipedia.org/wiki/Ethiopian_Empire"
+        }
+      ],
+      "ruler": "Emperor Dawit III (Solomonic dynasty)",
+      "sparse_data": false
+    },
+    "han_china": {
+      "score": 65,
+      "summary": "Kangxi Emperor's final years (dies 1722). Stable centralized rule, mature bureaucracy, prosperous interior. Qing-Dzungar war over Tibet active — Qing expedition retakes Lhasa 1720 after the 1717-18 Dzungar occupation. Active conflicts: China-Tibet, 1718-20 Religion: Confucian state ideology; Buddhism + Daoism tolerated; Tibetan Buddhism patronized; Chinese Rites Controversy souring relations with Catholic missions, but Jesuits still at court. Islam tolerated.",
+      "factors": {
+        "safety": 73,
+        "health": 50,
+        "economy": 50,
+        "governance": 85,
+        "religious_tolerance": 55
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Kangxi Emperor",
+          "url": "https://en.wikipedia.org/wiki/Kangxi_Emperor"
+        },
+        {
+          "label": "Dzungar-Qing Wars",
+          "url": "https://en.wikipedia.org/wiki/Dzungar%E2%80%93Qing_Wars"
+        },
+        {
+          "label": "Chinese Rites controversy",
+          "url": "https://en.wikipedia.org/wiki/Chinese_Rites_controversy"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Kangxi Emperor (Qing)",
+      "sparse_data": false
+    },
+    "japan": {
+      "score": 62,
+      "summary": "Tokugawa shogunate under Yoshimune (8th shogun, acc. 1716); Kyōhō Reforms underway — frugality edicts, land-survey, ageyumai rice tax. Pax Tokugawa; Edo population near 1 million. Korea under Joseon king Sukjong (final year, d. 1720), stable Neo-Confucian state. Religion: Sakoku in full force; Christianity banned with executions ongoing; fumie tests annual. Buddhism + Shinto state-aligned. Korea aggressively Neo-Confucian, persecuting Catholicism and shamanism.",
+      "factors": {
+        "safety": 85,
+        "health": 55,
+        "economy": 50,
+        "governance": 80,
+        "religious_tolerance": 15
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Kyōhō Reforms",
+          "url": "https://en.wikipedia.org/wiki/Ky%C5%8Dh%C5%8D_Reforms"
+        },
+        {
+          "label": "Tokugawa Yoshimune",
+          "url": "https://en.wikipedia.org/wiki/Tokugawa_Yoshimune"
+        },
+        {
+          "label": "Sakoku",
+          "url": "https://en.wikipedia.org/wiki/Sakoku"
+        },
+        {
+          "label": "Sukjong of Joseon",
+          "url": "https://en.wikipedia.org/wiki/Sukjong_of_Joseon"
+        }
+      ],
+      "ruler": "Tokugawa Yoshimune (Shogun); Emperor Nakamikado (figurehead); King Sukjong of Joseon (Korea)",
+      "sparse_data": false
     },
     "north_america_east": {
       "score": 60,
-      "summary": "British colonies: Massachusetts Bay, Virginia, Carolinas. Stable but small populations. Native nations (Iroquois, Cherokee) still autonomous. King George's War a generation away. Religion: Varies by colony: Puritans intolerant in MA, Quaker tolerance in PA, Anglican establishment in VA. Native religions intact.",
+      "summary": "Thirteen-Colonies precursor: Massachusetts Bay, New York, Pennsylvania, Virginia, Carolinas, plus Georgia not yet founded. Stable but small populations (~470k). Iroquois Confederacy and Cherokee still autonomous and powerful. New France (Canada/Louisiana) under Governor-General Vaudreuil; Louisiana being colonized via John Law's Company of the West. Religion: Varies by colony: Congregationalist establishment in MA, Quaker tolerance in PA, Anglican establishment in VA + SC, Catholic gentry in MD. New France strictly Catholic. Native religions intact in the interior.",
       "factors": {
         "safety": 85,
         "health": 35,
@@ -558,22 +536,917 @@
         "governance": 50,
         "religious_tolerance": 65
       },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
       "sources": [
+        {
+          "label": "Thirteen Colonies",
+          "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies"
+        },
+        {
+          "label": "Iroquois Confederacy",
+          "url": "https://en.wikipedia.org/wiki/Iroquois"
+        },
+        {
+          "label": "New France",
+          "url": "https://en.wikipedia.org/wiki/New_France"
+        },
+        {
+          "label": "Philippe de Rigaud de Vaudreuil",
+          "url": "https://en.wikipedia.org/wiki/Philippe_de_Rigaud_de_Vaudreuil"
+        }
+      ],
+      "ruler": "British royal/proprietary governors; Philippe de Rigaud de Vaudreuil (New France)",
+      "sparse_data": false
+    },
+    "andes": {
+      "score": 52,
+      "summary": "Viceroyalty of Peru under Viceroy Diego Morcillo Rubio de Auñón (Archbishop of Lima, serving as interim viceroy 1716-20). Potosí silver still flowing though declining; mita labor brutal. Catastrophic typhus/plague epidemic across Andes 1718-20. Stable colonial rule. Religion: Catholic compulsory; Peruvian Inquisition in Lima; ongoing 'extirpation of idolatries' campaigns in Andean highlands. Syncretism widespread.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 32,
+        "governance": 55,
+        "religious_tolerance": 25
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Viceroyalty of Peru",
+          "url": "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"
+        },
+        {
+          "label": "Diego Morcillo Rubio de Auñón",
+          "url": "https://en.wikipedia.org/wiki/Diego_Morcillo_Rubio_de_Au%C3%B1%C3%B3n"
+        },
+        {
+          "label": "Potosí",
+          "url": "https://en.wikipedia.org/wiki/Potos%C3%AD"
+        },
+        {
+          "label": "Maddison Project 2023 — PER 1719 gdppc=1101",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        }
+      ],
+      "ruler": "Diego Morcillo Rubio de Auñón (Viceroy of Peru)",
+      "sparse_data": false
+    },
+    "brazil_amazon": {
+      "score": 56,
+      "summary": "Portuguese colonial Brazil under the Council of Overseas (Conselho Ultramarino) in Lisbon and a Viceroy at Salvador. Minas Gerais gold rush in full swing (peak 1700-1750) — funding João V's spending and triggering interior settlement. Heavy enslaved-African economy; Amazon basin largely under Jesuit-led missions. Religion: Catholic compulsory; Portuguese Inquisition (Lisbon-based) prosecutes New Christians (conversos); Jesuit aldeamentos consolidate Indigenous peoples. African religions practiced covertly.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 50,
+        "governance": 55,
+        "religious_tolerance": 25
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Colonial Brazil",
+          "url": "https://en.wikipedia.org/wiki/Colonial_Brazil"
+        },
+        {
+          "label": "Brazilian Gold Rush",
+          "url": "https://en.wikipedia.org/wiki/Brazilian_Gold_Rush"
+        },
+        {
+          "label": "Captaincy of Minas Gerais",
+          "url": "https://en.wikipedia.org/wiki/Captaincy_of_Minas_Gerais"
+        }
+      ],
+      "ruler": "João V of Portugal, via Viceroy of Brazil (Vasco Fernandes César de Meneses from 1720)",
+      "sparse_data": false
+    },
+    "sweden_empire": {
+      "score": 30,
+      "summary": "Charles XII killed at Fredriksten Dec 1718; sister Ulrika Eleonora crowned 1719 after accepting parliamentary constraints — beginning of the 'Age of Liberty'. Sweden exhausted, finances ruined, Russia and Hanover invading Bohuslän and Pomerania. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Saxony, Poland, 1709-19; Sweden-Denmark, 1709-20 Religion: Lutheran state church under the 1686 Church Law; Catholics and Jews effectively excluded; conversion away from Lutheranism criminalized.",
+      "factors": {
+        "safety": 5,
+        "health": 40,
+        "economy": 58,
+        "governance": 35,
+        "religious_tolerance": 25
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Age of Liberty",
+          "url": "https://en.wikipedia.org/wiki/Age_of_Liberty"
+        },
+        {
+          "label": "Ulrika Eleonora, Queen of Sweden",
+          "url": "https://en.wikipedia.org/wiki/Ulrika_Eleonora,_Queen_of_Sweden"
+        },
+        {
+          "label": "Great Northern War",
+          "url": "https://en.wikipedia.org/wiki/Great_Northern_War"
+        },
+        {
+          "label": "Charles XII",
+          "url": "https://en.wikipedia.org/wiki/Charles_XII_of_Sweden"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
-          "label": "Thirteen Colonies (Wikipedia)",
-          "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies"
+          "label": "Maddison Project 2023 — SWE 1719 gdppc=1683",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         }
       ],
-      "ruler": "Royal/Proprietary governors",
-      "_debug": {
-        "conflicts": [],
-        "gdppc_iso": null,
-        "gdppc": null
-      }
+      "ruler": "Ulrika Eleonora (Holstein-Gottorp-Romanov; crowned March 1719)",
+      "sparse_data": false
+    },
+    "denmark_norway": {
+      "score": 47,
+      "summary": "Denmark-Norway personal union under absolutist Frederick IV, on the winning side of the Great Northern War. Naval gains in the Baltic; Tordenskjold's raids on Swedish coast. Economy taxed but state functional. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Denmark, 1709-20 Religion: Lutheran state church (Danish Law of Christian V); Catholicism and Judaism restricted; pietist revival gaining at court.",
+      "factors": {
+        "safety": 48,
+        "health": 45,
+        "economy": 50,
+        "governance": 60,
+        "religious_tolerance": 25
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Frederick IV of Denmark",
+          "url": "https://en.wikipedia.org/wiki/Frederick_IV_of_Denmark"
+        },
+        {
+          "label": "Denmark-Norway",
+          "url": "https://en.wikipedia.org/wiki/Denmark%E2%80%93Norway"
+        },
+        {
+          "label": "Peter Wessel Tordenskjold",
+          "url": "https://en.wikipedia.org/wiki/Peter_Wessel_Tordenskiold"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Frederick IV (House of Oldenburg)",
+      "sparse_data": false
+    },
+    "swedish_baltic": {
+      "score": 51,
+      "summary": "Swedish Estonia, Livonia and Ingria de-facto under Russian military occupation since 1710; Swedish administration in name only pending the Treaty of Nystad 1721. Cities (Reval, Riga, Narva) depopulated by 1710 plague and Russian campaigns. Religion: Lutheran majority (German Baltic nobility, urban burghers); Orthodox minority growing under Russian occupation; Jewish settlement legally restricted.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 50,
+        "governance": 25,
+        "religious_tolerance": 35
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Swedish Livonia",
+          "url": "https://en.wikipedia.org/wiki/Swedish_Livonia"
+        },
+        {
+          "label": "Swedish Estonia",
+          "url": "https://en.wikipedia.org/wiki/Swedish_Estonia"
+        },
+        {
+          "label": "Treaty of Nystad",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Nystad"
+        },
+        {
+          "label": "Great Northern War plague outbreak",
+          "url": "https://en.wikipedia.org/wiki/Great_Northern_War_plague_outbreak"
+        }
+      ],
+      "ruler": "Nominal Swedish governors; de-facto Russian commanders under Peter I",
+      "sparse_data": false
+    },
+    "habsburg_austria": {
+      "score": 56,
+      "summary": "Charles VI's Habsburg Monarchy at its early-18th-century peak after Passarowitz 1718 (gains in Banat, Belgrade, Oltenia). Rules Austria, Bohemia, Hungary and the new Austrian Netherlands; in the Quadruple Alliance against Spain. Pragmatic Sanction (1713) being pushed for inheritance. Active conflicts: Spain-Austria, Britain, France, United Provinces, 1717-20 Religion: Counter-Reformation Catholicism enforced in Bohemia and Inner Austria; Protestants tolerated in Hungary under the 1681 Sopron compromise; Jews restricted (small Vienna community).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 70,
+        "religious_tolerance": 25
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Charles VI, Holy Roman Emperor",
+          "url": "https://en.wikipedia.org/wiki/Charles_VI,_Holy_Roman_Emperor"
+        },
+        {
+          "label": "Treaty of Passarowitz",
+          "url": "https://en.wikipedia.org/wiki/Treaty_of_Passarowitz"
+        },
+        {
+          "label": "Habsburg monarchy",
+          "url": "https://en.wikipedia.org/wiki/Habsburg_monarchy"
+        },
+        {
+          "label": "Pragmatic Sanction of 1713",
+          "url": "https://en.wikipedia.org/wiki/Pragmatic_Sanction_of_1713"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Emperor Charles VI (Habsburg)",
+      "sparse_data": false
+    },
+    "prussia_brandenburg": {
+      "score": 56,
+      "summary": "Brandenburg-Prussia under Frederick William I, the 'Soldier-King'. Rigorous fiscal-military reforms, doubled army, austerity at court. Just exiting the Great Northern War with gains in Swedish Pomerania (Stettin) confirmed in 1720. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Prussia-Sweden, 1715-20 Religion: Calvinist Hohenzollern ruling Lutheran majority; famously tolerant — refuge for Huguenots (1685 Edict of Potsdam) and Salzburg Protestants later; Jews tolerated under restrictions.",
+      "factors": {
+        "safety": 48,
+        "health": 45,
+        "economy": 51,
+        "governance": 75,
+        "religious_tolerance": 65
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Frederick William I of Prussia",
+          "url": "https://en.wikipedia.org/wiki/Frederick_William_I_of_Prussia"
+        },
+        {
+          "label": "Kingdom of Prussia",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Prussia"
+        },
+        {
+          "label": "Edict of Potsdam",
+          "url": "https://en.wikipedia.org/wiki/Edict_of_Potsdam"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — DEU 1719 gdppc=1682",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        }
+      ],
+      "ruler": "Frederick William I (Hohenzollern)",
+      "sparse_data": false
+    },
+    "german_princes": {
+      "score": 47,
+      "summary": "Patchwork of HRE states. Saxony (Augustus the Strong, also king of Poland) exhausted by Great Northern War; Hanover ruled in personal union from London by George I; Bavaria under Max II Emanuel rebuilding after Spanish-Succession defeats; ecclesiastical electorates and dozens of small territories stable under the post-Westphalia order. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Saxony, Poland, 1709-19; Hanover-Sweden, 1719-21 Religion: Westphalia (1648) confessional settlement: prince chooses Catholic/Lutheran/Reformed; minorities tolerated where economically useful. Saxony's electors Catholic but state Lutheran.",
+      "factors": {
+        "safety": 36,
+        "health": 45,
+        "economy": 51,
+        "governance": 55,
+        "religious_tolerance": 55
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Electorate of Saxony",
+          "url": "https://en.wikipedia.org/wiki/Electorate_of_Saxony"
+        },
+        {
+          "label": "Electorate of Hanover",
+          "url": "https://en.wikipedia.org/wiki/Electorate_of_Hanover"
+        },
+        {
+          "label": "Electorate of Bavaria",
+          "url": "https://en.wikipedia.org/wiki/Electorate_of_Bavaria"
+        },
+        {
+          "label": "Holy Roman Empire",
+          "url": "https://en.wikipedia.org/wiki/Holy_Roman_Empire"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — DEU 1719 gdppc=1682",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        }
+      ],
+      "ruler": "Augustus II 'the Strong' (Saxony); George I (Hanover, in personal union with GB); Max II Emanuel (Bavaria); various ecclesiastical + secular princes",
+      "sparse_data": false
+    },
+    "polish_lithuanian_commonwealth": {
+      "score": 39,
+      "summary": "Polish-Lithuanian Commonwealth under Augustus II the Strong, badly weakened by the Great Northern War and Russian/Saxon armies marching through. The Silent Sejm of 1717 has just locked in noble dominance and capped the army at ~24,000 — start of the slow slide to partitions. Active conflicts: Denmark, Saxony, Poland, Russia, Prussia, Hanover, Britain-Sweden, Turkey, 1700-21; Sweden-Saxony, Poland, 1709-19 Religion: Historically Europe's most tolerant state (Warsaw Confederation 1573) but Catholicism increasingly aggressive — anti-Protestant Toruń tumult 1724 looming. Large Jewish population under the Council of Four Lands. Eastern Orthodox + Uniate Christians.",
+      "factors": {
+        "safety": 48,
+        "health": 40,
+        "economy": 25,
+        "governance": 30,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Augustus II the Strong",
+          "url": "https://en.wikipedia.org/wiki/Augustus_II_the_Strong"
+        },
+        {
+          "label": "Silent Sejm",
+          "url": "https://en.wikipedia.org/wiki/Silent_Sejm"
+        },
+        {
+          "label": "Polish-Lithuanian Commonwealth",
+          "url": "https://en.wikipedia.org/wiki/Polish%E2%80%93Lithuanian_Commonwealth"
+        },
+        {
+          "label": "Council of Four Lands",
+          "url": "https://en.wikipedia.org/wiki/Council_of_Four_Lands"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — POL 1719 gdppc=964",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        }
+      ],
+      "ruler": "Augustus II 'the Strong' (Wettin)",
+      "sparse_data": false
+    },
+    "mughal_north": {
+      "score": 54,
+      "summary": "Mughal Empire under teenage Muhammad Shah (acc. Sept 1719 after the Sayyid Brothers deposed Farrukhsiyar in Feb and ran through Rafi ud-Darajat and Shah Jahan II). Court dominated by the Sayyid Brothers (Hasan Ali, Husain Ali). Imperial authority crumbling in the provinces. Religion: Jizya on non-Muslims abolished 1712-19; Hindu nobility (Rajputs, Marathas in Mughal service) again influential; Sikh persecution easing post-Banda Singh execution 1716.",
+      "factors": {
+        "safety": 85,
+        "health": 40,
+        "economy": 50,
+        "governance": 25,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Muhammad Shah",
+          "url": "https://en.wikipedia.org/wiki/Muhammad_Shah"
+        },
+        {
+          "label": "Sayyid Brothers",
+          "url": "https://en.wikipedia.org/wiki/Sayyid_brothers"
+        },
+        {
+          "label": "Farrukhsiyar",
+          "url": "https://en.wikipedia.org/wiki/Farrukhsiyar"
+        },
+        {
+          "label": "Mughal Empire",
+          "url": "https://en.wikipedia.org/wiki/Mughal_Empire"
+        }
+      ],
+      "ruler": "Muhammad Shah (Mughal); real power: Sayyid Brothers",
+      "sparse_data": false
+    },
+    "maratha_confederacy": {
+      "score": 64,
+      "summary": "Maratha Confederacy under Chhatrapati Shahu I with Peshwa Balaji Vishwanath, who in Feb-April 1719 negotiated the landmark agreement granting Marathas chauth + sardeshmukhi rights over the six Deccan subahs and home rule over Shahu's Swarajya. Marathas escort the Sayyid Brothers to Delhi during the 1719 coup. Religion: Hindu state with strong Brahmin Peshwa leadership; Muslims, Jains, Parsis tolerated; Sikh + bhakti movements active. Comparatively pluralist by 1719 South Asian standards.",
+      "factors": {
+        "safety": 85,
+        "health": 40,
+        "economy": 50,
+        "governance": 60,
+        "religious_tolerance": 70
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Maratha Confederacy",
+          "url": "https://en.wikipedia.org/wiki/Maratha_Confederacy"
+        },
+        {
+          "label": "Balaji Vishwanath",
+          "url": "https://en.wikipedia.org/wiki/Balaji_Vishwanath"
+        },
+        {
+          "label": "Shahu I",
+          "url": "https://en.wikipedia.org/wiki/Shahu_I"
+        }
+      ],
+      "ruler": "Chhatrapati Shahu I; Peshwa Balaji Vishwanath",
+      "sparse_data": false
+    },
+    "bengal": {
+      "score": 64,
+      "summary": "Bengal Subah de-facto independent under Nawab Murshid Quli Khan since 1717 (officially nazim + diwan). Capital moved to Murshidabad; revenue system overhauled, jagirdars curbed. Wealthiest Mughal province; English, Dutch, French factories at Calcutta/Chinsurah/Chandernagore. Religion: Muslim ruling class over Hindu majority; broadly tolerant administration. Sufi influence strong; Hindu zamindars retained.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 70,
+        "religious_tolerance": 55
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Murshid Quli Khan",
+          "url": "https://en.wikipedia.org/wiki/Murshid_Quli_Khan"
+        },
+        {
+          "label": "Bengal Subah",
+          "url": "https://en.wikipedia.org/wiki/Bengal_Subah"
+        },
+        {
+          "label": "Nawabs of Bengal",
+          "url": "https://en.wikipedia.org/wiki/Nawabs_of_Bengal_and_Murshidabad"
+        }
+      ],
+      "ruler": "Murshid Quli Khan, Nawab of Bengal (nominally under Mughal Muhammad Shah)",
+      "sparse_data": false
+    },
+    "deccan_sultanates": {
+      "score": 59,
+      "summary": "Mughal Deccan in flux: Nizam-ul-Mulk Asaf Jah I will formally found the autonomous Hyderabad State in 1724 but is already a power broker in 1719. Mysore under Krishnaraja Wodeyar II nominally rules, Dalwai Devarajaiah in real control. Maratha chauth pressure constant. Religion: Sunni Muslim ruling elites over Hindu majority; sharia-based courts coexist with local custom; Marathas extract chauth from non-Muslim and Muslim subjects alike.",
+      "factors": {
+        "safety": 85,
+        "health": 40,
+        "economy": 50,
+        "governance": 45,
+        "religious_tolerance": 55
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Asaf Jah I",
+          "url": "https://en.wikipedia.org/wiki/Asaf_Jah_I"
+        },
+        {
+          "label": "Hyderabad State",
+          "url": "https://en.wikipedia.org/wiki/Hyderabad_State"
+        },
+        {
+          "label": "Kingdom of Mysore",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Mysore"
+        },
+        {
+          "label": "Krishnaraja Wodeyar II",
+          "url": "https://en.wikipedia.org/wiki/Krishnaraja_Wodeyar_II"
+        }
+      ],
+      "ruler": "Nizam-ul-Mulk Asaf Jah I (Mughal Deccan subadar); Krishnaraja Wodeyar II / Dalwai Devarajaiah (Mysore)",
+      "sparse_data": false
+    },
+    "voc_indonesia": {
+      "score": 59,
+      "summary": "Dutch East India Company (VOC) the dominant power in the Indonesian archipelago, capital at Batavia. Governor-General Hendrick Zwaardecroon (1718-25) consolidating spice monopoly; Mataram Sultanate (Java) under Pakubuwono I a VOC client. Bantam, Aceh, Makassar reduced or subordinated. Religion: Native population overwhelmingly Sunni Muslim (Java, Sumatra), Hindu (Bali), animist. VOC enforces Dutch Reformed in fort chaplaincies; Catholics barred; broad de-facto tolerance of Islam for trade reasons.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 50,
+        "governance": 55,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Dutch East India Company",
+          "url": "https://en.wikipedia.org/wiki/Dutch_East_India_Company"
+        },
+        {
+          "label": "Hendrick Zwaardecroon",
+          "url": "https://en.wikipedia.org/wiki/Hendrick_Zwaardecroon"
+        },
+        {
+          "label": "Sultanate of Mataram",
+          "url": "https://en.wikipedia.org/wiki/Sultanate_of_Mataram"
+        },
+        {
+          "label": "Pakubuwono I",
+          "url": "https://en.wikipedia.org/wiki/Pakubuwono_I"
+        }
+      ],
+      "ruler": "Hendrick Zwaardecroon (VOC Governor-General); Pakubuwono I (Mataram, dies Feb 1719)",
+      "sparse_data": false
+    },
+    "siam_vietnam_burma": {
+      "score": 61,
+      "summary": "Ayutthaya Kingdom under King Thai Sa (Phumintharacha) stable, prosperous, post-1688 expulsion of French; foreign trade flourishing. Vietnam split: Trịnh lords (Trịnh Cương) at Thăng Long (north), Nguyễn lords (Nguyễn Phúc Chu) at Phú Xuân (south). Toungoo Burma under Taninganwe Min weakening — only ~33 years from Mon revolt + Konbaung rise. Religion: Theravada Buddhism dominant (Siam, Burma); Mahayana + Confucianism (Vietnam); Catholic and Muslim minorities tolerated as trading communities. Pluralism is the regional norm.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 70
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Ayutthaya Kingdom",
+          "url": "https://en.wikipedia.org/wiki/Ayutthaya_Kingdom"
+        },
+        {
+          "label": "Thai Sa",
+          "url": "https://en.wikipedia.org/wiki/Thai_Sa"
+        },
+        {
+          "label": "Trịnh lords",
+          "url": "https://en.wikipedia.org/wiki/Tr%E1%BB%8Bnh_lords"
+        },
+        {
+          "label": "Nguyễn lords",
+          "url": "https://en.wikipedia.org/wiki/Nguy%E1%BB%85n_lords"
+        },
+        {
+          "label": "Toungoo dynasty",
+          "url": "https://en.wikipedia.org/wiki/Toungoo_dynasty"
+        }
+      ],
+      "ruler": "Thai Sa / Phumintharacha (Ayutthaya); Trịnh Cương (Đàng Ngoài); Nguyễn Phúc Chu (Đàng Trong); Taninganwe Min (Toungoo Burma)",
+      "sparse_data": false
+    },
+    "spanish_philippines": {
+      "score": 54,
+      "summary": "Spanish colonial Philippines under Governor-General Fernando Bustamante (assassinated by a friar-led mob in Manila Oct 1719). Manila Galleon trade with Acapulco is the colony's economic spine; Moros (Sultanates of Sulu, Maguindanao) independent in the south. Religion: Roman Catholic, enforced by friars (Dominican, Franciscan, Augustinian, Jesuit); indigenous religions suppressed in lowland Christianized areas. Muslim south outside colonial control; Chinese Sangley population periodically persecuted.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 20
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Spanish Philippines",
+          "url": "https://en.wikipedia.org/wiki/Captaincy_General_of_the_Philippines"
+        },
+        {
+          "label": "Fernando Manuel de Bustamante y Bustillo",
+          "url": "https://en.wikipedia.org/wiki/Fernando_Manuel_de_Bustamante_y_Bustillo"
+        },
+        {
+          "label": "Manila galleon",
+          "url": "https://en.wikipedia.org/wiki/Manila_galleon"
+        },
+        {
+          "label": "Sultanate of Sulu",
+          "url": "https://en.wikipedia.org/wiki/Sultanate_of_Sulu"
+        }
+      ],
+      "ruler": "Fernando Manuel de Bustamante y Bustillo (Governor-General); Philip V of Spain above",
+      "sparse_data": false
+    },
+    "kongo_angola": {
+      "score": 48,
+      "summary": "Kingdom of Kongo fragmented after the 1665 Battle of Mbwila and ongoing civil wars; rival claimants (Kimpanzu, Kinlaza) hold pieces. Portuguese Angola coast (Luanda, Benguela) is a slave-trade hub feeding Brazil. Queen Nzinga's Matamba/Ndongo legacy persists. Active conflicts: Kakonda-Portugal (Angola), 1716-22 Religion: Kongo officially Catholic since 1491, heavily syncretic; Antonine movement (Beatriz Kimpa Vita executed 1706) recently suppressed. Traditional religions dominant in interior; Catholic-only on Portuguese coast.",
+      "factors": {
+        "safety": 73,
+        "health": 30,
+        "economy": 50,
+        "governance": 25,
+        "religious_tolerance": 45
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Kingdom of Kongo",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Kongo"
+        },
+        {
+          "label": "Portuguese Angola",
+          "url": "https://en.wikipedia.org/wiki/Portuguese_Angola"
+        },
+        {
+          "label": "Antonian Movement",
+          "url": "https://en.wikipedia.org/wiki/Antonian_Movement"
+        },
+        {
+          "label": "Kingdom of Matamba",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Matamba"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Manuel II of Kongo (contested); Portuguese governors of Angola",
+      "sparse_data": false
+    },
+    "southern_africa": {
+      "score": 61,
+      "summary": "Lunda Empire under Mwata Yamvo and Luba Kingdom dominate the central African savanna; Rozvi Empire on the Zimbabwe plateau replacing the Mutapa. Portuguese Mozambique restricted to Sofala/Mozambique Island. Dutch Cape Colony small (founded 1652) — frontier settlement, slave imports, Khoekhoe smallpox of 1713 devastating. Religion: Traditional African religions dominant. Dutch Reformed at the Cape (no toleration for Catholics, partial for Muslims via Cape Malay exiles). Portuguese ports Catholic.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 77,
+        "governance": 35,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Lunda Empire",
+          "url": "https://en.wikipedia.org/wiki/Lunda_Empire"
+        },
+        {
+          "label": "Kingdom of Luba",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Luba"
+        },
+        {
+          "label": "Rozvi Empire",
+          "url": "https://en.wikipedia.org/wiki/Rozvi_Empire"
+        },
+        {
+          "label": "Dutch Cape Colony",
+          "url": "https://en.wikipedia.org/wiki/Dutch_Cape_Colony"
+        },
+        {
+          "label": "Portuguese Mozambique",
+          "url": "https://en.wikipedia.org/wiki/Portuguese_Mozambique"
+        },
+        {
+          "label": "Maddison Project 2023 — ZAF 1719 gdppc=2222",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        }
+      ],
+      "ruler": "Mwata Yamvo Muteba (Lunda); various Luba, Rozvi rulers; Maurits Pasques de Chavonnes (VOC Cape governor)",
+      "sparse_data": false
+    },
+    "asante_coast": {
+      "score": 56,
+      "summary": "Asante Empire under Asantehene Opoku Ware I (acc. 1718, Osei Tutu died 1717) consolidating gold and slave-trade dominance inland from the Gold Coast. Coastal Dahomey under King Agaja expanding aggressively (Allada conquered 1724). European trading forts (Dutch, English, Danish, Brandenburg) dot the coast. Active conflicts: Pirates-England (Gambia), 1719 Religion: Akan, Fon and Yoruba traditional religions dominant; Islam present among northern Asante traders; Christianity confined to European fort chaplaincies — minimal native conversion.",
+      "factors": {
+        "safety": 73,
+        "health": 35,
+        "economy": 50,
+        "governance": 55,
+        "religious_tolerance": 55
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Ashanti Empire",
+          "url": "https://en.wikipedia.org/wiki/Ashanti_Empire"
+        },
+        {
+          "label": "Opoku Ware I",
+          "url": "https://en.wikipedia.org/wiki/Opoku_Ware_I"
+        },
+        {
+          "label": "Kingdom of Dahomey",
+          "url": "https://en.wikipedia.org/wiki/Kingdom_of_Dahomey"
+        },
+        {
+          "label": "Agaja",
+          "url": "https://en.wikipedia.org/wiki/Agaja"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Opoku Ware I (Asante); Agaja (Dahomey); Akwasi Akromampong (Akwamu)",
+      "sparse_data": false
+    },
+    "sahel_interior": {
+      "score": 57,
+      "summary": "Mali Empire reduced to a rump; Bambara Kingdom of Segou founded 1712 under Mamari 'Biton' Coulibaly rising on the Niger. Kanem-Bornu Empire under Mai Dunama VIII still significant around Lake Chad; Hausa city-states (Kano, Katsina, Zaria) prosperous trade hubs. Religion: Islam dominant among elites and traders (Maliki Sunni); traditional religions widespread among commoners and in Bambara Segou (notably non-Muslim). Tolerant coexistence the norm.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 50,
+        "governance": 35,
+        "religious_tolerance": 60
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Bambara Empire",
+          "url": "https://en.wikipedia.org/wiki/Bambara_Empire"
+        },
+        {
+          "label": "Kanem-Bornu Empire",
+          "url": "https://en.wikipedia.org/wiki/Kanem%E2%80%93Bornu_Empire"
+        },
+        {
+          "label": "Hausa Kingdoms",
+          "url": "https://en.wikipedia.org/wiki/Hausa_Kingdoms"
+        },
+        {
+          "label": "Mali Empire",
+          "url": "https://en.wikipedia.org/wiki/Mali_Empire"
+        }
+      ],
+      "ruler": "Mamari Coulibaly (Segou Bambara); Mai Dunama VIII (Bornu); various Hausa kings",
+      "sparse_data": false
+    },
+    "new_spain": {
+      "score": 55,
+      "summary": "Viceroyalty of New Spain (Mexico + Central America + parts of US Southwest + Philippines administratively) under Viceroy Baltasar de Zúñiga, marqués de Valero. Stable bureaucracy, silver from Zacatecas/Guanajuato funding the empire; northern frontier (Texas missions re-established 1716-19) active. Religion: Catholicism compulsory; Mexican Inquisition active against Jews/conversos, witches, heretics, syncretism. Indigenous religions formally suppressed; popular syncretism (Guadalupe) tolerated.",
+      "factors": {
+        "safety": 85,
+        "health": 35,
+        "economy": 44,
+        "governance": 60,
+        "religious_tolerance": 20
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Viceroyalty of New Spain",
+          "url": "https://en.wikipedia.org/wiki/New_Spain"
+        },
+        {
+          "label": "Baltasar de Zúñiga, marqués de Valero",
+          "url": "https://en.wikipedia.org/wiki/Baltasar_de_Z%C3%BA%C3%B1iga,_Marquis_of_Valero"
+        },
+        {
+          "label": "Mexican Inquisition",
+          "url": "https://en.wikipedia.org/wiki/Mexican_Inquisition"
+        },
+        {
+          "label": "Maddison Project 2023 — MEX 1719 gdppc=1557",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        }
+      ],
+      "ruler": "Baltasar de Zúñiga, marqués de Valero (Viceroy); Philip V of Spain above",
+      "sparse_data": false
+    },
+    "caribbean": {
+      "score": 50,
+      "summary": "Multi-imperial: Spanish Cuba/Puerto Rico/Santo Domingo, English Jamaica/Barbados/Leewards, French Saint-Domingue/Martinique/Guadeloupe, Dutch Curaçao/Aruba/Bonaire, Danish St Thomas. Golden Age of Piracy ending (Blackbeard killed 1718); War of the Quadruple Alliance brings Anglo-Spanish raiding. Sugar+slavery economy at takeoff. Active conflicts: Pirates-England (Gambia), 1719 Religion: Catholic compulsory in Spanish/French colonies; Anglican established in English; Dutch Reformed in Dutch; Jews tolerated in Curaçao (Mikvé Israel-Emanuel, 1659) and Barbados. Enslaved African religions suppressed but persistent.",
+      "factors": {
+        "safety": 73,
+        "health": 30,
+        "economy": 50,
+        "governance": 40,
+        "religious_tolerance": 35
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "wiki",
+        "religious_tolerance": "wiki"
+      },
+      "sources": [
+        {
+          "label": "Golden Age of Piracy",
+          "url": "https://en.wikipedia.org/wiki/Golden_Age_of_Piracy"
+        },
+        {
+          "label": "Saint-Domingue",
+          "url": "https://en.wikipedia.org/wiki/Saint-Domingue"
+        },
+        {
+          "label": "Colony of Jamaica",
+          "url": "https://en.wikipedia.org/wiki/Colony_of_Jamaica"
+        },
+        {
+          "label": "Curaçao and Dependencies",
+          "url": "https://en.wikipedia.org/wiki/Cura%C3%A7ao_and_Dependencies"
+        },
+        {
+          "label": "Captaincy General of Cuba",
+          "url": "https://en.wikipedia.org/wiki/Captaincy_General_of_Cuba"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        }
+      ],
+      "ruler": "Various colonial governors under Spain, Britain, France, Dutch Republic, Denmark-Norway",
+      "sparse_data": false
     }
   }
 }

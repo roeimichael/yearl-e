@@ -15,11 +15,12 @@ from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.gzip import GZipMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 from . import regions as regions_mod
 from .scoring import score_guess
@@ -30,7 +31,11 @@ log = logging.getLogger("yearle")
 app = FastAPI(title="yearl-e")
 
 _origins_raw = os.environ.get("ALLOWED_ORIGINS", "").strip()
-_origins = ["*"] if not _origins_raw else [o.strip() for o in _origins_raw.split(",") if o.strip()]
+if _origins_raw:
+    _origins = [o.strip() for o in _origins_raw.split(",") if o.strip()]
+else:
+    log.warning("ALLOWED_ORIGINS unset — defaulting to localhost only. Set in prod.")
+    _origins = ["http://127.0.0.1:8000", "http://127.0.0.1:8765", "http://localhost:8000", "http://localhost:8765"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=_origins,
@@ -39,6 +44,8 @@ app.add_middleware(
     allow_headers=["*"],
     max_age=86400,
 )
+# Compress region_set payloads (162KB → ~30KB) and other large JSON.
+app.add_middleware(GZipMiddleware, minimum_size=1024)
 
 ROOT = Path(__file__).parent.parent
 FRONTEND = ROOT / "frontend"
@@ -82,9 +89,13 @@ def healthz():
 
 
 @app.get("/api/regions")
-def get_regions():
-    """Region geometry for the globe overlay. Cached client-side."""
-    return {"regions": list(regions_mod.REGIONS.values())}
+def get_regions(set_name: str = Query("early_modern", alias="set")):
+    """Region geometry (real polygons, GeoJSON) for the globe overlay.
+    Cached client-side. `?set=` selects which era's grouping."""
+    try:
+        return {"set": set_name, "regions": regions_mod.region_set_for_serving(set_name)}
+    except FileNotFoundError:
+        raise HTTPException(404, f"unknown region set: {set_name}")
 
 
 @app.get("/api/today")
@@ -100,13 +111,14 @@ def today():
         "year": year,
         "label": y["label"],
         "era_summary": y["era_summary"],
+        "region_set": y.get("region_set", "early_modern"),
     }
 
 
 class GuessIn(BaseModel):
-    year: int
-    lat: float
-    lon: float
+    year: int = Field(..., ge=-1000, le=2100)
+    lat: float = Field(..., ge=-90.0, le=90.0)
+    lon: float = Field(..., ge=-180.0, le=180.0)
 
 
 @app.post("/api/today/guess")
@@ -114,8 +126,12 @@ def today_guess(body: GuessIn):
     y = regions_mod.load_year(body.year)
     if not y:
         raise HTTPException(400, f"unknown year {body.year}")
+    set_name = y.get("region_set", "early_modern")
+    set_regions = regions_mod.load_region_set(set_name)
     pick = score_guess(body.year, body.lat, body.lon)
     ranking = regions_mod.ranked(body.year)
+    if not ranking:
+        raise HTTPException(500, "year file has no scored regions")
     top_id, top = ranking[0]
     rank_idx = next((i for i, (rid, _) in enumerate(ranking) if rid == pick["region_id"]), -1)
     return {
@@ -124,11 +140,13 @@ def today_guess(body: GuessIn):
         "total_regions": len(ranking),
         "top": {
             "region_id": top_id,
-            "region_name": regions_mod.REGIONS[top_id]["name"],
+            "region_name": set_regions[top_id]["name"],
             "score": top["score"],
             "summary": top["summary"],
             "factors": top.get("factors", {}),
+            "factor_sources": top.get("factor_sources", {}),
             "sources": top.get("sources", []),
+            "ruler": top.get("ruler"),
         },
         "era_summary": y["era_summary"],
         "label": y["label"],

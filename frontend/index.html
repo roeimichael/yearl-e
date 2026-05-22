@@ -11,23 +11,28 @@
 <meta property="og:type" content="website" />
 
 <link href="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.css" rel="stylesheet" />
-<link rel="preload" as="fetch" href="/api/today" crossorigin />
-<link rel="preload" as="fetch" href="/api/regions" crossorigin />
-<link href="/static/style.css?v=1" rel="stylesheet" />
+<link href="/static/style.css?v=5" rel="stylesheet" />
 </head>
 <body>
 
 <div id="map"></div>
 
 <div id="topbar">
+  <svg id="brand-icon" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+    <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="currentColor" stroke-width="1.1"/>
+    <path d="M3 12 H21" fill="none" stroke="currentColor" stroke-width="1.1"/>
+  </svg>
   <span id="brand">yearl-e</span>
   <span id="day-tag"></span>
 </div>
 
 <div id="hud" class="hidden">
   <div id="year-prompt">
+    <span class="hud-dash">— </span>
     <span class="hud-label">where would you want to live in</span>
     <span id="year-label"></span>
+    <span class="hud-dash"> —</span>
   </div>
   <div id="era-summary"></div>
 </div>
@@ -46,11 +51,14 @@
   </div>
 
   <div id="reveal-card" class="card hidden">
-    <h2 id="reveal-score"></h2>
+    <div id="reveal-score-wrap">
+      <div id="reveal-score-big"><span id="reveal-score-num">0</span><span id="reveal-score-denom">/ 100</span></div>
+      <div id="reveal-score-rank"></div>
+    </div>
     <div id="reveal-pick"></div>
     <div id="reveal-pick-factors" class="factors"></div>
     <div id="reveal-pick-sources" class="sources"></div>
-    <h3 class="best-h">Best place that year</h3>
+    <h3 class="best-h"><span class="best-h-orn">✦</span> Best place that year <span class="best-h-orn">✦</span></h3>
     <div id="reveal-top"></div>
     <div id="reveal-top-factors" class="factors"></div>
     <div id="reveal-top-sources" class="sources"></div>
@@ -67,6 +75,6 @@
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.js"></script>
-<script src="/static/app.js?v=1"></script>
+<script src="/static/app.js?v=5"></script>
 </body>
 </html>

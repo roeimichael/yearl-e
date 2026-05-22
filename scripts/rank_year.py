@@ -1,38 +1,26 @@
 """Convert raw extract (Maddison + Brecke) + manual context into a scored year file.
 
 Run: python scripts/rank_year.py 1719
-Reads:   data/raw/{year}_extract.json
-Writes:  data/year_scores/{year:04d}.json
+Reads:
+  data/raw/{year}_extract.json
+  data/region_groupings/{set}.py  (era-keyed manual context)
+  data/region_sets/{set}.json     (built polygons, for region IDs)
+Writes:
+  data/year_scores/{year:04d}.json
 
-## Ranking formula
+## Strict source policy
 
-Each region gets 5 factor scores in [0, 100], then a weighted overall:
+Every factor declares its source in `factor_sources`:
+  - safety       → "brecke" (always, derived from Brecke Conflict Catalog)
+  - economy      → "maddison" if Maddison has a member-country GDP/cap, else "neutral"
+  - governance   → "wiki" if region has Wikipedia citations, else "neutral"
+  - health       → "baseline" (era baseline + manual adj) or "neutral"
+  - religious_tolerance → "wiki" or "neutral"
 
-  overall = 0.30*safety + 0.20*governance + 0.20*economy
-          + 0.15*health + 0.15*religious_tolerance
+If a region's MANUAL_1719 entry sets `sparse_data: True` (or is missing),
+its 3 manual factors are held at neutral 50 and a warning summary is set.
 
-### safety
-- Start 85.
-- For each Brecke conflict active in this year whose region_code or
-  region_hits includes this region: subtract 12 (or 25 if fatalities > 50k).
-- Floor at 5 if the region was a primary belligerent in a >100k-fatality war.
-
-### economy
-- If Maddison gdppc available: linear scale across the year's distribution.
-  Use percentile within that year, then map to [25, 90].
-- If missing: pull manual_econ (0-100 hand estimate) or fall back to 50.
-
-### governance
-- 100% manual (this year, this region). 0-100, with notes.
-
-### health
-- Era baseline 45 (pre-industrial). +/- manual adjustments per region this year
-  (e.g. plague outbreak, famine, exceptional sanitation).
-
-### religious_tolerance
-- 100% manual. Era + region specific.
-
-Every factor cites the source of its number in `sources[]` per region.
+Overall = 0.30*safety + 0.20*governance + 0.20*economy + 0.15*health + 0.15*religious_tolerance
 """
 from __future__ import annotations
 import json
@@ -43,392 +31,244 @@ ROOT = Path(__file__).parent.parent
 RAW = ROOT / "data" / "raw"
 OUT_DIR = ROOT / "data" / "year_scores"
 
-REGIONS = json.loads((ROOT / "data" / "regions.json").read_text(encoding="utf-8"))["regions"]
-REGION_IDS = [r["id"] for r in REGIONS]
+# Which region set the year uses. Add entries here when new sets ship.
+YEAR_TO_SET = {1719: "early_modern"}
 
-# Maddison ISO3 → our region_id. Multiple ISOs can map to one region.
-MADDISON_TO_REGION = {
-    "ITA": "rome_italy",
-    "CHN": "han_china",
-    "IND": "gupta_india",
-    "IRN": "persia",
-    "EGY": "egypt_nile",
-    "TUR": "constantinople_balkans",
-    "ESP": "andalusia_iberia",
-    "PRT": "andalusia_iberia",
-    "FRA": "francia",
-    "GBR": "england",
-    "SWE": "scandinavia",
-    "DNK": "scandinavia",
-    "NOR": "scandinavia",
-    "FIN": "scandinavia",
-    "RUS": "rus",
-    "JPN": "japan",
-    "MEX": "mesoamerica",
-    "PER": "andes",
-    "ETH": "ethiopia",
-    "DEU": "francia",   # German lands not their own region; lump with francia (loose)
-    "NLD": "francia",   # likewise — see overrides in 1719 if needed
-}
 
-# Brecke `Region` codes (per their codebook): rough mapping to our region_ids.
-# 1=British Isles, 2=Western Europe, 3=Central Europe, 4=Eastern Europe,
-# 5=Middle East, 6=North Africa, 7=Sub-Saharan Africa, 8=South Asia,
-# 9=Southeast Asia, 10=East Asia, 11=Oceania, 12=Central Asia, 13=Latin America,
-# 14=North America. (Approximate — Brecke's docs are sparse.)
+def load_grouping(set_name: str) -> dict:
+    """Era-keyed grouping. Plain JSON — never exec arbitrary code from disk."""
+    p = ROOT / "data" / "region_groupings" / f"{set_name}.json"
+    return json.loads(p.read_text(encoding="utf-8"))
+
+
+def load_region_set_meta(set_name: str) -> dict[str, dict]:
+    p = ROOT / "data" / "region_sets" / f"{set_name}.json"
+    raw = json.loads(p.read_text(encoding="utf-8"))
+    return {r["id"]: r for r in raw["regions"]}
+
+
+# ─── safety from Brecke ──────────────────────────────────────────────────────
+
+# Brecke `Region` codes → our region_ids (multiple matches OK). Per Brecke
+# codebook: 1=British Isles, 2=W Europe, 3=Central Europe, 4=E Europe,
+# 5=Middle East, 6=N Africa, 7=Sub-Saharan, 8=South Asia, 9=SE Asia,
+# 10=East Asia, 11=Oceania, 12=Central Asia, 13=Latin America, 14=N America.
 BRECKE_REGION_TO_OURS = {
     1: ["england"],
     2: ["francia", "andalusia_iberia"],
-    3: ["francia", "rome_italy"],   # central europe spans both loosely
-    4: ["rus", "constantinople_balkans", "scandinavia"],
-    5: ["persia", "egypt_nile", "constantinople_balkans"],
-    6: ["egypt_nile", "sahel_west_africa"],
-    7: ["sahel_west_africa", "ethiopia"],
-    8: ["gupta_india"],
-    9: [],
+    3: ["habsburg_austria", "prussia_brandenburg", "german_princes", "rome_italy"],
+    4: ["rus", "polish_lithuanian_commonwealth", "swedish_baltic", "constantinople_balkans"],
+    5: ["persia", "egypt_nile", "arabia", "constantinople_balkans"],
+    6: ["egypt_nile", "sahel_interior"],
+    7: ["asante_coast", "sahel_interior", "ethiopia", "kongo_angola", "southern_africa"],
+    8: ["mughal_north", "maratha_confederacy", "bengal", "deccan_sultanates"],
+    9: ["siam_vietnam_burma", "voc_indonesia", "spanish_philippines"],
     10: ["han_china", "japan"],
     11: [],
     12: ["central_asia"],
-    13: ["mesoamerica", "andes"],
+    13: ["new_spain", "andes", "brazil_amazon", "caribbean"],
     14: ["north_america_east"],
 }
 
-
-# ─── 1719 manual context ─────────────────────────────────────────────────────
-# Per-region facts that aren't in datasets. Each is sourced. Keys must align
-# with REGION_IDS. Numbers are hand-set with reasoning in `note`.
-
-MANUAL_1719 = {
-    "rome_italy": {
-        "governance": 55,
-        "health_adj": 0,
-        "religious_tolerance": 40,
-        "governance_note": "Fragmented: Papal States, Venice (post-Karlowitz peace), Savoy, Spanish then Austrian Naples (Treaty of London 1718 transferred Sicily/Sardinia). No unified leadership.",
-        "religion_note": "Inquisition still active in many states; Jewish ghettos enforced.",
-        "ruler": "Pope Clement XI; multiple secular rulers",
-        "sources": [
-            {"label": "Treaty of London 1718 (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Treaty_of_London_(1718)"}
-        ],
-    },
-    "han_china": {
-        "governance": 85,
-        "health_adj": 5,
-        "religious_tolerance": 55,
-        "governance_note": "Kangxi Emperor's final years (d. 1722). Stable centralized rule, mature bureaucracy, peaceful interior. Tibet expedition (1718-20) active.",
-        "religion_note": "Rites Controversy ongoing; Christian missions tolerated but restricted.",
-        "ruler": "Kangxi Emperor (Qing)",
-        "sources": [
-            {"label": "Kangxi Emperor (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Kangxi_Emperor"}
-        ],
-    },
-    "gupta_india": {
-        "governance": 35,
-        "health_adj": -5,
-        "religious_tolerance": 45,
-        "governance_note": "Mughal Empire under Muhammad Shah, dominated by Sayyid Brothers. Aurangzeb's death (1707) triggered ongoing succession chaos and noble revolts.",
-        "religion_note": "Post-Aurangzeb, jizya repealed 1712-19; Hindu tolerance improving from prior decades but Marathas rising in opposition.",
-        "ruler": "Muhammad Shah (Mughal), real power: Sayyid Brothers",
-        "sources": [
-            {"label": "Sayyid Brothers (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Sayyid_brothers"}
-        ],
-    },
-    "persia": {
-        "governance": 20,
-        "health_adj": -10,
-        "religious_tolerance": 30,
-        "governance_note": "Safavid Empire collapsing. Sultan Husayn weak; Afghan Hotaki invasion (1717-22) underway, will sack Isfahan 1722.",
-        "religion_note": "Shia state hostile to Sunni Afghans + Christians + Zoroastrians.",
-        "ruler": "Sultan Husayn (Safavid)",
-        "sources": [
-            {"label": "Fall of Safavid Empire (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Fall_of_the_Safavid_dynasty"}
-        ],
-    },
-    "egypt_nile": {
-        "governance": 50,
-        "health_adj": -5,
-        "religious_tolerance": 50,
-        "governance_note": "Ottoman province, Mamluk beys ascendant in practice. Stable but with periodic Mamluk power struggles.",
-        "religion_note": "Ottoman millet system: Copts + Jews protected as dhimmis with restrictions.",
-        "ruler": "Ottoman appointee + Mamluk beys (de facto)",
-        "sources": [
-            {"label": "Ottoman Egypt (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Ottoman_Egypt"}
-        ],
-    },
-    "constantinople_balkans": {
-        "governance": 70,
-        "health_adj": 0,
-        "religious_tolerance": 60,
-        "governance_note": "Ottoman Tulip Period under Ahmed III + Grand Vizier Damat Ibrahim. Peace, cultural flowering, Westernizing reforms. Post-Passarowitz (1718).",
-        "religion_note": "Millet system: Greek Orthodox, Armenians, Jews tolerated. Best European environment for Jews in this era.",
-        "ruler": "Sultan Ahmed III (Ottoman)",
-        "sources": [
-            {"label": "Tulip Period (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Tulip_period"}
-        ],
-    },
-    "andalusia_iberia": {
-        "governance": 45,
-        "health_adj": 0,
-        "religious_tolerance": 20,
-        "governance_note": "Spain under Philip V, in War of Quadruple Alliance vs Britain/France/Austria/Netherlands. Recently defeated at Cape Passaro (1718). Cardinal Alberoni's adventurism collapsing.",
-        "religion_note": "Spanish Inquisition active; forced conversions, Moriscos already expelled.",
-        "ruler": "Philip V (Bourbon)",
-        "sources": [
-            {"label": "War of the Quadruple Alliance (Wikipedia)", "url": "https://en.wikipedia.org/wiki/War_of_the_Quadruple_Alliance"}
-        ],
-    },
-    "francia": {
-        "governance": 65,
-        "health_adj": 0,
-        "religious_tolerance": 30,
-        "governance_note": "France under Louis XV (age 9), regency of Philippe II d'Orléans. Stable but financially strained (John Law's bubble brewing). Allied with Britain in Quadruple Alliance.",
-        "religion_note": "Revocation of Edict of Nantes (1685) still in force; Huguenots persecuted/exiled. Catholic mandatory.",
-        "ruler": "Louis XV (regency of Philippe II d'Orléans)",
-        "sources": [
-            {"label": "Régence of Philippe d'Orléans (Wikipedia)", "url": "https://en.wikipedia.org/wiki/R%C3%A9gence"}
-        ],
-    },
-    "england": {
-        "governance": 75,
-        "health_adj": 5,
-        "religious_tolerance": 50,
-        "governance_note": "George I, post-Jacobite-1715 stable. Whig supremacy, parliamentary government, Walpole's rise. Allied with France in Quadruple Alliance.",
-        "religion_note": "Toleration Act 1689 — Protestant Dissenters tolerated; Catholics excluded from public life. No state persecution of Jews.",
-        "ruler": "George I (Hanover)",
-        "sources": [
-            {"label": "George I of Great Britain (Wikipedia)", "url": "https://en.wikipedia.org/wiki/George_I_of_Great_Britain"}
-        ],
-    },
-    "scandinavia": {
-        "governance": 50,
-        "health_adj": 0,
-        "religious_tolerance": 35,
-        "governance_note": "Sweden: Charles XII killed Dec 1718, succession to Ulrika Eleonora + parliamentary 'Age of Liberty' beginning. Devastated by Great Northern War. Denmark stable under Frederick IV.",
-        "religion_note": "Lutheran state churches; Catholics + Jews excluded or restricted.",
-        "ruler": "Ulrika Eleonora (Sweden); Frederick IV (Denmark)",
-        "sources": [
-            {"label": "Age of Liberty (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Age_of_Liberty"}
-        ],
-    },
-    "rus": {
-        "governance": 70,
-        "health_adj": -5,
-        "religious_tolerance": 25,
-        "governance_note": "Peter the Great near end of Great Northern War (Nystad 1721 imminent). Massive centralizing reforms, new capital St Petersburg. Heavy taxation + conscription.",
-        "religion_note": "Orthodox state, Old Believers persecuted (double tax 1716). Western tolerance only for foreign experts.",
-        "ruler": "Peter I (Romanov)",
-        "sources": [
-            {"label": "Peter the Great (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Peter_the_Great"}
-        ],
-    },
-    "central_asia": {
-        "governance": 30,
-        "health_adj": -5,
-        "religious_tolerance": 50,
-        "governance_note": "Khanates of Khiva, Bukhara, Kokand — small unstable states. Junghar Khanate strong further east, in conflict with Qing.",
-        "religion_note": "Predominantly Sunni Muslim. Sufi orders influential. Minorities restricted.",
-        "ruler": "Various khans",
-        "sources": [
-            {"label": "Khanate of Bukhara (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Khanate_of_Bukhara"}
-        ],
-    },
-    "japan": {
-        "governance": 80,
-        "health_adj": 10,
-        "religious_tolerance": 15,
-        "governance_note": "Tokugawa shogunate under Yoshimune (Kyōhō Reforms underway since 1716). Famously peaceful Edo period — no wars, urban Edo > 1M.",
-        "religion_note": "Sakoku in full force; Christianity banned, brutal persecution. Buddhism + Shinto state-aligned.",
-        "ruler": "Tokugawa Yoshimune (8th Shogun)",
-        "sources": [
-            {"label": "Kyōhō Reforms (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Ky%C5%8Dh%C5%8D_Reforms"}
-        ],
-    },
-    "mesoamerica": {
-        "governance": 55,
-        "health_adj": -10,
-        "religious_tolerance": 25,
-        "governance_note": "Spanish Viceroyalty of New Spain. Stable colonial admin, silver mining wealth. Indigenous societies devastated by prior epidemics + encomienda decline.",
-        "religion_note": "Catholic compulsory; Inquisition prosecutes heresy + syncretism.",
-        "ruler": "Viceroy Baltasar de Zúñiga (Spain)",
-        "sources": [
-            {"label": "Viceroyalty of New Spain (Wikipedia)", "url": "https://en.wikipedia.org/wiki/New_Spain"}
-        ],
-    },
-    "andes": {
-        "governance": 55,
-        "health_adj": -10,
-        "religious_tolerance": 25,
-        "governance_note": "Spanish Viceroyalty of Peru. Potosí silver still flowing, mita labor system brutal. Stable colonial rule.",
-        "religion_note": "Catholic compulsory; Andean traditional religion suppressed but syncretism widespread.",
-        "ruler": "Viceroy Diego Morcillo Rubio de Auñón",
-        "sources": [
-            {"label": "Viceroyalty of Peru (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Viceroyalty_of_Peru"}
-        ],
-    },
-    "sahel_west_africa": {
-        "governance": 50,
-        "health_adj": -10,
-        "religious_tolerance": 60,
-        "governance_note": "Decline of Mali; rise of Bambara states (Segou under Mamari Coulibaly from 1712). Asante Empire consolidating in Gold Coast. Atlantic slave trade peaking — coastal raids destabilizing interior.",
-        "religion_note": "Islam dominant in Sahel, traditional African religions widespread further south. Coexistence outside slave-trade zones.",
-        "ruler": "Various — Asantehene Osei Tutu, Bambara king Mamari Coulibaly",
-        "sources": [
-            {"label": "Atlantic slave trade (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Atlantic_slave_trade"}
-        ],
-    },
-    "ethiopia": {
-        "governance": 35,
-        "health_adj": -5,
-        "religious_tolerance": 40,
-        "governance_note": "Gondarine period under Dawit III (deposed/poisoned 1721). Court intrigues, regional warlords growing. Decline of imperial authority.",
-        "religion_note": "Ethiopian Orthodox state church; Muslims + traditional religions restricted but tolerated regionally.",
-        "ruler": "Emperor Dawit III",
-        "sources": [
-            {"label": "Dawit III of Ethiopia (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Dawit_III"}
-        ],
-    },
-    "north_america_east": {
-        "governance": 50,
-        "health_adj": -10,
-        "religious_tolerance": 65,
-        "governance_note": "British colonies: Massachusetts Bay, Virginia, Carolinas. Stable but small populations. Native nations (Iroquois, Cherokee) still autonomous. King George's War a generation away.",
-        "religion_note": "Varies by colony: Puritans intolerant in MA, Quaker tolerance in PA, Anglican establishment in VA. Native religions intact.",
-        "ruler": "Royal/Proprietary governors",
-        "sources": [
-            {"label": "Thirteen Colonies (Wikipedia)", "url": "https://en.wikipedia.org/wiki/Thirteen_Colonies"}
-        ],
-    },
-}
-
-# Era summary printed at the top of the year payload (shown in HUD).
-ERA_SUMMARY_1719 = (
-    "Great Northern War ending (Charles XII killed late 1718). War of the Quadruple "
-    "Alliance ongoing (Spain vs Britain/France/Austria/Netherlands). Ottoman Tulip "
-    "Period of peace + reform. Kangxi Emperor's final years in Qing China. Mughal "
-    "succession chaos under Sayyid Brothers. Tokugawa Japan stable + closed."
-)
-
-
-def _percentile(value: float, sorted_values: list[float]) -> float:
-    """Return position of value in sorted ascending list, in [0, 1]."""
-    if not sorted_values:
-        return 0.5
-    n = len(sorted_values)
-    below = sum(1 for v in sorted_values if v < value)
-    return below / max(n - 1, 1)
-
-
-def compute_safety(region_id: str, conflicts: list[dict]) -> tuple[int, list[str]]:
-    """Return (score, list of conflict names that hit this region)."""
-    score = 85
-    hits = []
-    for c in conflicts:
-        rcode = c.get("region_code")
-        ours = BRECKE_REGION_TO_OURS.get(rcode, [])
-        # Also a crude name-match heuristic — e.g. conflict name contains region keyword.
-        name_lower = (c["name"] or "").lower()
-        keyword_hits = any(k in name_lower for k in REGION_KEYWORDS.get(region_id, []))
-        if region_id in ours or keyword_hits:
-            hits.append(c["name"])
-            fatal = c.get("fatalities") or 0
-            score -= 25 if fatal > 50_000 else 12
-    return max(score, 5), hits
-
-
+# Lower-cased substrings to scan conflict names for. Catches Brecke entries
+# whose `Region` code is ambiguous but whose name contains a clear keyword.
 REGION_KEYWORDS = {
-    "rome_italy": ["italy", "naples", "sicily", "venice", "sardinia"],
-    "han_china": ["china"],
-    "gupta_india": ["india", "mughal", "marathas"],
-    "persia": ["persia", "afghanistan", "iran"],
-    "egypt_nile": ["egypt"],
-    "constantinople_balkans": ["turkey", "ottoman", "balkans", "hungary"],
+    "rome_italy": ["italy", "naples", "sicily", "venice", "sardinia", "papal"],
     "andalusia_iberia": ["spain", "portugal", "iberia"],
-    "francia": ["france", "germany", "holland", "netherlands", "united provinces", "hanover", "prussia", "saxony"],
+    "francia": ["france", "holland", "netherlands", "united provinces", "low countries", "belgium"],
     "england": ["britain", "england", "scotland", "ireland", "british"],
-    "scandinavia": ["sweden", "denmark", "norway"],
-    "rus": ["russia", "poland", "ukraine"],
-    "central_asia": ["central asia", "khiva", "bukhara", "junghar"],
-    "japan": ["japan"],
-    "mesoamerica": ["mexico", "new spain"],
-    "andes": ["peru", "andes", "inca"],
-    "sahel_west_africa": ["gambia", "angola", "kakonda", "asante", "mali"],
+    "habsburg_austria": ["austria", "habsburg", "hungary", "bohemia"],
+    "prussia_brandenburg": ["prussia", "brandenburg"],
+    "german_princes": ["saxony", "hanover", "bavaria", "germany"],
+    "polish_lithuanian_commonwealth": ["poland", "lithuania", "polish"],
+    "sweden_empire": ["sweden", "swedish", "finland"],
+    "denmark_norway": ["denmark", "danish", "norway"],
+    "swedish_baltic": ["livonia", "estonia", "ingria"],
+    "rus": ["russia", "russian", "ukraine", "cossack", "muscovy"],
+    "constantinople_balkans": ["turkey", "ottoman", "balkans", "anatolia"],
+    "persia": ["persia", "afghanistan", "iran", "safavid", "hotaki"],
+    "egypt_nile": ["egypt", "levant", "syria"],
+    "arabia": ["arabia", "oman", "mecca", "hejaz", "yemen"],
     "ethiopia": ["ethiopia", "abyssinia"],
+    "central_asia": ["khiva", "bukhara", "junghar", "khanate"],
+    "mughal_north": ["mughal", "delhi"],
+    "maratha_confederacy": ["maratha", "shahu"],
+    "bengal": ["bengal"],
+    "deccan_sultanates": ["deccan", "hyderabad", "mysore"],
+    "han_china": ["china", "qing", "kangxi", "tibet"],
+    "japan": ["japan", "korea"],
+    "voc_indonesia": ["java", "batavia", "voc", "indonesia"],
+    "siam_vietnam_burma": ["siam", "vietnam", "burma", "ayutthaya"],
+    "spanish_philippines": ["philippines", "manila"],
+    "asante_coast": ["asante", "gold coast", "dahomey", "gambia"],
+    "sahel_interior": ["mali", "songhai", "bambara", "hausa"],
+    "kongo_angola": ["kongo", "angola", "kakonda"],
+    "southern_africa": ["lunda", "cape", "mozambique"],
+    "new_spain": ["mexico", "new spain"],
+    "caribbean": ["caribbean", "jamaica", "cuba", "saint-domingue", "pirate"],
+    "andes": ["peru", "andes", "inca", "chile"],
+    "brazil_amazon": ["brazil", "portuguese america"],
     "north_america_east": ["new england", "virginia", "carolina", "massachusetts"],
 }
 
 
-def compute_economy(region_id: str, gdppc_by_region: dict, sorted_vals: list[float]) -> tuple[int, str | None, float | None]:
-    """Return (score, source_country_iso, gdppc_used)."""
-    entry = gdppc_by_region.get(region_id)
-    if not entry:
-        return 50, None, None
-    pct = _percentile(entry["gdppc"], sorted_vals)
-    score = round(25 + pct * 65)  # range [25, 90]
-    return score, entry["iso"], entry["gdppc"]
+def compute_safety(region_id: str, conflicts: list[dict]) -> tuple[int, list[str]]:
+    """Score 85 baseline minus conflict hits. Name keywords are primary signal;
+    Brecke region_code is fallback only when the region has no keyword list, or
+    when no other region's name matches (ambiguous code-only attribution to
+    multi-region codes used to bleed wars into wrong neighbours)."""
+    score = 85
+    hits = []
+    keywords = REGION_KEYWORDS.get(region_id, [])
+    for c in conflicts:
+        rcode = c.get("region_code")
+        ours = BRECKE_REGION_TO_OURS.get(rcode, [])
+        name_lower = (c.get("name") or "").lower()
+        name_match = any(k in name_lower for k in keywords)
+        code_match = region_id in ours
+        if not (name_match or code_match):
+            continue
+        # If we have keywords and the name doesn't mention us, only trust the
+        # code attribution when it points to one region (specific). When code
+        # maps to many regions and name says nothing about us — skip.
+        if keywords and code_match and not name_match and len(ours) > 1:
+            continue
+        hits.append(c["name"])
+        fatal = c.get("fatalities") or 0
+        score -= 25 if fatal > 50_000 else 12
+    return max(score, 5), hits
+
+
+# ─── economy from Maddison ───────────────────────────────────────────────────
+
+# Multi-ISO3 → region. NB: Maddison's coverage is sparse for 1719 (only 11
+# countries have a number). Most regions get "neutral" for economy.
+# We thread Maddison through the agent's REGION_MEMBERS instead of hardcoding —
+# this keeps the mapping single-source-of-truth.
+def compute_economy(region_id: str, members_iso3: list[str],
+                    raw_gdppc: dict, sorted_values: list[float]) -> tuple[int, str | None, float | None, str | None]:
+    """Return (score, source_iso, gdppc_used, factor_source_key)."""
+    best_iso, best_val = None, -1.0
+    for iso in members_iso3:
+        v = raw_gdppc.get(iso)
+        if v and v["gdppc"] > best_val:
+            best_iso, best_val = iso, v["gdppc"]
+    if best_iso is None:
+        return 50, None, None, "neutral"
+    n = len(sorted_values)
+    if n < 2:
+        # With one datapoint a percentile is meaningless — fall to neutral mid.
+        return 50, best_iso, best_val, "maddison"
+    pct = sum(1 for v in sorted_values if v < best_val) / (n - 1)
+    return round(25 + pct * 65), best_iso, best_val, "maddison"
+
+
+# ─── score one region ────────────────────────────────────────────────────────
+
+
+def score_region(region_id: str, members_iso3: list[str], manual: dict,
+                 raw_gdppc: dict, sorted_gdppc: list[float], conflicts: list[dict]) -> dict:
+    safety, conflict_hits = compute_safety(region_id, conflicts)
+    econ_score, econ_iso, econ_val, econ_src = compute_economy(
+        region_id, members_iso3, raw_gdppc, sorted_gdppc
+    )
+
+    sparse = manual.get("sparse_data", False) or not manual.get("sources")
+    if sparse:
+        gov = relig = 50
+        health = 45
+        gov_src = relig_src = "neutral"
+        health_src = "baseline"
+        summary = "Sparse cited data for this region in 1719; manual factors held neutral."
+    else:
+        # If a manual field is missing, fall to neutral 50 AND tag its source
+        # as "neutral" — never claim a wiki citation for a default value.
+        gov = manual.get("governance", 50)
+        gov_src = "wiki" if "governance" in manual else "neutral"
+        relig = manual.get("religious_tolerance", 50)
+        relig_src = "wiki" if "religious_tolerance" in manual else "neutral"
+        health = max(0, min(100, 45 + manual.get("health_adj", 0)))
+        health_src = "baseline"
+        bits = []
+        if manual.get("governance_note"):
+            bits.append(manual["governance_note"])
+        if conflict_hits:
+            bits.append("Active conflicts: " + "; ".join(conflict_hits[:3]))
+        if manual.get("religion_note"):
+            bits.append("Religion: " + manual["religion_note"])
+        joined = " ".join(bits)
+        # Truncate cleanly on word boundary rather than mid-word.
+        summary = joined if len(joined) <= 700 else joined[:700].rsplit(" ", 1)[0] + "…"
+
+    overall = round(0.30 * safety + 0.20 * gov + 0.20 * econ_score +
+                    0.15 * health + 0.15 * relig)
+
+    sources = list(manual.get("sources", []))
+    if conflict_hits:
+        sources.append({"label": "Brecke Conflict Catalog 1400-2000", "url": "https://brecke.inta.gatech.edu/research/conflict/"})
+    if econ_iso:
+        sources.append({
+            "label": f"Maddison Project 2023 — {econ_iso} 1719 gdppc={econ_val:.0f}",
+            "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+        })
+
+    return {
+        "score": overall,
+        "summary": summary,
+        "factors": {
+            "safety": safety,
+            "health": health,
+            "economy": econ_score,
+            "governance": gov,
+            "religious_tolerance": relig,
+        },
+        "factor_sources": {
+            "safety": "brecke",
+            "health": health_src,
+            "economy": econ_src,
+            "governance": gov_src,
+            "religious_tolerance": relig_src,
+        },
+        "sources": sources,
+        "ruler": manual.get("ruler"),
+        "sparse_data": sparse,
+    }
 
 
 def rank(year: int, raw: dict) -> dict:
-    # 1. Map Maddison entries → region (best, by GDP), keep one per region.
-    gdppc_by_region: dict[str, dict] = {}
-    for iso, v in raw["gdppc"].items():
-        rid = MADDISON_TO_REGION.get(iso)
-        if not rid:
-            continue
-        # If multiple countries map to same region, prefer the highest gdppc as the marker.
-        cur = gdppc_by_region.get(rid)
-        if cur is None or v["gdppc"] > cur["gdppc"]:
-            gdppc_by_region[rid] = {**v, "iso": iso}
-    sorted_vals = sorted(v["gdppc"] for v in gdppc_by_region.values())
+    set_name = YEAR_TO_SET[year]
+    grouping = load_grouping(set_name)
+    region_meta = load_region_set_meta(set_name)
+    # The grouping JSON holds a single manual_{year} dict per known year; we
+    # look it up by the year being ranked so new years can be added without
+    # touching this file.
+    manual_dict = grouping.get(f"manual_{year}", {})
+    era_summary = grouping.get(f"era_summary_{year}", "")
+
+    members = grouping["region_members"]
+    # Maddison: collect numbers for percentile across all ISOs that map to any of our regions.
+    used_isos = {iso for isos in members.values() for iso in isos}
+    sorted_gdppc = sorted(v["gdppc"] for iso, v in raw["gdppc"].items() if iso in used_isos)
 
     out_regions = {}
-    for rid in REGION_IDS:
-        manual = MANUAL_1719.get(rid, {})
-        safety, conflict_names = compute_safety(rid, raw["conflicts"])
-        econ_score, econ_iso, econ_val = compute_economy(rid, gdppc_by_region, sorted_vals)
-        gov = manual.get("governance", 50)
-        health = max(0, min(100, 45 + manual.get("health_adj", 0)))
-        relig = manual.get("religious_tolerance", 50)
-
-        # Overall: 0.30 safety + 0.20 governance + 0.20 economy + 0.15 health + 0.15 relig
-        overall = round(0.30 * safety + 0.20 * gov + 0.20 * econ_score + 0.15 * health + 0.15 * relig)
-
-        sources = [
-            {"label": "Brecke Conflict Catalog 1400-2000", "url": "https://brecke.inta.gatech.edu/research/conflict/"}
-        ]
-        if econ_iso:
-            sources.append({"label": f"Maddison Project 2023 — {econ_iso} 1719 gdppc={econ_val:.0f}", "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"})
-        sources.extend(manual.get("sources", []))
-
-        summary_bits = []
-        if manual.get("governance_note"):
-            summary_bits.append(manual["governance_note"])
-        if conflict_names:
-            summary_bits.append("Active conflicts: " + "; ".join(conflict_names[:3]))
-        if manual.get("religion_note"):
-            summary_bits.append("Religion: " + manual["religion_note"])
-
-        out_regions[rid] = {
-            "score": overall,
-            "summary": " ".join(summary_bits)[:600],
-            "factors": {
-                "safety": safety,
-                "health": health,
-                "economy": econ_score,
-                "governance": gov,
-                "religious_tolerance": relig,
-            },
-            "sources": sources,
-            "ruler": manual.get("ruler"),
-            "_debug": {
-                "conflicts": conflict_names,
-                "gdppc_iso": econ_iso,
-                "gdppc": econ_val,
-            },
-        }
+    for rid in members:
+        if rid not in region_meta:
+            print(f"  [skip] {rid}: not in {set_name}.json (NE missing all members)")
+            continue
+        out_regions[rid] = score_region(
+            rid,
+            members[rid],
+            manual_dict.get(rid, {}),
+            raw["gdppc"],
+            sorted_gdppc,
+            raw["conflicts"],
+        )
 
     return {
         "year": year,
         "label": f"{year} CE",
-        "era_summary": ERA_SUMMARY_1719,
+        "region_set": set_name,
+        "era_summary": era_summary,
         "regions": out_regions,
     }
 
@@ -446,15 +286,7 @@ def main() -> int:
     out = rank(year, raw)
     out_path = OUT_DIR / f"{year:04d}.json"
     out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
-    print(f"wrote {out_path}")
-    # Print top 5 + bottom 3 for sanity.
-    ranked = sorted(out["regions"].items(), key=lambda kv: -kv[1]["score"])
-    print(f"\nTop 5 places to live in {year}:")
-    for rid, c in ranked[:5]:
-        print(f"  {c['score']:3d}  {rid:28s}  {c.get('ruler','')}")
-    print(f"\nBottom 3:")
-    for rid, c in ranked[-3:]:
-        print(f"  {c['score']:3d}  {rid:28s}  {c.get('ruler','')}")
+    print(f"wrote {out_path} ({out_path.stat().st_size/1024:.1f} KB, {len(out['regions'])} regions)")
     return 0
 
 
