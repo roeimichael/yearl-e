@@ -202,19 +202,28 @@ def score_region(year: int, region_id: str, members_iso3: list[str], manual: dic
         health = 45
         relig_src = "neutral"
         health_src = "baseline"
-        # Build summary from whatever year-specific data we do have so the
-        # year doesn't read as a copy of every other unbuilt year.
+        # Build educational prose explaining WHAT the data shows and what's
+        # neutral-by-absence. Every year reads differently because Brecke,
+        # Maddison and V-Dem all change year-to-year.
         parts = []
-        if vdem_score is not None:
-            parts.append(f"V-Dem polyarchy {vdem_score}/100 ({vdem_iso}, {year}).")
         if conflict_hits:
-            parts.append(f"In {year}, active conflicts touching this region: " +
-                         "; ".join(conflict_hits[:3]) + ".")
+            parts.append(f"Active conflicts in {year}: " + "; ".join(conflict_hits[:3]) + ".")
+        else:
+            parts.append(f"Brecke records no major conflicts touching this region in {year} "
+                         f"(safety scored at the era baseline of 85).")
         if econ_iso:
-            parts.append(f"GDP/capita {econ_val:.0f} (Maddison Project 2023, {econ_iso}).")
-        if not parts:
-            parts.append(f"No major dataset coverage for this region in {year}; "
-                         "manual factors held neutral.")
+            parts.append(f"Maddison records GDP/capita {econ_val:.0f} ({econ_iso}, {year}) — "
+                         f"used as the economy proxy for the whole region.")
+        else:
+            parts.append("No Maddison GDP coverage for this region — economy held at neutral 50, "
+                         "reflecting the thin pre-modern record outside the European core.")
+        if vdem_score is not None:
+            label = "highly autocratic" if vdem_score < 15 else (
+                    "limited representation" if vdem_score < 35 else (
+                    "early democratic" if vdem_score < 60 else "broadly democratic"))
+            parts.append(f"V-Dem polyarchy {vdem_score}/100 ({vdem_iso}, {year}) — {label}.")
+        else:
+            parts.append("Governance held at neutral (V-Dem coverage starts 1789).")
         summary = " ".join(parts)
     else:
         # If a manual field is missing, fall to neutral 50 AND tag its source
@@ -309,6 +318,21 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
             sorted_gdppc,
             raw["conflicts"],
         )
+
+    # Normalize the overall score per year so the worst region of the year is
+    # 1 and the best is 100. Without this, sparse-data years cluster every
+    # region in a narrow band (50–65) and ranking-vs-score feels disconnected.
+    # We keep the raw composite as `raw_score` for transparency.
+    if out_regions:
+        raws = [r["score"] for r in out_regions.values()]
+        rmin, rmax = min(raws), max(raws)
+        spread = rmax - rmin
+        for r in out_regions.values():
+            r["raw_score"] = r["score"]
+            if spread > 0:
+                r["score"] = round(1 + 99 * (r["score"] - rmin) / spread)
+            else:
+                r["score"] = 50
 
     return {
         "year": year,

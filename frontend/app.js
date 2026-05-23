@@ -55,6 +55,11 @@ const DISPLAY_NAMES = {
 
 const displayName = (r) => DISPLAY_NAMES[r.id] || r.name.split(" (")[0];
 
+// Same lookup but by raw id string (for backend payloads that don't carry the
+// region object). Falls back to a humanized version of the id.
+const displayNameById = (id) =>
+  DISPLAY_NAMES[id] || id.split("_").map(w => w[0].toUpperCase() + w.slice(1)).join(" ");
+
 const REGION_SRC = "regions-src";
 const REGION_FILL = "regions-fill";
 const REGION_OUTLINE = "regions-outline";
@@ -536,13 +541,15 @@ function showReveal(p) {
   const eraSumEl = $("reveal-era-summary");
   if (eraYearEl) eraYearEl.textContent = p.label || state.label || "";
   if (eraSumEl) eraSumEl.textContent = p.era_summary || state.era || "";
+  const pickName = g.region_id ? displayNameById(g.region_id) : (g.region_name || "(no region)");
   $("reveal-pick").innerHTML =
-    `<strong>You picked: ${g.region_name || "(no region)"}</strong>` +
+    `<strong>You picked: ${pickName}</strong>` +
     `<div>${g.summary || ""}</div>`;
   $("reveal-pick-factors").innerHTML = renderFactors(g.factors, g.factor_sources);
   $("reveal-pick-sources").innerHTML = renderSources(g.sources);
+  const topName = p.top.region_id ? displayNameById(p.top.region_id) : p.top.region_name;
   $("reveal-top").innerHTML =
-    `<strong>${p.top.region_name} · ${p.top.score}/100</strong>` +
+    `<strong>${topName} · ${p.top.score}/100</strong>` +
     `<div>${p.top.summary}</div>`;
   $("reveal-top-factors").innerHTML = renderFactors(p.top.factors, p.top.factor_sources);
   $("reveal-top-sources").innerHTML = renderSources(p.top.sources);
