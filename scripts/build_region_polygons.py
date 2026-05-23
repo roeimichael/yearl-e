@@ -75,6 +75,9 @@ def build(set_name: str) -> None:
             print(f"  [!] {rid}: no member geometries found, skipping")
             continue
         merged = unary_union(geoms) if len(geoms) > 1 else geoms[0]
+        # buffer(0) cleans degenerate slivers / self-intersections that
+        # unary_union can leave between disconnected members (Egypt-Sudan spike).
+        merged = merged.buffer(0)
         centroid_pt = merged.centroid
         out_regions.append({
             "id": rid,
