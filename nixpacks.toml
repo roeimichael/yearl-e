@@ -5,4 +5,4 @@ nixPkgs = ["python311", "gcc"]
 cmds = ["python -m venv /opt/venv", "/opt/venv/bin/pip install --upgrade pip", "/opt/venv/bin/pip install -r backend/requirements.txt"]
 
 [start]
-cmd = "/opt/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port $PORT"
+cmd = "sh -c '/opt/venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port ${PORT:-8000}'"
