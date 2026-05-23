@@ -12,6 +12,49 @@ const state = {
   mode: "start",       // start | playing | reveal | explore
 };
 
+// Display names for early_modern region IDs — the raw IDs in the data are
+// programmatic ("rome_italy"); these are what we actually paint on the globe.
+const DISPLAY_NAMES = {
+  rome_italy: "Italy",
+  andalusia_iberia: "Iberia",
+  francia: "France",
+  england: "Britain",
+  rus: "Russia",
+  constantinople_balkans: "Ottoman Empire",
+  persia: "Persia",
+  central_asia: "Central Asia",
+  egypt_nile: "Egypt",
+  arabia: "Arabia",
+  ethiopia: "Ethiopia",
+  han_china: "China",
+  japan: "Japan",
+  north_america_east: "N. America",
+  andes: "Andes",
+  brazil_amazon: "Brazil",
+  sweden_empire: "Sweden",
+  denmark_norway: "Denmark-Norway",
+  swedish_baltic: "Baltic",
+  habsburg_austria: "Austria",
+  prussia_brandenburg: "Prussia",
+  german_princes: "German States",
+  polish_lithuanian_commonwealth: "Poland-Lithuania",
+  mughal_north: "Mughal India",
+  maratha_confederacy: "Marathas",
+  bengal: "Bengal",
+  deccan_sultanates: "Deccan",
+  voc_indonesia: "Dutch Indies",
+  siam_vietnam_burma: "SE Asia",
+  spanish_philippines: "Philippines",
+  kongo_angola: "Kongo",
+  southern_africa: "S. Africa",
+  asante_coast: "Gold Coast",
+  sahel_interior: "Sahel",
+  new_spain: "New Spain",
+  caribbean: "Caribbean",
+};
+
+const displayName = (r) => DISPLAY_NAMES[r.id] || r.name.split(" (")[0];
+
 const REGION_SRC = "regions-src";
 const REGION_FILL = "regions-fill";
 const REGION_OUTLINE = "regions-outline";
@@ -29,20 +72,16 @@ async function boot() {
   const [todayP, regionsP] = [fetch("/api/today").then(r => r.json()),
                               fetch("/api/regions").then(r => r.json())];
   initMap();
-  // Subtle loading hint while /api/today resolves.
-  $("start-era").textContent = "loading today's year…";
-  $("start-era").classList.add("loading");
   const today = await todayP;
-  $("start-era").classList.remove("loading");
   state.date = today.date;
   state.year = today.year;
   state.label = today.label;
   state.era = today.era_summary;
   $("day-tag").textContent = `Day ${today.day_number}`;
-  $("start-year").textContent = today.label;
-  $("start-era").textContent = today.era_summary;
+  const btn = $("btn-start");
+  btn.disabled = false;
+  btn.textContent = "Spin the globe →";
   $("year-label").textContent = today.label;
-  $("era-summary").textContent = today.era_summary;
 
   const regions = await regionsP;
   state.regions = regions.regions;
@@ -67,8 +106,8 @@ function initMap() {
   map = new maplibregl.Map({
     container: "map",
     style: "https://demotiles.maplibre.org/style.json",
-    center: [20, 25],
-    zoom: 1.6,
+    center: [34.8, 31.5],  // Israel
+    zoom: 2.4,
     projection: "globe",
     attributionControl: false,
   });
@@ -122,7 +161,7 @@ function regionsAsGeoJSON(scoreLookup) {
       type: "Feature",
       properties: {
         id: r.id,
-        name: r.name,
+        name: displayName(r),
         score: scoreLookup ? (scoreLookup[r.id]?.score ?? null) : null,
       },
       geometry: r.geometry,
@@ -131,8 +170,10 @@ function regionsAsGeoJSON(scoreLookup) {
 }
 
 function addRegionLayer() {
-  map.addSource(REGION_SRC, { type: "geojson", data: regionsAsGeoJSON() });
-  // Fill — invisible until scores are known (reveal/explore mode).
+  // promoteId lets us key feature-state by our string id (for hover state).
+  map.addSource(REGION_SRC, { type: "geojson", data: regionsAsGeoJSON(), promoteId: "id" });
+  // Fill — translucent hint while playing so boundaries are readable;
+  // jumps to color gradient on reveal/explore.
   map.addLayer({
     id: REGION_FILL,
     type: "fill",
@@ -140,23 +181,51 @@ function addRegionLayer() {
     paint: {
       "fill-color": [
         "case",
-        ["==", ["get", "score"], null], "transparent",
+        ["==", ["get", "score"], null], "#8b6b3a",
         ["interpolate", ["linear"], ["get", "score"],
-          0, "#5a2a2a", 30, "#8b5a3a", 50, "#c9a86a", 70, "#9bbf7a", 100, "#3a8b5e"]
+          0,   "#4a1818",
+          15,  "#7a2f1f",
+          30,  "#a85a2c",
+          45,  "#c89148",
+          55,  "#d8c075",
+          65,  "#b6c772",
+          78,  "#7ab86a",
+          90,  "#3f9558",
+          100, "#246d3e"]
       ],
       "fill-opacity": [
         "case",
-        ["==", ["get", "score"], null], 0,
-        0.32
+        ["boolean", ["feature-state", "hover"], false],
+          ["case", ["==", ["get", "score"], null], 0.22, 0.70],
+        ["case", ["==", ["get", "score"], null], 0.08, 0.48]
       ],
+      "fill-opacity-transition": { duration: 180 },
     },
   });
-  // Thin border so regions are still discoverable while playing.
+  // Outline — solid + bolder on hover for the "pop" effect.
   map.addLayer({
     id: REGION_OUTLINE,
     type: "line",
     source: REGION_SRC,
-    paint: { "line-color": "#5a4424", "line-width": 0.6, "line-opacity": 0.5, "line-dasharray": [2, 3] },
+    paint: {
+      "line-color": [
+        "case",
+        ["boolean", ["feature-state", "hover"], false], "#f0c98a",
+        "#5a3a1a"
+      ],
+      "line-width": [
+        "case",
+        ["boolean", ["feature-state", "hover"], false], 2.4,
+        1.0
+      ],
+      "line-opacity": [
+        "case",
+        ["boolean", ["feature-state", "hover"], false], 1.0,
+        0.7
+      ],
+      "line-width-transition": { duration: 180 },
+      "line-color-transition": { duration: 180 },
+    },
   });
   // Region names rendered at centroids — replaces demotiles country labels.
   map.addSource(REGION_LABELS_SRC, {
@@ -165,10 +234,7 @@ function addRegionLayer() {
       type: "FeatureCollection",
       features: state.regions.map(r => ({
         type: "Feature",
-        properties: {
-          name: r.name.split(" (")[0],
-          min_zoom: r.min_zoom ?? 1.0,
-        },
+        properties: { name: displayName(r) },
         geometry: { type: "Point", coordinates: [r.centroid[1], r.centroid[0]] },
       })),
     },
@@ -179,23 +245,19 @@ function addRegionLayer() {
     source: REGION_LABELS_SRC,
     layout: {
       "text-field": ["get", "name"],
-      "text-size": ["interpolate", ["linear"], ["zoom"], 1, 11, 4, 14],
-      "text-letter-spacing": 0.04,
+      "text-size": ["interpolate", ["linear"], ["zoom"], 1.5, 10, 3, 13, 5, 16],
+      "text-letter-spacing": 0.05,
       "text-anchor": "center",
       "text-allow-overlap": false,
-      "text-padding": 4,
+      "text-ignore-placement": false,
+      "text-padding": 2,
     },
     paint: {
-      "text-color": "#3a2a18",
+      "text-color": "#2a1f12",
       "text-halo-color": "#ede4cf",
-      "text-halo-width": 1.4,
-      "text-halo-blur": 0.6,
-      // Hide labels for small regions until user zooms in.
-      "text-opacity": [
-        "case",
-        ["<", ["zoom"], ["get", "min_zoom"]], 0,
-        0.92
-      ],
+      "text-halo-width": 1.6,
+      "text-halo-blur": 0.4,
+      "text-opacity": 0.95,
     },
   });
   map.addSource(PICK_SRC, { type: "geojson", data: { type: "FeatureCollection", features: [] } });
@@ -225,6 +287,7 @@ function setPick(lat, lon) {
 
 async function onMapClick(e) {
   if (state.mode === "playing") {
+    if (state._longPress) { state._longPress = false; return; }
     const { lat, lng } = e.lngLat;
     setPick(lat, lng);
     state.mode = "submitting";
@@ -234,14 +297,17 @@ async function onMapClick(e) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ year: state.year, lat, lon: lng }),
       });
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      if (!res.ok) {
+        const body = await res.text().catch(() => "");
+        throw new Error(`HTTP ${res.status} ${res.statusText} — ${body.slice(0, 200)}`);
+      }
       const payload = await res.json();
       localStorage.setItem(`yearle:v1:guess:${state.date}`, JSON.stringify(payload));
       showReveal(payload);
     } catch (err) {
       console.error("guess submit failed:", err);
       state.mode = "playing";
-      alert("Couldn't submit your guess — check your connection and try again.");
+      alert(`Couldn't submit guess.\n${err.message || err}\n\nIs the backend running?`);
     }
   } else if (state.mode === "explore") {
     const feats = map.queryRenderedFeatures(e.point, { layers: [REGION_FILL] });
@@ -249,18 +315,132 @@ async function onMapClick(e) {
   }
 }
 
-// Hover affordance on globe regions during explore mode.
+// Hover state — drives both the HUD hint and the per-region "pop" via
+// feature-state. Touch uses a 300ms long-press to preview without submitting.
+let hoveredRid = null;
+function setHoverRegion(rid) {
+  if (hoveredRid === rid) return;
+  if (hoveredRid) {
+    map.setFeatureState({ source: REGION_SRC, id: hoveredRid }, { hover: false });
+  }
+  hoveredRid = rid;
+  if (rid) {
+    map.setFeatureState({ source: REGION_SRC, id: rid }, { hover: true });
+  }
+}
+
 function attachHoverHandlers() {
-  map.on("mousemove", (e) => {
-    if (state.mode !== "explore") {
-      document.body.classList.remove("map-hover-explore");
+  const hoverEl = $("hud-hover-region");
+  const defaultHint = hoverEl ? hoverEl.textContent : "";
+
+  const updateHoverFromPoint = (point) => {
+    if (state.mode !== "playing" && state.mode !== "explore") {
+      setHoverRegion(null);
+      if (hoverEl) hoverEl.textContent = defaultHint;
       return;
     }
-    const feats = map.queryRenderedFeatures(e.point, { layers: [REGION_FILL] });
-    document.body.classList.toggle("map-hover-explore", feats.length > 0);
+    const feats = map.queryRenderedFeatures(point, { layers: [REGION_FILL] });
+    const f = feats[0];
+    setHoverRegion(f ? f.properties.id : null);
+    if (state.mode === "playing" && hoverEl) {
+      hoverEl.textContent = f?.properties?.name || defaultHint;
+    }
+    document.body.classList.toggle("map-hover-play", state.mode === "playing" && !!f);
+    document.body.classList.toggle("map-hover-explore", state.mode === "explore" && !!f);
+  };
+
+  map.on("mousemove", (e) => updateHoverFromPoint(e.point));
+  map.on("mouseout", () => {
+    setHoverRegion(null);
+    document.body.classList.remove("map-hover-explore", "map-hover-play");
+    if (hoverEl) hoverEl.textContent = defaultHint;
   });
-  map.on("mouseleave", () => document.body.classList.remove("map-hover-explore"));
+
+  // Touch long-press = preview, not submit. 300ms hold to pop; release fades.
+  let pressTimer = null;
+  map.on("touchstart", (e) => {
+    state._longPress = false;
+    if (e.points && e.points.length > 1) return;
+    const pt = e.point;
+    pressTimer = setTimeout(() => {
+      state._longPress = true;
+      updateHoverFromPoint(pt);
+    }, 300);
+  });
+  const clearPress = () => { if (pressTimer) { clearTimeout(pressTimer); pressTimer = null; } };
+  map.on("touchend", () => {
+    clearPress();
+    setTimeout(() => {
+      setHoverRegion(null);
+      if (hoverEl) hoverEl.textContent = defaultHint;
+    }, 600);
+  });
+  map.on("touchmove", () => { clearPress(); state._longPress = true; });
 }
+
+// ─── share ───────────────────────────────────────────────────────────────────
+
+function scoreEmoji(v) {
+  if (v >= 80) return "🟩";
+  if (v >= 60) return "🟨";
+  if (v >= 40) return "🟧";
+  if (v >= 20) return "🟥";
+  return "⬛";
+}
+
+function buildShareText(payload) {
+  const g = payload.guess || {};
+  const score = g.score ?? 0;
+  const dayTag = $("day-tag")?.textContent || "";
+  const factorOrder = ["safety", "health", "economy", "governance", "religious_tolerance"];
+  const grid = factorOrder.map(k => scoreEmoji(g.factors?.[k] ?? 0)).join("");
+  const url = location.origin || "yearl-e";
+  return `yearl-e ${dayTag} · ${state.label}
+${score}/100 · rank ${payload.rank}/${payload.total_regions} · ${g.region_name || "?"}
+${grid}
+${url}`;
+}
+
+function showToast(msg, ms = 1800) {
+  const t = $("toast");
+  if (!t) return;
+  t.textContent = msg;
+  t.classList.remove("hidden");
+  clearTimeout(showToast._h);
+  showToast._h = setTimeout(() => t.classList.add("hidden"), ms);
+}
+
+async function shareResult() {
+  const saved = localStorage.getItem(`yearle:v1:guess:${state.date}`);
+  if (!saved) return;
+  const text = buildShareText(JSON.parse(saved));
+  // Prefer native share on mobile; fall back to clipboard.
+  if (navigator.share) {
+    try { await navigator.share({ text }); return; } catch (e) { /* fall through */ }
+  }
+  try {
+    await navigator.clipboard.writeText(text);
+    showToast("Copied to clipboard");
+  } catch (e) {
+    // Last-resort textarea trick for old browsers.
+    const ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand("copy"); ta.remove();
+    showToast("Copied");
+  }
+}
+
+$("btn-share").addEventListener("click", shareResult);
+
+// ─── about modal ─────────────────────────────────────────────────────────────
+
+$("link-about").addEventListener("click", (e) => {
+  e.preventDefault();
+  $("about-card").classList.remove("hidden");
+});
+$("btn-about-close").addEventListener("click", () => {
+  $("about-card").classList.add("hidden");
+});
 
 $("btn-start").addEventListener("click", () => {
   $("start-card").classList.add("hidden");
@@ -293,6 +473,7 @@ $("btn-explore-close").addEventListener("click", () => {
 const SOURCE_TAGS = {
   "maddison": { label: "Maddison", title: "Maddison Project 2023 GDP/cap" },
   "brecke":   { label: "Brecke",   title: "Brecke Conflict Catalog 1400-2000" },
+  "vdem":     { label: "V-Dem",    title: "Varieties of Democracy v15 — Electoral Democracy Index (polyarchy)" },
   "wiki":     { label: "Wiki",     title: "Wikipedia (manual context)" },
   "neutral":  { label: "neutral",  title: "No sourced data — held at 50" },
   "baseline": { label: "era",      title: "Era baseline with manual adjustment" },
@@ -351,6 +532,10 @@ function showReveal(p) {
   }
   const rankEl = $("reveal-score-rank");
   if (rankEl) rankEl.textContent = `rank ${p.rank} of ${p.total_regions}`;
+  const eraYearEl = $("reveal-era-year");
+  const eraSumEl = $("reveal-era-summary");
+  if (eraYearEl) eraYearEl.textContent = p.label || state.label || "";
+  if (eraSumEl) eraSumEl.textContent = p.era_summary || state.era || "";
   $("reveal-pick").innerHTML =
     `<strong>You picked: ${g.region_name || "(no region)"}</strong>` +
     `<div>${g.summary || ""}</div>`;
@@ -368,31 +553,35 @@ function showExploreDetail(rid) {
   const cell = state._yearData?.[rid];
   if (!cell) return;
   const region = state.regions.find(r => r.id === rid);
-  // Rank position for this region in the year.
   const ranking = Object.entries(state._yearData).sort((a,b) => b[1].score - a[1].score);
   const rankIdx = ranking.findIndex(([id]) => id === rid) + 1;
   const scoreCls = cell.score >= 65 ? "high" : cell.score <= 40 ? "low" : "";
-  const rulerLine = cell.ruler ? `<div class="explore-ruler">👑 ${cell.ruler}</div>` : "";
   const isWinner = rankIdx === 1;
-  const pillCls = isWinner ? "explore-rank-pill rank-winner" : "explore-rank-pill";
-  const laurel = isWinner ? `<span class="laurel" title="Top-ranked region this year">🏛</span>` : "";
+  const rankPill = `<span class="ed-rank${isWinner ? " ed-rank-winner" : ""}">` +
+    (isWinner ? "🏛 " : "") + `#${rankIdx} of ${ranking.length}</span>`;
+  const rulerLine = cell.ruler
+    ? `<div class="ed-ruler"><span class="ed-ruler-icon">👑</span>${cell.ruler}</div>` : "";
+  $("explore-detail").className = "";
   $("explore-detail").innerHTML =
-    `<div class="explore-headline">
-       <div>
-         <div class="explore-headline-name">${region.name}</div>
-         <span class="${pillCls}">${laurel}rank ${rankIdx} of ${ranking.length}</span>
+    `<div class="ed-header">
+       <div class="ed-header-l">
+         <div class="ed-name">${displayName(region)}</div>
+         ${rankPill}
        </div>
-       <div class="explore-headline-score ${scoreCls}">${cell.score}</div>
+       <div class="ed-score ${scoreCls}">${cell.score}<span class="ed-score-denom">/100</span></div>
      </div>` +
     rulerLine +
-    `<div class="explore-summary">${cell.summary || ""}</div>` +
-    `<div class="factors">${renderFactors(cell.factors, cell.factor_sources)}</div>` +
-    `<div class="sources">${renderSources(cell.sources)}</div>`;
+    `<p class="ed-summary">${cell.summary || ""}</p>` +
+    `<div class="factors ed-factors">${renderFactors(cell.factors, cell.factor_sources)}</div>` +
+    (cell.sources?.length
+      ? `<div class="ed-sources"><span class="ed-sources-label">Sources</span>${renderSources(cell.sources)}</div>`
+      : "");
 }
 
 // ─── go ──────────────────────────────────────────────────────────────────────
 
 boot().catch(err => {
   console.error(err);
-  $("start-era").textContent = "Failed to load. Check console.";
+  const btn = $("btn-start");
+  if (btn) btn.textContent = `Failed to load — ${err.message || err}`;
 });

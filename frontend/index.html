@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 
 <link href="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.css" rel="stylesheet" />
-<link href="/static/style.css?v=5" rel="stylesheet" />
+<link href="/static/style.css?v=14" rel="stylesheet" />
 </head>
 <body>
 
@@ -34,26 +34,67 @@
     <span id="year-label"></span>
     <span class="hud-dash"> —</span>
   </div>
-  <div id="era-summary"></div>
+  <div id="hud-hint"><span id="hud-hover-region">click anywhere on the globe to guess</span></div>
 </div>
 
 <div id="overlay">
 
-  <div id="start-card" class="card">
+  <div id="start-card" class="card start-card">
     <h1>yearl-e</h1>
-    <p class="tagline">Each day, one historical year. Click the globe where you'd want to live.<br/>
-    Score based on actual living conditions — peace, health, economy, governance, religious tolerance.<br/>
-    Every score cites real sources.</p>
-    <div id="start-year"></div>
-    <div id="start-era"></div>
-    <button id="btn-start">Spin the globe →</button>
-    <p class="credit">by <a href="https://roei-michael-portfolio.vercel.app/" target="_blank" rel="noopener">Roei Michael</a> · same year for everyone, resets 00:00 IL</p>
+    <p class="tagline-lead">A daily history puzzle.</p>
+    <p class="tagline">Each day, one historical year — somewhere between 1000 BCE and today.<br/>
+    Click the globe where you'd want to live that year.<br/>
+    Scored on real living conditions: peace, health, economy, governance, tolerance.</p>
+    <button id="btn-start" disabled>Loading today's year…</button>
+    <p class="credit">
+      by <a href="https://roei-michael-portfolio.vercel.app/" target="_blank" rel="noopener">Roei Michael</a>
+      · same year for everyone · resets 00:00 IL
+      · <a href="#" id="link-about">about</a>
+    </p>
+  </div>
+
+  <div id="about-card" class="card hidden about-card">
+    <button id="btn-about-close" aria-label="close" class="card-close">×</button>
+    <h2>About yearl-e</h2>
+    <p>Each day, a random historical year is rolled (deterministic — same year for everyone). You click the globe where you'd want to live. Your score is based on the actual living conditions of that region in that year.</p>
+
+    <h3>The 5 factors</h3>
+    <ul class="about-list">
+      <li><strong>Safety</strong> — derived from the Brecke Conflict Catalog. Region loses points for each active war/rebellion that year.</li>
+      <li><strong>Health</strong> — era baseline with manual adjustments for known epidemics, famines, sanitation.</li>
+      <li><strong>Economy</strong> — Maddison Project 2023 GDP/capita, ranked into a percentile across the year's coverage.</li>
+      <li><strong>Governance</strong> — V-Dem v15 Electoral Democracy Index (polyarchy) for years ≥1789; manual research for earlier years.</li>
+      <li><strong>Religious tolerance</strong> — manual research of state religion enforcement, persecution, tolerance acts.</li>
+    </ul>
+
+    <p class="about-formula"><strong>Overall score</strong> = 0.30 × safety + 0.20 × governance + 0.20 × economy + 0.15 × health + 0.15 × tolerance.</p>
+
+    <h3>Data sources</h3>
+    <ul class="about-list about-sources">
+      <li><a href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/" target="_blank" rel="noopener">Maddison Project Database 2023</a> — GDP per capita, 1 AD–2022</li>
+      <li><a href="https://brecke.inta.gatech.edu/research/conflict/" target="_blank" rel="noopener">Brecke Conflict Catalog</a> — global wars 1400–2000</li>
+      <li><a href="https://www.v-dem.net/data/the-v-dem-dataset/" target="_blank" rel="noopener">V-Dem v15</a> — Electoral Democracy Index 1789–present</li>
+      <li><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> — country polygons (grouped into historical regions)</li>
+      <li><a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> — year article summaries + manual context citations</li>
+    </ul>
+
+    <h3>Known limitations</h3>
+    <ul class="about-list">
+      <li>Region borders are modern country shapes grouped into historical entities — not period-accurate.</li>
+      <li>Pre-1789 governance scores fall back to era baselines where no manual research exists.</li>
+      <li>India and Germany are subdivided by bounding box, not true historical boundaries.</li>
+      <li>Currently covers 1500–1815. Other periods coming.</li>
+    </ul>
   </div>
 
   <div id="reveal-card" class="card hidden">
     <div id="reveal-score-wrap">
       <div id="reveal-score-big"><span id="reveal-score-num">0</span><span id="reveal-score-denom">/ 100</span></div>
       <div id="reveal-score-rank"></div>
+    </div>
+    <div id="reveal-era">
+      <div id="reveal-era-year"></div>
+      <div id="reveal-era-summary"></div>
     </div>
     <div id="reveal-pick"></div>
     <div id="reveal-pick-factors" class="factors"></div>
@@ -62,19 +103,28 @@
     <div id="reveal-top"></div>
     <div id="reveal-top-factors" class="factors"></div>
     <div id="reveal-top-sources" class="sources"></div>
-    <button id="btn-explore">Explore the globe →</button>
+    <div class="reveal-actions">
+      <button id="btn-share" class="btn-secondary">Share result</button>
+      <button id="btn-explore">Explore the globe →</button>
+    </div>
   </div>
 
+  <div id="toast" class="hidden"></div>
+
   <div id="explore-card" class="card hidden">
-    <h3>Explore <span id="explore-year"></span></h3>
-    <p class="muted">Click any region to see its ranking + sources.</p>
-    <div id="explore-detail"></div>
-    <button id="btn-explore-close" class="link-btn">close</button>
+    <div class="explore-head">
+      <div class="explore-eyebrow"><span id="explore-year"></span></div>
+      <p class="explore-sub">Tap a region on the globe.</p>
+      <button id="btn-explore-close" aria-label="close" class="card-close">×</button>
+    </div>
+    <div id="explore-detail" class="explore-empty">
+      <span>No region selected.</span>
+    </div>
   </div>
 
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.js"></script>
-<script src="/static/app.js?v=5"></script>
+<script src="/static/app.js?v=14"></script>
 </body>
 </html>

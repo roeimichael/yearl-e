@@ -27,12 +27,26 @@ import json
 import sys
 from pathlib import Path
 
+import vdem_lookup
+
 ROOT = Path(__file__).parent.parent
 RAW = ROOT / "data" / "raw"
 OUT_DIR = ROOT / "data" / "year_scores"
 
-# Which region set the year uses. Add entries here when new sets ship.
-YEAR_TO_SET = {1719: "early_modern"}
+# Year → region set resolver. Add new eras here as polygon sets ship.
+# Range-based so we don't have to enumerate every year.
+ERA_RANGES = [
+    (1500, 1815, "early_modern"),
+    # (1815, 1945, "industrial"),
+    # (1945, 2100, "modern"),
+]
+
+
+def year_to_set(year: int) -> str:
+    for lo, hi, name in ERA_RANGES:
+        if lo <= year <= hi:
+            return name
+    raise ValueError(f"no region set covers year {year}")
 
 
 def load_grouping(set_name: str) -> dict:
@@ -166,20 +180,42 @@ def compute_economy(region_id: str, members_iso3: list[str],
 # ─── score one region ────────────────────────────────────────────────────────
 
 
-def score_region(region_id: str, members_iso3: list[str], manual: dict,
+def score_region(year: int, region_id: str, members_iso3: list[str], manual: dict,
                  raw_gdppc: dict, sorted_gdppc: list[float], conflicts: list[dict]) -> dict:
     safety, conflict_hits = compute_safety(region_id, conflicts)
     econ_score, econ_iso, econ_val, econ_src = compute_economy(
         region_id, members_iso3, raw_gdppc, sorted_gdppc
     )
 
+    # V-Dem governance (1789+ only) — best-scored member country.
+    vdem_score, vdem_iso = vdem_lookup.governance(members_iso3, year)
+
     sparse = manual.get("sparse_data", False) or not manual.get("sources")
     if sparse:
-        gov = relig = 50
+        if vdem_score is not None:
+            gov = vdem_score
+            gov_src = "vdem"
+        else:
+            gov = 50
+            gov_src = "neutral"
+        relig = 50
         health = 45
-        gov_src = relig_src = "neutral"
+        relig_src = "neutral"
         health_src = "baseline"
-        summary = "Sparse cited data for this region in 1719; manual factors held neutral."
+        # Build summary from whatever year-specific data we do have so the
+        # year doesn't read as a copy of every other unbuilt year.
+        parts = []
+        if vdem_score is not None:
+            parts.append(f"V-Dem polyarchy {vdem_score}/100 ({vdem_iso}, {year}).")
+        if conflict_hits:
+            parts.append(f"In {year}, active conflicts touching this region: " +
+                         "; ".join(conflict_hits[:3]) + ".")
+        if econ_iso:
+            parts.append(f"GDP/capita {econ_val:.0f} (Maddison Project 2023, {econ_iso}).")
+        if not parts:
+            parts.append(f"No major dataset coverage for this region in {year}; "
+                         "manual factors held neutral.")
+        summary = " ".join(parts)
     else:
         # If a manual field is missing, fall to neutral 50 AND tag its source
         # as "neutral" — never claim a wiki citation for a default value.
@@ -208,8 +244,13 @@ def score_region(region_id: str, members_iso3: list[str], manual: dict,
         sources.append({"label": "Brecke Conflict Catalog 1400-2000", "url": "https://brecke.inta.gatech.edu/research/conflict/"})
     if econ_iso:
         sources.append({
-            "label": f"Maddison Project 2023 — {econ_iso} 1719 gdppc={econ_val:.0f}",
+            "label": f"Maddison Project 2023 — {econ_iso} {year} gdppc={econ_val:.0f}",
             "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+        })
+    if vdem_score is not None and gov_src == "vdem":
+        sources.append({
+            "label": f"V-Dem v15 — {vdem_iso} {year} polyarchy={vdem_score}",
+            "url": "https://www.v-dem.net/data/the-v-dem-dataset/",
         })
 
     return {
@@ -235,8 +276,8 @@ def score_region(region_id: str, members_iso3: list[str], manual: dict,
     }
 
 
-def rank(year: int, raw: dict) -> dict:
-    set_name = YEAR_TO_SET[year]
+def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
+    set_name = year_to_set(year)
     grouping = load_grouping(set_name)
     region_meta = load_region_set_meta(set_name)
     # The grouping JSON holds a single manual_{year} dict per known year; we
@@ -244,6 +285,10 @@ def rank(year: int, raw: dict) -> dict:
     # touching this file.
     manual_dict = grouping.get(f"manual_{year}", {})
     era_summary = grouping.get(f"era_summary_{year}", "")
+    # If we don't have a hand-written era summary for this year, fall back to
+    # the Wikipedia year article's lead paragraph — keeps it year-specific.
+    if not era_summary and wiki:
+        era_summary = wiki.get("summary", "")
 
     members = grouping["region_members"]
     # Maddison: collect numbers for percentile across all ISOs that map to any of our regions.
@@ -256,6 +301,7 @@ def rank(year: int, raw: dict) -> dict:
             print(f"  [skip] {rid}: not in {set_name}.json (NE missing all members)")
             continue
         out_regions[rid] = score_region(
+            year,
             rid,
             members[rid],
             manual_dict.get(rid, {}),
@@ -283,7 +329,14 @@ def main() -> int:
         print(f"missing {raw_path}; run scripts/fetch_year.py {year} first", file=sys.stderr)
         return 1
     raw = json.loads(raw_path.read_text(encoding="utf-8"))
-    out = rank(year, raw)
+    wiki_path = RAW / f"{year}_wiki.json"
+    wiki = json.loads(wiki_path.read_text(encoding="utf-8")) if wiki_path.exists() else None
+    out = rank(year, raw, wiki)
+    # Cite the Wikipedia year article on every region whose summary came from it.
+    if wiki and wiki.get("url"):
+        wiki_src = {"label": f"Wikipedia — {year}", "url": wiki["url"]}
+        for cell in out["regions"].values():
+            cell.setdefault("sources", []).append(wiki_src)
     out_path = OUT_DIR / f"{year:04d}.json"
     out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"wrote {out_path} ({out_path.stat().st_size/1024:.1f} KB, {len(out['regions'])} regions)")

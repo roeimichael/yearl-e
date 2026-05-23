@@ -4,7 +4,21 @@ __pycache__/
 venv/
 .env
 .DS_Store
-data/raw/*.xlsx
-data/raw/*.csv
-data/seed_chunks/
 node_modules/
+
+# Raw datasets — large, regenerable via scripts/fetch_sources.py
+data/raw/*.xlsx
+data/raw/*.xls
+data/raw/*.csv
+data/raw/*.zip
+data/raw/*.geojson
+# Per-year build caches — regenerable via scripts/build_year.py
+data/raw/*_extract.json
+data/raw/*_wiki.json
+# Historical basemaps bundle
+data/raw/historical_basemaps/
+
+data/seed_chunks/
+
+# Claude Code transcripts/etc.
+.claude/

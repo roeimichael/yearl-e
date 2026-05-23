@@ -15,7 +15,7 @@ import json
 import sys
 from pathlib import Path
 
-from shapely.geometry import mapping, shape
+from shapely.geometry import box, mapping, shape
 from shapely.ops import unary_union
 
 ROOT = Path(__file__).parent.parent
@@ -48,11 +48,26 @@ def build(set_name: str) -> None:
     members: dict[str, list[str]] = g["region_members"]
     centroids: dict[str, list[float]] = g.get("region_centroid_hints", {})
     names: dict[str, str] = g.get("region_names", {})
+    # Optional bbox clips so multiple regions can share one country geometry
+    # without the polygons overlapping (e.g. India split into Mughal/Maratha/
+    # Bengal/Deccan, or Germany split into Prussia/German Princes).
+    clips: dict[str, dict[str, list[float]]] = g.get("region_clips", {})
 
     out_regions = []
     missing = []
     for rid, isos in members.items():
-        geoms = [by_iso[i] for i in isos if i in by_iso]
+        geoms = []
+        region_clip = clips.get(rid, {})
+        for i in isos:
+            if i not in by_iso:
+                continue
+            geom = by_iso[i]
+            if i in region_clip:
+                w, s, e, n = region_clip[i]
+                geom = geom.intersection(box(w, s, e, n))
+                if geom.is_empty:
+                    continue
+            geoms.append(geom)
         skipped = [i for i in isos if i not in by_iso]
         if skipped:
             missing.append((rid, skipped))
