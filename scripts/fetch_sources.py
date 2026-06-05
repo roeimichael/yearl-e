@@ -20,6 +20,10 @@ SOURCES = {
     "brecke.xlsx": "https://brecke.inta.gatech.edu/wp-content/uploads/sites/19/2018/09/Conflict-Catalog-18-vars.xlsx",
     # ── Small CSVs (<1 MB each) ───────────────────────────────────────────
     "buringh_literacy.csv": "https://raw.githubusercontent.com/manjunath5496/CSV-Datasets_1/master/Estimated%20historical%20literacy%20rates%20-%20Buringh%20and%20Van%20Zanden%20(2009).csv",
+    # health factor: life expectancy by country + continental aggregates, 1543-2023
+    "owid_life_exp.csv": "https://ourworldindata.org/grapher/life-expectancy.csv?csvType=full&useColumnShortNames=true",
+    # tolerance factor: 10,940 European witch-trial records 1300-1850 (Leeson & Russ 2018)
+    "witch_trials.csv": "https://raw.githubusercontent.com/JakeRuss/witch-trials/master/data/trials.csv",
     # ── Mid (~few MB each) ────────────────────────────────────────────────
     "ucdp_acd.zip": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zip",
     "cshapes2.zip": "https://icr.ethz.ch/data/cshapes/CShapes-2.0.zip",

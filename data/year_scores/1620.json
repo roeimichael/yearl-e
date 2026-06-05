@@ -5,21 +5,21 @@
   "era_summary": "1620 (MDCXX) was a leap year starting on Wednesday of the Gregorian calendar and a leap year starting on Saturday of the Julian calendar, the 1620th year of the Common Era (CE) and Anno Domini (AD) designations, the 620th year of the 2nd millennium, the 20th year of the 17th century, and the 1st year of the 1620s decade. As of the start of 1620, the Gregorian calendar was 10 days ahead of the Julian calendar, which remained in localized use until 1923. ",
   "regions": {
     "tsardom_of_russia": {
-      "score": 38,
-      "summary": "Active conflicts in 1620: Russia-Tungus, Kets (central Siberia), 1610-33. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 49,
+      "summary": "Active conflicts in 1620: Russia-Tungus, Kets (central Siberia), 1610-33. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
-        "health": 45,
+        "health": 39,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -31,6 +31,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -38,24 +42,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q186096",
-      "raw_score": 53
+      "raw_score": 51
     },
     "spanish_empire": {
-      "score": 42,
-      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. Maddison GDP/capita 1003 (MEX, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 32,
+      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. Maddison GDP/capita 1003 (MEX, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 20/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 20,
         "economy": 38,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -71,6 +75,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -78,29 +86,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 54
+      "raw_score": 46
     },
     "golden_horde": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Golden Horde in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Golden Horde in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -110,29 +122,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q79965",
-      "raw_score": 59
+      "raw_score": 54
     },
     "ottoman_empire": {
-      "score": 26,
-      "summary": "Brecke records no major conflict touching Ottoman Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 28,
+      "summary": "Brecke records no major conflict touching Ottoman Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 39/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 53,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 39
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
         },
         {
           "label": "Wikipedia — 1620",
@@ -142,24 +162,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q12560",
-      "raw_score": 50
+      "raw_score": 45
     },
     "ming_dynasty": {
-      "score": 46,
-      "summary": "Active conflicts in 1620: China (Ming)-Jin (Liaoning), 1619-22. Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 45,
+      "summary": "Active conflicts in 1620: China (Ming)-Jin (Liaoning), 1619-22. Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 19,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -175,6 +195,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -182,29 +206,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q9903",
-      "raw_score": 55
+      "raw_score": 50
     },
     "kazakh_khanate": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -214,29 +242,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1433867",
-      "raw_score": 55
+      "raw_score": 52
     },
     "mughal_empire": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Mughal Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Mughal Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -246,29 +278,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q33296",
-      "raw_score": 57
+      "raw_score": 54
     },
     "safavid_dynasty": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Safavid Dynasty in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Safavid Dynasty in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -278,24 +314,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q161205",
-      "raw_score": 55
+      "raw_score": 52
     },
     "tibet": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Tibet in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Tibet in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 25,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -307,6 +343,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -314,24 +354,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q521263",
-      "raw_score": 59
+      "raw_score": 55
     },
     "swedish_empire": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Swedish Empire in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1623 (SWE, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Swedish Empire in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1623 (SWE, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 39/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 28,
         "economy": 64,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 39
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "modeled",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -343,6 +383,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -350,24 +394,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q215443",
-      "raw_score": 59
+      "raw_score": 55
     },
     "polish_lithuanian_commonwealth": {
-      "score": 5,
-      "summary": "Brecke records no major conflict touching Polish-Lithuanian Commonwealth in 1620 (safety at the era baseline of 85). Maddison GDP/capita 872 (POL, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 21,
+      "summary": "Brecke records no major conflict touching Polish-Lithuanian Commonwealth in 1620 (safety at the era baseline of 85). Maddison GDP/capita 872 (POL, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 41/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 53,
-        "health": 45,
+        "health": 42,
         "economy": 25,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 41
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -379,6 +423,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -386,24 +438,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q172107",
-      "raw_score": 45
+      "raw_score": 43
     },
     "eastern_moghulistan": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Eastern Moghulistan in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Eastern Moghulistan in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 25,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -415,6 +467,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -422,24 +478,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1191125",
-      "raw_score": 59
+      "raw_score": 55
     },
     "denmark_norway": {
-      "score": 50,
-      "summary": "Active conflicts in 1620: Sweden-Denmark, 1620-22. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 39,
+      "summary": "Active conflicts in 1620: Sweden-Denmark, 1620-22. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 22/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 20,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 22
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "modeled",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -451,6 +507,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -458,24 +518,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q62651",
-      "raw_score": 56
+      "raw_score": 48
     },
     "iberian_union": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Iberian Union in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1446 (PRT, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Iberian Union in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1446 (PRT, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 46,
         "economy": 58,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -487,6 +547,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -494,24 +562,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q377350",
-      "raw_score": 61
+      "raw_score": 57
     },
     "spanish_empire_bra": {
-      "score": 50,
-      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 42,
+      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 22,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -523,6 +591,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -530,24 +602,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 56
+      "raw_score": 49
     },
     "mongol_khanate": {
-      "score": 46,
-      "summary": "Active conflicts in 1620: China (Qing)-Mongolia (Mongolia), 1594-1632. Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 45,
+      "summary": "Active conflicts in 1620: China (Qing)-Mongolia (Mongolia), 1594-1632. Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 19,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -563,6 +635,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -570,24 +646,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q19927420",
-      "raw_score": 55
+      "raw_score": 50
     },
     "kingdom_of_france": {
-      "score": 75,
-      "summary": "Active conflicts in 1620: France (nobles), 1619-20. Maddison GDP/capita 1742 (FRA, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Active conflicts in 1620: France (nobles), 1619-20. Maddison GDP/capita 1742 (FRA, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 10/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 42,
         "economy": 77,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 10
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -603,6 +679,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -610,29 +694,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q207162",
-      "raw_score": 62
+      "raw_score": 55
     },
     "funj_sultanate": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Funj Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Funj Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 21,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -642,24 +730,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1475713",
-      "raw_score": 60
+      "raw_score": 56
     },
     "kingdom_of_england": {
-      "score": 79,
-      "summary": "Active conflicts in 1620: England-Portugal (Indian Ocean), 1612-30. Maddison GDP/capita 1842 (GBR, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 80,
+      "summary": "Active conflicts in 1620: England-Portugal (Indian Ocean), 1612-30. Maddison GDP/capita 1842 (GBR, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 61/100, anchored on life-expectancy data for the region. Religious tolerance 12/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 61,
         "economy": 84,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 12
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -675,6 +763,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -682,29 +778,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q179876",
-      "raw_score": 63
+      "raw_score": 60
     },
     "first_toungoo_empire": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching First Toungoo Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching First Toungoo Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -714,29 +814,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q23039102",
-      "raw_score": 57
+      "raw_score": 55
     },
     "khanate_of_bukhara": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Khanate of Bukhara in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Khanate of Bukhara in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -746,29 +850,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q577668",
-      "raw_score": 55
+      "raw_score": 52
     },
     "ethiopian_empire": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 21,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -778,24 +886,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q207521",
-      "raw_score": 60
+      "raw_score": 57
     },
     "oirat_confederation": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Oirat Confederation in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Oirat Confederation in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 25,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -805,6 +913,10 @@
         {
           "label": "Maddison Project 2023 — CHN 1620 gdppc=1262",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -814,24 +926,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q4332415",
-      "raw_score": 59
+      "raw_score": 55
     },
     "t_med": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Tümed in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Tümed in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 25,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -843,6 +955,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -850,29 +966,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3402317",
-      "raw_score": 59
+      "raw_score": 55
     },
     "habsburg_monarchy": {
-      "score": 26,
-      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 31/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 53,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 31
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
         },
         {
           "label": "Wikipedia — 1620",
@@ -882,24 +1006,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q66504140",
-      "raw_score": 50
+      "raw_score": 47
     },
     "holy_roman_empire_minor_states": {
       "score": 42,
-      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 53,
-        "health": 45,
+        "health": 47,
         "economy": 70,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -911,6 +1035,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -918,29 +1050,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q12548",
-      "raw_score": 54
+      "raw_score": 49
     },
     "saadi_sultanate": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Saadi Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Saadi Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 21,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -950,29 +1086,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1136188",
-      "raw_score": 60
+      "raw_score": 56
     },
     "tokugawa_shogunate": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -982,29 +1122,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q205662",
-      "raw_score": 59
+      "raw_score": 54
     },
     "lan_xang": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Lan Xang in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Lan Xang in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1014,29 +1158,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q853477",
-      "raw_score": 57
+      "raw_score": 55
     },
     "ayutthaya_kingdom": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Ayutthaya Kingdom in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Ayutthaya Kingdom in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1046,24 +1194,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q841364",
-      "raw_score": 57
+      "raw_score": 55
     },
     "khoshut_khanate": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Khoshut Khanate in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Khoshut Khanate in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 25,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1075,6 +1223,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1082,29 +1234,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q10921634",
-      "raw_score": 59
+      "raw_score": 55
     },
     "bornu_empire": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Bornu Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Bornu Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 21,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1114,24 +1270,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1139762",
-      "raw_score": 60
+      "raw_score": 57
     },
     "spanish_empire_phl": {
-      "score": 42,
-      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 45,
+      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
-        "health": 45,
+        "health": 18,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1143,6 +1299,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1150,29 +1310,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 54
+      "raw_score": 50
     },
     "sultanate_of_darfur": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 21,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1182,29 +1346,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1474791",
-      "raw_score": 60
+      "raw_score": 56
     },
     "joseon": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Joseon in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Joseon in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1214,29 +1382,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q28405",
-      "raw_score": 59
+      "raw_score": 54
     },
     "bijapur_sultanate": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Bijapur Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Bijapur Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1246,29 +1418,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q83821",
-      "raw_score": 57
+      "raw_score": 54
     },
     "khmer_empire": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Khmer Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Khmer Empire in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1278,24 +1454,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q201705",
-      "raw_score": 57
+      "raw_score": 55
     },
     "denmark_norway_isl": {
-      "score": 50,
-      "summary": "Active conflicts in 1620: Sweden-Denmark, 1620-22. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Active conflicts in 1620: Sweden-Denmark, 1620-22. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 20,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 45
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "modeled",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1314,29 +1490,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q62651",
-      "raw_score": 56
+      "raw_score": 52
     },
     "jesuit_reducciones": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Jesuit Reducciones in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Jesuit Reducciones in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 28,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1346,29 +1526,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q465960",
-      "raw_score": 60
+      "raw_score": 54
     },
     "sultanate_of_johor": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1378,29 +1562,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1150344",
-      "raw_score": 57
+      "raw_score": 55
     },
     "western_moghulistan": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Western Moghulistan in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Western Moghulistan in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1410,24 +1598,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1191125",
-      "raw_score": 55
+      "raw_score": 52
     },
     "later_jin_dynasty": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Later Jin Dynasty in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Later Jin Dynasty in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1262 (CHN, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 45,
+        "health": 25,
         "economy": 51,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1439,6 +1627,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1446,29 +1638,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1062546",
-      "raw_score": 59
+      "raw_score": 55
     },
     "golconda_sultanate": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Golconda Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Golconda Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1478,29 +1674,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1148042",
-      "raw_score": 57
+      "raw_score": 54
     },
     "khanate_of_khiva": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1510,29 +1710,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q491106",
-      "raw_score": 55
+      "raw_score": 52
     },
     "gorkha_kingdom": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Gorkha Kingdom in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Gorkha Kingdom in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1542,24 +1746,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3332217",
-      "raw_score": 57
+      "raw_score": 54
     },
     "principality_of_transylvania": {
-      "score": 9,
-      "summary": "Active conflicts in 1620: Emperor, Bavaria, Spain, Sax-Boh, Silesia, Moravia, Palatinate, Transylvania, 1618-22; Emperor-Transylvania, 1619-27. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 25,
+      "summary": "Active conflicts in 1620: Emperor, Bavaria, Spain, Sax-Boh, Silesia, Moravia, Palatinate, Transylvania, 1618-22; Emperor-Transylvania, 1619-27. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 33/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 40,
-        "health": 45,
+        "health": 33,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1571,6 +1775,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1578,24 +1786,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q655621",
-      "raw_score": 46
+      "raw_score": 44
     },
     "brandenburg_prussia": {
       "score": 42,
-      "summary": "Brecke records no major conflict touching Brandenburg-Prussia in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "summary": "Brecke records no major conflict touching Brandenburg-Prussia in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 53,
-        "health": 45,
+        "health": 47,
         "economy": 70,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -1607,6 +1815,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1614,24 +1830,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q157367",
-      "raw_score": 54
+      "raw_score": 49
     },
     "kingdom_of_kongo": {
-      "score": 50,
-      "summary": "Active conflicts in 1620: Kongo (Angola) (succession), 1614-41. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Active conflicts in 1620: Kongo (Angola) (succession), 1614-41. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 15/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 15,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1641,6 +1857,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1650,24 +1870,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q796583",
-      "raw_score": 56
+      "raw_score": 52
     },
     "principality_of_moldavia": {
-      "score": 42,
-      "summary": "Active conflicts in 1620: Poland, Moldavians, Cossacks-Turkey, Tartars, 1620-21. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 56,
+      "summary": "Active conflicts in 1620: Poland, Moldavians, Cossacks-Turkey, Tartars, 1620-21. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
-        "health": 45,
+        "health": 39,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1679,6 +1899,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1686,29 +1910,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q10957559",
-      "raw_score": 54
+      "raw_score": 53
     },
     "sultanate_of_brunei": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1718,29 +1946,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q887803",
-      "raw_score": 57
+      "raw_score": 55
     },
     "small_horde": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Small Horde in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Small Horde in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1753,26 +1985,30 @@
       "raw_score": 56
     },
     "tr_nh_lords": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Trịnh lords in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Trịnh lords in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1782,29 +2018,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2267508",
-      "raw_score": 57
+      "raw_score": 55
     },
     "sultanate_of_aceh": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1814,29 +2054,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1061057",
-      "raw_score": 57
+      "raw_score": 55
     },
     "principality_of_wallachia": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1849,26 +2093,30 @@
       "raw_score": 56
     },
     "haudenosaunee": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Haudenosaunee in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Haudenosaunee in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 28,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1878,24 +2126,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q68518",
-      "raw_score": 60
+      "raw_score": 57
     },
     "don_cossacks": {
-      "score": 42,
-      "summary": "Active conflicts in 1620: Poland, Moldavians, Cossacks-Turkey, Tartars, 1620-21. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 56,
+      "summary": "Active conflicts in 1620: Poland, Moldavians, Cossacks-Turkey, Tartars, 1620-21. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
-        "health": 45,
+        "health": 39,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -1907,6 +2155,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -1914,29 +2166,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1057292",
-      "raw_score": 54
+      "raw_score": 53
     },
     "nguy_n_lords": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Nguyễn lords in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Nguyễn lords in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1946,29 +2202,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2301908",
-      "raw_score": 57
+      "raw_score": 55
     },
     "crimean_khanate": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Crimean Khanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Crimean Khanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -1981,26 +2241,30 @@
       "raw_score": 56
     },
     "sultanate_of_banten": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2010,29 +2274,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q734867",
-      "raw_score": 57
+      "raw_score": 55
     },
     "kingdom_of_mrauk_u": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Kingdom of Mrauk U in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Kingdom of Mrauk U in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2042,29 +2310,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q10791211",
-      "raw_score": 57
+      "raw_score": 55
     },
     "sultanate_of_palembang": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2074,24 +2346,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3503555",
-      "raw_score": 57
+      "raw_score": 55
     },
     "duchy_of_bavaria": {
       "score": 1,
-      "summary": "Active conflicts in 1620: Emperor, Bavaria, Spain, Sax-Boh, Silesia, Moravia, Palatinate, Transylvania, 1618-22; Palatinate, Baden, Brunswick- Bavaria, Spain, emperor, 1620-23. Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "summary": "Active conflicts in 1620: Emperor, Bavaria, Spain, Sax-Boh, Silesia, Moravia, Palatinate, Transylvania, 1618-22; Palatinate, Baden, Brunswick- Bavaria, Spain, emperor, 1620-23. Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 35/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 20,
-        "health": 45,
+        "health": 35,
         "economy": 70,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -2107,6 +2379,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2114,24 +2394,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q47261",
-      "raw_score": 44
+      "raw_score": 37
     },
     "republic_of_venice": {
-      "score": 50,
-      "summary": "Active conflicts in 1620: Spain-Venice, 1617-21. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 45,
+      "summary": "Active conflicts in 1620: Spain-Venice, 1617-21. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
-        "health": 45,
+        "health": 39,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -2143,6 +2423,14 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2150,29 +2438,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q4948",
-      "raw_score": 56
+      "raw_score": 50
     },
     "mataram_sultanate": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Mataram Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Mataram Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2182,29 +2474,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q402145",
-      "raw_score": 57
+      "raw_score": 55
     },
     "swiss_confederation": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Swiss Confederation in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Swiss Confederation in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 10/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 10
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2214,29 +2514,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q39",
-      "raw_score": 60
+      "raw_score": 54
     },
     "ahmadnagar_sultanate": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Ahmadnagar Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Ahmadnagar Sultanate in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2246,29 +2550,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q400998",
-      "raw_score": 57
+      "raw_score": 54
     },
     "papal_states": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Papal States in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Papal States in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2278,24 +2590,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170174",
-      "raw_score": 60
+      "raw_score": 55
     },
     "house_of_savoy": {
-      "score": 88,
-      "summary": "Brecke records no major conflict touching House of Savoy in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1742 (FRA, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching House of Savoy in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1742 (FRA, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 10/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 48,
         "economy": 77,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 10
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -2307,6 +2619,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2314,24 +2634,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q200229",
-      "raw_score": 65
+      "raw_score": 60
     },
     "dutch_republic": {
       "score": 100,
-      "summary": "Brecke records no major conflict touching Dutch Republic in 1620 (safety at the era baseline of 85). Maddison GDP/capita 3493 (NLD, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "summary": "Brecke records no major conflict touching Dutch Republic in 1620 (safety at the era baseline of 85). Maddison GDP/capita 3493 (NLD, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 31/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 50,
         "economy": 90,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 31
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -2343,6 +2663,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2350,29 +2678,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170072",
-      "raw_score": 68
+      "raw_score": 66
     },
     "nayaks_of_madurai": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Nayaks of Madurai in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Nayaks of Madurai in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2382,29 +2714,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1530838",
-      "raw_score": 57
+      "raw_score": 54
     },
     "sultanate_of_malacca": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2414,24 +2750,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q46652",
-      "raw_score": 57
+      "raw_score": 55
     },
     "portuguese_ceylon": {
-      "score": 42,
-      "summary": "Active conflicts in 1620: United Provinces-Ceylon (Portugal), 1611-28. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 45,
+      "summary": "Active conflicts in 1620: United Provinces-Ceylon (Portugal), 1611-28. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
-        "health": 45,
+        "health": 18,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -2443,6 +2779,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2450,24 +2790,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1709007",
-      "raw_score": 54
+      "raw_score": 50
     },
     "electorate_of_saxony": {
       "score": 42,
-      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1641 (DEU, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 53,
-        "health": 45,
+        "health": 47,
         "economy": 70,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -2479,6 +2819,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2486,24 +2834,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q156199",
-      "raw_score": 54
+      "raw_score": 49
     },
     "spanish_empire_lka": {
-      "score": 42,
-      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 45,
+      "summary": "Active conflicts in 1620: Switzerland (Valtellina, with Spanish intervention) 1620-23. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
-        "health": 45,
+        "health": 18,
         "economy": 50,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
@@ -2515,6 +2863,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2522,29 +2874,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 54
+      "raw_score": 50
     },
     "sultanate_of_banjar": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2554,29 +2910,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1660566",
-      "raw_score": 57
+      "raw_score": 55
     },
     "small_horde_kaz": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Small Horde (KAZ) in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Small Horde (KAZ) in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2586,29 +2946,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q631210",
-      "raw_score": 55
+      "raw_score": 52
     },
     "itza_mayans": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Itza Mayans in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Itza Mayans in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 28,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2618,29 +2982,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q606377",
-      "raw_score": 60
+      "raw_score": 54
     },
     "sultanate_of_cirebon": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Sultanate of Cirebon in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Sultanate of Cirebon in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 45,
+        "health": 24,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2650,29 +3018,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2077648",
-      "raw_score": 57
+      "raw_score": 55
     },
     "republic_of_florence": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Republic of Florence in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Republic of Florence in 1620 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 45,
         "economy": 50,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "neutral",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
         },
         {
           "label": "Wikipedia — 1620",
@@ -2682,24 +3058,24 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q148540",
-      "raw_score": 60
+      "raw_score": 55
     },
     "duchy_of_lorraine": {
-      "score": 88,
-      "summary": "Brecke records no major conflict touching Duchy of Lorraine in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1742 (FRA, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching Duchy of Lorraine in 1620 (safety at the era baseline of 85). Maddison GDP/capita 1742 (FRA, 1620) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 10/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 45,
+        "health": 48,
         "economy": 77,
         "governance": 50,
-        "religious_tolerance": 50
+        "religious_tolerance": 10
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "baseline",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "neutral",
-        "religious_tolerance": "neutral"
+        "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
@@ -2711,6 +3087,14 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+          "url": "https://github.com/JakeRuss/witch-trials"
+        },
+        {
           "label": "Wikipedia — 1620",
           "url": "https://en.wikipedia.org/wiki/1620"
         }
@@ -2718,7 +3102,7 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q155019",
-      "raw_score": 65
+      "raw_score": 60
     }
   }
 }

@@ -31,6 +31,8 @@ import sys
 from pathlib import Path
 
 import vdem_lookup
+import factors
+from factors import ISO3_TO_BRECKE
 
 ROOT = Path(__file__).parent.parent
 RAW = ROOT / "data" / "raw"
@@ -60,31 +62,7 @@ def load_region_set(set_name: str) -> list[dict]:
     return json.loads(p.read_text(encoding="utf-8"))["regions"]
 
 
-# ─── ISO3 → Brecke macro-region (for safety) ─────────────────────────────────
-# Brecke codebook regions: 1 British Isles, 2 W Europe, 3 Central Europe,
-# 4 E Europe, 5 Middle East, 6 N Africa, 7 Sub-Saharan, 8 South Asia,
-# 9 SE Asia, 10 East Asia, 11 Oceania, 12 Central Asia, 13 Latin America,
-# 14 N America.
-BRECKE_MEMBERS = {
-    1: "GBR IRL",
-    2: "FRA ESP PRT ITA BEL LUX NLD CHE MCO AND",
-    3: "DEU AUT CZE SVK HUN POL SVN HRV LIE",
-    4: "RUS UKR BLR LTU LVA EST ROU MDA BGR GRC SRB BIH MKD ALB MNE",
-    5: "TUR IRN IRQ SYR LBN ISR PSE JOR SAU YEM OMN ARE KWT QAT BHR AZE ARM GEO AFG",
-    6: "MAR DZA TUN LBY EGY SDN SSD MRT ESH",
-    7: ("ETH ERI SOM DJI KEN TZA UGA RWA BDI COD COG AGO ZMB ZWE MOZ MWI MDG "
-        "ZAF NAM BWA LSO SWZ NGA NER TCD CMR CAF GAB GNQ BEN TGO GHA CIV BFA "
-        "MLI SEN GMB GNB GIN SLE LBR"),
-    8: "IND PAK BGD NPL BTN LKA MDV",
-    9: "MMR THA LAO KHM VNM MYS SGP IDN PHL BRN TLS",
-    10: "CHN MNG TWN JPN KOR PRK",
-    11: "AUS NZL PNG FJI",
-    12: "KAZ UZB TKM TJK KGZ",
-    13: ("MEX GTM BLZ HND SLV NIC CRI PAN CUB JAM HTI DOM BHS TTO COL VEN ECU "
-         "PER BOL BRA PRY URY ARG CHL GUY SUR"),
-    14: "USA CAN",
-}
-ISO3_TO_BRECKE = {iso: code for code, isos in BRECKE_MEMBERS.items() for iso in isos.split()}
+# ISO3_TO_BRECKE lives in factors.py (shared with the health/tolerance providers).
 
 # Words to strip from a polity name before using the rest as conflict keywords.
 NAME_STOP = {
@@ -169,8 +147,8 @@ def score_region(year: int, region: dict, raw_gdppc: dict,
         gov, gov_src = vdem_score, "vdem"
     else:
         gov, gov_src = 50, "neutral"
-    health, health_src = 45, "baseline"
-    relig, relig_src = 50, "neutral"
+    health, health_src = factors.health(members, year, len(conflict_hits), econ_score)
+    relig, relig_src, witch_pen = factors.tolerance(members, year)
 
     parts = []
     if conflict_hits:
@@ -191,6 +169,14 @@ def score_region(year: int, region: dict, raw_gdppc: dict,
         parts.append(f"V-Dem polyarchy {vdem_score}/100 ({vdem_iso}, {year}) — {label}.")
     else:
         parts.append("Governance neutral (V-Dem coverage starts 1789).")
+    if health_src == "lifeexp":
+        parts.append(f"Health {health}/100, anchored on life-expectancy data for the region.")
+    if witch_pen:
+        parts.append(f"Religious tolerance {relig}/100 — lowered by recorded witch-trial "
+                     f"persecution in this period.")
+    else:
+        parts.append(f"Religious tolerance {relig}/100 (modeled from the era's state-religion "
+                     f"pattern for this region).")
     summary = " ".join(parts)
 
     overall = round(0.30 * safety + 0.20 * gov + 0.20 * econ_score +
@@ -209,6 +195,16 @@ def score_region(year: int, region: dict, raw_gdppc: dict,
         sources.append({
             "label": f"V-Dem v15 — {vdem_iso} {year} polyarchy={vdem_score}",
             "url": "https://www.v-dem.net/data/the-v-dem-dataset/",
+        })
+    if health_src == "lifeexp":
+        sources.append({
+            "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+            "url": "https://ourworldindata.org/life-expectancy",
+        })
+    if witch_pen:
+        sources.append({
+            "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
+            "url": "https://github.com/JakeRuss/witch-trials",
         })
 
     return {

@@ -482,6 +482,9 @@ const SOURCE_TAGS = {
   "wiki":     { label: "Wiki",     title: "Wikipedia (manual context)" },
   "neutral":  { label: "neutral",  title: "No sourced data — held at 50" },
   "baseline": { label: "era",      title: "Era baseline with manual adjustment" },
+  "lifeexp":  { label: "Life exp.", title: "Life expectancy (Our World in Data: Riley, Zijdeman, UN) — country or regional" },
+  "modeled":  { label: "modeled",  title: "Modeled estimate from the era's regional pattern (no direct dataset)" },
+  "witch-trials": { label: "Witch trials", title: "Leeson & Russ witch-trial database — recorded persecution lowers tolerance" },
 };
 
 function renderFactors(factors, factorSources) {
