@@ -24,6 +24,9 @@ SOURCES = {
     "ucdp_acd.zip": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zip",
     "cshapes2.zip": "https://icr.ethz.ch/data/cshapes/CShapes-2.0.zip",
     "polity5.xls": "https://www.systemicpeace.org/inscr/p5v2018.xls",
+    # ── Cliopatria: year-keyed polities 3400 BCE-2024 CE, CC-BY 4.0 (~44 MB
+    #    zip -> 157 MB geojson). The period-boundary backbone for all eras.
+    "cliopatria.geojson.zip": "https://raw.githubusercontent.com/Seshat-Global-History-Databank/cliopatria/master/cliopatria.geojson.zip",
     # ── Big (>100 MB) — V-Dem covers 1789-present, 500+ indicators ───────
     "vdem_v15_core.csv": "https://zenodo.org/api/records/16413929/files/V-Dem-CY-Core-v15.csv/content",
 }

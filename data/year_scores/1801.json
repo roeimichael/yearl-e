@@ -1,34 +1,34 @@
 {
   "year": 1801,
   "label": "1801 CE",
-  "region_set": "early_modern",
+  "region_set": "early_modern_1800",
   "era_summary": "1801 (MDCCCI) was a common year starting on Thursday of the Gregorian calendar and a common year starting on Tuesday of the Julian calendar, the 1801st year of the Common Era (CE) and Anno Domini (AD) designations, the 801st year of the 2nd millennium, the 1st year of the 19th century, and the 2nd year of the 1800s decade. As of the start of 1801, the Gregorian calendar was 12 days ahead of the Julian calendar, which remained in localized use until 1923. ",
   "regions": {
-    "rome_italy": {
-      "score": 80,
-      "summary": "Active conflicts in 1801: France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800. Maddison records GDP/capita 2515 (ITA, 1801) — used as the economy proxy for the whole region. Governance held at neutral (V-Dem coverage starts 1789).",
+    "russian_empire": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Russian Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (RUS, 1801) — highly autocratic.",
       "factors": {
-        "safety": 60,
+        "safety": 81,
         "health": 45,
-        "economy": 72,
-        "governance": 50,
+        "economy": 50,
+        "governance": 2,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "baseline",
-        "economy": "maddison",
-        "governance": "neutral",
+        "economy": "neutral",
+        "governance": "vdem",
         "religious_tolerance": "neutral"
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "Maddison Project 2023 — ITA 1801 gdppc=2515",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+          "label": "V-Dem v15 — RUS 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
           "label": "Wikipedia — 1801",
@@ -37,15 +37,716 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 57
+      "wikidata": "Q34266",
+      "raw_score": 49
     },
-    "andalusia_iberia": {
-      "score": 1,
-      "summary": "Active conflicts in 1801: France-England, Spain, Holland (colonies in America), 1793-1801; Spain-England, 1795-1801; France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800. Maddison records GDP/capita 1391 (PRT, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 2/100 (ESP, 1801) — highly autocratic.",
+    "qing_dynasty": {
+      "score": 20,
+      "summary": "Brecke records no major conflict touching Qing Dynasty in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 4/100 (CHN, 1801) — highly autocratic.",
       "factors": {
-        "safety": 24,
+        "safety": 61,
         "health": 45,
-        "economy": 55,
+        "economy": 50,
+        "governance": 4,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1801 polyarchy=4",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q8733",
+      "raw_score": 43
+    },
+    "spanish_empire": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Spanish Empire in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1298 (MEX, 1801) — economy proxy for the territory. V-Dem polyarchy 8/100 (ARG, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 37,
+        "governance": 8,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — MEX 1801 gdppc=1298",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — ARG 1801 polyarchy=8",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q80702",
+      "raw_score": 49
+    },
+    "portuguese_empire": {
+      "score": 47,
+      "summary": "Brecke records no major conflict touching Portuguese Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (BRA, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 1,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — BRA 1801 polyarchy=1",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q200464",
+      "raw_score": 50
+    },
+    "ottoman_empire": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Ottoman Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (EGY, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 69,
+        "health": 45,
+        "economy": 50,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — EGY 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q12560",
+      "raw_score": 46
+    },
+    "kazakh_khanate": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1433867",
+      "raw_score": 56
+    },
+    "qajar_dynasty": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Qajar Dynasty in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q189326",
+      "raw_score": 60
+    },
+    "durrani_empire": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Durrani Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (AFG, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — AFG 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q467627",
+      "raw_score": 49
+    },
+    "swedish_empire": {
+      "score": 58,
+      "summary": "Brecke records no major conflict touching Swedish Empire in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1353 (SWE, 1801) — economy proxy for the territory. V-Dem polyarchy 19/100 (SWE, 1801) — limited representation.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 49,
+        "governance": 19,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — SWE 1801 gdppc=1353",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — SWE 1801 polyarchy=19",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q215443",
+      "raw_score": 53
+    },
+    "united_states_of_america": {
+      "score": 81,
+      "summary": "Active conflicts in 1801: France-England, Spain, Holland (colonies in America), 1793-1801. Maddison GDP/capita 2592 (USA, 1801) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1801) — early democratic.",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 78,
+        "governance": 36,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — USA 1801 gdppc=2592",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — USA 1801 polyarchy=36",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q30",
+      "raw_score": 59
+    },
+    "maratha_empire": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Maratha Empire in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1033 (IND, 1801) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 31,
+        "governance": 5,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — IND 1801 polyarchy=5",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q83618",
+      "raw_score": 46
+    },
+    "habsburg_monarchy": {
+      "score": 12,
+      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 6/100 (HUN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 53,
+        "health": 45,
+        "economy": 50,
+        "governance": 6,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — HUN 1801 polyarchy=6",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q66504140",
+      "raw_score": 41
+    },
+    "british_empire": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching British Empire in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1033 (IND, 1801) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 31,
+        "governance": 5,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — IND 1801 polyarchy=5",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q8680",
+      "raw_score": 46
+    },
+    "khanate_of_khiva": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q491106",
+      "raw_score": 56
+    },
+    "british_colonial_empire": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching British Colonial Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q8680",
+      "raw_score": 60
+    },
+    "denmark_norway": {
+      "score": 39,
+      "summary": "Active conflicts in 1801: Britain-Denmark, 1801. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 10/100 (DNK, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 10,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "V-Dem v15 — DNK 1801 polyarchy=10",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q62651",
+      "raw_score": 48
+    },
+    "emirate_of_diriyah": {
+      "score": 47,
+      "summary": "Brecke records no major conflict touching Emirate of Diriyah in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (SAU, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — SAU 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q146871",
+      "raw_score": 50
+    },
+    "french_consulate": {
+      "score": 35,
+      "summary": "Active conflicts in 1801: Wars of the French Revolution, 1791-1802. Maddison GDP/capita 1580 (FRA, 1801) — economy proxy for the territory. V-Dem polyarchy 12/100 (FRA, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 60,
+        "health": 45,
+        "economy": 60,
+        "governance": 12,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — FRA 1801 gdppc=1580",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — FRA 1801 polyarchy=12",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q877619",
+      "raw_score": 47
+    },
+    "konbaung_dynasty": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Konbaung Dynasty in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (MMR, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — MMR 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1062422",
+      "raw_score": 49
+    },
+    "funj_sultanate": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Funj Sultanate in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1475713",
+      "raw_score": 56
+    },
+    "kingdom_of_spain": {
+      "score": 1,
+      "summary": "Active conflicts in 1801: France-England, Spain, Holland (colonies in America), 1793-1801; Spain-England, 1795-1801; Spain-Portugal, 1801. Maddison GDP/capita 1352 (ESP, 1801) — economy proxy for the territory. V-Dem polyarchy 2/100 (ESP, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 49,
+        "health": 45,
+        "economy": 43,
         "governance": 2,
         "religious_tolerance": 50
       },
@@ -58,11 +759,15 @@
       },
       "sources": [
         {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
-          "label": "Maddison Project 2023 — PRT 1801 gdppc=1391",
+          "label": "Maddison Project 2023 — ESP 1801 gdppc=1352",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
@@ -76,52 +781,14 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 33
+      "wikidata": "Q29",
+      "raw_score": 38
     },
-    "francia": {
-      "score": 44,
-      "summary": "Active conflicts in 1801: France-England, Spain, Holland (colonies in America), 1793-1801; France-Egypt, Britain, Turkey, Russia, 1798-1801; France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800. Maddison records GDP/capita 4111 (NLD, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 13/100 (NLD, 1801) — highly autocratic.",
+    "kingdom_of_great_britain": {
+      "score": 28,
+      "summary": "Active conflicts in 1801: France-Egypt, Britain, Turkey, Russia, 1798-1801; France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800; Britain-Denmark, 1801. Maddison GDP/capita 3351 (GBR, 1801) — economy proxy for the territory. V-Dem polyarchy 28/100 (GBR, 1801) — limited representation.",
       "factors": {
-        "safety": 36,
-        "health": 45,
-        "economy": 90,
-        "governance": 13,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Maddison Project 2023 — NLD 1801 gdppc=4111",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — NLD 1801 polyarchy=13",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 46
-    },
-    "england": {
-      "score": 18,
-      "summary": "Active conflicts in 1801: France-England, Spain, Holland (colonies in America), 1793-1801; Spain-England, 1795-1801; France-Egypt, Britain, Turkey, Russia, 1798-1801. Maddison records GDP/capita 3351 (GBR, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 28/100 (GBR, 1801) — limited representation.",
-      "factors": {
-        "safety": 5,
+        "safety": 28,
         "health": 45,
         "economy": 84,
         "governance": 28,
@@ -135,6 +802,10 @@
         "religious_tolerance": "neutral"
       },
       "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
@@ -154,16 +825,81 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 38
+      "wikidata": "Q23666",
+      "raw_score": 45
     },
-    "rus": {
-      "score": 8,
-      "summary": "Active conflicts in 1801: France-Egypt, Britain, Turkey, Russia, 1798-1801; France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800; Russia (Caucasus), 1800-29. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (RUS, 1801) — highly autocratic.",
+    "kingdom_of_prussia": {
+      "score": 50,
+      "summary": "Brecke records no major conflict touching Kingdom of Prussia in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
       "factors": {
-        "safety": 36,
+        "safety": 57,
         "health": 45,
         "economy": 50,
-        "governance": 2,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q27306",
+      "raw_score": 51
+    },
+    "emirate_of_bukhara": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Emirate of Bukhara in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q746558",
+      "raw_score": 56
+    },
+    "morocco": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Morocco in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (MAR, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 1,
         "religious_tolerance": 50
       },
       "factor_sources": {
@@ -175,11 +911,11 @@
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "V-Dem v15 — RUS 1801 polyarchy=2",
+          "label": "V-Dem v15 — MAR 1801 polyarchy=1",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
@@ -189,16 +925,17 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 35
+      "wikidata": "Q1028",
+      "raw_score": 46
     },
-    "constantinople_balkans": {
-      "score": 21,
-      "summary": "Active conflicts in 1801: France-Egypt, Britain, Turkey, Russia, 1798-1801; France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (TUR, 1801) — highly autocratic.",
+    "tokugawa_shogunate": {
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (JPN, 1801) — highly autocratic.",
       "factors": {
-        "safety": 48,
+        "safety": 73,
         "health": 45,
         "economy": 50,
-        "governance": 2,
+        "governance": 3,
         "religious_tolerance": 50
       },
       "factor_sources": {
@@ -210,11 +947,11 @@
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "V-Dem v15 — TUR 1801 polyarchy=2",
+          "label": "V-Dem v15 — JPN 1801 polyarchy=3",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
@@ -224,11 +961,216 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 39
+      "wikidata": "Q205662",
+      "raw_score": 47
     },
-    "persia": {
-      "score": 47,
-      "summary": "Active conflicts in 1801: Afghanistan (Ghilzais), 1801. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (AFG, 1801) — highly autocratic.",
+    "rattanakosin_kingdom": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Rattanakosin Kingdom in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — THA 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1155700",
+      "raw_score": 49
+    },
+    "mughal_empire": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Mughal Empire in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1033 (IND, 1801) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 31,
+        "governance": 5,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — IND 1801 polyarchy=5",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q33296",
+      "raw_score": 46
+    },
+    "bornu_empire": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Bornu Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1139762",
+      "raw_score": 56
+    },
+    "spanish_empire_phl": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Spanish Empire (PHL) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q80702",
+      "raw_score": 59
+    },
+    "british_cape_colony": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching British Cape Colony in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q370736",
+      "raw_score": 56
+    },
+    "sultanate_of_darfur": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1474791",
+      "raw_score": 56
+    },
+    "joseon": {
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Joseon in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (KOR, 1801) — highly autocratic.",
       "factors": {
         "safety": 73,
         "health": 45,
@@ -245,11 +1187,11 @@
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "V-Dem v15 — AFG 1801 polyarchy=2",
+          "label": "V-Dem v15 — KOR 1801 polyarchy=2",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
@@ -259,13 +1201,14 @@
       ],
       "ruler": null,
       "sparse_data": true,
+      "wikidata": "Q28405",
       "raw_score": 47
     },
-    "central_asia": {
-      "score": 54,
-      "summary": "Active conflicts in 1801: China (White Lotus sect), 1796-1804; Korea (catholics), 1801. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
+    "wadai_empire": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Wadai Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
       "factors": {
-        "safety": 48,
+        "safety": 73,
         "health": 45,
         "economy": 50,
         "governance": 50,
@@ -280,6 +1223,42 @@
       },
       "sources": [
         {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1132786",
+      "raw_score": 56
+    },
+    "denmark_norway_isl": {
+      "score": 70,
+      "summary": "Active conflicts in 1801: Britain-Denmark, 1801. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
@@ -290,13 +1269,294 @@
       ],
       "ruler": null,
       "sparse_data": true,
+      "wikidata": "Q62651",
+      "raw_score": 56
+    },
+    "regency_of_algiers": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Regency of Algiers in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q3045696",
+      "raw_score": 56
+    },
+    "ethiopian_empire": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (ETH, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 1,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — ETH 1801 polyarchy=1",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q207521",
+      "raw_score": 46
+    },
+    "greenland": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Greenland in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q223",
+      "raw_score": 60
+    },
+    "holy_roman_empire_minor_states": {
+      "score": 28,
+      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1781 (DEU, 1801) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 57,
+        "health": 45,
+        "economy": 66,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — DEU 1801 gdppc=1781",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q12548",
+      "raw_score": 45
+    },
+    "batavian_republic": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Batavian Republic in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q188553",
       "raw_score": 49
     },
-    "egypt_nile": {
-      "score": 34,
-      "summary": "Active conflicts in 1801: France-Egypt, Britain, Turkey, Russia, 1798-1801; Egypt-Wahhabis (Arabia), 1801-11. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (EGY, 1801) — highly autocratic.",
+    "dutch_east_indies": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Dutch East Indies in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
       "factors": {
-        "safety": 61,
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q188161",
+      "raw_score": 49
+    },
+    "nepal": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Nepal in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (NPL, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 1,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — NPL 1801 polyarchy=1",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q837",
+      "raw_score": 49
+    },
+    "t_y_s_n_dynasty": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Tây Sơn dynasty in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1034173",
+      "raw_score": 59
+    },
+    "vientiane": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Vientiane in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
         "health": 45,
         "economy": 50,
         "governance": 3,
@@ -310,6 +1570,1130 @@
         "religious_tolerance": "neutral"
       },
       "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — THA 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q9326",
+      "raw_score": 49
+    },
+    "sultanate_of_johor": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1150344",
+      "raw_score": 49
+    },
+    "qasimids": {
+      "score": 47,
+      "summary": "Brecke records no major conflict touching Qasimids in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (YEM, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — YEM 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q5261548",
+      "raw_score": 50
+    },
+    "kingdom_of_luang_phrabang": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Kingdom of Luang Phrabang in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q190165",
+      "raw_score": 59
+    },
+    "ashanti_empire": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Ashanti Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q722071",
+      "raw_score": 56
+    },
+    "carnatic_sultanate": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Carnatic Sultanate in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1033 (IND, 1801) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 31,
+        "governance": 5,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — IND 1801 polyarchy=5",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q3277580",
+      "raw_score": 46
+    },
+    "nawab_of_awadh": {
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Nawab of Awadh in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1033 (IND, 1801) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 31,
+        "governance": 5,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — IND 1801 polyarchy=5",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q2614237",
+      "raw_score": 46
+    },
+    "kingdom_of_naples_napoleonic": {
+      "score": 73,
+      "summary": "Active conflicts in 1801: France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800. Maddison GDP/capita 2515 (ITA, 1801) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 60,
+        "health": 45,
+        "economy": 72,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — ITA 1801 gdppc=2515",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q48779892",
+      "raw_score": 57
+    },
+    "kingdom_of_portugal": {
+      "score": 9,
+      "summary": "Active conflicts in 1801: France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800; Spain-Portugal, 1801. Maddison GDP/capita 1391 (PRT, 1801) — economy proxy for the territory. V-Dem polyarchy 2/100 (PRT, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 48,
+        "health": 45,
+        "economy": 55,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — PRT 1801 gdppc=1391",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — PRT 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q45670",
+      "raw_score": 40
+    },
+    "khmer_empire": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Khmer Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q201705",
+      "raw_score": 59
+    },
+    "kingdom_of_lunda": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Kingdom of Lunda in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1796223",
+      "raw_score": 56
+    },
+    "khanate_of_kokand": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Khanate of Kokand in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q696241",
+      "raw_score": 56
+    },
+    "beylik_of_tunis": {
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Beylik of Tunis in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (TUN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — TUN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q4899891",
+      "raw_score": 47
+    },
+    "principality_of_wallachia": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q171393",
+      "raw_score": 59
+    },
+    "principality_of_moldavia": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Principality of Moldavia in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q10957559",
+      "raw_score": 59
+    },
+    "merina_kingdom": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Merina Kingdom in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1071439",
+      "raw_score": 56
+    },
+    "karamanli_dynasty": {
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Karamanli Dynasty in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (LBY, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — LBY 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1929987",
+      "raw_score": 47
+    },
+    "oyo_empire": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Oyo Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q849623",
+      "raw_score": 56
+    },
+    "kingdom_of_sardinia": {
+      "score": 100,
+      "summary": "Brecke records no major conflict touching Kingdom of Sardinia in 1801 (safety at the era baseline of 85). Maddison GDP/capita 2515 (ITA, 1801) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 72,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ITA 1801 gdppc=2515",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q2577303",
+      "raw_score": 64
+    },
+    "sultanate_of_oman": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Sultanate of Oman in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q842",
+      "raw_score": 60
+    },
+    "cambodia": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Cambodia in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q424",
+      "raw_score": 59
+    },
+    "sultanate_of_palembang": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q3503555",
+      "raw_score": 49
+    },
+    "kingdom_of_georgia": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Kingdom of Georgia in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q154667",
+      "raw_score": 60
+    },
+    "chiangmai": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Chiangmai in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — THA 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q52028",
+      "raw_score": 49
+    },
+    "sultanate_of_brunei": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q887803",
+      "raw_score": 59
+    },
+    "sultanate_of_sulu": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Sultanate of Sulu in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q422065",
+      "raw_score": 59
+    },
+    "sikh_empire": {
+      "score": 50,
+      "summary": "Active conflicts in 1801: India-Sikhs, 1799-1802. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 56,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q83572",
+      "raw_score": 51
+    },
+    "duchy_of_bavaria": {
+      "score": 28,
+      "summary": "Brecke records no major conflict touching Duchy of Bavaria in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1781 (DEU, 1801) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 57,
+        "health": 45,
+        "economy": 66,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — DEU 1801 gdppc=1781",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q47261",
+      "raw_score": 45
+    },
+    "sultanate_of_banten": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q734867",
+      "raw_score": 49
+    },
+    "batavian_republic_nld": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Batavian Republic (NLD) in 1801 (safety at the era baseline of 85). Maddison GDP/capita 4111 (NLD, 1801) — economy proxy for the territory. V-Dem polyarchy 13/100 (NLD, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 90,
+        "governance": 13,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — NLD 1801 gdppc=4111",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — NLD 1801 polyarchy=13",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q188553",
+      "raw_score": 60
+    },
+    "portuguese_empire_moz": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Portuguese Empire (MOZ) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q200464",
+      "raw_score": 56
+    },
+    "helvetic_republic": {
+      "score": 58,
+      "summary": "Brecke records no major conflict touching Helvetic Republic in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 18/100 (CHE, 1801) — limited representation.",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 18,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — CHE 1801 polyarchy=18",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q206696",
+      "raw_score": 53
+    },
+    "french_consulate_egy": {
+      "score": 5,
+      "summary": "Active conflicts in 1801: Wars of the French Revolution, 1791-1802. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (EGY, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 48,
+        "health": 45,
+        "economy": 50,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
@@ -325,133 +2709,37 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 43
+      "wikidata": "Q877619",
+      "raw_score": 39
     },
-    "arabia": {
-      "score": 50,
-      "summary": "Active conflicts in 1801: Egypt-Wahhabis (Arabia), 1801-11. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 7/100 (KWT, 1801) — highly autocratic.",
+    "electorate_of_saxony": {
+      "score": 28,
+      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1781 (DEU, 1801) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1801) — highly autocratic.",
       "factors": {
-        "safety": 73,
+        "safety": 57,
         "health": 45,
-        "economy": 50,
-        "governance": 7,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "V-Dem v15 — KWT 1801 polyarchy=7",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 48
-    },
-    "ethiopia": {
-      "score": 57,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (ETH, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 1,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "V-Dem v15 — ETH 1801 polyarchy=1",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 50
-    },
-    "han_china": {
-      "score": 34,
-      "summary": "Active conflicts in 1801: China (White Lotus sect), 1796-1804. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 4/100 (CHN, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 60,
-        "health": 45,
-        "economy": 50,
-        "governance": 4,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "V-Dem v15 — CHN 1801 polyarchy=4",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 43
-    },
-    "japan": {
-      "score": 47,
-      "summary": "Active conflicts in 1801: Korea (catholics), 1801. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (JPN, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 73,
-        "health": 45,
-        "economy": 50,
+        "economy": 66,
         "governance": 3,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "baseline",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "neutral"
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "V-Dem v15 — JPN 1801 polyarchy=3",
+          "label": "Maddison Project 2023 — DEU 1801 gdppc=1781",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1801 polyarchy=3",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
@@ -461,11 +2749,332 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 47
+      "wikidata": "Q156199",
+      "raw_score": 45
     },
-    "north_america_east": {
+    "papal_states": {
       "score": 100,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 2592 (USA, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 36/100 (USA, 1801) — early democratic.",
+      "summary": "Brecke records no major conflict touching Papal States in 1801 (safety at the era baseline of 85). Maddison GDP/capita 2515 (ITA, 1801) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 72,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ITA 1801 gdppc=2515",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q170174",
+      "raw_score": 64
+    },
+    "british_colonial_empire_sur": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (SUR) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q8680",
+      "raw_score": 60
+    },
+    "electorate_of_hanover": {
+      "score": 28,
+      "summary": "Brecke records no major conflict touching Electorate of Hanover in 1801 (safety at the era baseline of 85). Maddison GDP/capita 1781 (DEU, 1801) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 57,
+        "health": 45,
+        "economy": 66,
+        "governance": 3,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — DEU 1801 gdppc=1781",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1801 polyarchy=3",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q706018",
+      "raw_score": 45
+    },
+    "kingdom_of_bhutan": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q917",
+      "raw_score": 59
+    },
+    "kingdom_of_champasak": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Kingdom of Champasak in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q403369",
+      "raw_score": 59
+    },
+    "sultanate_of_aceh": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1061057",
+      "raw_score": 49
+    },
+    "sultanate_of_banjar": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q1660566",
+      "raw_score": 49
+    },
+    "french_louisiana": {
+      "score": 66,
+      "summary": "Active conflicts in 1801: Wars of the French Revolution, 1791-1802. Maddison GDP/capita 2592 (USA, 1801) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1801) — early democratic.",
+      "factors": {
+        "safety": 60,
+        "health": 45,
+        "economy": 78,
+        "governance": 36,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "maddison",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Brecke Conflict Catalog 1400-2000",
+          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — USA 1801 gdppc=2592",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "V-Dem v15 — USA 1801 polyarchy=36",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q5501836",
+      "raw_score": 55
+    },
+    "bamana_empire": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Bamana Empire in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q762084",
+      "raw_score": 56
+    },
+    "russian_empire_usa": {
+      "score": 96,
+      "summary": "Brecke records no major conflict touching Russian Empire (USA) in 1801 (safety at the era baseline of 85). Maddison GDP/capita 2592 (USA, 1801) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1801) — early democratic.",
       "factors": {
         "safety": 85,
         "health": 45,
@@ -482,6 +3091,10 @@
       },
       "sources": [
         {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
           "label": "Maddison Project 2023 — USA 1801 gdppc=2592",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
@@ -496,149 +3109,14 @@
       ],
       "ruler": null,
       "sparse_data": true,
+      "wikidata": "Q34266",
       "raw_score": 63
     },
-    "andes": {
-      "score": 41,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1003 (PER, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 1/100 (CHL, 1801) — highly autocratic.",
+    "nguy_n_dynasty": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Nguyễn dynasty in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
       "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 25,
-        "governance": 1,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — PER 1801 gdppc=1003",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — CHL 1801 polyarchy=1",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 45
-    },
-    "brazil_amazon": {
-      "score": 60,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 8/100 (ARG, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 8,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "V-Dem v15 — ARG 1801 polyarchy=8",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 51
-    },
-    "sweden_empire": {
-      "score": 67,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1353 (SWE, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 19/100 (SWE, 1801) — limited representation.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 49,
-        "governance": 19,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — SWE 1801 gdppc=1353",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — SWE 1801 polyarchy=19",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 53
-    },
-    "denmark_norway": {
-      "score": 50,
-      "summary": "Active conflicts in 1801: Britain-Denmark, 1801. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 10/100 (DNK, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 73,
-        "health": 45,
-        "economy": 50,
-        "governance": 10,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "V-Dem v15 — DNK 1801 polyarchy=10",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 48
-    },
-    "swedish_baltic": {
-      "score": 90,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 85,
+        "safety": 81,
         "health": 45,
         "economy": 50,
         "governance": 50,
@@ -653,39 +3131,8 @@
       },
       "sources": [
         {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 60
-    },
-    "habsburg_austria": {
-      "score": 34,
-      "summary": "Active conflicts in 1801: France-Britain, Russia, Austria, Turkey, Portugal, Naples, 1798-1800. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 6/100 (HUN, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 60,
-        "health": 45,
-        "economy": 50,
-        "governance": 6,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "V-Dem v15 — HUN 1801 polyarchy=6",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
           "label": "Wikipedia — 1801",
@@ -694,248 +3141,12 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 43
+      "wikidata": "Q6500483",
+      "raw_score": 59
     },
-    "prussia_brandenburg": {
-      "score": 70,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1781 (DEU, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 3/100 (DEU, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 66,
-        "governance": 3,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — DEU 1801 gdppc=1781",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — DEU 1801 polyarchy=3",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 54
-    },
-    "german_princes": {
-      "score": 80,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1781 (DEU, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 18/100 (CHE, 1801) — limited representation.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 66,
-        "governance": 18,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — DEU 1801 gdppc=1781",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — CHE 1801 polyarchy=18",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 57
-    },
-    "polish_lithuanian_commonwealth": {
-      "score": 90,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "neutral",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 60
-    },
-    "mughal_north": {
+    "haiti": {
       "score": 47,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1033 (IND, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 31,
-        "governance": 5,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — IND 1801 polyarchy=5",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 47
-    },
-    "maratha_confederacy": {
-      "score": 47,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1033 (IND, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 31,
-        "governance": 5,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — IND 1801 polyarchy=5",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 47
-    },
-    "bengal": {
-      "score": 47,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1033 (IND, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 31,
-        "governance": 5,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — IND 1801 polyarchy=5",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 47
-    },
-    "deccan_sultanates": {
-      "score": 47,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1033 (IND, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 5/100 (IND, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 31,
-        "governance": 5,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — IND 1801 gdppc=1033",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — IND 1801 polyarchy=5",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 47
-    },
-    "voc_indonesia": {
-      "score": 57,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "summary": "Brecke records no major conflict touching Haiti in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (HTI, 1801) — highly autocratic.",
       "factors": {
         "safety": 85,
         "health": 45,
@@ -952,6 +3163,206 @@
       },
       "sources": [
         {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "V-Dem v15 — HTI 1801 polyarchy=2",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q2006756",
+      "raw_score": 50
+    },
+    "british_colonial_empire_jam": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q8680",
+      "raw_score": 60
+    },
+    "british_ceylon": {
+      "score": 81,
+      "summary": "Brecke records no major conflict touching British Ceylon in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q918153",
+      "raw_score": 59
+    },
+    "russian_empire_part2": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Russian Empire (part2) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q34266",
+      "raw_score": 60
+    },
+    "british_empire_can": {
+      "score": 85,
+      "summary": "Brecke records no major conflict touching British Empire (CAN) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 85,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q8680",
+      "raw_score": 60
+    },
+    "sultanate_of_oman_tza": {
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Sultanate of Oman (TZA) in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789).",
+      "factors": {
+        "safety": 73,
+        "health": 45,
+        "economy": 50,
+        "governance": 50,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "neutral",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Wikipedia — 1801",
+          "url": "https://en.wikipedia.org/wiki/1801"
+        }
+      ],
+      "ruler": null,
+      "sparse_data": true,
+      "wikidata": "Q842",
+      "raw_score": 56
+    },
+    "sultanate_of_jambi": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
+      "factors": {
+        "safety": 81,
+        "health": 45,
+        "economy": 50,
+        "governance": 2,
+        "religious_tolerance": 50
+      },
+      "factor_sources": {
+        "safety": "brecke",
+        "health": "baseline",
+        "economy": "neutral",
+        "governance": "vdem",
+        "religious_tolerance": "neutral"
+      },
+      "sources": [
+        {
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
           "label": "V-Dem v15 — IDN 1801 polyarchy=2",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
@@ -962,16 +3373,17 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 50
+      "wikidata": "Q1679856",
+      "raw_score": 49
     },
-    "siam_vietnam_burma": {
-      "score": 47,
-      "summary": "Active conflicts in 1801: Vietnam (peasant rebellion), 1771-1802. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1801) — highly autocratic.",
+    "sultanate_of_malacca": {
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1801 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1801) — highly autocratic.",
       "factors": {
-        "safety": 73,
+        "safety": 81,
         "health": 45,
         "economy": 50,
-        "governance": 3,
+        "governance": 2,
         "religious_tolerance": 50
       },
       "factor_sources": {
@@ -983,11 +3395,11 @@
       },
       "sources": [
         {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
+          "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
+          "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "V-Dem v15 — THA 1801 polyarchy=3",
+          "label": "V-Dem v15 — IDN 1801 polyarchy=2",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
@@ -997,212 +3409,8 @@
       ],
       "ruler": null,
       "sparse_data": true,
-      "raw_score": 47
-    },
-    "spanish_philippines": {
-      "score": 90,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "neutral",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 60
-    },
-    "kongo_angola": {
-      "score": 90,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "neutral",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 60
-    },
-    "southern_africa": {
-      "score": 90,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "neutral",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 60
-    },
-    "asante_coast": {
-      "score": 90,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "neutral",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 60
-    },
-    "sahel_interior": {
-      "score": 64,
-      "summary": "Active conflicts in 1801: Fulani-Hausa (Nigeria), 1790-1801. No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. Governance held at neutral (V-Dem coverage starts 1789).",
-      "factors": {
-        "safety": 60,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "neutral",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Brecke Conflict Catalog 1400-2000",
-          "url": "https://brecke.inta.gatech.edu/research/conflict/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 52
-    },
-    "new_spain": {
-      "score": 50,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). Maddison records GDP/capita 1298 (MEX, 1801) — used as the economy proxy for the whole region. V-Dem polyarchy 3/100 (MEX, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 37,
-        "governance": 3,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "Maddison Project 2023 — MEX 1801 gdppc=1298",
-          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
-        },
-        {
-          "label": "V-Dem v15 — MEX 1801 polyarchy=3",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 48
-    },
-    "caribbean": {
-      "score": 60,
-      "summary": "Brecke records no major conflicts touching this region in 1801 (safety scored at the era baseline of 85). No Maddison GDP coverage for this region — economy held at neutral 50, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 5/100 (CUB, 1801) — highly autocratic.",
-      "factors": {
-        "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 5,
-        "religious_tolerance": 50
-      },
-      "factor_sources": {
-        "safety": "brecke",
-        "health": "baseline",
-        "economy": "neutral",
-        "governance": "vdem",
-        "religious_tolerance": "neutral"
-      },
-      "sources": [
-        {
-          "label": "V-Dem v15 — CUB 1801 polyarchy=5",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
-        },
-        {
-          "label": "Wikipedia — 1801",
-          "url": "https://en.wikipedia.org/wiki/1801"
-        }
-      ],
-      "ruler": null,
-      "sparse_data": true,
-      "raw_score": 51
+      "wikidata": "Q46652",
+      "raw_score": 49
     }
   }
 }

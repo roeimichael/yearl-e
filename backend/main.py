@@ -89,9 +89,13 @@ def healthz():
 
 
 @app.get("/api/regions")
-def get_regions(set_name: str = Query("early_modern", alias="set")):
+def get_regions(set_name: str | None = Query(None, alias="set")):
     """Region geometry (real polygons, GeoJSON) for the globe overlay.
-    Cached client-side. `?set=` selects which era's grouping."""
+    Cached client-side. `?set=` selects a specific snapshot; with no `set` it
+    resolves to TODAY's rolled year's snapshot so the globe matches the puzzle."""
+    if not set_name:
+        y = regions_mod.load_year(_roll_year(_today_iso()))
+        set_name = y.get("region_set", "early_modern") if y else "early_modern"
     try:
         return {"set": set_name, "regions": regions_mod.region_set_for_serving(set_name)}
     except FileNotFoundError:
