@@ -107,7 +107,7 @@ def _life_exp() -> dict[str, tuple[list[int], list[float]]]:
     Keeps ISO3 countries and OWID_* aggregates."""
     out: dict[str, list[tuple[int, float]]] = {}
     p = RAW / "owid_life_exp.csv"
-    with open(p, encoding="utf-8") as f:
+    with p.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             code = row.get("code") or ""
             le = row.get("life_expectancy_0") or ""
@@ -152,7 +152,7 @@ def _witch_intensity() -> dict[tuple[str, int], int]:
     """(iso3, decade) -> total persons tried. Persecution-intensity signal."""
     out: dict[tuple[str, int], int] = {}
     p = RAW / "witch_trials.csv"
-    with open(p, encoding="utf-8") as f:
+    with p.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             iso = WT_NAME_TO_ISO.get((row.get("gadm.adm0") or "").strip())
             dec = row.get("decade") or ""

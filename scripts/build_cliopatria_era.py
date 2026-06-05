@@ -192,7 +192,8 @@ def build_regions(feats: list[dict], ne_isos, ne_shapes, tree, idx_to_iso,
                 "geometry": mapping(geom),
             })
 
-    # min_zoom by area rank (thirds), same convention as build_region_polygons.
+    # min_zoom by area rank (thirds): big regions stay labelled when zoomed out,
+    # small ones surface only as you zoom in.
     regions.sort(key=lambda r: -r["_area"])
     n = len(regions)
     for i, r in enumerate(regions):

@@ -30,26 +30,28 @@ import re
 import sys
 from pathlib import Path
 
-import vdem_lookup
 import factors
-from factors import ISO3_TO_BRECKE
+import vdem_lookup
+from factors import ISO3_TO_BRECKE  # shared with the health/tolerance providers
 
 ROOT = Path(__file__).parent.parent
 RAW = ROOT / "data" / "raw"
-OUT_DIR = ROOT / "data" / "region_sets"
+REGION_SETS = ROOT / "data" / "region_sets"
 YEAR_OUT = ROOT / "data" / "year_scores"
 
 # ─── era → snapshot grid ─────────────────────────────────────────────────────
-# Each game-year uses the nearest snapshot's region-set. Add eras here as their
-# Cliopatria snapshots ship. Snapshot files are data/region_sets/{era}_{y}.json.
-ERA_SNAPSHOTS = {
+# Maps an era to (first_year, last_year, [snapshot years]). Each game-year is
+# scored against the nearest snapshot's region-set. Snapshot files are named
+# data/region_sets/{era}_{snapshot_year}.json. To add an era, build its
+# snapshots with build_cliopatria_era.py then add a row here.
+ERA_SNAPSHOTS: dict[str, tuple[int, int, list[int]]] = {
     "early_modern": (1500, 1815, list(range(1500, 1801, 25)) + [1815]),
 }
 
 
 def snapshot_for(year: int) -> str:
-    """Return the region_set name (e.g. 'early_modern_1700') whose snapshot year
-    is nearest to `year` within its era."""
+    """Return the region-set name (e.g. 'early_modern_1700') whose snapshot year
+    is nearest to `year`, within the era that covers it."""
     for era, (lo, hi, snaps) in ERA_SNAPSHOTS.items():
         if lo <= year <= hi:
             best = min(snaps, key=lambda s: abs(s - year))
@@ -58,22 +60,23 @@ def snapshot_for(year: int) -> str:
 
 
 def load_region_set(set_name: str) -> list[dict]:
-    p = OUT_DIR / f"{set_name}.json"
+    """Read the region list from a snapshot file under data/region_sets/."""
+    p = REGION_SETS / f"{set_name}.json"
     return json.loads(p.read_text(encoding="utf-8"))["regions"]
 
 
-# ISO3_TO_BRECKE lives in factors.py (shared with the health/tolerance providers).
-
 # Words to strip from a polity name before using the rest as conflict keywords.
-NAME_STOP = {
+NAME_STOP: frozenset[str] = frozenset({
     "empire", "kingdom", "sultanate", "dynasty", "khanate", "republic", "of",
     "the", "and", "confederation", "principality", "duchy", "states", "state",
     "lords", "grand", "new", "house", "colonial", "minor", "dutch", "monarchy",
     "shogunate", "reducciones", "commonwealth",
-}
+})
 
 
 def name_keywords(name: str) -> list[str]:
+    """Distinctive lowercase tokens (>3 chars, non-stopword) from a polity name,
+    used to match conflicts to the polity by name."""
     toks = re.findall(r"[a-z]+", name.lower())
     return [t for t in toks if len(t) > 3 and t not in NAME_STOP]
 
@@ -283,7 +286,10 @@ def main() -> int:
             cell.setdefault("sources", []).append(wiki_src)
     YEAR_OUT.mkdir(parents=True, exist_ok=True)
     out_path = YEAR_OUT / f"{year:04d}.json"
-    out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False), encoding="utf-8")
+    # newline="\n": keep LF on every platform so re-runs match the committed data
+    # byte-for-byte (Windows would otherwise rewrite all files with CRLF).
+    out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False),
+                        encoding="utf-8", newline="\n")
     print(f"wrote {out_path.name} ({out_path.stat().st_size/1024:.1f} KB, {len(out['regions'])} regions, set={out['region_set']})")
     return 0
 

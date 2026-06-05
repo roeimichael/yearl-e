@@ -11,7 +11,13 @@
 <meta property="og:type" content="website" />
 
 <link href="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.css" rel="stylesheet" />
-<link href="/static/style.css?v=16" rel="stylesheet" />
+
+<!-- Antique-atlas serif pairing. Optional & graceful: falls back to Georgia stack. -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
+
+<link href="/static/style.css?v=17" rel="stylesheet" />
 </head>
 <body>
 
@@ -40,12 +46,13 @@
 <div id="overlay">
 
   <div id="start-card" class="card start-card">
+    <span class="card-eyebrow">a daily history puzzle</span>
     <h1>yearl-e</h1>
-    <p class="tagline-lead">A daily history puzzle.</p>
+    <p class="tagline-lead">Where on Earth would you want to live that year?</p>
     <p class="tagline">Each day, one historical year from the early modern world — 1500 to 1815.<br/>
     Click the globe where you'd want to live that year.<br/>
     Scored on real living conditions: peace, health, economy, governance, tolerance.</p>
-    <button id="btn-start" disabled>Loading today's year…</button>
+    <button id="btn-start" disabled><span class="btn-spinner" aria-hidden="true"></span>Loading today's year…</button>
     <p class="credit">
       by <a href="https://roei-michael-portfolio.vercel.app/" target="_blank" rel="noopener">Roei Michael</a>
       · same year for everyone · resets 00:00 IL
@@ -90,6 +97,7 @@
 
   <div id="reveal-card" class="card hidden">
     <div id="reveal-score-wrap">
+      <div class="reveal-score-eyebrow">Your verdict</div>
       <div id="reveal-score-big"><span id="reveal-score-num">0</span><span id="reveal-score-denom">/ 100</span></div>
       <div id="reveal-score-rank"></div>
     </div>
@@ -126,6 +134,6 @@
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.js"></script>
-<script src="/static/app.js?v=16"></script>
+<script src="/static/app.js?v=17"></script>
 </body>
 </html>

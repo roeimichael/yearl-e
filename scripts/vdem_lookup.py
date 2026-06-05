@@ -18,15 +18,15 @@ ROOT = Path(__file__).parent.parent
 # Pre-sliced 5-column CSV from prep_vdem.py — full Core is 200 MB.
 VDEM_PATH = ROOT / "data" / "raw" / "vdem_governance.csv"
 
-# V-Dem country_text_id mostly matches ISO3 but has a handful of exceptions
-# we care about. Map V-Dem code → ISO3.
+# V-Dem country_text_id mostly matches ISO3 but has a handful of exceptions we
+# care about. Map V-Dem code → ISO3. (None of these fire for the early-modern era
+# we currently ship, but they keep the lookup correct as later eras are added.)
 VDEM_TO_ISO3 = {
-    "ZZB": "ZAR",  # Burma → Myanmar (V-Dem uses BMA, but accommodate variants)
-    "DRV": "VNM",  # Democratic Republic of Vietnam
+    "ZZB": "MMR",  # Zanzibar/Burma variant → Myanmar
+    "DRV": "VNM",  # Democratic Republic of Vietnam (North)
     "RVN": "VNM",  # Republic of Vietnam (South)
     "PSG": "PSE",  # Palestine/Gaza
-    "TWN": "TWN",
-    # Most others are 1:1 ISO3.
+    # Everything else is 1:1 with ISO3.
 }
 
 

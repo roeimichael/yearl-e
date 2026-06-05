@@ -95,7 +95,7 @@ def get_regions(set_name: str | None = Query(None, alias="set")):
     resolves to TODAY's rolled year's snapshot so the globe matches the puzzle."""
     if not set_name:
         y = regions_mod.load_year(_roll_year(_today_iso()))
-        set_name = y.get("region_set", "early_modern") if y else "early_modern"
+        set_name = regions_mod.region_set_of(y) if y else regions_mod.DEFAULT_REGION_SET
     try:
         return {"set": set_name, "regions": regions_mod.region_set_for_serving(set_name)}
     except FileNotFoundError:
@@ -115,7 +115,7 @@ def today():
         "year": year,
         "label": y["label"],
         "era_summary": y["era_summary"],
-        "region_set": y.get("region_set", "early_modern"),
+        "region_set": regions_mod.region_set_of(y),
     }
 
 
@@ -130,7 +130,7 @@ def today_guess(body: GuessIn):
     y = regions_mod.load_year(body.year)
     if not y:
         raise HTTPException(400, f"unknown year {body.year}")
-    set_name = y.get("region_set", "early_modern")
+    set_name = regions_mod.region_set_of(y)
     set_regions = regions_mod.load_region_set(set_name)
     pick = score_guess(body.year, body.lat, body.lon)
     ranking = regions_mod.ranked(body.year)

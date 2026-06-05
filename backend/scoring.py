@@ -9,7 +9,7 @@ from math import asin, cos, radians, sin, sqrt
 
 from shapely.geometry import Point
 
-from .regions import load_region_set, load_year
+from .regions import load_region_set, load_year, region_set_of
 
 
 def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
@@ -43,38 +43,36 @@ def region_for_point(set_name: str, lat: float, lon: float) -> str | None:
     return best
 
 
+def _empty_guess(region_id: str | None, region_name: str, summary: str) -> dict:
+    """A scored-guess payload with no factor data (unresolved point / no cell)."""
+    return {
+        "region_id": region_id,
+        "region_name": region_name,
+        "score": 0,
+        "summary": summary,
+        "factors": {},
+        "factor_sources": {},
+        "sources": [],
+        "ruler": None,
+    }
+
+
 def score_guess(year: int, lat: float, lon: float) -> dict:
+    """Resolve a globe click to a region in the year's snapshot and return its
+    score payload. Always returns a dict (falls back to empty data on a miss)."""
     y = load_year(year)
     if not y:
         raise ValueError(f"no data for year {year}")
-    set_name = y.get("region_set", "early_modern")
+    set_name = region_set_of(y)
     regions = load_region_set(set_name)
     rid = region_for_point(set_name, lat, lon)
     if rid is None:
         # Should be unreachable given the centroid fallback, but defend anyway.
-        return {
-            "region_id": None,
-            "region_name": "(unknown)",
-            "score": 0,
-            "summary": "Could not resolve a region for this point.",
-            "factors": {},
-            "factor_sources": {},
-            "sources": [],
-            "ruler": None,
-        }
-    cell = y["regions"].get(rid)
+        return _empty_guess(None, "(unknown)", "Could not resolve a region for this point.")
     region_name = regions[rid]["name"] if rid in regions else "(no region)"
+    cell = y["regions"].get(rid)
     if not cell:
-        return {
-            "region_id": rid,
-            "region_name": region_name,
-            "score": 0,
-            "summary": "No data for this region this year.",
-            "factors": {},
-            "factor_sources": {},
-            "sources": [],
-            "ruler": None,
-        }
+        return _empty_guess(rid, region_name, "No data for this region this year.")
     return {
         "region_id": rid,
         "region_name": region_name,
