@@ -5,20 +5,20 @@
   "era_summary": "1677 (MDCLXXVII) was a common year starting on Friday of the Gregorian calendar and a common year starting on Monday of the Julian calendar, the 1677th year of the Common Era (CE) and Anno Domini (AD) designations, the 677th year of the 2nd millennium, the 77th year of the 17th century, and the 8th year of the 1670s decade. As of the start of 1677, the Gregorian calendar was 10 days ahead of the Julian calendar, which remained in localized use until 1923. ",
   "regions": {
     "tsardom_of_russia": {
-      "score": 34,
-      "summary": "Active conflicts in 1677: Russia (Bashkirs), 1674-81; Turkey, Cossacks-Russia (Ukraine), 1677-81; Russia-Lamut Tungas (eastern Siberia), 1677. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 46,
+      "summary": "Active conflicts in 1677: Russia (Bashkirs), 1674-81; Turkey, Cossacks-Russia (Ukraine), 1677-81; Russia-Lamut Tungas (eastern Siberia), 1677. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (RUS) — long-entrenched state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 49,
         "health": 27,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -29,6 +29,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — RUS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -42,23 +46,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q186096",
-      "raw_score": 46
+      "raw_score": 56
     },
     "qing_dynasty": {
-      "score": 50,
-      "summary": "Active conflicts in 1677: China (Qing) (Ming rebellion) (Yunnan, Guangdong, Fujian), 1673-81. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 57,
+      "summary": "Active conflicts in 1677: China (Qing) (Ming rebellion) (Yunnan, Guangdong, Fujian), 1673-81. Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 18,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -69,6 +73,14 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -82,15 +94,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q8733",
-      "raw_score": 51
+      "raw_score": 60
     },
     "spanish_empire": {
-      "score": 57,
-      "summary": "Brecke records no major conflict touching Spanish Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1350 (MEX, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 46,
+      "summary": "Brecke records no major conflict touching Spanish Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1350 (MEX, 1677) — economy proxy for the territory. State-continuity 50/100 (MEX) — established state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 27,
-        "economy": 47,
+        "health": 29,
+        "economy": 60,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -98,7 +110,7 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -109,6 +121,10 @@
         {
           "label": "Maddison Project 2023 — MEX 1677 gdppc=1350",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MEX",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -122,29 +138,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 53
+      "raw_score": 56
     },
     "ottoman_empire": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Ottoman Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 37/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 33,
+      "summary": "Brecke records no major conflict touching Ottoman Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 867 (TUR, 1677) — economy proxy for the territory. State-continuity 100/100 (TUR) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 37/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 57,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 25,
+        "governance": 100,
         "religious_tolerance": 37
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — TUR 1677 gdppc=867",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TUR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -162,29 +186,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q12560",
-      "raw_score": 46
+      "raw_score": 51
     },
     "mughal_empire": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Mughal Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Mughal Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1174 (IND, 1677) — economy proxy for the territory. State-continuity 100/100 (IND) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 31,
+        "governance": 100,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1677 gdppc=1174",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IND",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -198,29 +230,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q33296",
-      "raw_score": 57
+      "raw_score": 62
     },
     "golden_horde": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Golden Horde in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Golden Horde in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (MNG) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MNG",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -234,29 +270,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q79965",
-      "raw_score": 56
+      "raw_score": 66
     },
     "kazakh_khanate": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 85/100 (KAZ) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 85,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — KAZ",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -270,29 +310,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1433867",
-      "raw_score": 55
+      "raw_score": 62
     },
     "safavid_dynasty": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Safavid Dynasty in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Safavid Dynasty in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IRN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -306,23 +350,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q161205",
-      "raw_score": 56
+      "raw_score": 66
     },
     "swedish_empire": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching Swedish Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1760 (SWE, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 23/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Swedish Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1760 (SWE, 1677) — economy proxy for the territory. State-continuity 100/100 (SWE) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 23/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 77,
-        "health": 28,
-        "economy": 68,
-        "governance": 50,
+        "health": 29,
+        "economy": 72,
+        "governance": 100,
         "religious_tolerance": 23
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "modeled",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -333,6 +377,10 @@
         {
           "label": "Maddison Project 2023 — SWE 1677 gdppc=1760",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — SWE",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
@@ -346,29 +394,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q215443",
-      "raw_score": 54
+      "raw_score": 65
     },
     "tibet": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Tibet in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Tibet in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -382,23 +438,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q521263",
-      "raw_score": 56
+      "raw_score": 65
     },
     "eastern_moghulistan": {
-      "score": 50,
-      "summary": "Active conflicts in 1677: Russia-Lamut Tungas (eastern Siberia), 1677. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 57,
+      "summary": "Active conflicts in 1677: Russia-Lamut Tungas (eastern Siberia), 1677. Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 18,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -409,6 +465,14 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -422,29 +486,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1191125",
-      "raw_score": 51
+      "raw_score": 60
     },
     "oirat_confederation": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching Oirat Confederation in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 68,
+      "summary": "Brecke records no major conflict touching Oirat Confederation in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -458,23 +530,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q4332415",
-      "raw_score": 54
+      "raw_score": 64
     },
     "polish_lithuanian_commonwealth": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Polish-Lithuanian Commonwealth in 1677 (safety at the era baseline of 85). Maddison GDP/capita 880 (POL, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 46,
+      "summary": "Brecke records no major conflict touching Polish-Lithuanian Commonwealth in 1677 (safety at the era baseline of 85). Maddison GDP/capita 880 (POL, 1677) — economy proxy for the territory. State-continuity 100/100 (POL) — long-entrenched state (pre-democracy governance proxy). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 57,
         "health": 42,
-        "economy": 25,
-        "governance": 50,
+        "economy": 27,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -485,6 +557,10 @@
         {
           "label": "Maddison Project 2023 — POL 1677 gdppc=880",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — POL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -498,23 +574,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q172107",
-      "raw_score": 46
+      "raw_score": 56
     },
     "southern_ming": {
-      "score": 50,
-      "summary": "Active conflicts in 1677: China (Qing) (Ming rebellion) (Yunnan, Guangdong, Fujian), 1673-81. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 57,
+      "summary": "Active conflicts in 1677: China (Qing) (Ming rebellion) (Yunnan, Guangdong, Fujian), 1673-81. Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 18,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -525,6 +601,14 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -538,11 +622,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1198163",
-      "raw_score": 51
+      "raw_score": 60
     },
     "portuguese_empire": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching Portuguese Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 41,
+      "summary": "Brecke records no major conflict touching Portuguese Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (BRA) — established state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 28,
@@ -554,13 +638,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — BRA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -577,20 +665,20 @@
       "raw_score": 54
     },
     "denmark_norway": {
-      "score": 1,
-      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Denmark, Brandenburg, Lunenburg, Munster, emperor, UP-Sweden, 1675-79; Denmark-Hamburg, 1676-79. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 30/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 20,
+      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Denmark, Brandenburg, Lunenburg, Munster, emperor, UP-Sweden, 1675-79; Denmark-Hamburg, 1676-79. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 30/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 36,
         "health": 8,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 30
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "modeled",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -601,6 +689,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DNK",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
@@ -614,23 +706,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q62651",
-      "raw_score": 36
+      "raw_score": 46
     },
     "kingdom_of_spain": {
-      "score": 4,
-      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Spain (Sicily, with intervention by France and Holland), 1674-79; Morocco-Spain, 1677. Maddison GDP/capita 1035 (ESP, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 49,
+      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Spain (Sicily, with intervention by France and Holland), 1674-79; Morocco-Spain, 1677. Maddison GDP/capita 2434 (ITA, 1677) — economy proxy for the territory. State-continuity 100/100 (ESP) — long-entrenched state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 36,
-        "health": 25,
-        "economy": 32,
-        "governance": 50,
+        "health": 30,
+        "economy": 78,
+        "governance": 100,
         "religious_tolerance": 38
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -643,8 +735,12 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
-          "label": "Maddison Project 2023 — ESP 1677 gdppc=1035",
+          "label": "Maddison Project 2023 — ITA 1677 gdppc=2434",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ESP",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -662,23 +758,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q29",
-      "raw_score": 37
+      "raw_score": 57
     },
     "kingdom_of_france": {
-      "score": 37,
-      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Spain (Sicily, with intervention by France and Holland), 1674-79. Maddison GDP/capita 1763 (FRA, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 36/100, anchored on life-expectancy data for the region. Religious tolerance 12/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 46,
+      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Spain (Sicily, with intervention by France and Holland), 1674-79. Maddison GDP/capita 1763 (FRA, 1677) — economy proxy for the territory. State-continuity 100/100 (FRA) — long-entrenched state (pre-democracy governance proxy). Health 36/100, anchored on life-expectancy data for the region. Religious tolerance 12/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 48,
         "health": 36,
-        "economy": 76,
-        "governance": 50,
+        "economy": 74,
+        "governance": 100,
         "religious_tolerance": 12
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -693,6 +789,10 @@
         {
           "label": "Maddison Project 2023 — FRA 1677 gdppc=1763",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — FRA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -710,29 +810,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q207162",
-      "raw_score": 47
+      "raw_score": 56
     },
     "first_toungoo_empire": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching First Toungoo Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching First Toungoo Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MMR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -746,29 +850,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q23039102",
-      "raw_score": 56
+      "raw_score": 66
     },
     "funj_sultanate": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching Funj Sultanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 57,
+      "summary": "Brecke records no major conflict touching Funj Sultanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (SDN) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — SDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -782,29 +890,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1475713",
-      "raw_score": 55
+      "raw_score": 60
     },
     "haudenosaunee": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Haudenosaunee in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 36,
+      "summary": "Brecke records no major conflict touching Haudenosaunee in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1233 (USA, 1677) — economy proxy for the territory. State-continuity 38/100 (USA) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 28,
-        "economy": 50,
-        "governance": 50,
+        "health": 26,
+        "economy": 41,
+        "governance": 38,
         "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — USA 1677 gdppc=1233",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — USA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -818,29 +934,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q68518",
-      "raw_score": 57
+      "raw_score": 52
     },
     "ethiopian_empire": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (ETH) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ETH",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -854,23 +974,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q207521",
-      "raw_score": 57
+      "raw_score": 67
     },
     "kingdom_of_england": {
-      "score": 84,
-      "summary": "Brecke records no major conflict touching Kingdom of England in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2029 (GBR, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 43/100, anchored on life-expectancy data for the region. Religious tolerance 13/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 68,
+      "summary": "Brecke records no major conflict touching Kingdom of England in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2029 (GBR, 1677) — economy proxy for the territory. State-continuity 75/100 (GBR) — long-entrenched state (pre-democracy governance proxy). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 13/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 43,
-        "economy": 83,
-        "governance": 50,
+        "health": 42,
+        "economy": 76,
+        "governance": 75,
         "religious_tolerance": 13
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -881,6 +1001,10 @@
         {
           "label": "Maddison Project 2023 — GBR 1677 gdppc=2029",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — GBR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -898,29 +1022,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q179876",
-      "raw_score": 61
+      "raw_score": 64
     },
     "khanate_of_bukhara": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching Khanate of Bukhara in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Khanate of Bukhara in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (UZB) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — UZB",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -934,29 +1062,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q577668",
-      "raw_score": 55
+      "raw_score": 65
     },
     "t_med": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Tümed in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Tümed in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -970,29 +1106,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3402317",
-      "raw_score": 56
+      "raw_score": 65
     },
     "habsburg_monarchy": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 29/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (AUT) — long-entrenched state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 29/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
         "health": 45,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 29
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — AUT",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1010,23 +1150,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q66504140",
-      "raw_score": 51
+      "raw_score": 61
     },
     "morocco": {
-      "score": 50,
-      "summary": "Active conflicts in 1677: Morocco-Spain, 1677. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 15/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Active conflicts in 1677: Morocco-Spain, 1677. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (MAR) — long-entrenched state (pre-democracy governance proxy). Health 15/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 15,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -1037,6 +1177,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MAR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1050,29 +1194,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1028",
-      "raw_score": 51
+      "raw_score": 61
     },
     "tokugawa_shogunate": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1073 (JPN, 1677) — economy proxy for the territory. State-continuity 100/100 (JPN) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 29,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — JPN 1677 gdppc=1073",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — JPN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1086,29 +1238,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q205662",
-      "raw_score": 56
+      "raw_score": 61
     },
     "lan_xang": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Lan Xang in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Lan Xang in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 94/100 (LAO) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 94,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LAO",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1122,29 +1278,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q853477",
-      "raw_score": 56
+      "raw_score": 65
     },
     "ayutthaya_kingdom": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Ayutthaya Kingdom in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Ayutthaya Kingdom in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (THA) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — THA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1158,29 +1318,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q841364",
-      "raw_score": 56
+      "raw_score": 66
     },
     "khoshut_khanate": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Khoshut Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Khoshut Khanate in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1297 (CHN, 1677) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "economy": 45,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — CHN 1677 gdppc=1297",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1194,23 +1362,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q10921634",
-      "raw_score": 56
+      "raw_score": 65
     },
     "holy_roman_empire_minor_states": {
-      "score": 44,
-      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 46,
+      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
-        "health": 45,
-        "economy": 54,
-        "governance": 50,
+        "health": 46,
+        "economy": 62,
+        "governance": 75,
         "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -1221,6 +1389,10 @@
         {
           "label": "Maddison Project 2023 — DEU 1677 gdppc=1608",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1238,29 +1410,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q12548",
-      "raw_score": 49
+      "raw_score": 56
     },
     "qasimids": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Qasimids in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Qasimids in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (YEM) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — YEM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1274,29 +1450,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q5261548",
-      "raw_score": 57
+      "raw_score": 58
     },
     "bornu_empire": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Bornu Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 38,
+      "summary": "Brecke records no major conflict touching Bornu Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 30/100 (TCD) — fragmented / weak state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 30,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TCD",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1310,11 +1490,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1139762",
-      "raw_score": 57
+      "raw_score": 53
     },
     "spanish_empire_phl": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Spanish Empire (PHL) in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 46,
+      "summary": "Brecke records no major conflict touching Spanish Empire (PHL) in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (PHL) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
@@ -1326,13 +1506,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — PHL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1349,26 +1533,30 @@
       "raw_score": 56
     },
     "sultanate_of_darfur": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 57,
+      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (SDN) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — SDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1382,29 +1570,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1474791",
-      "raw_score": 55
+      "raw_score": 60
     },
     "joseon": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Joseon in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Joseon in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (KOR) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — KOR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1418,29 +1610,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q28405",
-      "raw_score": 56
+      "raw_score": 66
     },
     "wadai_empire": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Wadai Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 38,
+      "summary": "Brecke records no major conflict touching Wadai Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 30/100 (TCD) — fragmented / weak state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 30,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TCD",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1454,29 +1650,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1132786",
-      "raw_score": 57
+      "raw_score": 53
     },
     "khmer_empire": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Khmer Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Khmer Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (KHM) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — KHM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1490,11 +1690,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q201705",
-      "raw_score": 56
+      "raw_score": 61
     },
     "jesuit_reducciones": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching Jesuit Reducciones in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 41,
+      "summary": "Brecke records no major conflict touching Jesuit Reducciones in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (PRY) — established state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 28,
@@ -1506,13 +1706,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — PRY",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1529,20 +1733,20 @@
       "raw_score": 54
     },
     "denmark_norway_isl": {
-      "score": 11,
-      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Denmark, Brandenburg, Lunenburg, Munster, emperor, UP-Sweden, 1675-79; Denmark-Hamburg, 1676-79. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 14,
+      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Denmark, Brandenburg, Lunenburg, Munster, emperor, UP-Sweden, 1675-79; Denmark-Hamburg, 1676-79. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 36,
         "health": 8,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 45
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "modeled",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -1555,6 +1759,10 @@
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ISL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Wikipedia — 1677",
           "url": "https://en.wikipedia.org/wiki/1677"
         }
@@ -1562,29 +1770,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q62651",
-      "raw_score": 39
+      "raw_score": 44
     },
     "kalmyk_khanate": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Kalmyk Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Kalmyk Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (RUS) — long-entrenched state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — RUS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1598,29 +1810,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q4210248",
-      "raw_score": 57
+      "raw_score": 67
     },
     "golconda_sultanate": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Golconda Sultanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Golconda Sultanate in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1174 (IND, 1677) — economy proxy for the territory. State-continuity 100/100 (IND) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 31,
+        "governance": 100,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1677 gdppc=1174",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IND",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1634,29 +1854,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1148042",
-      "raw_score": 57
+      "raw_score": 62
     },
     "astrakhan_khanate": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Astrakhan Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Astrakhan Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (RUS) — long-entrenched state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — RUS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1670,23 +1894,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q210163",
-      "raw_score": 57
+      "raw_score": 67
     },
     "brandenburg_prussia": {
-      "score": 14,
-      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Denmark, Brandenburg, Lunenburg, Munster, emperor, UP-Sweden, 1675-79. Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 33/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 36,
+      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Denmark, Brandenburg, Lunenburg, Munster, emperor, UP-Sweden, 1675-79. Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. State-continuity 100/100 (POL) — long-entrenched state (pre-democracy governance proxy). Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 40,
-        "health": 33,
-        "economy": 54,
-        "governance": 50,
+        "health": 34,
+        "economy": 62,
+        "governance": 100,
         "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -1701,6 +1925,10 @@
         {
           "label": "Maddison Project 2023 — DEU 1677 gdppc=1608",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — POL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1718,23 +1946,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q157367",
-      "raw_score": 40
+      "raw_score": 52
     },
     "zaporozhian_cossacks": {
-      "score": 60,
-      "summary": "Active conflicts in 1677: Turkey, Cossacks-Russia (Ukraine), 1677-81. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 44,
+      "summary": "Active conflicts in 1677: Turkey, Cossacks-Russia (Ukraine), 1677-81. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 54/100 (UKR) — established state (pre-democracy governance proxy). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
         "health": 39,
         "economy": 50,
-        "governance": 50,
+        "governance": 54,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -1745,6 +1973,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — UKR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1758,29 +1990,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1076173",
-      "raw_score": 54
+      "raw_score": 55
     },
     "sultanate_of_johor": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1794,29 +2030,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1150344",
-      "raw_score": 56
+      "raw_score": 61
     },
     "english_colonial_empire": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching English Colonial Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 41,
+      "summary": "Brecke records no major conflict touching English Colonial Empire in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1233 (USA, 1677) — economy proxy for the territory. State-continuity 50/100 (JAM) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 28,
-        "economy": 50,
+        "health": 26,
+        "economy": 41,
         "governance": 50,
         "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — USA 1677 gdppc=1233",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — JAM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1830,29 +2074,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q617219",
-      "raw_score": 57
+      "raw_score": 54
     },
     "khanate_of_khiva": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 71,
+      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (UZB) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — UZB",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1866,29 +2114,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q491106",
-      "raw_score": 55
+      "raw_score": 65
     },
     "gorkha_kingdom": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Gorkha Kingdom in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Gorkha Kingdom in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (NPL) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — NPL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1902,11 +2154,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3332217",
-      "raw_score": 57
+      "raw_score": 62
     },
     "principality_of_transylvania": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Principality of Transylvania in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Principality of Transylvania in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
@@ -1941,20 +2193,20 @@
       "raw_score": 57
     },
     "sloboda_ukraine": {
-      "score": 60,
-      "summary": "Active conflicts in 1677: Turkey, Cossacks-Russia (Ukraine), 1677-81. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 68,
+      "summary": "Active conflicts in 1677: Turkey, Cossacks-Russia (Ukraine), 1677-81. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (RUS) — long-entrenched state (pre-democracy governance proxy). Health 39/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
         "health": 39,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -1965,6 +2217,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — RUS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1978,29 +2234,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q598570",
-      "raw_score": 54
+      "raw_score": 64
     },
     "small_horde": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Small Horde in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Small Horde in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (RUS) — long-entrenched state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — RUS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2014,23 +2274,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q631210",
-      "raw_score": 57
+      "raw_score": 67
     },
     "kingdom_of_portugal": {
-      "score": 84,
-      "summary": "Brecke records no major conflict touching Kingdom of Portugal in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1742 (PRT, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching Kingdom of Portugal in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1742 (PRT, 1677) — economy proxy for the territory. State-continuity 100/100 (PRT) — long-entrenched state (pre-democracy governance proxy). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 46,
-        "economy": 61,
-        "governance": 50,
+        "health": 47,
+        "economy": 70,
+        "governance": 100,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -2041,6 +2301,10 @@
         {
           "label": "Maddison Project 2023 — PRT 1677 gdppc=1742",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — PRT",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2054,11 +2318,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q45670",
-      "raw_score": 61
+      "raw_score": 73
     },
     "principality_of_moldavia": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Principality of Moldavia in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Principality of Moldavia in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (MDA) — established state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
@@ -2070,13 +2334,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MDA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2093,26 +2361,30 @@
       "raw_score": 57
     },
     "tr_nh_lords": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Trịnh lords in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Trịnh lords in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (VNM) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — VNM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2126,29 +2398,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2267508",
-      "raw_score": 56
+      "raw_score": 61
     },
     "dutch_republic": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Dutch Republic in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Dutch Republic in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2162,11 +2438,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170072",
-      "raw_score": 56
+      "raw_score": 61
     },
     "principality_of_wallachia": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
@@ -2201,8 +2477,8 @@
       "raw_score": 57
     },
     "yarubid_dynasty": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Yarubid dynasty in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Yarubid dynasty in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
@@ -2237,26 +2513,30 @@
       "raw_score": 57
     },
     "nguy_n_lords": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Nguyễn lords in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Nguyễn lords in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (VNM) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — VNM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2270,29 +2550,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2301908",
-      "raw_score": 56
+      "raw_score": 61
     },
     "kingdom_of_mysore": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Kingdom of Mysore in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Kingdom of Mysore in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1174 (IND, 1677) — economy proxy for the territory. State-continuity 100/100 (IND) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 31,
+        "governance": 100,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1677 gdppc=1174",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IND",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2306,29 +2594,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q266923",
-      "raw_score": 57
+      "raw_score": 62
     },
     "crimean_khanate": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Crimean Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Crimean Khanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (RUS) — long-entrenched state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 45,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — RUS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2342,29 +2634,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q160440",
-      "raw_score": 57
+      "raw_score": 67
     },
     "sultanate_of_banten": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2378,29 +2674,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q734867",
-      "raw_score": 56
+      "raw_score": 61
     },
     "sultanate_of_palembang": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2414,23 +2714,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3503555",
-      "raw_score": 56
+      "raw_score": 61
     },
     "duchy_of_bavaria": {
-      "score": 44,
-      "summary": "Brecke records no major conflict touching Duchy of Bavaria in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 46,
+      "summary": "Brecke records no major conflict touching Duchy of Bavaria in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
-        "health": 45,
-        "economy": 54,
-        "governance": 50,
+        "health": 46,
+        "economy": 62,
+        "governance": 75,
         "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -2441,6 +2741,10 @@
         {
           "label": "Maddison Project 2023 — DEU 1677 gdppc=1608",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2458,29 +2762,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q47261",
-      "raw_score": 49
+      "raw_score": 56
     },
     "sultanate_of_brunei": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (BRN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — BRN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2494,23 +2802,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q887803",
-      "raw_score": 56
+      "raw_score": 66
     },
     "new_france": {
-      "score": 27,
-      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Spain (Sicily, with intervention by France and Holland), 1674-79. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 16/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 1,
+      "summary": "Active conflicts in 1677: France, Cologne, UK, Sweden-UP, Brandenburg, Spain, Austria, Germany, Denmark, 1672-78; Spain (Sicily, with intervention by France and Holland), 1674-79. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 25/100 (CAN) — fragmented / weak state (pre-democracy governance proxy). Health 16/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 48,
         "health": 16,
         "economy": 50,
-        "governance": 50,
+        "governance": 25,
         "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -2521,6 +2829,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CAN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2534,29 +2846,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170604",
-      "raw_score": 44
+      "raw_score": 39
     },
     "mataram_sultanate": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Mataram Sultanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Mataram Sultanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2570,29 +2886,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q402145",
-      "raw_score": 56
+      "raw_score": 61
     },
     "swiss_confederation": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching Swiss Confederation in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 10/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 68,
+      "summary": "Brecke records no major conflict touching Swiss Confederation in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (CHE) — long-entrenched state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 10/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 45,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 10
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CHE",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2610,29 +2930,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q39",
-      "raw_score": 54
+      "raw_score": 64
     },
     "kingdom_of_mrauk_u": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Kingdom of Mrauk U in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Kingdom of Mrauk U in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MMR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2646,29 +2970,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q10791211",
-      "raw_score": 56
+      "raw_score": 66
     },
     "republic_of_venice": {
-      "score": 74,
-      "summary": "Brecke records no major conflict touching Republic of Venice in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Republic of Venice in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2434 (ITA, 1677) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
+        "health": 48,
+        "economy": 78,
+        "governance": 56,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ITA 1677 gdppc=2434",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ITA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2682,23 +3014,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q4948",
-      "raw_score": 58
+      "raw_score": 66
     },
     "house_of_savoy": {
-      "score": 80,
-      "summary": "Brecke records no major conflict touching House of Savoy in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1763 (FRA, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 12/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 84,
+      "summary": "Brecke records no major conflict touching House of Savoy in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2434 (ITA, 1677) — economy proxy for the territory. State-continuity 100/100 (FRA) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 12/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 48,
-        "economy": 76,
-        "governance": 50,
+        "economy": 78,
+        "governance": 100,
         "religious_tolerance": 12
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -2707,8 +3039,12 @@
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "Maddison Project 2023 — FRA 1677 gdppc=1763",
+          "label": "Maddison Project 2023 — ITA 1677 gdppc=2434",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — FRA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2726,29 +3062,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q200229",
-      "raw_score": 60
+      "raw_score": 70
     },
     "papal_states": {
-      "score": 74,
-      "summary": "Brecke records no major conflict touching Papal States in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Papal States in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2434 (ITA, 1677) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
+        "health": 48,
+        "economy": 78,
+        "governance": 56,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ITA 1677 gdppc=2434",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ITA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2762,23 +3106,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170174",
-      "raw_score": 58
+      "raw_score": 66
     },
     "electorate_of_saxony": {
-      "score": 44,
-      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 46,
+      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1608 (DEU, 1677) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 14/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
-        "health": 45,
-        "economy": 54,
-        "governance": 50,
+        "health": 46,
+        "economy": 62,
+        "governance": 75,
         "religious_tolerance": 14
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -2789,6 +3133,10 @@
         {
           "label": "Maddison Project 2023 — DEU 1677 gdppc=1608",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2806,29 +3154,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q156199",
-      "raw_score": 49
+      "raw_score": 56
     },
     "nayaks_of_madurai": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Nayaks of Madurai in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Nayaks of Madurai in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1174 (IND, 1677) — economy proxy for the territory. State-continuity 100/100 (IND) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 31,
+        "governance": 100,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1677 gdppc=1174",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IND",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2842,29 +3198,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1530838",
-      "raw_score": 57
+      "raw_score": 62
     },
     "sultanate_of_sulu": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Sulu in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Sultanate of Sulu in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (MYS) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MYS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2878,23 +3238,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q422065",
-      "raw_score": 56
+      "raw_score": 57
     },
     "dutch_republic_nld": {
       "score": 100,
-      "summary": "Brecke records no major conflict touching Dutch Republic (NLD) in 1677 (safety at the era baseline of 85). Maddison GDP/capita 3144 (NLD, 1677) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 33/100 — lowered by recorded witch-trial persecution in this period.",
+      "summary": "Brecke records no major conflict touching Dutch Republic (NLD) in 1677 (safety at the era baseline of 85). Maddison GDP/capita 3144 (NLD, 1677) — economy proxy for the territory. State-continuity 100/100 (NLD) — long-entrenched state (pre-democracy governance proxy). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 33/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 50,
         "economy": 90,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 33
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
       "sources": [
@@ -2905,6 +3265,10 @@
         {
           "label": "Maddison Project 2023 — NLD 1677 gdppc=3144",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — NLD",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2922,11 +3286,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170072",
-      "raw_score": 66
+      "raw_score": 76
     },
     "kingdom_of_bhutan": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
@@ -2961,8 +3325,8 @@
       "raw_score": 57
     },
     "portuguese_ceylon": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Portuguese Ceylon in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Portuguese Ceylon in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (LKA) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
@@ -2974,13 +3338,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LKA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2997,8 +3365,8 @@
       "raw_score": 57
     },
     "new_netherland": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching New Netherland in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 41,
+      "summary": "Brecke records no major conflict touching New Netherland in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (GUY) — established state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 28,
@@ -3010,13 +3378,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — GUY",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3033,26 +3405,30 @@
       "raw_score": 54
     },
     "sultanate_of_aceh": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3066,29 +3442,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1061057",
-      "raw_score": 56
+      "raw_score": 61
     },
     "bijapur_sultanate": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Bijapur Sultanate in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Bijapur Sultanate in 1677 (safety at the era baseline of 85). Maddison GDP/capita 1174 (IND, 1677) — economy proxy for the territory. State-continuity 100/100 (IND) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 22,
+        "economy": 31,
+        "governance": 100,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1677 gdppc=1174",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IND",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3102,29 +3486,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q83821",
-      "raw_score": 57
+      "raw_score": 62
     },
     "sultanate_of_banjar": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3138,29 +3526,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1660566",
-      "raw_score": 56
+      "raw_score": 61
     },
     "sultanate_of_malacca": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3174,11 +3566,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q46652",
-      "raw_score": 56
+      "raw_score": 61
     },
     "dutch_republic_lka": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Dutch Republic (LKA) in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Dutch Republic (LKA) in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (LKA) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
@@ -3190,13 +3582,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LKA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3213,26 +3609,34 @@
       "raw_score": 57
     },
     "dutch_cape_coast": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Dutch Cape Coast in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 44,
+      "summary": "Brecke records no major conflict touching Dutch Cape Coast in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2715 (ZAF, 1677) — economy proxy for the territory. State-continuity 0/100 (ZAF) — fragmented / weak state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 21,
-        "economy": 50,
-        "governance": 50,
+        "health": 26,
+        "economy": 88,
+        "governance": 0,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ZAF 1677 gdppc=2715",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ZAF",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3246,29 +3650,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q221283",
-      "raw_score": 57
+      "raw_score": 55
     },
     "sultanate_of_cirebon": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Cirebon in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Cirebon in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3282,29 +3690,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2077648",
-      "raw_score": 56
+      "raw_score": 61
     },
     "oyo_empire": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Oyo Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 63,
+      "summary": "Brecke records no major conflict touching Oyo Empire in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (NGA) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — NGA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3318,29 +3730,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q849623",
-      "raw_score": 57
+      "raw_score": 62
     },
     "sultanate_of_jambi": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3354,29 +3770,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1679856",
-      "raw_score": 56
+      "raw_score": 61
     },
     "republic_of_florence": {
-      "score": 74,
-      "summary": "Brecke records no major conflict touching Republic of Florence in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Republic of Florence in 1677 (safety at the era baseline of 85). Maddison GDP/capita 2434 (ITA, 1677) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 45,
-        "economy": 50,
-        "governance": 50,
+        "health": 48,
+        "economy": 78,
+        "governance": 56,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ITA 1677 gdppc=2434",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ITA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3390,29 +3814,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q148540",
-      "raw_score": 58
+      "raw_score": 66
     },
     "dutch_republic_idn": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Dutch Republic (IDN) in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Dutch Republic (IDN) in 1677 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3426,7 +3854,7 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170072",
-      "raw_score": 56
+      "raw_score": 61
     }
   }
 }

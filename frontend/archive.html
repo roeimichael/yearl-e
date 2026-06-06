@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>yearl-e — data archive</title>
+<style>
+  :root { --bg:#1a1410; --paper:#ede4cf; --ink:#2a1f12; --accent:#7a5a30; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--paper);
+         font-family:'Iowan Old Style','Palatino','Georgia',serif; line-height:1.5; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 80px; }
+  a { color:#d8c075; }
+  h1 { font-size: 30px; margin: 0 0 2px; }
+  h2 { font-size: 20px; margin: 34px 0 10px; border-bottom:1px solid #4a3924; padding-bottom:6px; }
+  .sub { color:#c9b89a; margin: 0 0 6px; }
+  .back { font-size:14px; }
+  table { width:100%; border-collapse: collapse; font-size:14px; margin-top:6px; background:rgba(237,228,207,0.03); }
+  th, td { text-align:left; padding:7px 10px; border-bottom:1px solid #3a2f22; vertical-align:top; }
+  th { color:#d8c075; font-weight:600; }
+  code { background:rgba(237,228,207,0.10); padding:1px 5px; border-radius:3px; font-size:13px; }
+  .pill { display:inline-block; background:rgba(122,90,48,0.35); border:1px solid #7a5a30;
+          border-radius:10px; padding:1px 8px; margin:2px 3px 2px 0; font-size:12px; }
+  details { margin:6px 0; }
+  summary { cursor:pointer; color:#d8c075; padding:4px 0; }
+  .muted { color:#9a8b6a; }
+  .stat { font-size:15px; }
+  .err { color:#e0a0a0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <p class="back"><a href="/">← back to the game</a></p>
+  <h1 id="title">yearl-e data archive</h1>
+  <p class="sub" id="subtitle">loading…</p>
+  <div id="content"></div>
+</div>
+
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+async function load() {
+  const el = document.getElementById("content");
+  let d;
+  try {
+    const r = await fetch("/api/archive");
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    d = await r.json();
+  } catch (e) {
+    el.innerHTML = `<p class="err">Couldn't load archive: ${esc(e.message)}. Is the backend running?</p>`;
+    return;
+  }
+  document.getElementById("title").textContent = d.title || "yearl-e data archive";
+  const y = d.years || {};
+  document.getElementById("subtitle").textContent =
+    `${d.era || ""} · ${y.count || 0} years (${y.min ?? "?"}–${y.max ?? "?"}) · ${(d.snapshots||[]).length} border snapshots`;
+
+  let html = "";
+
+  // Storage layout
+  html += `<h2>Where the data lives</h2><table><tr><th>Path</th><th>Contents</th><th>Ships to prod?</th></tr>`;
+  for (const s of d.storage || [])
+    html += `<tr><td><code>${esc(s.path)}</code></td><td>${esc(s.what)}</td><td>${s.ships ? "✔ yes" : "— local only"}</td></tr>`;
+  html += `</table>`;
+
+  // Sources
+  html += `<h2>Scoring data sources</h2><table><tr><th>Factor</th><th>Dataset</th><th>Coverage</th></tr>`;
+  for (const s of d.sources || [])
+    html += `<tr><td><strong>${esc(s.factor)}</strong></td><td>${esc(s.dataset)}</td><td class="muted">${esc(s.coverage)}</td></tr>`;
+  html += `</table>`;
+
+  // Snapshots
+  html += `<h2>Border snapshots &amp; regions</h2>`;
+  html += `<p class="muted">Each game-year uses the nearest snapshot's borders. Region names below are exactly how the game labels them.</p>`;
+  html += `<table><tr><th>Snapshot set</th><th>Year</th><th>Regions</th><th>Years using it</th></tr>`;
+  for (const s of d.snapshots || [])
+    html += `<tr><td><code>${esc(s.set)}</code></td><td>${esc(s.snapshot_year)}</td><td>${s.region_count}</td><td>${s.years_using}</td></tr>`;
+  html += `</table>`;
+
+  for (const s of d.snapshots || []) {
+    const pills = (s.regions || []).map(n => `<span class="pill">${esc(n)}</span>`).join("");
+    html += `<details><summary>${esc(s.set)} — ${s.region_count} regions</summary><div>${pills}</div></details>`;
+  }
+
+  el.innerHTML = html;
+}
+load();
+</script>
+</body>
+</html>

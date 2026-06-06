@@ -171,6 +171,55 @@ def year_regions(year: int):
     }
 
 
+# Factor → dataset, for the archive page (kept in sync with scripts/rank_year + factors).
+_ARCHIVE_SOURCES = [
+    {"factor": "Safety", "dataset": "Brecke Conflict Catalog 1400-2000", "coverage": "active wars/rebellions per region-year"},
+    {"factor": "Economy", "dataset": "Maddison Project Database 2023", "coverage": "GDP/capita, percentile-ranked (sparse pre-1800)"},
+    {"factor": "Governance", "dataset": "V-Dem v15 (Electoral Democracy Index)", "coverage": "1789-present; neutral before"},
+    {"factor": "Health", "dataset": "Our World in Data — life expectancy", "coverage": "country (Tier 1) + continental aggregate (Tier 2, from 1770)"},
+    {"factor": "Religious tolerance", "dataset": "Leeson-Russ Witch Trials + modeled regional baseline", "coverage": "real persecution penalty (Europe) over a modeled era baseline"},
+    {"factor": "Borders", "dataset": "Cliopatria / Seshat (CC-BY 4.0)", "coverage": "year-keyed historical polities, 3400 BCE-2024 CE"},
+]
+_ARCHIVE_STORAGE = [
+    {"path": "data/raw/", "what": "downloaded source datasets + per-year extracts", "ships": False},
+    {"path": "data/region_sets/", "what": "the 14 Cliopatria time-snapshots (borders + member_iso3)", "ships": True},
+    {"path": "data/year_scores/", "what": "scored year files (one per year)", "ships": True},
+]
+
+
+@app.get("/api/archive")
+def archive():
+    """Inventory of everything the game ships: snapshots, regions, years, sources.
+    Powers the /archive data-browser page."""
+    import re
+    from collections import Counter
+    rs_dir = ROOT / "data" / "region_sets"
+    snaps = []
+    for p in sorted(rs_dir.glob("*.json")):
+        m = re.search(r"_(-?\d+)\.json$", p.name)
+        snap_year = int(m.group(1)) if m else None
+        regions = regions_mod.load_region_set(p.stem)
+        snaps.append({
+            "set": p.stem,
+            "snapshot_year": snap_year,
+            "region_count": len(regions),
+            "regions": sorted(r["name"] for r in regions.values()),
+        })
+    years = regions_mod.available_years()
+    snap_years = [s["snapshot_year"] for s in snaps if s["snapshot_year"] is not None]
+    usage = Counter(min(snap_years, key=lambda s: abs(s - y)) for y in years) if snap_years else Counter()
+    for s in snaps:
+        s["years_using"] = usage.get(s["snapshot_year"], 0)
+    return {
+        "title": "yearl-e data archive",
+        "era": "early modern (1500–1815)",
+        "years": {"count": len(years), "min": min(years), "max": max(years)} if years else {},
+        "snapshots": snaps,
+        "sources": _ARCHIVE_SOURCES,
+        "storage": _ARCHIVE_STORAGE,
+    }
+
+
 # ─── static (local dev) ──────────────────────────────────────────────────────
 
 if SERVE_FRONTEND and FRONTEND.exists():
@@ -179,5 +228,9 @@ if SERVE_FRONTEND and FRONTEND.exists():
     @app.get("/")
     def index():
         return FileResponse(FRONTEND / "index.html")
+
+    @app.get("/archive")
+    def archive_page():
+        return FileResponse(FRONTEND / "archive.html")
 else:
     log.info("frontend mount disabled (SERVE_FRONTEND=%s)", SERVE_FRONTEND)

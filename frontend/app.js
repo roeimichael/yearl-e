@@ -159,7 +159,7 @@ function initMap() {
         color: "rgba(214, 184, 125, 0.10)",
         "high-color": "rgba(60, 36, 18, 0.7)",
         "horizon-blend": 0.15,
-        "space-color": "#0a0805",
+        "space-color": "#3a2e1f",
         "star-intensity": 0.0,
       });
     } catch (e) {}

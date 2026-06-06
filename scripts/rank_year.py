@@ -31,6 +31,8 @@ import sys
 from pathlib import Path
 
 import factors
+import maddison_lookup
+import statehist_lookup
 import vdem_lookup
 from factors import ISO3_TO_BRECKE  # shared with the health/tolerance providers
 
@@ -113,20 +115,17 @@ def compute_safety(name: str, member_iso3: list[str], conflicts: list[dict]) -> 
 # ─── economy from Maddison ───────────────────────────────────────────────────
 
 
-def compute_economy(member_iso3: list[str], raw_gdppc: dict,
-                    sorted_values: list[float]) -> tuple[int, str | None, float | None, str]:
-    best_iso, best_val = None, -1.0
-    for iso in member_iso3:
-        v = raw_gdppc.get(iso)
-        if v and v["gdppc"] > best_val:
-            best_iso, best_val = iso, v["gdppc"]
+def compute_economy(best_iso: str | None, best_val: float | None,
+                    sorted_values: list[float]) -> tuple[int, str]:
+    """Percentile-rank a region's GDP/cap against the year's other regions.
+    best_iso/best_val come from maddison_lookup.best_for (interpolated)."""
     if best_iso is None:
-        return 50, None, None, "neutral"
+        return 50, "neutral"
     n = len(sorted_values)
     if n < 2:
-        return 50, best_iso, best_val, "maddison"
+        return 50, "maddison"
     pct = sum(1 for v in sorted_values if v < best_val) / (n - 1)
-    return round(25 + pct * 65), best_iso, best_val, "maddison"
+    return round(25 + pct * 65), "maddison"
 
 
 # ─── score one region ────────────────────────────────────────────────────────
@@ -137,19 +136,26 @@ CLIO_SOURCE = {
 }
 
 
-def score_region(year: int, region: dict, raw_gdppc: dict,
+def score_region(year: int, region: dict,
                  sorted_gdppc: list[float], conflicts: list[dict]) -> dict:
     name = region["name"]
     members = region.get("member_iso3", [])
 
     safety, conflict_hits = compute_safety(name, members, conflicts)
-    econ_score, econ_iso, econ_val, econ_src = compute_economy(members, raw_gdppc, sorted_gdppc)
-    vdem_score, vdem_iso = vdem_lookup.governance(members, year)
+    econ_iso, econ_val = maddison_lookup.best_for(members, year)
+    econ_score, econ_src = compute_economy(econ_iso, econ_val, sorted_gdppc)
 
+    # Governance: V-Dem electoral democracy from 1789; Statehist state-continuity
+    # proxy before that; neutral only if neither has the territory.
+    vdem_score, vdem_iso = vdem_lookup.governance(members, year)
     if vdem_score is not None:
-        gov, gov_src = vdem_score, "vdem"
+        gov, gov_src, gov_iso = vdem_score, "vdem", vdem_iso
     else:
-        gov, gov_src = 50, "neutral"
+        sh_score, sh_iso = statehist_lookup.governance(members, year)
+        if sh_score is not None:
+            gov, gov_src, gov_iso = sh_score, "statehist", sh_iso
+        else:
+            gov, gov_src, gov_iso = 50, "neutral", None
     health, health_src = factors.health(members, year, len(conflict_hits), econ_score)
     relig, relig_src, witch_pen = factors.tolerance(members, year)
 
@@ -165,13 +171,18 @@ def score_region(year: int, region: dict, raw_gdppc: dict,
     else:
         parts.append("No Maddison GDP coverage — economy held neutral, reflecting the "
                      "thin pre-modern record outside the European core.")
-    if vdem_score is not None:
-        label = ("highly autocratic" if vdem_score < 15 else
-                 "limited representation" if vdem_score < 35 else
-                 "early democratic" if vdem_score < 60 else "broadly democratic")
-        parts.append(f"V-Dem polyarchy {vdem_score}/100 ({vdem_iso}, {year}) — {label}.")
+    if gov_src == "vdem":
+        label = ("highly autocratic" if gov < 15 else
+                 "limited representation" if gov < 35 else
+                 "early democratic" if gov < 60 else "broadly democratic")
+        parts.append(f"V-Dem polyarchy {gov}/100 ({gov_iso}, {year}) — {label}.")
+    elif gov_src == "statehist":
+        label = ("fragmented / weak state" if gov < 35 else
+                 "established state" if gov < 70 else "long-entrenched state")
+        parts.append(f"State-continuity {gov}/100 ({gov_iso}) — {label} "
+                     f"(pre-democracy governance proxy).")
     else:
-        parts.append("Governance neutral (V-Dem coverage starts 1789).")
+        parts.append("Governance neutral (no state-history coverage for this territory).")
     if health_src == "lifeexp":
         parts.append(f"Health {health}/100, anchored on life-expectancy data for the region.")
     if witch_pen:
@@ -196,8 +207,13 @@ def score_region(year: int, region: dict, raw_gdppc: dict,
         })
     if gov_src == "vdem":
         sources.append({
-            "label": f"V-Dem v15 — {vdem_iso} {year} polyarchy={vdem_score}",
+            "label": f"V-Dem v15 — {gov_iso} {year} polyarchy={gov}",
             "url": "https://www.v-dem.net/data/the-v-dem-dataset/",
+        })
+    elif gov_src == "statehist":
+        sources.append({
+            "label": f"State Antiquity Index (Borcan-Olsson-Putterman) — {gov_iso}",
+            "url": "https://sites.google.com/site/econolaols/extended-state-history-index",
         })
     if health_src == "lifeexp":
         sources.append({
@@ -240,13 +256,17 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
 
     era_summary = wiki.get("summary", "") if wiki else ""
 
-    used_isos = {iso for r in regions for iso in r.get("member_iso3", [])}
-    sorted_gdppc = sorted(v["gdppc"] for iso, v in raw["gdppc"].items() if iso in used_isos)
+    # Per-year economy percentile baseline: each region's best member-country
+    # GDP/cap, interpolated from Maddison benchmarks (captures China/India/Japan/
+    # Ottoman/Mexico, which the old exact-year extract missed).
+    sorted_gdppc = sorted(
+        v for r in regions
+        if (v := maddison_lookup.best_for(r.get("member_iso3", []), year)[1]) is not None
+    )
 
     out_regions = {}
     for r in regions:
-        out_regions[r["id"]] = score_region(
-            year, r, raw["gdppc"], sorted_gdppc, raw["conflicts"])
+        out_regions[r["id"]] = score_region(year, r, sorted_gdppc, raw["conflicts"])
 
     # Normalize overall per year: worst region -> 1, best -> 100. Keeps ranking
     # legible when raw composites cluster in a narrow band.
@@ -267,15 +287,13 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
     }
 
 
-def main() -> int:
-    if len(sys.argv) != 2:
-        print("usage: python scripts/rank_year.py <year>", file=sys.stderr)
-        return 2
-    year = int(sys.argv[1])
+def build_year_file(year: int) -> Path | None:
+    """Score one year and write its data/year_scores/{year}.json. Returns the
+    path, or None if the raw extract is missing. Reusable in-process (loaders
+    are lru-cached) so bulk re-scoring all years stays a single process."""
     raw_path = RAW / f"{year}_extract.json"
     if not raw_path.exists():
-        print(f"missing {raw_path}; run scripts/fetch_year.py {year} first", file=sys.stderr)
-        return 1
+        return None
     raw = json.loads(raw_path.read_text(encoding="utf-8"))
     wiki_path = RAW / f"{year}_wiki.json"
     wiki = json.loads(wiki_path.read_text(encoding="utf-8")) if wiki_path.exists() else None
@@ -290,7 +308,20 @@ def main() -> int:
     # byte-for-byte (Windows would otherwise rewrite all files with CRLF).
     out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False),
                         encoding="utf-8", newline="\n")
-    print(f"wrote {out_path.name} ({out_path.stat().st_size/1024:.1f} KB, {len(out['regions'])} regions, set={out['region_set']})")
+    return out_path
+
+
+def main() -> int:
+    if len(sys.argv) != 2:
+        print("usage: python scripts/rank_year.py <year>", file=sys.stderr)
+        return 2
+    year = int(sys.argv[1])
+    out_path = build_year_file(year)
+    if out_path is None:
+        print(f"missing {RAW / f'{year}_extract.json'}; run scripts/fetch_year.py {year} first",
+              file=sys.stderr)
+        return 1
+    print(f"wrote {out_path.name} ({out_path.stat().st_size/1024:.1f} KB)")
     return 0
 
 

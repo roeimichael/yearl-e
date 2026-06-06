@@ -5,7 +5,7 @@
   "era_summary": "1803 (MDCCCIII) was a common year starting on Saturday of the Gregorian calendar and a common year starting on Thursday of the Julian calendar, the 1803rd year of the Common Era (CE) and Anno Domini (AD) designations, the 803rd year of the 2nd millennium, the 3rd year of the 19th century, and the 4th year of the 1800s decade. As of the start of 1803, the Gregorian calendar was 12 days ahead of the Julian calendar, which remained in localized use until 1923. ",
   "regions": {
     "russian_empire": {
-      "score": 38,
+      "score": 32,
       "summary": "Brecke records no major conflict touching Russian Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (RUS, 1803) — highly autocratic. Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -45,19 +45,19 @@
       "raw_score": 47
     },
     "qing_dynasty": {
-      "score": 9,
-      "summary": "Brecke records no major conflict touching Qing Dynasty in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 4/100 (CHN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Qing Dynasty in 1803 (safety at the era baseline of 85). Maddison GDP/capita 966 (TWN, 1803) — economy proxy for the territory. V-Dem polyarchy 4/100 (CHN, 1803) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
-        "health": 24,
-        "economy": 50,
+        "health": 25,
+        "economy": 58,
         "governance": 4,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -65,6 +65,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — TWN 1803 gdppc=966",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — CHN 1803 polyarchy=4",
@@ -82,15 +86,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q8733",
-      "raw_score": 40
+      "raw_score": 42
     },
     "spanish_empire": {
-      "score": 13,
-      "summary": "Brecke records no major conflict touching Spanish Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1264 (MEX, 1803) — economy proxy for the territory. V-Dem polyarchy 8/100 (ARG, 1803) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 45,
+      "summary": "Brecke records no major conflict touching Spanish Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1860 (URY, 1803) — economy proxy for the territory. V-Dem polyarchy 8/100 (ARG, 1803) — highly autocratic. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 25,
-        "economy": 32,
+        "health": 31,
+        "economy": 78,
         "governance": 8,
         "religious_tolerance": 26
       },
@@ -107,7 +111,7 @@
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "Maddison Project 2023 — MEX 1803 gdppc=1264",
+          "label": "Maddison Project 2023 — URY 1803 gdppc=1860",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
@@ -126,22 +130,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 41
+      "raw_score": 51
     },
     "portuguese_empire": {
-      "score": 26,
-      "summary": "Brecke records no major conflict touching Portuguese Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (BRA, 1803) — highly autocratic. Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 18,
+      "summary": "Brecke records no major conflict touching Portuguese Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 867 (BRA, 1803) — economy proxy for the territory. V-Dem polyarchy 1/100 (BRA, 1803) — highly autocratic. Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 28,
-        "economy": 50,
+        "health": 27,
+        "economy": 46,
         "governance": 1,
         "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -149,6 +153,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — BRA 1803 gdppc=867",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — BRA 1803 polyarchy=1",
@@ -166,22 +174,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q200464",
-      "raw_score": 44
+      "raw_score": 43
     },
     "ottoman_empire": {
-      "score": 22,
-      "summary": "Brecke records no major conflict touching Ottoman Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (EGY, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Ottoman Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1537 (GRC, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (EGY, 1803) — highly autocratic. Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 24,
-        "economy": 50,
+        "health": 27,
+        "economy": 73,
         "governance": 3,
         "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -189,6 +197,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — GRC 1803 gdppc=1537",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — EGY 1803 polyarchy=3",
@@ -206,29 +218,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q12560",
-      "raw_score": 43
+      "raw_score": 48
     },
     "kazakh_khanate": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Kazakh Khanate in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (KAZ) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — KAZ",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -242,29 +258,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1433867",
-      "raw_score": 54
+      "raw_score": 55
     },
     "qajar_dynasty": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Qajar Dynasty in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching Qajar Dynasty in 1803 (safety at the era baseline of 85). Maddison GDP/capita 877 (IRN, 1803) — economy proxy for the territory. State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "economy": 47,
+        "governance": 100,
         "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IRN 1803 gdppc=877",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IRN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -278,10 +302,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q189326",
-      "raw_score": 57
+      "raw_score": 66
     },
     "durrani_empire": {
-      "score": 34,
+      "score": 28,
       "summary": "Brecke records no major conflict touching Durrani Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (AFG, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -321,12 +345,12 @@
       "raw_score": 46
     },
     "swedish_empire": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Swedish Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1403 (SWE, 1803) — economy proxy for the territory. V-Dem polyarchy 19/100 (SWE, 1803) — limited representation. Health 62/100, anchored on life-expectancy data for the region. Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Swedish Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1403 (SWE, 1803) — economy proxy for the territory. V-Dem polyarchy 19/100 (SWE, 1803) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 62,
-        "economy": 44,
+        "health": 65,
+        "economy": 67,
         "governance": 19,
         "religious_tolerance": 45
       },
@@ -362,15 +386,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q215443",
-      "raw_score": 54
+      "raw_score": 59
     },
     "united_states_of_america": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching United States of America in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2590 (USA, 1803) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1803) — early democratic. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching United States of America in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2590 (USA, 1803) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1803) — early democratic. Health 32/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 31,
-        "economy": 77,
+        "health": 32,
+        "economy": 86,
         "governance": 36,
         "religious_tolerance": 46
       },
@@ -406,22 +430,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q30",
-      "raw_score": 60
+      "raw_score": 62
     },
     "maratha_empire": {
-      "score": 18,
-      "summary": "Active conflicts in 1803: Britain-Marathas, 1803-05. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 21,
+      "summary": "Active conflicts in 1803: Britain-Marathas, 1803-05. Maddison GDP/capita 1023 (IND, 1803) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 20/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
-        "health": 18,
-        "economy": 50,
+        "health": 20,
+        "economy": 59,
         "governance": 5,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -433,6 +457,10 @@
         {
           "label": "Brecke Conflict Catalog 1400-2000",
           "url": "https://brecke.inta.gatech.edu/research/conflict/"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1803 gdppc=1023",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IND 1803 polyarchy=5",
@@ -450,22 +478,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q83618",
-      "raw_score": 42
+      "raw_score": 44
     },
     "habsburg_monarchy": {
-      "score": 13,
-      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 6/100 (HUN, 1803) — highly autocratic. Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1941 (AUT, 1803) — economy proxy for the territory. V-Dem polyarchy 6/100 (HUN, 1803) — highly autocratic. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 53,
-        "health": 42,
-        "economy": 50,
+        "health": 45,
+        "economy": 79,
         "governance": 6,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -473,6 +501,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — AUT 1803 gdppc=1941",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — HUN 1803 polyarchy=6",
@@ -490,22 +522,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q66504140",
-      "raw_score": 41
+      "raw_score": 47
     },
     "british_empire": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching British Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching British Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1023 (IND, 1803) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 26,
+        "economy": 59,
         "governance": 5,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -513,6 +545,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1803 gdppc=1023",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IND 1803 polyarchy=5",
@@ -530,29 +566,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q8680",
-      "raw_score": 46
+      "raw_score": 48
     },
     "khanate_of_khiva": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Khanate of Khiva in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (UZB) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — UZB",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -566,29 +606,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q491106",
-      "raw_score": 54
+      "raw_score": 59
     },
     "british_colonial_empire": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching British Colonial Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching British Colonial Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1441 (CAN, 1803) — economy proxy for the territory. State-continuity 75/100 (CAN) — long-entrenched state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 28,
-        "economy": 50,
-        "governance": 50,
+        "health": 30,
+        "economy": 69,
+        "governance": 75,
         "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — CAN 1803 gdppc=1441",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CAN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -602,22 +650,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q8680",
-      "raw_score": 57
+      "raw_score": 66
     },
     "denmark_norway": {
-      "score": 42,
-      "summary": "Brecke records no major conflict touching Denmark-Norway in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 10/100 (DNK, 1803) — highly autocratic. Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Denmark-Norway in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2031 (DNK, 1803) — economy proxy for the territory. V-Dem polyarchy 10/100 (DNK, 1803) — highly autocratic. Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 26,
-        "economy": 50,
+        "health": 30,
+        "economy": 80,
         "governance": 10,
         "religious_tolerance": 45
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "modeled",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -625,6 +673,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — DNK 1803 gdppc=2031",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — DNK 1803 polyarchy=10",
@@ -638,22 +690,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q62651",
-      "raw_score": 48
+      "raw_score": 55
     },
     "emirate_of_diriyah": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Emirate of Diriyah in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (SAU, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 25,
+      "summary": "Brecke records no major conflict touching Emirate of Diriyah in 1803 (safety at the era baseline of 85). Maddison GDP/capita 797 (SAU, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (SAU, 1803) — highly autocratic. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 50,
+        "health": 23,
+        "economy": 38,
         "governance": 2,
         "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -661,6 +713,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — SAU 1803 gdppc=797",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — SAU 1803 polyarchy=2",
@@ -678,15 +734,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q146871",
-      "raw_score": 47
+      "raw_score": 45
     },
     "french_consulate": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching French Consulate in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1737 (FRA, 1803) — economy proxy for the territory. V-Dem polyarchy 12/100 (FRA, 1803) — highly autocratic. Health 63/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching French Consulate in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2331 (BEL, 1803) — economy proxy for the territory. V-Dem polyarchy 12/100 (FRA, 1803) — highly autocratic. Health 66/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 63,
-        "economy": 58,
+        "health": 66,
+        "economy": 81,
         "governance": 12,
         "religious_tolerance": 40
       },
@@ -703,7 +759,7 @@
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
         },
         {
-          "label": "Maddison Project 2023 — FRA 1803 gdppc=1737",
+          "label": "Maddison Project 2023 — BEL 1803 gdppc=2331",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
@@ -722,22 +778,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q877619",
-      "raw_score": 55
+      "raw_score": 60
     },
     "konbaung_dynasty": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Konbaung Dynasty in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (MMR, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 21,
+      "summary": "Brecke records no major conflict touching Konbaung Dynasty in 1803 (safety at the era baseline of 85). Maddison GDP/capita 803 (MMR, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (MMR, 1803) — highly autocratic. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 23,
+        "economy": 39,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -745,6 +801,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — MMR 1803 gdppc=803",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — MMR 1803 polyarchy=2",
@@ -762,29 +822,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1062422",
-      "raw_score": 47
+      "raw_score": 44
     },
     "funj_sultanate": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Funj Sultanate in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Funj Sultanate in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 60/100 (SDN) — established state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 60,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — SDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -798,15 +862,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1475713",
-      "raw_score": 53
+      "raw_score": 55
     },
     "kingdom_of_spain": {
-      "score": 13,
-      "summary": "Active conflicts in 1803: Spain-Britain, 1803-08. Maddison GDP/capita 1266 (ESP, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (ESP, 1803) — highly autocratic. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Active conflicts in 1803: Spain-Britain, 1803-08. Maddison GDP/capita 1266 (ESP, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (ESP, 1803) — highly autocratic. Health 38/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 34,
-        "economy": 38,
+        "health": 38,
+        "economy": 65,
         "governance": 2,
         "religious_tolerance": 40
       },
@@ -846,15 +910,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q29",
-      "raw_score": 41
+      "raw_score": 47
     },
     "kingdom_of_great_britain": {
-      "score": 1,
-      "summary": "Active conflicts in 1803: Britain-Sri Lanka (Kandy), 1802-04; France-Britain, 1803-14; Spain-Britain, 1803-08. Maddison GDP/capita 3252 (GBR, 1803) — economy proxy for the territory. V-Dem polyarchy 27/100 (GBR, 1803) — limited representation. Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 42/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 4,
+      "summary": "Active conflicts in 1803: Britain-Sri Lanka (Kandy), 1802-04; France-Britain, 1803-14; Spain-Britain, 1803-08. Maddison GDP/capita 3252 (GBR, 1803) — economy proxy for the territory. V-Dem polyarchy 27/100 (GBR, 1803) — limited representation. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 42/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 8,
-        "health": 48,
-        "economy": 84,
+        "health": 49,
+        "economy": 89,
         "governance": 27,
         "religious_tolerance": 42
       },
@@ -894,29 +958,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q23666",
-      "raw_score": 38
+      "raw_score": 39
     },
     "kingdom_of_prussia": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Kingdom of Prussia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 39,
+      "summary": "Brecke records no major conflict touching Kingdom of Prussia in 1803 (safety at the era baseline of 85). Maddison GDP/capita 844 (POL, 1803) — economy proxy for the territory. State-continuity 44/100 (POL) — established state (pre-democracy governance proxy). Health 41/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
-        "health": 42,
-        "economy": 50,
-        "governance": 50,
+        "health": 41,
+        "economy": 44,
+        "governance": 44,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — POL 1803 gdppc=844",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — POL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -930,11 +1002,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q27306",
-      "raw_score": 51
+      "raw_score": 49
     },
     "emirate_of_bukhara": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Emirate of Bukhara in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 56,
+      "summary": "Brecke records no major conflict touching Emirate of Bukhara in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (TJK) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 24,
@@ -946,13 +1018,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TJK",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -969,19 +1045,19 @@
       "raw_score": 54
     },
     "morocco": {
-      "score": 26,
-      "summary": "Brecke records no major conflict touching Morocco in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (MAR, 1803) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 1,
+      "summary": "Brecke records no major conflict touching Morocco in 1803 (safety at the era baseline of 85). Maddison GDP/capita 685 (MAR, 1803) — economy proxy for the territory. V-Dem polyarchy 1/100 (MAR, 1803) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 21,
-        "economy": 50,
+        "health": 18,
+        "economy": 26,
         "governance": 1,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -989,6 +1065,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — MAR 1803 gdppc=685",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — MAR 1803 polyarchy=1",
@@ -1006,22 +1086,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1028",
-      "raw_score": 44
+      "raw_score": 38
     },
     "tokugawa_shogunate": {
-      "score": 22,
-      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (JPN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 28,
+      "summary": "Brecke records no major conflict touching Tokugawa Shogunate in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1317 (JPN, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (JPN, 1803) — highly autocratic. Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 24,
-        "economy": 50,
+        "health": 26,
+        "economy": 66,
         "governance": 3,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1029,6 +1109,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — JPN 1803 gdppc=1317",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — JPN 1803 polyarchy=3",
@@ -1046,22 +1130,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q205662",
-      "raw_score": 43
+      "raw_score": 46
     },
     "rattanakosin_kingdom": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Rattanakosin Kingdom in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Rattanakosin Kingdom in 1803 (safety at the era baseline of 85). Maddison GDP/capita 909 (THA, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 50,
+        "economy": 49,
         "governance": 3,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1069,6 +1153,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — THA 1803 gdppc=909",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — THA 1803 polyarchy=3",
@@ -1089,19 +1177,19 @@
       "raw_score": 47
     },
     "mughal_empire": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Mughal Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Mughal Empire in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1023 (IND, 1803) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 26,
+        "economy": 59,
         "governance": 5,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1109,6 +1197,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1803 gdppc=1023",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IND 1803 polyarchy=5",
@@ -1126,29 +1218,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q33296",
-      "raw_score": 46
+      "raw_score": 48
     },
     "bornu_empire": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Bornu Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Bornu Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 30/100 (TCD) — fragmented / weak state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 30,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TCD",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1162,29 +1258,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1139762",
-      "raw_score": 57
+      "raw_score": 53
     },
     "spanish_empire_phl": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Spanish Empire (PHL) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Spanish Empire (PHL) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 931 (PHL, 1803) — economy proxy for the territory. State-continuity 50/100 (PHL) — established state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 25,
+        "economy": 52,
         "governance": 50,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — PHL 1803 gdppc=931",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — PHL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1198,29 +1302,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q80702",
-      "raw_score": 56
+      "raw_score": 57
     },
     "british_cape_colony": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching British Cape Colony in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching British Cape Colony in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1479 (ZAF, 1803) — economy proxy for the territory. State-continuity 56/100 (ZAF) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 21,
-        "economy": 50,
-        "governance": 50,
+        "health": 24,
+        "economy": 72,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — ZAF 1803 gdppc=1479",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ZAF",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1234,29 +1346,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q370736",
-      "raw_score": 57
+      "raw_score": 63
     },
     "sultanate_of_darfur": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Sultanate of Darfur in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 60/100 (SDN) — established state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 60,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — SDN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1270,22 +1386,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1474791",
-      "raw_score": 53
+      "raw_score": 55
     },
     "joseon": {
-      "score": 18,
-      "summary": "Brecke records no major conflict touching Joseon in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (KOR, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 8,
+      "summary": "Brecke records no major conflict touching Joseon in 1803 (safety at the era baseline of 85). Maddison GDP/capita 816 (KOR, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (KOR, 1803) — highly autocratic. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 24,
-        "economy": 50,
+        "health": 23,
+        "economy": 40,
         "governance": 2,
         "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1293,6 +1409,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — KOR 1803 gdppc=816",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — KOR 1803 polyarchy=2",
@@ -1310,29 +1430,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q28405",
-      "raw_score": 42
+      "raw_score": 40
     },
     "wadai_empire": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Wadai Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Wadai Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 30/100 (TCD) — fragmented / weak state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 30,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TCD",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1346,29 +1470,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1132786",
-      "raw_score": 57
+      "raw_score": 53
     },
     "denmark_norway_isl": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 45
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "modeled",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ISL",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Wikipedia — 1803",
@@ -1378,29 +1506,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q62651",
-      "raw_score": 56
+      "raw_score": 61
     },
     "regency_of_algiers": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Regency of Algiers in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Regency of Algiers in 1803 (safety at the era baseline of 85). Maddison GDP/capita 685 (DZA, 1803) — economy proxy for the territory. State-continuity 75/100 (DZA) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 21,
-        "economy": 50,
-        "governance": 50,
+        "health": 18,
+        "economy": 26,
+        "governance": 75,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — DZA 1803 gdppc=685",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DZA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1417,7 +1553,7 @@
       "raw_score": 53
     },
     "ethiopian_empire": {
-      "score": 38,
+      "score": 32,
       "summary": "Brecke records no major conflict touching Ethiopian Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (ETH, 1803) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1457,8 +1593,8 @@
       "raw_score": 47
     },
     "greenland": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Greenland in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Greenland in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
@@ -1489,12 +1625,12 @@
       "raw_score": 56
     },
     "holy_roman_empire_minor_states": {
-      "score": 30,
-      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
-        "health": 44,
-        "economy": 64,
+        "health": 45,
+        "economy": 74,
         "governance": 3,
         "religious_tolerance": 44
       },
@@ -1530,22 +1666,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q12548",
-      "raw_score": 45
+      "raw_score": 47
     },
     "batavian_republic": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Batavian Republic in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Batavian Republic in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1553,6 +1689,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -1570,22 +1710,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q188553",
-      "raw_score": 47
+      "raw_score": 42
     },
     "dutch_east_indies": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Dutch East Indies in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Dutch East Indies in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1593,6 +1733,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -1610,22 +1754,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q188161",
-      "raw_score": 47
+      "raw_score": 42
     },
     "nepal": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Nepal in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 1/100 (NPL, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 8,
+      "summary": "Brecke records no major conflict touching Nepal in 1803 (safety at the era baseline of 85). Maddison GDP/capita 641 (NPL, 1803) — economy proxy for the territory. V-Dem polyarchy 1/100 (NPL, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 25,
         "governance": 1,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1633,6 +1777,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — NPL 1803 gdppc=641",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — NPL 1803 polyarchy=1",
@@ -1650,29 +1798,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q837",
-      "raw_score": 46
+      "raw_score": 40
     },
     "t_y_s_n_dynasty": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Tây Sơn dynasty in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 90,
+      "summary": "Brecke records no major conflict touching Tây Sơn dynasty in 1803 (safety at the era baseline of 85). Maddison GDP/capita 840 (VNM, 1803) — economy proxy for the territory. State-continuity 99/100 (VNM) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 23,
+        "economy": 41,
+        "governance": 99,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — VNM 1803 gdppc=840",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — VNM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1686,22 +1842,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1034173",
-      "raw_score": 56
+      "raw_score": 64
     },
     "vientiane": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Vientiane in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Vientiane in 1803 (safety at the era baseline of 85). Maddison GDP/capita 909 (THA, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 50,
+        "economy": 49,
         "governance": 3,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1709,6 +1865,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — THA 1803 gdppc=909",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — THA 1803 polyarchy=3",
@@ -1729,19 +1889,19 @@
       "raw_score": 47
     },
     "sultanate_of_johor": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Sultanate of Johor in 1803 (safety at the era baseline of 85). Maddison GDP/capita 961 (MYS, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 25,
+        "economy": 54,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1749,6 +1909,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — MYS 1803 gdppc=961",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -1766,10 +1930,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1150344",
-      "raw_score": 47
+      "raw_score": 48
     },
     "qasimids": {
-      "score": 38,
+      "score": 32,
       "summary": "Brecke records no major conflict touching Qasimids in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (YEM, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1809,26 +1973,30 @@
       "raw_score": 47
     },
     "kingdom_of_luang_phrabang": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Kingdom of Luang Phrabang in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Kingdom of Luang Phrabang in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (LAO) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LAO",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1842,29 +2010,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q190165",
-      "raw_score": 56
+      "raw_score": 57
     },
     "ashanti_empire": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Ashanti Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Ashanti Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (GHA) — established state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — GHA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -1878,22 +2050,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q722071",
-      "raw_score": 57
+      "raw_score": 58
     },
     "carnatic_sultanate": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Carnatic Sultanate in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Carnatic Sultanate in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1023 (IND, 1803) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 26,
+        "economy": 59,
         "governance": 5,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1901,6 +2073,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1803 gdppc=1023",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IND 1803 polyarchy=5",
@@ -1918,22 +2094,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3277580",
-      "raw_score": 46
+      "raw_score": 48
     },
     "nawab_of_awadh": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Nawab of Awadh in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 35,
+      "summary": "Brecke records no major conflict touching Nawab of Awadh in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1023 (IND, 1803) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1803) — highly autocratic. Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 26,
+        "economy": 59,
         "governance": 5,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -1941,6 +2117,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IND 1803 gdppc=1023",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IND 1803 polyarchy=5",
@@ -1958,23 +2138,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2614237",
-      "raw_score": 46
+      "raw_score": 48
     },
     "kingdom_of_naples_napoleonic": {
-      "score": 67,
-      "summary": "Active conflicts in 1803: Napoleonic Wars, 1803-15. Maddison GDP/capita 2517 (ITA, 1803) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 38/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 69,
+      "summary": "Active conflicts in 1803: Napoleonic Wars, 1803-15. Maddison GDP/capita 2517 (ITA, 1803) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 40/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 60,
-        "health": 38,
-        "economy": 70,
-        "governance": 50,
+        "health": 40,
+        "economy": 82,
+        "governance": 56,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -1991,6 +2171,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ITA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         },
@@ -2002,15 +2186,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q48779892",
-      "raw_score": 54
+      "raw_score": 58
     },
     "kingdom_of_portugal": {
-      "score": 42,
-      "summary": "Brecke records no major conflict touching Kingdom of Portugal in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1427 (PRT, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (PRT, 1803) — highly autocratic. Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Kingdom of Portugal in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1427 (PRT, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (PRT, 1803) — highly autocratic. Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 42,
-        "economy": 51,
+        "health": 44,
+        "economy": 68,
         "governance": 2,
         "religious_tolerance": 40
       },
@@ -2046,29 +2230,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q45670",
-      "raw_score": 48
+      "raw_score": 52
     },
     "khmer_empire": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Khmer Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching Khmer Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (KHM) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — KHM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2082,11 +2270,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q201705",
-      "raw_score": 56
+      "raw_score": 61
     },
     "kingdom_of_lunda": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Kingdom of Lunda in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Kingdom of Lunda in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (AGO) — established state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
@@ -2098,13 +2286,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — AGO",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2121,26 +2313,30 @@
       "raw_score": 57
     },
     "khanate_of_kokand": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Khanate of Kokand in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching Khanate of Kokand in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (UZB) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — UZB",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2154,22 +2350,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q696241",
-      "raw_score": 54
+      "raw_score": 59
     },
     "beylik_of_tunis": {
-      "score": 26,
-      "summary": "Brecke records no major conflict touching Beylik of Tunis in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (TUN, 1803) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 4,
+      "summary": "Brecke records no major conflict touching Beylik of Tunis in 1803 (safety at the era baseline of 85). Maddison GDP/capita 685 (TUN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (TUN, 1803) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 21,
-        "economy": 50,
+        "health": 18,
+        "economy": 26,
         "governance": 2,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -2177,6 +2373,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — TUN 1803 gdppc=685",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — TUN 1803 polyarchy=2",
@@ -2194,11 +2394,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q4899891",
-      "raw_score": 44
+      "raw_score": 39
     },
     "principality_of_wallachia": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Principality of Wallachia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 42,
@@ -2233,8 +2433,8 @@
       "raw_score": 57
     },
     "principality_of_moldavia": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Principality of Moldavia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Principality of Moldavia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (MDA) — established state (pre-democracy governance proxy). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 42,
@@ -2246,13 +2446,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MDA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2269,26 +2473,30 @@
       "raw_score": 57
     },
     "merina_kingdom": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Merina Kingdom in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching Merina Kingdom in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (MDG) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MDG",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2302,10 +2510,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1071439",
-      "raw_score": 57
+      "raw_score": 62
     },
     "karamanli_dynasty": {
-      "score": 26,
+      "score": 21,
       "summary": "Brecke records no major conflict touching Karamanli Dynasty in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (LBY, 1803) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -2345,26 +2553,30 @@
       "raw_score": 44
     },
     "oyo_empire": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Oyo Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching Oyo Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (NGA) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — NGA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2378,23 +2590,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q849623",
-      "raw_score": 57
+      "raw_score": 62
     },
     "kingdom_of_sardinia": {
-      "score": 100,
-      "summary": "Brecke records no major conflict touching Kingdom of Sardinia in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2517 (ITA, 1803) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching Kingdom of Sardinia in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2517 (ITA, 1803) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 44,
-        "economy": 70,
-        "governance": 50,
+        "health": 46,
+        "economy": 82,
+        "governance": 56,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -2405,6 +2617,10 @@
         {
           "label": "Maddison Project 2023 — ITA 1803 gdppc=2517",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ITA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2418,11 +2634,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q2577303",
-      "raw_score": 62
+      "raw_score": 66
     },
     "sultanate_of_oman": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Sultanate of Oman in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Sultanate of Oman in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
@@ -2457,26 +2673,34 @@
       "raw_score": 57
     },
     "cambodia": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Cambodia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 90,
+      "summary": "Brecke records no major conflict touching Cambodia in 1803 (safety at the era baseline of 85). Maddison GDP/capita 840 (VNM, 1803) — economy proxy for the territory. State-continuity 99/100 (VNM) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 23,
+        "economy": 41,
+        "governance": 99,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — VNM 1803 gdppc=840",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — VNM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2490,22 +2714,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q424",
-      "raw_score": 56
+      "raw_score": 64
     },
     "sultanate_of_palembang": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -2513,6 +2737,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -2530,11 +2758,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q3503555",
-      "raw_score": 47
+      "raw_score": 42
     },
     "kingdom_of_georgia": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Kingdom of Georgia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Kingdom of Georgia in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (GEO) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 24,
@@ -2546,13 +2774,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — GEO",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2569,19 +2801,19 @@
       "raw_score": 57
     },
     "chiangmai": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Chiangmai in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (THA, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Chiangmai in 1803 (safety at the era baseline of 85). Maddison GDP/capita 909 (THA, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 50,
+        "economy": 49,
         "governance": 3,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -2589,6 +2821,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — THA 1803 gdppc=909",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — THA 1803 polyarchy=3",
@@ -2609,26 +2845,34 @@
       "raw_score": 47
     },
     "sultanate_of_brunei": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 100,
+      "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1803 (safety at the era baseline of 85). Maddison GDP/capita 961 (MYS, 1803) — economy proxy for the territory. State-continuity 100/100 (BRN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 25,
+        "economy": 54,
+        "governance": 100,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — MYS 1803 gdppc=961",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — BRN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2642,29 +2886,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q887803",
-      "raw_score": 56
+      "raw_score": 67
     },
     "sultanate_of_sulu": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Sultanate of Sulu in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Sultanate of Sulu in 1803 (safety at the era baseline of 85). Maddison GDP/capita 961 (MYS, 1803) — economy proxy for the territory. State-continuity 56/100 (MYS) — established state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 25,
+        "economy": 54,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — MYS 1803 gdppc=961",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MYS",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2678,29 +2930,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q422065",
-      "raw_score": 56
+      "raw_score": 58
     },
     "sikh_empire": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Sikh Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 93,
+      "summary": "Brecke records no major conflict touching Sikh Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 100/100 (PAK) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — PAK",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2714,15 +2970,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q83572",
-      "raw_score": 55
+      "raw_score": 65
     },
     "duchy_of_bavaria": {
-      "score": 30,
-      "summary": "Brecke records no major conflict touching Duchy of Bavaria in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Duchy of Bavaria in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
-        "health": 44,
-        "economy": 64,
+        "health": 45,
+        "economy": 74,
         "governance": 3,
         "religious_tolerance": 44
       },
@@ -2758,22 +3014,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q47261",
-      "raw_score": 45
+      "raw_score": 47
     },
     "sultanate_of_banten": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Sultanate of Banten in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -2781,6 +3037,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -2798,10 +3058,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q734867",
-      "raw_score": 47
+      "raw_score": 42
     },
     "batavian_republic_nld": {
-      "score": 88,
+      "score": 73,
       "summary": "Brecke records no major conflict touching Batavian Republic (NLD) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 4244 (NLD, 1803) — economy proxy for the territory. V-Dem polyarchy 13/100 (NLD, 1803) — highly autocratic. Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2845,26 +3105,30 @@
       "raw_score": 59
     },
     "portuguese_empire_moz": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Portuguese Empire (MOZ) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Portuguese Empire (MOZ) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (MOZ) — established state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MOZ",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2878,10 +3142,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q200464",
-      "raw_score": 57
+      "raw_score": 58
     },
     "helvetic_republic": {
-      "score": 55,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Helvetic Republic in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 18/100 (CHE, 1803) — limited representation. Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2921,19 +3185,19 @@
       "raw_score": 51
     },
     "french_consulate_egy": {
-      "score": 26,
-      "summary": "Brecke records no major conflict touching French Consulate (EGY) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 3/100 (EGY, 1803) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 25,
+      "summary": "Brecke records no major conflict touching French Consulate (EGY) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 956 (EGY, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (EGY, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
-        "health": 21,
-        "economy": 50,
+        "health": 22,
+        "economy": 53,
         "governance": 3,
         "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -2941,6 +3205,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — EGY 1803 gdppc=956",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — EGY 1803 polyarchy=3",
@@ -2958,15 +3226,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q877619",
-      "raw_score": 44
+      "raw_score": 45
     },
     "electorate_of_saxony": {
-      "score": 30,
-      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Electorate of Saxony in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
-        "health": 44,
-        "economy": 64,
+        "health": 45,
+        "economy": 74,
         "governance": 3,
         "religious_tolerance": 44
       },
@@ -3002,23 +3270,23 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q156199",
-      "raw_score": 45
+      "raw_score": 47
     },
     "papal_states": {
-      "score": 100,
-      "summary": "Brecke records no major conflict touching Papal States in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2517 (ITA, 1803) — economy proxy for the territory. Governance neutral (V-Dem coverage starts 1789). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching Papal States in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2517 (ITA, 1803) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 44,
-        "economy": 70,
-        "governance": 50,
+        "health": 46,
+        "economy": 82,
+        "governance": 56,
         "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
@@ -3029,6 +3297,10 @@
         {
           "label": "Maddison Project 2023 — ITA 1803 gdppc=2517",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — ITA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3042,11 +3314,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q170174",
-      "raw_score": 62
+      "raw_score": 66
     },
     "british_colonial_empire_sur": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (SUR) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 56,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (SUR) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 50/100 (GUY) — established state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 28,
@@ -3058,13 +3330,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — GUY",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3081,12 +3357,12 @@
       "raw_score": 54
     },
     "electorate_of_hanover": {
-      "score": 30,
-      "summary": "Brecke records no major conflict touching Electorate of Hanover in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Electorate of Hanover in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1803 (DEU, 1803) — economy proxy for the territory. V-Dem polyarchy 3/100 (DEU, 1803) — highly autocratic. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
-        "health": 44,
-        "economy": 64,
+        "health": 45,
+        "economy": 74,
         "governance": 3,
         "religious_tolerance": 44
       },
@@ -3122,11 +3398,11 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q706018",
-      "raw_score": 45
+      "raw_score": 47
     },
     "kingdom_of_bhutan": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
@@ -3161,26 +3437,30 @@
       "raw_score": 55
     },
     "kingdom_of_champasak": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Kingdom of Champasak in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Kingdom of Champasak in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 56/100 (LAO) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 50,
-        "governance": 50,
+        "governance": 56,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LAO",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3194,22 +3474,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q403369",
-      "raw_score": 56
+      "raw_score": 57
     },
     "sultanate_of_aceh": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -3217,6 +3497,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -3234,22 +3518,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1061057",
-      "raw_score": 47
+      "raw_score": 42
     },
     "sultanate_of_banjar": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Sultanate of Banjar in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -3257,6 +3541,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -3274,15 +3562,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1660566",
-      "raw_score": 47
+      "raw_score": 42
     },
     "french_louisiana": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching French Louisiana in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2590 (USA, 1803) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1803) — early democratic. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching French Louisiana in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2590 (USA, 1803) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1803) — early democratic. Health 32/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 31,
-        "economy": 77,
+        "health": 32,
+        "economy": 86,
         "governance": 36,
         "religious_tolerance": 46
       },
@@ -3318,29 +3606,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q5501836",
-      "raw_score": 60
+      "raw_score": 62
     },
     "bamana_empire": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Bamana Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching Bamana Empire in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 75/100 (MLI) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 75,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MLI",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3354,15 +3646,15 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q762084",
-      "raw_score": 57
+      "raw_score": 62
     },
     "russian_empire_usa": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching Russian Empire (USA) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2590 (USA, 1803) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1803) — early democratic. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching Russian Empire (USA) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 2590 (USA, 1803) — economy proxy for the territory. V-Dem polyarchy 36/100 (USA, 1803) — early democratic. Health 32/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 31,
-        "economy": 77,
+        "health": 32,
+        "economy": 86,
         "governance": 36,
         "religious_tolerance": 46
       },
@@ -3398,29 +3690,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q34266",
-      "raw_score": 60
+      "raw_score": 62
     },
     "nguy_n_dynasty": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Nguyễn dynasty in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 90,
+      "summary": "Brecke records no major conflict touching Nguyễn dynasty in 1803 (safety at the era baseline of 85). Maddison GDP/capita 840 (VNM, 1803) — economy proxy for the territory. State-continuity 99/100 (VNM) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
-        "governance": 50,
+        "health": 23,
+        "economy": 41,
+        "governance": 99,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — VNM 1803 gdppc=840",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — VNM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3434,10 +3734,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q6500483",
-      "raw_score": 56
+      "raw_score": 64
     },
     "haiti": {
-      "score": 5,
+      "score": 4,
       "summary": "Active conflicts in 1803: Haiti-France, 1802-03. No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (HTI, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -3481,26 +3781,34 @@
       "raw_score": 39
     },
     "british_colonial_empire_jam": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1117 (JAM, 1803) — economy proxy for the territory. State-continuity 50/100 (JAM) — established state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 28,
-        "economy": 50,
+        "health": 29,
+        "economy": 64,
         "governance": 50,
         "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — JAM 1803 gdppc=1117",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — JAM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3514,29 +3822,37 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q8680",
-      "raw_score": 54
+      "raw_score": 57
     },
     "british_ceylon": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching British Ceylon in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching British Ceylon in 1803 (safety at the era baseline of 85). Maddison GDP/capita 877 (LKA, 1803) — economy proxy for the territory. State-continuity 50/100 (LKA) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 50,
+        "economy": 47,
         "governance": 50,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — LKA 1803 gdppc=877",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LKA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3553,8 +3869,8 @@
       "raw_score": 55
     },
     "russian_empire_part2": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Russian Empire (part2) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Russian Empire (part2) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (no state-history coverage for this territory). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
@@ -3585,26 +3901,34 @@
       "raw_score": 56
     },
     "british_empire_can": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching British Empire (CAN) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching British Empire (CAN) in 1803 (safety at the era baseline of 85). Maddison GDP/capita 1441 (CAN, 1803) — economy proxy for the territory. State-continuity 75/100 (CAN) — long-entrenched state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 28,
-        "economy": 50,
-        "governance": 50,
+        "health": 30,
+        "economy": 69,
+        "governance": 75,
         "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
-        "governance": "neutral",
+        "economy": "maddison",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — CAN 1803 gdppc=1441",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — CAN",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3618,29 +3942,33 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q8680",
-      "raw_score": 57
+      "raw_score": 66
     },
     "sultanate_of_oman_tza": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Sultanate of Oman (TZA) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. Governance neutral (V-Dem coverage starts 1789). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 45,
+      "summary": "Brecke records no major conflict touching Sultanate of Oman (TZA) in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. State-continuity 21/100 (TZA) — fragmented / weak state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 21,
         "economy": 50,
-        "governance": 50,
+        "governance": 21,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "neutral",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — TZA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3654,22 +3982,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q842",
-      "raw_score": 57
+      "raw_score": 51
     },
     "sultanate_of_jambi": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -3677,6 +4005,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -3694,22 +4026,22 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1679856",
-      "raw_score": 47
+      "raw_score": 42
     },
     "sultanate_of_malacca": {
-      "score": 38,
-      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1803 (safety at the era baseline of 85). No Maddison GDP coverage — economy held neutral, reflecting the thin pre-modern record outside the European core. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1803 (safety at the era baseline of 85). Maddison GDP/capita 795 (IDN, 1803) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1803) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
-        "health": 24,
-        "economy": 50,
+        "health": 22,
+        "economy": 29,
         "governance": 2,
         "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
-        "economy": "neutral",
+        "economy": "maddison",
         "governance": "vdem",
         "religious_tolerance": "modeled"
       },
@@ -3717,6 +4049,10 @@
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
           "url": "https://github.com/Seshat-Global-History-Databank/cliopatria"
+        },
+        {
+          "label": "Maddison Project 2023 — IDN 1803 gdppc=795",
+          "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
           "label": "V-Dem v15 — IDN 1803 polyarchy=2",
@@ -3734,7 +4070,7 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q46652",
-      "raw_score": 47
+      "raw_score": 42
     }
   }
 }
