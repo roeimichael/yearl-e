@@ -11,6 +11,7 @@ import hashlib
 import logging
 import os
 import random
+from functools import lru_cache
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -116,6 +117,8 @@ def today():
         "label": y["label"],
         "era_summary": y["era_summary"],
         "region_set": regions_mod.region_set_of(y),
+        # pre-guess hint: what this year weighted most (dynamic per-year weights)
+        "emphasis": y.get("emphasis"),
     }
 
 
@@ -151,9 +154,14 @@ def today_guess(body: GuessIn):
             "factor_sources": top.get("factor_sources", {}),
             "sources": top.get("sources", []),
             "ruler": top.get("ruler"),
+            "data_quality": top.get("data_quality", 0),
+            "sparse_data": top.get("sparse_data", True),
         },
         "era_summary": y["era_summary"],
         "label": y["label"],
+        # how this year's score was weighted (dynamic per-year weights)
+        "emphasis": y.get("emphasis"),
+        "weights": y.get("weights", {}),
     }
 
 
@@ -174,8 +182,8 @@ def year_regions(year: int):
 # Factor → dataset, for the archive page (kept in sync with scripts/rank_year + factors).
 _ARCHIVE_SOURCES = [
     {"factor": "Safety", "dataset": "Brecke Conflict Catalog 1400-2000", "coverage": "active wars/rebellions per region-year"},
-    {"factor": "Economy", "dataset": "Maddison Project Database 2023", "coverage": "GDP/capita, percentile-ranked (sparse pre-1800)"},
-    {"factor": "Governance", "dataset": "V-Dem v15 (Electoral Democracy Index)", "coverage": "1789-present; neutral before"},
+    {"factor": "Economy", "dataset": "Maddison Project 2023 + modeled regional baseline", "coverage": "real GDP/cap where available (39%), else modeled macro-region baseline"},
+    {"factor": "Governance", "dataset": "V-Dem v15 + State Antiquity Index", "coverage": "V-Dem 1789+; State-continuity proxy before (92% statehist)"},
     {"factor": "Health", "dataset": "Our World in Data — life expectancy", "coverage": "country (Tier 1) + continental aggregate (Tier 2, from 1770)"},
     {"factor": "Religious tolerance", "dataset": "Leeson-Russ Witch Trials + modeled regional baseline", "coverage": "real persecution penalty (Europe) over a modeled era baseline"},
     {"factor": "Borders", "dataset": "Cliopatria / Seshat (CC-BY 4.0)", "coverage": "year-keyed historical polities, 3400 BCE-2024 CE"},
@@ -185,6 +193,39 @@ _ARCHIVE_STORAGE = [
     {"path": "data/region_sets/", "what": "the 14 Cliopatria time-snapshots (borders + member_iso3)", "ships": True},
     {"path": "data/year_scores/", "what": "scored year files (one per year)", "ships": True},
 ]
+
+
+@lru_cache(maxsize=1)
+def _quality_summary() -> dict:
+    """Per-factor real-vs-modeled fill and the data_quality histogram across every
+    scored cell. Scans all year files once (cached) for the /archive page."""
+    from collections import Counter
+    real = {"safety": "brecke", "health": "lifeexp", "economy": "maddison"}
+    real_gov = {"vdem", "statehist"}
+    factors_fill = {f: Counter() for f in
+                    ["safety", "health", "economy", "governance", "religious_tolerance"]}
+    dq = Counter()
+    cells = 0
+    for yr in regions_mod.available_years():
+        y = regions_mod.load_year(yr)
+        if not y:
+            continue
+        for c in y["regions"].values():
+            cells += 1
+            dq[c.get("data_quality", 0)] += 1
+            for f, fill in factors_fill.items():
+                fill[c.get("factor_sources", {}).get(f, "?")] += 1
+    if not cells:
+        return {}
+    def pct(counter):
+        return {k: round(100 * v / cells) for k, v in counter.most_common()}
+    return {
+        "cells": cells,
+        "factor_fill": {f: pct(c) for f, c in factors_fill.items()},
+        "data_quality_hist": {str(k): round(100 * v / cells) for k, v in sorted(dq.items())},
+        "note": "factor_fill = % of cells per source; data_quality = how many of the 5 "
+                "factors rest on real measured data (vs modeled/neutral fallback).",
+    }
 
 
 @app.get("/api/archive")
@@ -217,6 +258,7 @@ def archive():
         "snapshots": snaps,
         "sources": _ARCHIVE_SOURCES,
         "storage": _ARCHIVE_STORAGE,
+        "quality": _quality_summary(),
     }
 
 

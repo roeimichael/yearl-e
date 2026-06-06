@@ -54,6 +54,8 @@ def _empty_guess(region_id: str | None, region_name: str, summary: str) -> dict:
         "factor_sources": {},
         "sources": [],
         "ruler": None,
+        "data_quality": 0,
+        "sparse_data": True,
     }
 
 
@@ -82,4 +84,6 @@ def score_guess(year: int, lat: float, lon: float) -> dict:
         "factor_sources": cell.get("factor_sources", {}),
         "sources": cell.get("sources", []),
         "ruler": cell.get("ruler"),
+        "data_quality": cell.get("data_quality", 0),
+        "sparse_data": cell.get("sparse_data", True),
     }

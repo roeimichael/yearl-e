@@ -69,6 +69,23 @@ async function load() {
     html += `<tr><td><strong>${esc(s.factor)}</strong></td><td>${esc(s.dataset)}</td><td class="muted">${esc(s.coverage)}</td></tr>`;
   html += `</table>`;
 
+  // Data quality — real vs modeled fill across every (year × region) cell
+  const q = d.quality || {};
+  if (q.cells) {
+    html += `<h2>Data quality</h2>`;
+    html += `<p class="muted">${esc(q.note || "")} ${q.cells.toLocaleString()} cells total (year × region).</p>`;
+    html += `<table><tr><th>Factor</th><th>Source breakdown (% of cells)</th></tr>`;
+    for (const [f, fill] of Object.entries(q.factor_fill || {})) {
+      const parts = Object.entries(fill).map(([k, v]) => `${esc(k)} ${v}%`).join(" · ");
+      html += `<tr><td><strong>${esc(f.replace(/_/g, " "))}</strong></td><td class="muted">${parts}</td></tr>`;
+    }
+    html += `</table>`;
+    const dh = q.data_quality_hist || {};
+    const bars = Object.entries(dh).map(([k, v]) =>
+      `<span class="pill">${esc(k)}/5 real → ${v}%</span>`).join("");
+    html += `<p class="muted" style="margin-top:8px">How many of the 5 factors per cell rest on real measured data:</p><div>${bars}</div>`;
+  }
+
   // Snapshots
   html += `<h2>Border snapshots &amp; regions</h2>`;
   html += `<p class="muted">Each game-year uses the nearest snapshot's borders. Region names below are exactly how the game labels them.</p>`;

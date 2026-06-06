@@ -579,6 +579,7 @@ const SOURCE_TAGS = {
   "maddison": { label: "Maddison", title: "Maddison Project 2023 GDP/cap" },
   "brecke":   { label: "Brecke",   title: "Brecke Conflict Catalog 1400-2000" },
   "vdem":     { label: "V-Dem",    title: "Varieties of Democracy v15 — Electoral Democracy Index (polyarchy)" },
+  "statehist": { label: "State Hist.", title: "State Antiquity Index (Borcan-Olsson-Putterman) — pre-1789 state-continuity governance proxy" },
   "wiki":     { label: "Wiki",     title: "Wikipedia (manual context)" },
   "neutral":  { label: "neutral",  title: "No sourced data — held at 50" },
   "baseline": { label: "era",      title: "Era baseline with manual adjustment" },
@@ -586,6 +587,34 @@ const SOURCE_TAGS = {
   "modeled":  { label: "modeled",  title: "Modeled estimate from the era's regional pattern (no direct dataset)" },
   "witch-trials": { label: "Witch trials", title: "Leeson & Russ witch-trial database — recorded persecution lowers tolerance" },
 };
+
+// Per-year emphasis banner: what the dynamic weights leaned on this year, with a
+// compact readout of the (uniform, world-wide) factor weights.
+function renderEmphasis(emphasis, weights) {
+  const el = $("reveal-emphasis");
+  if (!el) return;
+  if (!emphasis) { el.classList.add("hidden"); el.innerHTML = ""; return; }
+  let bars = "";
+  if (weights && Object.keys(weights).length) {
+    bars = `<div class="emphasis-weights">` + Object.entries(weights)
+      .sort((a, b) => b[1] - a[1])
+      .map(([k, v]) =>
+        `<span class="ew" title="${escapeHtml(k.replace(/_/g, " "))}: ${Math.round(v * 100)}% weight">` +
+        `${escapeHtml(k.replace(/_/g, " "))} ${Math.round(v * 100)}%</span>`)
+      .join("") + `</div>`;
+  }
+  el.innerHTML = `<span class="emphasis-mark">⚖</span> <em>${escapeHtml(emphasis)}</em>${bars}`;
+  el.classList.remove("hidden");
+}
+
+// Honest data-quality chip: how many of the 5 factors rest on real measured data.
+function qualityChip(dq) {
+  if (dq == null) return "";
+  const n = Number(dq) || 0;
+  const cls = n >= 4 ? "dq-good" : n <= 2 ? "dq-thin" : "dq-mid";
+  const title = `${n}/5 factors from real measured data (rest modeled/neutral)`;
+  return ` <span class="dq-chip ${cls}" title="${escapeHtml(title)}">data ${n}/5</span>`;
+}
 
 function renderFactors(factors, factorSources) {
   if (!factors || !Object.keys(factors).length) return "";
@@ -673,16 +702,17 @@ function showReveal(p) {
   const eraSumEl = $("reveal-era-summary");
   if (eraYearEl) eraYearEl.textContent = p.label || state.label || "";
   if (eraSumEl) eraSumEl.textContent = p.era_summary || state.era || "";
+  renderEmphasis(p.emphasis, p.weights);
   const pickName = displayNameFor(g.region_name, g.region_id);
   setHtml("reveal-pick",
-    `<strong>You picked: ${escapeHtml(pickName)}</strong>` +
+    `<strong>You picked: ${escapeHtml(pickName)}</strong>${qualityChip(g.data_quality)}` +
     `<div>${escapeHtml(g.summary || "")}</div>`);
   setHtml("reveal-pick-factors", renderFactors(g.factors, g.factor_sources));
   setHtml("reveal-pick-sources", renderSources(g.sources));
   const top = p.top || {};
   const topName = displayNameFor(top.region_name, top.region_id);
   setHtml("reveal-top",
-    `<strong>${escapeHtml(topName)} · ${top.score ?? 0}/100</strong>` +
+    `<strong>${escapeHtml(topName)} · ${top.score ?? 0}/100</strong>${qualityChip(top.data_quality)}` +
     `<div>${escapeHtml(top.summary || "")}</div>`);
   setHtml("reveal-top-factors", renderFactors(top.factors, top.factor_sources));
   setHtml("reveal-top-sources", renderSources(top.sources));

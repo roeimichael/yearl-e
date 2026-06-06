@@ -564,6 +564,58 @@ button:active {
 .src-chip.src-vdem     { background: rgba(74, 90, 160, 0.18); color: #5a6cb0; border-color: rgba(74, 90, 160, 0.4); }
 .src-chip.src-neutral  { opacity: 0.5; }
 
+/* per-year dynamic-weight emphasis banner */
+.reveal-emphasis {
+  margin: 6px 0 12px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  background: rgba(139, 107, 58, 0.12);
+  border: 1px solid rgba(139, 107, 58, 0.30);
+  color: var(--ink);
+  font-size: 13.5px;
+  line-height: 1.45;
+}
+.reveal-emphasis .emphasis-mark { opacity: 0.7; margin-right: 2px; }
+.emphasis-weights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 7px;
+}
+.emphasis-weights .ew {
+  font-size: 10px;
+  letter-spacing: 0.03em;
+  text-transform: capitalize;
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: rgba(110, 82, 38, 0.14);
+  color: var(--ink-soft);
+  white-space: nowrap;
+  cursor: help;
+}
+.emphasis-weights .ew:first-child {
+  background: rgba(139, 107, 58, 0.30);
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* honest per-cell data-quality chip */
+.dq-chip {
+  display: inline-block;
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 1px 5px;
+  margin-left: 6px;
+  border-radius: 6px;
+  vertical-align: middle;
+  cursor: help;
+  border: 1px solid transparent;
+}
+.dq-chip.dq-good { background: rgba(58, 139, 94, 0.16); color: var(--good); border-color: rgba(58, 139, 94, 0.35); }
+.dq-chip.dq-mid  { background: rgba(139, 107, 58, 0.16); color: var(--accent); border-color: rgba(139, 107, 58, 0.32); }
+.dq-chip.dq-thin { background: rgba(139, 58, 58, 0.14); color: var(--danger); border-color: rgba(139, 58, 58, 0.32); }
+
 .factor-bar {
   position: relative;
   height: 9px;
