@@ -117,17 +117,30 @@ def compute_safety(name: str, member_iso3: list[str], conflicts: list[dict]) -> 
 # ─── economy from Maddison ───────────────────────────────────────────────────
 
 
-def compute_economy(best_iso: str | None, best_val: float | None,
+def economy_estimate(members: list[str], year: int) -> tuple[float | None, str | None, str]:
+    """A region's GDP/cap estimate for the year: real Maddison if any member
+    country has a (interpolated) point, else the modeled macro-region baseline.
+    Returns (value, real_iso_or_None, source) where source ∈ maddison|modeled|neutral."""
+    iso, val = maddison_lookup.best_for(members, year)
+    if val is not None:
+        return val, iso, "maddison"
+    bval = factors.economy_baseline(members)
+    if bval is not None:
+        return bval, None, "modeled"
+    return None, None, "neutral"
+
+
+def compute_economy(value: float | None, source: str,
                     sorted_values: list[float]) -> tuple[int, str]:
-    """Percentile-rank a region's GDP/cap against the year's other regions.
-    best_iso/best_val come from maddison_lookup.best_for (interpolated)."""
-    if best_iso is None:
+    """Percentile-rank a region's GDP/cap estimate against every region's estimate
+    this year. value/source come from economy_estimate (real or modeled)."""
+    if value is None:
         return 50, "neutral"
     n = len(sorted_values)
     if n < 2:
-        return 50, "maddison"
-    pct = sum(1 for v in sorted_values if v < best_val) / (n - 1)
-    return round(25 + pct * 65), "maddison"
+        return 50, source
+    pct = sum(1 for v in sorted_values if v < value) / (n - 1)
+    return round(25 + pct * 65), source
 
 
 # ─── score one region ────────────────────────────────────────────────────────
@@ -137,6 +150,11 @@ CLIO_SOURCE = {
     "url": "https://github.com/Seshat-Global-History-Databank/cliopatria",
 }
 
+# factor_source tags that rest on real measured data (not modeled/neutral). Used
+# to compute per-cell data_quality / sparse_data honestly.
+REAL_SOURCES = frozenset({"brecke", "lifeexp", "maddison", "vdem", "statehist",
+                          "witch-trials"})
+
 
 def score_region(year: int, region: dict, sorted_gdppc: list[float],
                  conflicts: list[dict], weights: dict[str, float]) -> dict:
@@ -144,8 +162,8 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     members = region.get("member_iso3", [])
 
     safety, conflict_hits = compute_safety(name, members, conflicts)
-    econ_iso, econ_val = maddison_lookup.best_for(members, year)
-    econ_score, econ_src = compute_economy(econ_iso, econ_val, sorted_gdppc)
+    econ_val, econ_iso, econ_est_src = economy_estimate(members, year)
+    econ_score, econ_src = compute_economy(econ_val, econ_est_src, sorted_gdppc)
 
     # Governance: V-Dem electoral democracy from 1789; Statehist state-continuity
     # proxy before that; neutral only if neither has the territory.
@@ -167,12 +185,14 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     else:
         parts.append(f"Brecke records no major conflict touching {name} in {year} "
                      f"(safety at the era baseline of 85).")
-    if econ_iso:
+    if econ_src == "maddison":
         parts.append(f"Maddison GDP/capita {econ_val:.0f} ({econ_iso}, {year}) — "
                      f"economy proxy for the territory.")
+    elif econ_src == "modeled":
+        parts.append(f"No direct Maddison point — economy modeled from the early-modern "
+                     f"GDP/capita baseline for this macro-region (~{econ_val:.0f} 1990 int$).")
     else:
-        parts.append("No Maddison GDP coverage — economy held neutral, reflecting the "
-                     "thin pre-modern record outside the European core.")
+        parts.append("Economy held neutral (no economic geography mapped for this territory).")
     if gov_src == "vdem":
         label = ("highly autocratic" if gov < 15 else
                  "limited representation" if gov < 35 else
@@ -203,9 +223,14 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     if conflict_hits:
         sources.append({"label": "Brecke Conflict Catalog 1400-2000",
                         "url": "https://brecke.inta.gatech.edu/research/conflict/"})
-    if econ_iso:
+    if econ_src == "maddison":
         sources.append({
             "label": f"Maddison Project 2023 — {econ_iso} {year} gdppc={econ_val:.0f}",
+            "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
+        })
+    elif econ_src == "modeled":
+        sources.append({
+            "label": "Economy modeled from Maddison early-modern regional GDP/capita baseline",
             "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023",
         })
     if gov_src == "vdem":
@@ -229,6 +254,18 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
             "url": "https://github.com/JakeRuss/witch-trials",
         })
 
+    factor_sources = {
+        "safety": "brecke",
+        "health": health_src,
+        "economy": econ_src,
+        "governance": gov_src,
+        "religious_tolerance": relig_src,
+    }
+    # Honest data quality: how many of the 5 factors rest on real measured data
+    # (vs a modeled baseline / neutral fallback). 'sparse_data' now means the cell
+    # genuinely leans on assumptions (≤2 real), not a blanket era flag.
+    real_count = sum(1 for s in factor_sources.values() if s in REAL_SOURCES)
+
     return {
         "score": overall,
         "summary": summary,
@@ -239,16 +276,11 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
             "governance": gov,
             "religious_tolerance": relig,
         },
-        "factor_sources": {
-            "safety": "brecke",
-            "health": health_src,
-            "economy": econ_src,
-            "governance": gov_src,
-            "religious_tolerance": relig_src,
-        },
+        "factor_sources": factor_sources,
+        "data_quality": real_count,
         "sources": sources,
         "ruler": None,
-        "sparse_data": True,
+        "sparse_data": real_count <= 2,
         "wikidata": region.get("wikidata", ""),
     }
 
@@ -321,12 +353,13 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
         _pct(factors.persecution_level(year), dist_pers),
     )
 
-    # Per-year economy percentile baseline: each region's best member-country
-    # GDP/cap, interpolated from Maddison benchmarks (captures China/India/Japan/
-    # Ottoman/Mexico, which the old exact-year extract missed).
+    # Per-year economy percentile baseline: every region's GDP/cap estimate —
+    # real Maddison (interpolated benchmarks: China/India/Japan/Ottoman/Mexico)
+    # where available, else the modeled macro-region baseline — so the spread is
+    # full and no region sits flat-neutral just because Maddison is silent.
     sorted_gdppc = sorted(
         v for r in regions
-        if (v := maddison_lookup.best_for(r.get("member_iso3", []), year)[1]) is not None
+        if (v := economy_estimate(r.get("member_iso3", []), year)[0]) is not None
     )
 
     out_regions = {}

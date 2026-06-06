@@ -88,6 +88,33 @@ TOLERANCE_BASELINE = {
 }
 GLOBAL_TOL = 45
 
+# ─── early-modern economy baseline by macro-region ───────────────────────────
+# Modeled GDP/capita (1990 int$, Maddison units) for the early-modern era,
+# 1500-1815 — a fallback for regions Maddison's sparse benchmark data never
+# reaches (most of the world outside the European core). Grounded in Maddison's
+# regional aggregates and the established economic-history ordering (NW Europe
+# pulls ahead 1600+, Asia mid, Sub-Saharan/indigenous lowest). Coarse and static
+# by design: it gives a region a sensible *position* in the year's spread instead
+# of a flat neutral 50. Real per-country Maddison always wins over this. Higher
+# = richer. Keyed by Brecke macro-region code (see BRECKE_MEMBERS).
+ECONOMY_BASELINE = {
+    1:  1050,  # British Isles — leading edge by 1700
+    2:   920,  # W Europe — Low Countries/France core
+    3:   780,  # Central Europe — HRE, war-battered
+    4:   600,  # E Europe — serf agrarian, Russia/Balkans
+    5:   680,  # Middle East — Ottoman/Safavid, declining from medieval peak
+    6:   540,  # N Africa — Maghreb, oasis/coastal
+    7:   430,  # Sub-Saharan — mostly subsistence, pre-cash-crop
+    8:   600,  # South Asia — Mughal India, rich elite / poor mass
+    9:   620,  # SE Asia — trade-port wealth, spice islands
+    10:  650,  # East Asia — Ming/Qing China, Tokugawa Japan
+    11:  420,  # Oceania — indigenous subsistence
+    12:  520,  # Central Asia — steppe/oasis khanates
+    13:  560,  # Latin America — silver economy + subsistence
+    14:  640,  # N America — colonial cash crops / indigenous
+}
+GLOBAL_ECON = 550  # modeled GDP/cap when even the macro-region is unknown
+
 # witch-trial country name (gadm.adm0) -> ISO3
 WT_NAME_TO_ISO = {
     "United Kingdom": "GBR", "Germany": "DEU", "Switzerland": "CHE", "France": "FRA",
@@ -200,6 +227,17 @@ def health(member_iso3: list[str], year: int, conflict_hits: int,
     base -= min(18, 6 * conflict_hits)          # war wrecks health
     base += max(-7, min(7, (econ_score - 50) * 0.12))  # wealth buffers it
     return max(1, min(100, round(base))), source
+
+
+def economy_baseline(member_iso3: list[str]) -> float:
+    """Modeled GDP/cap (1990 int$) for the region's dominant macro-region — the
+    economy fallback when Maddison has no real per-country point. Mirrors the
+    tolerance baseline pattern; tagged 'modeled' by the caller."""
+    for iso in member_iso3:
+        code = ISO3_TO_BRECKE.get(iso)
+        if code in ECONOMY_BASELINE:
+            return float(ECONOMY_BASELINE[code])
+    return float(GLOBAL_ECON)
 
 
 def persecution_level(year: int) -> int:
