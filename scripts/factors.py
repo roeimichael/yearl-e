@@ -202,6 +202,13 @@ def health(member_iso3: list[str], year: int, conflict_hits: int,
     return max(1, min(100, round(base))), source
 
 
+def persecution_level(year: int) -> int:
+    """Total recorded witch-trial prosecutions worldwide in `year`'s decade —
+    a global 'how persecutory was this period' signal for dynamic weighting."""
+    decade = (year // 10) * 10
+    return sum(v for (iso, dec), v in _witch_intensity().items() if dec == decade)
+
+
 def tolerance(member_iso3: list[str], year: int) -> tuple[int, str, int]:
     """Modeled regional baseline minus real witch-trial persecution penalty.
     Returns (score, source, witch_penalty_applied)."""

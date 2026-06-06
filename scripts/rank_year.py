@@ -25,9 +25,11 @@ Overall = 0.30*safety + 0.20*governance + 0.20*economy + 0.15*health + 0.15*tole
 then normalized per-year so the year's worst region = 1, best = 100.
 """
 from __future__ import annotations
+import bisect
 import json
 import re
 import sys
+from functools import lru_cache
 from pathlib import Path
 
 import factors
@@ -136,8 +138,8 @@ CLIO_SOURCE = {
 }
 
 
-def score_region(year: int, region: dict,
-                 sorted_gdppc: list[float], conflicts: list[dict]) -> dict:
+def score_region(year: int, region: dict, sorted_gdppc: list[float],
+                 conflicts: list[dict], weights: dict[str, float]) -> dict:
     name = region["name"]
     members = region.get("member_iso3", [])
 
@@ -193,8 +195,9 @@ def score_region(year: int, region: dict,
                      f"pattern for this region).")
     summary = " ".join(parts)
 
-    overall = round(0.30 * safety + 0.20 * gov + 0.20 * econ_score +
-                    0.15 * health + 0.15 * relig)
+    overall = round(weights["safety"] * safety + weights["governance"] * gov +
+                    weights["economy"] * econ_score + weights["health"] * health +
+                    weights["religious_tolerance"] * relig)
 
     sources = [CLIO_SOURCE]
     if conflict_hits:
@@ -250,11 +253,73 @@ def score_region(year: int, region: dict,
     }
 
 
+# Dynamic per-year weights. What makes a place "good to live" shifts with the
+# world-state of the year: a violent year weights safety highest, an age of
+# persecution weights tolerance highest, calmer years lean on prosperity/health.
+# War/persecution are scored as ERA-PERCENTILES (so they vary year to year, not
+# saturate — Brecke has active wars every year). The SAME weights apply to every
+# region that year, so the within-year comparison stays fair.
+# Base already favours peace + freedom (the "where would a person want to live"
+# reading), which on its own spreads winners well beyond the European core.
+BASE_WEIGHTS = {"safety": 0.28, "religious_tolerance": 0.24, "governance": 0.16,
+                "economy": 0.16, "health": 0.16}  # sum 1.00
+_EMPHASIS = {
+    "safety": "a violent year — peace counted for most",
+    "religious_tolerance": "an age of persecution — tolerance counted for most",
+    "governance": "judged most by the reach of the state",
+    "economy": "judged most by prosperity",
+    "health": "judged most by health and survival",
+}
+
+
+def _war_raw(conflicts: list[dict]) -> int:
+    return sum((c.get("fatalities") or 0) for c in conflicts)
+
+
+@lru_cache(maxsize=1)
+def _era_distributions() -> tuple[list[int], list[int]]:
+    """Sorted war (active-conflict fatalities) and persecution levels across all
+    scored years — for percentile-normalizing each year's world-state."""
+    wars, pers = [], []
+    for p in RAW.glob("*_extract.json"):
+        try:
+            yr = int(p.name.split("_")[0])
+        except ValueError:
+            continue
+        d = json.loads(p.read_text(encoding="utf-8"))
+        wars.append(_war_raw(d.get("conflicts", [])))
+        pers.append(factors.persecution_level(yr))
+    return sorted(wars), sorted(pers)
+
+
+def _pct(val: float, sorted_vals: list[int]) -> float:
+    if not sorted_vals:
+        return 0.5
+    return bisect.bisect_right(sorted_vals, val) / len(sorted_vals)
+
+
+def year_weights(war_pct: float, pers_pct: float) -> tuple[dict[str, float], str]:
+    """Return (normalized weights, human emphasis label) for the year, given the
+    year's war/persecution era-percentiles (0–1)."""
+    w = dict(BASE_WEIGHTS)
+    w["safety"] += 0.22 * war_pct
+    w["religious_tolerance"] += 0.22 * pers_pct
+    total = sum(w.values())
+    w = {k: v / total for k, v in w.items()}
+    return w, _EMPHASIS[max(w, key=w.get)]
+
+
 def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
     set_name = snapshot_for(year)
     regions = load_region_set(set_name)
 
     era_summary = wiki.get("summary", "") if wiki else ""
+
+    dist_war, dist_pers = _era_distributions()
+    weights, emphasis = year_weights(
+        _pct(_war_raw(raw["conflicts"]), dist_war),
+        _pct(factors.persecution_level(year), dist_pers),
+    )
 
     # Per-year economy percentile baseline: each region's best member-country
     # GDP/cap, interpolated from Maddison benchmarks (captures China/India/Japan/
@@ -266,7 +331,7 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
 
     out_regions = {}
     for r in regions:
-        out_regions[r["id"]] = score_region(year, r, sorted_gdppc, raw["conflicts"])
+        out_regions[r["id"]] = score_region(year, r, sorted_gdppc, raw["conflicts"], weights)
 
     # Normalize overall per year: worst region -> 1, best -> 100. Keeps ranking
     # legible when raw composites cluster in a narrow band.
@@ -283,6 +348,8 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
         "label": f"{year} CE",
         "region_set": set_name,
         "era_summary": era_summary,
+        "weights": {k: round(v, 3) for k, v in weights.items()},
+        "emphasis": emphasis,
         "regions": out_regions,
     }
 
