@@ -50,6 +50,11 @@ YEAR_OUT = ROOT / "data" / "year_scores"
 # snapshots with build_cliopatria_era.py then add a row here.
 ERA_SNAPSHOTS: dict[str, tuple[int, int, list[int]]] = {
     "early_modern": (1500, 1815, list(range(1500, 1801, 25)) + [1815]),
+    # Modern era: snapshots denser where borders move fast (WWI redraw, WW2,
+    # decolonization, Soviet collapse). Cliopatria runs to 2024, so 2025/2026
+    # bind to the 2024 snapshot.
+    "modern": (1816, 2026, [1816, 1840, 1860, 1880, 1900, 1914, 1920, 1938,
+                            1945, 1960, 1975, 1991, 2000, 2010, 2024]),
 }
 
 
@@ -152,8 +157,12 @@ CLIO_SOURCE = {
 
 # factor_source tags that rest on real measured data (not modeled/neutral). Used
 # to compute per-cell data_quality / sparse_data honestly.
-REAL_SOURCES = frozenset({"brecke", "lifeexp", "maddison", "vdem", "statehist",
-                          "witch-trials"})
+REAL_SOURCES = frozenset({"brecke", "ucdp", "lifeexp", "maddison", "vdem",
+                          "statehist", "witch-trials"})
+
+# Brecke's conflict catalog ends here; build_extracts switches to UCDP after it,
+# so safety provenance is tagged accordingly (kept in sync with build_extracts).
+BRECKE_LAST_YEAR = 1999
 
 
 def score_region(year: int, region: dict, sorted_gdppc: list[float],
@@ -162,6 +171,7 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     members = region.get("member_iso3", [])
 
     safety, conflict_hits = compute_safety(name, members, conflicts)
+    safety_src = "brecke" if year <= BRECKE_LAST_YEAR else "ucdp"
     econ_val, econ_iso, econ_est_src = economy_estimate(members, year)
     econ_score, econ_src = compute_economy(econ_val, econ_est_src, sorted_gdppc)
 
@@ -179,11 +189,12 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     health, health_src = factors.health(members, year, len(conflict_hits), econ_score)
     relig, relig_src, witch_pen = factors.tolerance(members, year)
 
+    conflict_db = "UCDP" if year > BRECKE_LAST_YEAR else "Brecke"
     parts = []
     if conflict_hits:
         parts.append(f"Active conflicts in {year}: " + "; ".join(conflict_hits[:3]) + ".")
     else:
-        parts.append(f"Brecke records no major conflict touching {name} in {year} "
+        parts.append(f"{conflict_db} records no major conflict touching {name} in {year} "
                      f"(safety at the era baseline of 85).")
     if econ_src == "maddison":
         parts.append(f"Maddison GDP/capita {econ_val:.0f} ({econ_iso}, {year}) — "
@@ -221,8 +232,12 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
 
     sources = [CLIO_SOURCE]
     if conflict_hits:
-        sources.append({"label": "Brecke Conflict Catalog 1400-2000",
-                        "url": "https://brecke.inta.gatech.edu/research/conflict/"})
+        if safety_src == "ucdp":
+            sources.append({"label": "UCDP/PRIO Armed Conflict Dataset v25.1",
+                            "url": "https://ucdp.uu.se/downloads/"})
+        else:
+            sources.append({"label": "Brecke Conflict Catalog 1400-2000",
+                            "url": "https://brecke.inta.gatech.edu/research/conflict/"})
     if econ_src == "maddison":
         sources.append({
             "label": f"Maddison Project 2023 — {econ_iso} {year} gdppc={econ_val:.0f}",
@@ -255,7 +270,7 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
         })
 
     factor_sources = {
-        "safety": "brecke",
+        "safety": safety_src,
         "health": health_src,
         "economy": econ_src,
         "governance": gov_src,

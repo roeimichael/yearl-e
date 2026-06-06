@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>yearl-e — daily history puzzle</title>
-<meta name="description" content="Each day, a random year from the early modern world (1500–1815). Click the globe where you'd want to live. Score based on actual living conditions that year, with cited sources." />
+<meta name="description" content="Each day, a random year of world history (1500–2026). Click the globe where you'd want to live. Score based on actual living conditions that year, with cited sources." />
 
 <meta property="og:title" content="yearl-e — where on Earth would you want to live that year?" />
 <meta property="og:description" content="A daily history game. Same year for everyone. Cited sources, real data." />
@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
-<link href="/static/style.css?v=18" rel="stylesheet" />
+<link href="/static/style.css?v=19" rel="stylesheet" />
 </head>
 <body>
 
@@ -49,7 +49,7 @@
     <span class="card-eyebrow">a daily history puzzle</span>
     <h1>yearl-e</h1>
     <p class="tagline-lead">Where on Earth would you want to live that year?</p>
-    <p class="tagline">Each day, one historical year from the early modern world — 1500 to 1815.<br/>
+    <p class="tagline">Each day, one year of world history — anywhere from 1500 to 2026.<br/>
     Click the globe where you'd want to live that year.<br/>
     Scored on real living conditions: peace, health, economy, governance, tolerance.</p>
     <button id="btn-start" disabled><span class="btn-spinner" aria-hidden="true"></span>Loading today's year…</button>
@@ -67,31 +67,34 @@
 
     <h3>The 5 factors</h3>
     <ul class="about-list">
-      <li><strong>Safety</strong> — derived from the Brecke Conflict Catalog. Region loses points for each active war/rebellion that year.</li>
-      <li><strong>Health</strong> — era baseline with manual adjustments for known epidemics, famines, sanitation.</li>
-      <li><strong>Economy</strong> — Maddison Project 2023 GDP/capita, ranked into a percentile across the year's coverage.</li>
-      <li><strong>Governance</strong> — V-Dem v15 Electoral Democracy Index (polyarchy) for years ≥1789; manual research for earlier years.</li>
-      <li><strong>Religious tolerance</strong> — manual research of state religion enforcement, persecution, tolerance acts.</li>
+      <li><strong>Safety</strong> — active wars/rebellions that year from the Brecke Conflict Catalog (to 1999) and UCDP/PRIO (2000+). Each conflict touching a region costs points.</li>
+      <li><strong>Health</strong> — life expectancy (Our World in Data): the region's country where known, else its continental aggregate; adjusted for war and wealth.</li>
+      <li><strong>Economy</strong> — Maddison Project 2023 GDP/capita where available, else a modeled regional baseline; ranked into a percentile across the year.</li>
+      <li><strong>Governance</strong> — V-Dem v15 Electoral Democracy Index from 1789; the State Antiquity Index (state-continuity) as a proxy before that.</li>
+      <li><strong>Religious tolerance</strong> — a modeled regional baseline, lowered by recorded persecution (Leeson-Russ witch-trial database, Europe 1300–1850).</li>
     </ul>
 
-    <p class="about-formula"><strong>Overall score</strong> = 0.30 × safety + 0.20 × governance + 0.20 × economy + 0.15 × health + 0.15 × tolerance.</p>
+    <p class="about-formula"><strong>Overall score</strong> is a weighted blend of the five factors — and the weights <em>shift with the year</em>: a violent year counts peace most, an age of persecution counts tolerance most. The same weights apply to every region that year, and the reveal shows which factor mattered.</p>
 
     <h3>Data sources</h3>
     <ul class="about-list about-sources">
       <li><a href="https://www.rug.nl/ggdc/historicaldevelopment/maddison/" target="_blank" rel="noopener">Maddison Project Database 2023</a> — GDP per capita, 1 AD–2022</li>
-      <li><a href="https://brecke.inta.gatech.edu/research/conflict/" target="_blank" rel="noopener">Brecke Conflict Catalog</a> — global wars 1400–2000</li>
+      <li><a href="https://brecke.inta.gatech.edu/research/conflict/" target="_blank" rel="noopener">Brecke Conflict Catalog</a> — global wars 1400–1999</li>
+      <li><a href="https://ucdp.uu.se/downloads/" target="_blank" rel="noopener">UCDP/PRIO Armed Conflict Dataset</a> — armed conflicts 1946–2024</li>
       <li><a href="https://www.v-dem.net/data/the-v-dem-dataset/" target="_blank" rel="noopener">V-Dem v15</a> — Electoral Democracy Index 1789–present</li>
+      <li><a href="https://sites.google.com/site/econolaols/extended-state-history-index" target="_blank" rel="noopener">State Antiquity Index</a> — pre-1789 state-continuity proxy</li>
+      <li><a href="https://ourworldindata.org/life-expectancy" target="_blank" rel="noopener">Our World in Data</a> — life expectancy (Riley; Zijdeman; UN)</li>
+      <li><a href="https://github.com/JakeRuss/witch-trials" target="_blank" rel="noopener">Leeson-Russ Witch Trials</a> — recorded persecution, Europe 1300–1850</li>
       <li><a href="https://github.com/Seshat-Global-History-Databank/cliopatria" target="_blank" rel="noopener">Cliopatria (Seshat)</a> — period-accurate political borders, 3400 BCE–2024 CE (CC-BY 4.0)</li>
-      <li><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> — modern country shapes (used to map polities to economic data)</li>
-      <li><a href="https://en.wikipedia.org/" target="_blank" rel="noopener">Wikipedia</a> — year article summaries</li>
+      <li><a href="https://www.naturalearthdata.com/" target="_blank" rel="noopener">Natural Earth</a> — modern country shapes (used to map polities to country data)</li>
     </ul>
 
     <h3>Known limitations</h3>
     <ul class="about-list">
       <li>Regions are real historical polities from Cliopatria, with borders sampled every ~25 years — so the map shifts as the centuries pass.</li>
-      <li>Pre-1789 governance falls back to a neutral baseline (V-Dem democracy data begins in 1789).</li>
-      <li>Economy is mapped from a polity to the modern country it overlaps, so it's a proxy, not an exact figure.</li>
-      <li>Currently covers 1500–1815. Earlier eras (back to 1000 BCE) are coming next.</li>
+      <li>Each region's economy/governance/health are read from the modern country it overlaps, so they're proxies, not exact figures. The reveal labels each factor real vs modeled.</li>
+      <li>Pre-1789 governance uses a state-continuity proxy (it rewards stable, established states); religious tolerance outside Europe is a modeled regional baseline.</li>
+      <li>Covers 1500–2026 across two eras. Earlier eras (back to 1000 BCE) are coming next.</li>
     </ul>
   </div>
 
@@ -135,6 +138,6 @@
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.js"></script>
-<script src="/static/app.js?v=18"></script>
+<script src="/static/app.js?v=19"></script>
 </body>
 </html>

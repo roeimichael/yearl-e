@@ -181,7 +181,7 @@ def year_regions(year: int):
 
 # Factor → dataset, for the archive page (kept in sync with scripts/rank_year + factors).
 _ARCHIVE_SOURCES = [
-    {"factor": "Safety", "dataset": "Brecke Conflict Catalog 1400-2000", "coverage": "active wars/rebellions per region-year"},
+    {"factor": "Safety", "dataset": "Brecke Conflict Catalog (to 1999) + UCDP/PRIO (2000+)", "coverage": "active wars/rebellions per region-year"},
     {"factor": "Economy", "dataset": "Maddison Project 2023 + modeled regional baseline", "coverage": "real GDP/cap where available (39%), else modeled macro-region baseline"},
     {"factor": "Governance", "dataset": "V-Dem v15 + State Antiquity Index", "coverage": "V-Dem 1789+; State-continuity proxy before (92% statehist)"},
     {"factor": "Health", "dataset": "Our World in Data — life expectancy", "coverage": "country (Tier 1) + continental aggregate (Tier 2, from 1770)"},
@@ -253,7 +253,7 @@ def archive():
         s["years_using"] = usage.get(s["snapshot_year"], 0)
     return {
         "title": "yearl-e data archive",
-        "era": "early modern (1500–1815)",
+        "era": "early modern + modern (1500–2026)",
         "years": {"count": len(years), "min": min(years), "max": max(years)} if years else {},
         "snapshots": snaps,
         "sources": _ARCHIVE_SOURCES,
