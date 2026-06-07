@@ -18,7 +18,7 @@
       "factors": {
         "safety": 24,
         "health": 25,
-        "economy": 38,
+        "economy": 37,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -106,9 +106,9 @@
       "wikidata": "Q8733",
       "raw_score": 66
     },
-    "spanish_empire": {
+    "spanish_empire_mex": {
       "score": 45,
-      "summary": "Brecke records no major conflict touching Spanish Empire in 1698 (safety at the era baseline of 85). Maddison GDP/capita 1415 (MEX, 1698) — economy proxy for the territory. State-continuity 50/100 (MEX) — established state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Spanish Empire (MEX) in 1698 (safety at the era baseline of 85). Maddison GDP/capita 1415 (MEX, 1698) — economy proxy for the territory. State-continuity 50/100 (MEX) — established state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 30,
@@ -287,12 +287,12 @@
       "raw_score": 58
     },
     "safavid_dynasty": {
-      "score": 96,
+      "score": 92,
       "summary": "Brecke records no major conflict touching Safavid Dynasty in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 66,
+        "economy": 64,
         "governance": 100,
         "religious_tolerance": 52
       },
@@ -329,7 +329,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q161205",
-      "raw_score": 67
+      "raw_score": 66
     },
     "dzungar_khanate": {
       "score": 92,
@@ -377,23 +377,23 @@
       "raw_score": 66
     },
     "swedish_empire": {
-      "score": 60,
-      "summary": "Brecke records no major conflict touching Swedish Empire in 1698 (safety at the era baseline of 85). Maddison GDP/capita 1586 (SWE, 1698) — economy proxy for the territory. State-continuity 100/100 (SWE) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 68,
+      "summary": "Brecke records no major conflict touching Swedish Empire in 1698 (safety at the era baseline of 85). Maddison GDP/capita 1586 (SWE, 1698) — economy proxy for the territory. State-continuity 100/100 (SWE) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 69,
-        "health": 30,
+        "health": 49,
         "economy": 81,
         "governance": 100,
         "religious_tolerance": 32
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -408,6 +408,10 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
           "url": "https://github.com/JakeRuss/witch-trials"
         },
@@ -419,7 +423,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q215443",
-      "raw_score": 58
+      "raw_score": 60
     },
     "tibet": {
       "score": 92,
@@ -517,7 +521,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 35,
+        "economy": 34,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -556,24 +560,24 @@
       "wikidata": "Q200464",
       "raw_score": 48
     },
-    "denmark_norway": {
-      "score": 56,
-      "summary": "Brecke records no major conflict touching Denmark-Norway in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 35/100 — lowered by recorded witch-trial persecution in this period.",
+    "denmark_norway_nor": {
+      "score": 88,
+      "summary": "Brecke records no major conflict touching Denmark-Norway (NOR) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 34,
+        "health": 47,
+        "economy": 68,
         "governance": 100,
-        "religious_tolerance": 35
+        "religious_tolerance": 38
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -588,6 +592,10 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
           "url": "https://github.com/JakeRuss/witch-trials"
         },
@@ -599,7 +607,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62651",
-      "raw_score": 57
+      "raw_score": 65
     },
     "kingdom_of_spain": {
       "score": 100,
@@ -652,7 +660,7 @@
       "factors": {
         "safety": 69,
         "health": 47,
-        "economy": 68,
+        "economy": 67,
         "governance": 100,
         "religious_tolerance": 24
       },
@@ -795,7 +803,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -1073,7 +1081,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -1163,7 +1171,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 94,
         "religious_tolerance": 55
       },
@@ -1302,7 +1310,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 50,
         "religious_tolerance": 55
       },
@@ -1392,7 +1400,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 65,
+        "economy": 64,
         "governance": 100,
         "religious_tolerance": 44
       },
@@ -1482,7 +1490,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 35,
+        "economy": 34,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -1522,23 +1530,23 @@
       "raw_score": 48
     },
     "denmark_norway_isl": {
-      "score": 56,
-      "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 88,
+      "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 34,
+        "health": 47,
+        "economy": 68,
         "governance": 75,
-        "religious_tolerance": 45
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "statehist",
         "religious_tolerance": "modeled"
       },
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1553,14 +1561,18 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1698",
           "url": "https://en.wikipedia.org/wiki/1698"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q62651",
-      "raw_score": 57
+      "raw_score": 65
     },
     "kalmyk_khanate": {
       "score": 64,
@@ -1568,7 +1580,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -1707,7 +1719,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -1752,7 +1764,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -1797,7 +1809,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 54,
         "religious_tolerance": 48
       },
@@ -1842,7 +1854,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -1887,7 +1899,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 66,
+        "economy": 64,
         "governance": 56,
         "religious_tolerance": 52
       },
@@ -1972,12 +1984,12 @@
       "raw_score": 60
     },
     "gorkha_kingdom": {
-      "score": 56,
+      "score": 52,
       "summary": "Brecke records no major conflict touching Gorkha Kingdom in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 75/100 (NPL) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 23,
-        "economy": 38,
+        "economy": 37,
         "governance": 75,
         "religious_tolerance": 50
       },
@@ -2014,7 +2026,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q3332217",
-      "raw_score": 57
+      "raw_score": 56
     },
     "sloboda_ukraine": {
       "score": 64,
@@ -2022,7 +2034,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -2067,7 +2079,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2112,7 +2124,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 50,
         "religious_tolerance": 48
       },
@@ -2157,7 +2169,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -2245,13 +2257,13 @@
       "wikidata": "Q45670",
       "raw_score": 59
     },
-    "dutch_republic": {
+    "dutch_republic_idn": {
       "score": 72,
-      "summary": "Brecke records no major conflict touching Dutch Republic in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Dutch Republic (IDN) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2290,13 +2302,13 @@
       "wikidata": "Q170072",
       "raw_score": 61
     },
-    "new_france": {
+    "new_france_can": {
       "score": 49,
-      "summary": "Brecke records no major conflict touching New France in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~640 1990 int$). State-continuity 25/100 (CAN) — fragmented / weak state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching New France (CAN) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~640 1990 int$). State-continuity 25/100 (CAN) — fragmented / weak state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 29,
-        "economy": 64,
+        "economy": 63,
         "governance": 25,
         "religious_tolerance": 46
       },
@@ -2341,7 +2353,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 50,
         "religious_tolerance": 48
       },
@@ -2382,7 +2394,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2421,13 +2433,13 @@
       "wikidata": "Q2301908",
       "raw_score": 61
     },
-    "yarubid_dynasty": {
+    "yarubid_dynasty_omn": {
       "score": 68,
-      "summary": "Brecke records no major conflict touching Yarubid dynasty in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Yarubid dynasty (OMN) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 66,
+        "economy": 64,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -2513,7 +2525,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2607,7 +2619,7 @@
       "factors": {
         "safety": 69,
         "health": 43,
-        "economy": 38,
+        "economy": 37,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -2652,7 +2664,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2691,13 +2703,13 @@
       "wikidata": "Q3503555",
       "raw_score": 61
     },
-    "dutch_republic_idn": {
+    "dutch_republic_idn_1": {
       "score": 72,
       "summary": "Brecke records no major conflict touching Dutch Republic (IDN) in 1698 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2791,7 +2803,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -2836,7 +2848,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2930,7 +2942,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -3118,7 +3130,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -3208,7 +3220,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -3253,7 +3265,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -3298,7 +3310,7 @@
       "factors": {
         "safety": 77,
         "health": 23,
-        "economy": 38,
+        "economy": 37,
         "governance": 50,
         "religious_tolerance": 50
       },
@@ -3339,7 +3351,7 @@
       "factors": {
         "safety": 77,
         "health": 23,
-        "economy": 38,
+        "economy": 37,
         "governance": 50,
         "religious_tolerance": 50
       },
@@ -3429,7 +3441,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -3474,7 +3486,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 35,
+        "economy": 34,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -3519,7 +3531,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -3564,7 +3576,7 @@
       "factors": {
         "safety": 77,
         "health": 23,
-        "economy": 38,
+        "economy": 37,
         "governance": 50,
         "religious_tolerance": 50
       },
@@ -3609,7 +3621,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 35,
+        "economy": 34,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -3744,7 +3756,7 @@
       "factors": {
         "safety": 81,
         "health": 24,
-        "economy": 48,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },

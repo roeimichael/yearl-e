@@ -243,7 +243,7 @@
       "factors": {
         "safety": 69,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 100,
         "religious_tolerance": 52
       },
@@ -327,24 +327,24 @@
       "wikidata": "Q12560",
       "raw_score": 61
     },
-    "kalmar_union": {
-      "score": 80,
-      "summary": "Active conflicts in 1520: Sweden-Kalmar (Denmark), 1520-23. Maddison GDP/capita 2418 (SWE, 1520) — economy proxy for the territory. State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 43/100 — lowered by recorded witch-trial persecution in this period.",
+    "kalmar_union_swe": {
+      "score": 96,
+      "summary": "Active conflicts in 1520: Sweden-Kalmar (Denmark), 1520-23. Maddison GDP/capita 2418 (SWE, 1520) — economy proxy for the territory. State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Health 43/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
-        "health": 24,
+        "health": 43,
         "economy": 86,
         "governance": 100,
-        "religious_tolerance": 43
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -363,6 +363,10 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
           "url": "https://github.com/JakeRuss/witch-trials"
         },
@@ -374,15 +378,15 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62623",
-      "raw_score": 62
+      "raw_score": 66
     },
     "inca_empire": {
-      "score": 41,
+      "score": 37,
       "summary": "Brecke records no major conflict touching Inca Empire in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 82/100 (PER) — long-entrenched state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 82,
         "religious_tolerance": 26
       },
@@ -419,7 +423,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q28573",
-      "raw_score": 52
+      "raw_score": 51
     },
     "tibet": {
       "score": 92,
@@ -556,7 +560,7 @@
       "wikidata": "Q1191125",
       "raw_score": 65
     },
-    "kingdom_of_spain": {
+    "kingdom_of_spain_esp": {
       "score": 29,
       "summary": "Active conflicts in 1520: Turkey (Corsairs)-Spain, Hafsids (Algiers, Djidjelli, Tlemcen), 1514-21; Spain (Barcelona), 1519-22; Spain-Aztecs (Mexico), 1519-21. Maddison GDP/capita 2470 (ITA, 1520) — economy proxy for the territory. State-continuity 100/100 (ESP) — long-entrenched state (pre-democracy governance proxy). Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
@@ -1620,23 +1624,23 @@
       "raw_score": 51
     },
     "kalmar_union_isl": {
-      "score": 41,
-      "summary": "Active conflicts in 1520: Sweden-Kalmar (Denmark), 1520-23. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Active conflicts in 1520: Sweden-Kalmar (Denmark), 1520-23. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
-        "health": 18,
-        "economy": 35,
+        "health": 42,
+        "economy": 73,
         "governance": 75,
-        "religious_tolerance": 45
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "statehist",
         "religious_tolerance": "modeled"
       },
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1655,22 +1659,26 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1520",
           "url": "https://en.wikipedia.org/wiki/1520"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q62623",
-      "raw_score": 52
+      "raw_score": 61
     },
-    "spanish_empire": {
+    "spanish_empire_cub": {
       "score": 21,
-      "summary": "Brecke records no major conflict touching Spanish Empire in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 50/100 (DOM) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Spanish Empire (CUB) in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 50/100 (DOM) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -1895,7 +1903,7 @@
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 38,
         "religious_tolerance": 52
       },
@@ -2308,7 +2316,7 @@
       "factors": {
         "safety": 65,
         "health": 48,
-        "economy": 73,
+        "economy": 72,
         "governance": 100,
         "religious_tolerance": 44
       },
@@ -2752,9 +2760,9 @@
       "wikidata": "Q10957559",
       "raw_score": 54
     },
-    "kingdom_of_portugal": {
+    "kingdom_of_portugal_prt": {
       "score": 100,
-      "summary": "Brecke records no major conflict touching Kingdom of Portugal in 1520 (safety at the era baseline of 85). Maddison GDP/capita 1281 (PRT, 1520) — economy proxy for the territory. State-continuity 100/100 (PRT) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Kingdom of Portugal (PRT) in 1520 (safety at the era baseline of 85). Maddison GDP/capita 1281 (PRT, 1520) — economy proxy for the territory. State-continuity 100/100 (PRT) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 48,
@@ -2930,11 +2938,11 @@
     },
     "haudenosaunee": {
       "score": 37,
-      "summary": "Brecke records no major conflict touching Haudenosaunee in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~640 1990 int$). State-continuity 0/100 (USA) — fragmented / weak state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Haudenosaunee in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~640 1990 int$). State-continuity 0/100 (USA) — fragmented / weak state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 30,
-        "economy": 67,
+        "health": 29,
+        "economy": 66,
         "governance": 0,
         "religious_tolerance": 46
       },
@@ -3116,13 +3124,13 @@
       "wikidata": "Q818666",
       "raw_score": 56
     },
-    "portuguese_empire": {
+    "portuguese_empire_bra": {
       "score": 1,
-      "summary": "Brecke records no major conflict touching Portuguese Empire in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 13/100 (BRA) — fragmented / weak state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Portuguese Empire (BRA) in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 13/100 (BRA) — fragmented / weak state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 13,
         "religious_tolerance": 26
       },
@@ -3167,7 +3175,7 @@
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -3576,7 +3584,7 @@
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -4180,12 +4188,12 @@
       "raw_score": 65
     },
     "kingdom_of_georgia": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Kingdom of Georgia in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 41/100 (GEO) — established state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 41,
         "religious_tolerance": 52
       },
@@ -4222,7 +4230,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q154667",
-      "raw_score": 58
+      "raw_score": 57
     },
     "portuguese_empire_mys": {
       "score": 68,
@@ -4315,12 +4323,12 @@
       "raw_score": 56
     },
     "kingdom_of_kakheti": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Kingdom of Kakheti in 1520 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 41/100 (GEO) — established state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 41,
         "religious_tolerance": 52
       },
@@ -4357,7 +4365,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1209822",
-      "raw_score": 58
+      "raw_score": 57
     },
     "blambangan_kingdom": {
       "score": 80,
@@ -4459,7 +4467,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 50,
         "religious_tolerance": 26
       },

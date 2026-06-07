@@ -18,7 +18,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -102,9 +102,9 @@
       "wikidata": "Q8733",
       "raw_score": 64
     },
-    "spanish_empire": {
+    "spanish_empire_mex": {
       "score": 63,
-      "summary": "Brecke records no major conflict touching Spanish Empire in 1746 (safety at the era baseline of 85). Maddison GDP/capita 1254 (MEX, 1746) — economy proxy for the territory. State-continuity 50/100 (MEX) — established state (pre-democracy governance proxy). Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Spanish Empire (MEX) in 1746 (safety at the era baseline of 85). Maddison GDP/capita 1254 (MEX, 1746) — economy proxy for the territory. State-continuity 50/100 (MEX) — established state (pre-democracy governance proxy). Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 31,
@@ -283,12 +283,12 @@
       "raw_score": 63
     },
     "afsharid_iran": {
-      "score": 87,
+      "score": 84,
       "summary": "Brecke records no major conflict touching Afsharid Iran in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 100,
         "religious_tolerance": 52
       },
@@ -325,17 +325,17 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q63149558",
-      "raw_score": 63
+      "raw_score": 62
     },
     "swedish_empire": {
-      "score": 95,
-      "summary": "Brecke records no major conflict touching Swedish Empire in 1746 (safety at the era baseline of 85). Maddison GDP/capita 1474 (FIN, 1746) — economy proxy for the territory. State-continuity 100/100 (SWE) — long-entrenched state (pre-democracy governance proxy). Health 61/100, anchored on life-expectancy data for the region. Religious tolerance 30/100 — lowered by recorded witch-trial persecution in this period.",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching Swedish Empire in 1746 (safety at the era baseline of 85). Maddison GDP/capita 1474 (FIN, 1746) — economy proxy for the territory. State-continuity 100/100 (SWE) — long-entrenched state (pre-democracy governance proxy). Health 61/100, anchored on life-expectancy data for the region. Religious tolerance 33/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
         "health": 61,
         "economy": 79,
         "governance": 100,
-        "religious_tolerance": 30
+        "religious_tolerance": 33
       },
       "factor_sources": {
         "safety": "brecke",
@@ -374,7 +374,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q215443",
-      "raw_score": 66
+      "raw_score": 67
     },
     "portuguese_empire": {
       "score": 46,
@@ -382,7 +382,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 38,
+        "economy": 36,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -511,24 +511,24 @@
       "wikidata": "Q172107",
       "raw_score": 61
     },
-    "denmark_norway": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Denmark-Norway in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 43/100 — lowered by recorded witch-trial persecution in this period.",
+    "denmark_norway_nor": {
+      "score": 100,
+      "summary": "Brecke records no major conflict touching Denmark-Norway (NOR) in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 36,
+        "health": 47,
+        "economy": 67,
         "governance": 100,
-        "religious_tolerance": 43
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -543,6 +543,10 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
           "url": "https://github.com/JakeRuss/witch-trials"
         },
@@ -554,7 +558,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62651",
-      "raw_score": 60
+      "raw_score": 68
     },
     "habsburg_monarchy": {
       "score": 76,
@@ -658,9 +662,9 @@
       "wikidata": "Q207162",
       "raw_score": 47
     },
-    "british_colonial_empire": {
+    "british_colonial_empire_usa": {
       "score": 81,
-      "summary": "Brecke records no major conflict touching British Colonial Empire in 1746 (safety at the era baseline of 85). Maddison GDP/capita 2076 (USA, 1746) — economy proxy for the territory. State-continuity 50/100 (JAM) — established state (pre-democracy governance proxy). Health 32/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching British Colonial Empire (USA) in 1746 (safety at the era baseline of 85). Maddison GDP/capita 2076 (USA, 1746) — economy proxy for the territory. State-continuity 50/100 (JAM) — established state (pre-democracy governance proxy). Health 32/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 32,
@@ -709,7 +713,7 @@
       "factors": {
         "safety": 77,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 100,
         "religious_tolerance": 52
       },
@@ -748,7 +752,7 @@
       "wikidata": "Q97629053",
       "raw_score": 64
     },
-    "kingdom_of_spain": {
+    "kingdom_of_spain_esp": {
       "score": 76,
       "summary": "Active conflicts in 1746: Britain, Austria, United Provinces-Spain, Prussia, France, Bavaria, 1740-48. Maddison GDP/capita 1281 (ESP, 1746) — economy proxy for the territory. State-continuity 100/100 (ESP) — long-entrenched state (pre-democracy governance proxy). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
@@ -1175,7 +1179,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -1265,7 +1269,7 @@
       "factors": {
         "safety": 61,
         "health": 18,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -1404,7 +1408,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 50,
         "religious_tolerance": 55
       },
@@ -1449,7 +1453,7 @@
       "factors": {
         "safety": 85,
         "health": 29,
-        "economy": 63,
+        "economy": 61,
         "governance": 25,
         "religious_tolerance": 46
       },
@@ -1534,12 +1538,12 @@
       "raw_score": 56
     },
     "joseon": {
-      "score": 87,
+      "score": 84,
       "summary": "Brecke records no major conflict touching Joseon in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~650 1990 int$). State-continuity 100/100 (KOR) — long-entrenched state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 26,
-        "economy": 63,
+        "economy": 62,
         "governance": 100,
         "religious_tolerance": 44
       },
@@ -1576,7 +1580,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q28405",
-      "raw_score": 63
+      "raw_score": 62
     },
     "holy_roman_empire_minor_states": {
       "score": 76,
@@ -1633,7 +1637,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 38,
+        "economy": 36,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -1816,23 +1820,23 @@
       "raw_score": 64
     },
     "denmark_norway_isl": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 36,
+        "health": 47,
+        "economy": 67,
         "governance": 75,
-        "religious_tolerance": 45
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "statehist",
         "religious_tolerance": "modeled"
       },
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1847,14 +1851,18 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1746",
           "url": "https://en.wikipedia.org/wiki/1746"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q62651",
-      "raw_score": 57
+      "raw_score": 65
     },
     "regency_of_algiers": {
       "score": 68,
@@ -1901,7 +1909,7 @@
       "wikidata": "Q3045696",
       "raw_score": 56
     },
-    "new_france": {
+    "new_france_can": {
       "score": 33,
       "summary": "Active conflicts in 1746: Britain, Austria, United Provinces-Spain, Prussia, France, Bavaria, 1740-48; Britain-France (North America), 1744-48; France-England (India), 1744-48. Maddison GDP/capita 2076 (USA, 1746) — economy proxy for the territory. State-continuity 38/100 (USA) — established state (pre-democracy governance proxy). Health 14/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
@@ -1956,7 +1964,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -1995,13 +2003,13 @@
       "wikidata": "Q4210248",
       "raw_score": 64
     },
-    "dutch_republic": {
+    "dutch_republic_idn": {
       "score": 68,
-      "summary": "Brecke records no major conflict touching Dutch Republic in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 56/100 (IDN) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Dutch Republic (IDN) in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 56/100 (IDN) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -2046,7 +2054,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -2091,7 +2099,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2136,7 +2144,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -2181,7 +2189,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 56,
         "religious_tolerance": 48
       },
@@ -2226,7 +2234,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -2271,7 +2279,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 69,
         "religious_tolerance": 55
       },
@@ -2316,7 +2324,7 @@
       "factors": {
         "safety": 85,
         "health": 23,
-        "economy": 40,
+        "economy": 39,
         "governance": 75,
         "religious_tolerance": 50
       },
@@ -2361,7 +2369,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -2406,7 +2414,7 @@
       "factors": {
         "safety": 77,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 56,
         "religious_tolerance": 52
       },
@@ -2496,7 +2504,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 100,
         "religious_tolerance": 48
       },
@@ -2635,7 +2643,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -2680,7 +2688,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -2725,7 +2733,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 50,
         "religious_tolerance": 48
       },
@@ -2815,7 +2823,7 @@
       "factors": {
         "safety": 77,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -3040,7 +3048,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 50,
         "religious_tolerance": 48
       },
@@ -3081,7 +3089,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -3256,23 +3264,23 @@
       "raw_score": 56
     },
     "greenland": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Greenland in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). Governance neutral (no state-history coverage for this territory). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 84,
+      "summary": "Brecke records no major conflict touching Greenland in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). Governance neutral (no state-history coverage for this territory). Health 47/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 36,
+        "health": 47,
+        "economy": 67,
         "governance": 50,
-        "religious_tolerance": 45
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "neutral",
         "religious_tolerance": "modeled"
       },
-      "data_quality": 1,
+      "data_quality": 2,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3283,6 +3291,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1746",
           "url": "https://en.wikipedia.org/wiki/1746"
         }
@@ -3290,7 +3302,7 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q223",
-      "raw_score": 54
+      "raw_score": 62
     },
     "kingdom_of_mysore": {
       "score": 89,
@@ -3343,7 +3355,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 75,
         "religious_tolerance": 55
       },
@@ -3382,13 +3394,13 @@
       "wikidata": "Q424",
       "raw_score": 58
     },
-    "sultanate_of_oman": {
+    "sultanate_of_oman_omn": {
       "score": 63,
       "summary": "Active conflicts in 1746: Oman, 1719-47. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 20/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
         "health": 20,
-        "economy": 64,
+        "economy": 62,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -3433,7 +3445,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -3531,7 +3543,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -3621,7 +3633,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -3666,7 +3678,7 @@
       "factors": {
         "safety": 77,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 56,
         "religious_tolerance": 52
       },
@@ -3711,7 +3723,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -3805,7 +3817,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -3989,7 +4001,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 100,
         "religious_tolerance": 55
       },
@@ -4034,7 +4046,7 @@
       "factors": {
         "safety": 85,
         "health": 44,
-        "economy": 40,
+        "economy": 39,
         "governance": 56,
         "religious_tolerance": 48
       },
@@ -4173,7 +4185,7 @@
       "factors": {
         "safety": 85,
         "health": 23,
-        "economy": 40,
+        "economy": 39,
         "governance": 50,
         "religious_tolerance": 50
       },
@@ -4214,7 +4226,7 @@
       "factors": {
         "safety": 85,
         "health": 23,
-        "economy": 40,
+        "economy": 39,
         "governance": 50,
         "religious_tolerance": 50
       },
@@ -4259,7 +4271,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 69,
         "religious_tolerance": 55
       },
@@ -4304,7 +4316,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -4349,7 +4361,7 @@
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 38,
+        "economy": 36,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -4389,12 +4401,12 @@
       "raw_score": 48
     },
     "kingdom_of_georgia": {
-      "score": 73,
+      "score": 71,
       "summary": "Brecke records no major conflict touching Kingdom of Georgia in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 51/100 (GEO) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 51,
         "religious_tolerance": 52
       },
@@ -4431,7 +4443,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q154667",
-      "raw_score": 58
+      "raw_score": 57
     },
     "sultanate_of_banjar": {
       "score": 68,
@@ -4439,7 +4451,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -4484,7 +4496,7 @@
       "factors": {
         "safety": 85,
         "health": 23,
-        "economy": 40,
+        "economy": 39,
         "governance": 50,
         "religious_tolerance": 50
       },
@@ -4574,7 +4586,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },
@@ -4619,7 +4631,7 @@
       "factors": {
         "safety": 36,
         "health": 8,
-        "economy": 38,
+        "economy": 36,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -4663,12 +4675,12 @@
       "raw_score": 31
     },
     "kingdom_of_kakheti": {
-      "score": 73,
+      "score": 71,
       "summary": "Brecke records no major conflict touching Kingdom of Kakheti in 1746 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 51/100 (GEO) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
         "health": 26,
-        "economy": 64,
+        "economy": 62,
         "governance": 51,
         "religious_tolerance": 52
       },
@@ -4705,7 +4717,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1209822",
-      "raw_score": 58
+      "raw_score": 57
     },
     "sultanate_of_oman_tza": {
       "score": 41,
@@ -4762,7 +4774,7 @@
       "factors": {
         "safety": 73,
         "health": 24,
-        "economy": 49,
+        "economy": 47,
         "governance": 56,
         "religious_tolerance": 55
       },

@@ -13,7 +13,7 @@
   "emphasis": "an age of persecution — tolerance counted for most",
   "regions": {
     "mongol_khanate": {
-      "score": 92,
+      "score": 85,
       "summary": "Brecke records no major conflict touching Mongol Khanate in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1174 (CHN, 1524) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -58,7 +58,7 @@
       "raw_score": 66
     },
     "khanate_of_sibir": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Khanate of Sibir in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (RUS) — established state (pre-democracy governance proxy). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -103,7 +103,7 @@
       "raw_score": 55
     },
     "grand_principality_of_moscow": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Grand Principality of Moscow in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (RUS) — established state (pre-democracy governance proxy). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -148,7 +148,7 @@
       "raw_score": 55
     },
     "ming_dynasty": {
-      "score": 92,
+      "score": 85,
       "summary": "Brecke records no major conflict touching Ming Dynasty in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1174 (CHN, 1524) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -193,7 +193,7 @@
       "raw_score": 66
     },
     "kazakh_khanate": {
-      "score": 37,
+      "score": 34,
       "summary": "Brecke records no major conflict touching Kazakh Khanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~520 1990 int$). State-continuity 84/100 (KAZ) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
@@ -238,12 +238,12 @@
       "raw_score": 52
     },
     "safavid_dynasty": {
-      "score": 52,
+      "score": 49,
       "summary": "Active conflicts in 1524: Persia (Safavids)-Uzbeks, 1523-26. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 49,
         "health": 21,
-        "economy": 69,
+        "economy": 68,
         "governance": 100,
         "religious_tolerance": 52
       },
@@ -287,7 +287,7 @@
       "raw_score": 56
     },
     "ottoman_empire": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Ottoman Empire in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1084 (EGY, 1524) — economy proxy for the territory. State-continuity 100/100 (TUR) — long-entrenched state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -331,24 +331,24 @@
       "wikidata": "Q12560",
       "raw_score": 65
     },
-    "kalmar_union": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching Kalmar Union in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1315 (SWE, 1524) — economy proxy for the territory. State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 43/100 — lowered by recorded witch-trial persecution in this period.",
+    "kalmar_union_swe": {
+      "score": 100,
+      "summary": "Brecke records no major conflict touching Kalmar Union (SWE) in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1315 (SWE, 1524) — economy proxy for the territory. State-continuity 100/100 (DNK) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
-        "health": 30,
+        "health": 48,
         "economy": 80,
         "governance": 100,
-        "religious_tolerance": 43
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "maddison",
         "governance": "statehist",
         "religious_tolerance": "witch-trials"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -363,6 +363,10 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Leeson & Russ — Witch Trials database (Economic Journal 2018)",
           "url": "https://github.com/JakeRuss/witch-trials"
         },
@@ -374,15 +378,15 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62623",
-      "raw_score": 66
+      "raw_score": 70
     },
     "inca_empire": {
-      "score": 37,
+      "score": 34,
       "summary": "Brecke records no major conflict touching Inca Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 82/100 (PER) — long-entrenched state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 82,
         "religious_tolerance": 26
       },
@@ -422,7 +426,7 @@
       "raw_score": 52
     },
     "tibet": {
-      "score": 92,
+      "score": 85,
       "summary": "Brecke records no major conflict touching Tibet in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1174 (CHN, 1524) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -467,7 +471,7 @@
       "raw_score": 66
     },
     "house_of_jagiellon": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching House of Jagiellon in 1524 (safety at the era baseline of 85). Maddison GDP/capita 979 (POL, 1524) — economy proxy for the territory. State-continuity 100/100 (POL) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 57,
@@ -512,7 +516,7 @@
       "raw_score": 61
     },
     "eastern_moghulistan": {
-      "score": 92,
+      "score": 85,
       "summary": "Brecke records no major conflict touching Eastern Moghulistan in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1174 (CHN, 1524) — economy proxy for the territory. State-continuity 100/100 (CHN) — long-entrenched state (pre-democracy governance proxy). Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -556,8 +560,8 @@
       "wikidata": "Q1191125",
       "raw_score": 66
     },
-    "kingdom_of_spain": {
-      "score": 52,
+    "kingdom_of_spain_esp": {
+      "score": 49,
       "summary": "Active conflicts in 1524: France, Navarre-emperor, Spain, England, Italian states (from 1523),pope, 1521-25; Spain-Guatamala, 1522-24; Spain-Honduras, 1524-26. Maddison GDP/capita 2453 (ITA, 1524) — economy proxy for the territory. State-continuity 100/100 (ESP) — long-entrenched state (pre-democracy governance proxy). Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 49,
@@ -606,7 +610,7 @@
       "raw_score": 56
     },
     "nogai_horde": {
-      "score": 33,
+      "score": 30,
       "summary": "Brecke records no major conflict touching Nogai Horde in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~520 1990 int$). State-continuity 84/100 (KAZ) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 61,
@@ -651,7 +655,7 @@
       "raw_score": 51
     },
     "songhai_empire": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Songhai Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 75/100 (MLI) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -696,7 +700,7 @@
       "raw_score": 58
     },
     "funj_sultanate": {
-      "score": 56,
+      "score": 52,
       "summary": "Brecke records no major conflict touching Funj Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~540 1990 int$). State-continuity 75/100 (SDN) — long-entrenched state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -741,7 +745,7 @@
       "raw_score": 57
     },
     "kingdom_of_france": {
-      "score": 76,
+      "score": 71,
       "summary": "Active conflicts in 1524: France, Navarre-emperor, Spain, England, Italian states (from 1523),pope, 1521-25. Maddison GDP/capita 1367 (FRA, 1524) — economy proxy for the territory. State-continuity 100/100 (FRA) — long-entrenched state (pre-democracy governance proxy). Health 43/100, anchored on life-expectancy data for the region. Religious tolerance 34/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 73,
@@ -794,7 +798,7 @@
       "raw_score": 62
     },
     "holy_roman_empire_minor_states": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Holy Roman Empire Minor States in 1524 (safety at the era baseline of 85). Maddison GDP/capita 2938 (NLD, 1524) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
@@ -843,7 +847,7 @@
       "raw_score": 58
     },
     "khanate_of_bukhara": {
-      "score": 45,
+      "score": 41,
       "summary": "Brecke records no major conflict touching Khanate of Bukhara in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~520 1990 int$). State-continuity 100/100 (UZB) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
@@ -888,7 +892,7 @@
       "raw_score": 54
     },
     "kingdom_of_hungary": {
-      "score": 21,
+      "score": 19,
       "summary": "Active conflicts in 1524: Turkey-Hungary, 1521-26. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 70/100 (HUN) — long-entrenched state (pre-democracy governance proxy). Health 38/100, anchored on life-expectancy data for the region. Religious tolerance 45/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 49,
@@ -941,7 +945,7 @@
       "raw_score": 48
     },
     "wattasid_dynasty": {
-      "score": 45,
+      "score": 41,
       "summary": "Brecke records no major conflict touching Wattasid dynasty in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~540 1990 int$). State-continuity 56/100 (MAR) — established state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -986,7 +990,7 @@
       "raw_score": 54
     },
     "ayutthaya_kingdom": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Ayutthaya Kingdom in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 100/100 (THA) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1031,7 +1035,7 @@
       "raw_score": 65
     },
     "vijayanagara_empire": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Vijayanagara Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1076,7 +1080,7 @@
       "raw_score": 56
     },
     "ethiopian_empire": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Ethiopian Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 100/100 (ETH) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1121,7 +1125,7 @@
       "raw_score": 61
     },
     "lan_xang": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Lan Xang in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 100/100 (LAO) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1166,7 +1170,7 @@
       "raw_score": 65
     },
     "warring_states_japan": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Warring States Japan in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~650 1990 int$). State-continuity 75/100 (JPN) — long-entrenched state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1211,7 +1215,7 @@
       "raw_score": 61
     },
     "sultanate_of_bengal": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Sultanate of Bengal in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 75/100 (BGD) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1256,7 +1260,7 @@
       "raw_score": 59
     },
     "mali_empire": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Mali Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 75/100 (GMB) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1301,7 +1305,7 @@
       "raw_score": 58
     },
     "khanate_of_kazan": {
-      "score": 37,
+      "score": 34,
       "summary": "Active conflicts in 1524: Russia-Kazan and Crimean Tatars, 1523-24. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (RUS) — established state (pre-democracy governance proxy). Health 38/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -1350,7 +1354,7 @@
       "raw_score": 52
     },
     "joseon": {
-      "score": 84,
+      "score": 78,
       "summary": "Brecke records no major conflict touching Joseon in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~650 1990 int$). State-continuity 100/100 (KOR) — long-entrenched state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1395,7 +1399,7 @@
       "raw_score": 64
     },
     "shan_states": {
-      "score": 64,
+      "score": 60,
       "summary": "Active conflicts in 1524: Shans-Ava (Burma), 1524-27. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 88/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -1444,7 +1448,7 @@
       "raw_score": 59
     },
     "khmer_empire": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Khmer Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 100/100 (KHM) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1489,7 +1493,7 @@
       "raw_score": 65
     },
     "lodi_dynasty": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Lodi Dynasty in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1534,7 +1538,7 @@
       "raw_score": 56
     },
     "kingdom_of_england": {
-      "score": 64,
+      "score": 60,
       "summary": "Active conflicts in 1524: France, Navarre-emperor, Spain, England, Italian states (from 1523),pope, 1521-25. Maddison GDP/capita 1866 (GBR, 1524) — economy proxy for the territory. State-continuity 75/100 (GBR) — long-entrenched state (pre-democracy governance proxy). Health 42/100, anchored on life-expectancy data for the region. Religious tolerance 42/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
@@ -1583,7 +1587,7 @@
       "raw_score": 59
     },
     "hafsid_dynasty": {
-      "score": 56,
+      "score": 52,
       "summary": "Brecke records no major conflict touching Hafsid Dynasty in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~540 1990 int$). State-continuity 75/100 (TUN) — long-entrenched state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1628,23 +1632,23 @@
       "raw_score": 57
     },
     "kalmar_union_isl": {
-      "score": 56,
-      "summary": "Brecke records no major conflict touching Kalmar Union (ISL) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~550 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Religious tolerance 45/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 85,
+      "summary": "Brecke records no major conflict touching Kalmar Union (ISL) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 24,
-        "economy": 35,
+        "health": 48,
+        "economy": 73,
         "governance": 75,
-        "religious_tolerance": 45
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
-        "health": "modeled",
+        "health": "lifeexp",
         "economy": "modeled",
         "governance": "statehist",
         "religious_tolerance": "modeled"
       },
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1659,22 +1663,26 @@
           "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
+          "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
+          "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
           "label": "Wikipedia — 1524",
           "url": "https://en.wikipedia.org/wiki/1524"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q62623",
-      "raw_score": 57
+      "raw_score": 66
     },
-    "spanish_empire": {
-      "score": 21,
-      "summary": "Brecke records no major conflict touching Spanish Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 50/100 (DOM) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+    "spanish_empire_cub": {
+      "score": 19,
+      "summary": "Brecke records no major conflict touching Spanish Empire (CUB) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 50/100 (DOM) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 50,
         "religious_tolerance": 26
       },
@@ -1714,7 +1722,7 @@
       "raw_score": 48
     },
     "astrakhan_khanate": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Astrakhan Khanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (RUS) — established state (pre-democracy governance proxy). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -1759,7 +1767,7 @@
       "raw_score": 55
     },
     "sultanate_of_brunei": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Sultanate of Brunei in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 100/100 (BRN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1804,7 +1812,7 @@
       "raw_score": 65
     },
     "sultanate_of_malacca": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Sultanate of Malacca in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1849,7 +1857,7 @@
       "raw_score": 61
     },
     "spanish_empire_mex": {
-      "score": 29,
+      "score": 27,
       "summary": "Brecke records no major conflict touching Spanish Empire (MEX) in 1524 (safety at the era baseline of 85). Maddison GDP/capita 574 (MEX, 1524) — economy proxy for the territory. State-continuity 62/100 (MEX) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1894,12 +1902,12 @@
       "raw_score": 50
     },
     "timurid_empire": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Timurid Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 38/100 (AFG) — established state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 38,
         "religious_tolerance": 52
       },
@@ -1939,7 +1947,7 @@
       "raw_score": 58
     },
     "livonian_conference": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Livonian Conference in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (LVA) — established state (pre-democracy governance proxy). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 77,
@@ -1988,7 +1996,7 @@
       "raw_score": 55
     },
     "bornu_empire": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Bornu Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 75/100 (NER) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2033,7 +2041,7 @@
       "raw_score": 58
     },
     "l_dynasty": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Lê Dynasty in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 100/100 (VNM) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2078,7 +2086,7 @@
       "raw_score": 65
     },
     "kingdom_of_bohemia": {
-      "score": 76,
+      "score": 71,
       "summary": "Brecke records no major conflict touching Kingdom of Bohemia in 1524 (safety at the era baseline of 85). Maddison GDP/capita 979 (POL, 1524) — economy proxy for the territory. State-continuity 100/100 (POL) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
@@ -2123,7 +2131,7 @@
       "raw_score": 62
     },
     "crimean_khanate": {
-      "score": 37,
+      "score": 34,
       "summary": "Active conflicts in 1524: Russia-Kazan and Crimean Tatars, 1523-24. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (RUS) — established state (pre-democracy governance proxy). Health 38/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -2172,7 +2180,7 @@
       "raw_score": 52
     },
     "later_mayan_city_states": {
-      "score": 29,
+      "score": 27,
       "summary": "Brecke records no major conflict touching Later Mayan City-States in 1524 (safety at the era baseline of 85). Maddison GDP/capita 574 (MEX, 1524) — economy proxy for the territory. State-continuity 62/100 (MEX) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2217,7 +2225,7 @@
       "raw_score": 50
     },
     "western_moghulistan": {
-      "score": 17,
+      "score": 16,
       "summary": "Brecke records no major conflict touching Western Moghulistan in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~520 1990 int$). State-continuity 50/100 (KGZ) — established state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
@@ -2262,7 +2270,7 @@
       "raw_score": 47
     },
     "kashmiri_sultanate": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Kashmiri Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2307,12 +2315,12 @@
       "raw_score": 56
     },
     "habsburg_monarchy": {
-      "score": 76,
+      "score": 71,
       "summary": "Brecke records no major conflict touching Habsburg Monarchy in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~780 1990 int$). State-continuity 100/100 (AUT) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
         "health": 48,
-        "economy": 73,
+        "economy": 72,
         "governance": 100,
         "religious_tolerance": 44
       },
@@ -2352,7 +2360,7 @@
       "raw_score": 62
     },
     "khanate_of_khiva": {
-      "score": 45,
+      "score": 41,
       "summary": "Brecke records no major conflict touching Khanate of Khiva in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~520 1990 int$). State-continuity 100/100 (UZB) — long-entrenched state (pre-democracy governance proxy). Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 65,
@@ -2397,7 +2405,7 @@
       "raw_score": 54
     },
     "kingdom_of_scotland": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Kingdom of Scotland in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1866 (GBR, 1524) — economy proxy for the territory. State-continuity 75/100 (GBR) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 42/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -2442,7 +2450,7 @@
       "raw_score": 63
     },
     "bijapur_sultanate": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Bijapur Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2487,7 +2495,7 @@
       "raw_score": 56
     },
     "zayyanid_dynasty": {
-      "score": 41,
+      "score": 38,
       "summary": "Brecke records no major conflict touching Zayyanid dynasty in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~540 1990 int$). State-continuity 50/100 (DZA) — established state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2532,7 +2540,7 @@
       "raw_score": 53
     },
     "adal_sultanate": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Adal Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 100/100 (ETH) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2577,7 +2585,7 @@
       "raw_score": 61
     },
     "sind_samma_dynasty": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Sind-Samma Dynasty in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 75/100 (PAK) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2622,7 +2630,7 @@
       "raw_score": 59
     },
     "kingdom_of_kongo": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Kingdom of Kongo in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 75/100 (AGO) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2667,7 +2675,7 @@
       "raw_score": 58
     },
     "ava_kingdom": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Ava Kingdom in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 88/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2712,7 +2720,7 @@
       "raw_score": 63
     },
     "principality_of_moldavia": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Principality of Moldavia in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (MDA) — established state (pre-democracy governance proxy). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -2756,9 +2764,9 @@
       "wikidata": "Q10957559",
       "raw_score": 55
     },
-    "kingdom_of_portugal": {
-      "score": 100,
-      "summary": "Brecke records no major conflict touching Kingdom of Portugal in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1281 (PRT, 1524) — economy proxy for the territory. State-continuity 100/100 (PRT) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+    "kingdom_of_portugal_prt": {
+      "score": 93,
+      "summary": "Brecke records no major conflict touching Kingdom of Portugal (PRT) in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1281 (PRT, 1524) — economy proxy for the territory. State-continuity 100/100 (PRT) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 48,
@@ -2802,7 +2810,7 @@
       "raw_score": 68
     },
     "golconda_sultanate": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Golconda Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2847,7 +2855,7 @@
       "raw_score": 56
     },
     "sultanate_of_maguindanao": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Sultanate of Maguindanao in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (PHL) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2892,7 +2900,7 @@
       "raw_score": 61
     },
     "principality_of_wallachia": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Principality of Wallachia in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). Governance neutral (no state-history coverage for this territory). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -2933,12 +2941,12 @@
       "raw_score": 55
     },
     "haudenosaunee": {
-      "score": 37,
-      "summary": "Brecke records no major conflict touching Haudenosaunee in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~640 1990 int$). State-continuity 0/100 (USA) — fragmented / weak state (pre-democracy governance proxy). Health 30/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 34,
+      "summary": "Brecke records no major conflict touching Haudenosaunee in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~640 1990 int$). State-continuity 0/100 (USA) — fragmented / weak state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
-        "health": 30,
-        "economy": 67,
+        "health": 29,
+        "economy": 66,
         "governance": 0,
         "religious_tolerance": 46
       },
@@ -2978,7 +2986,7 @@
       "raw_score": 52
     },
     "kingdom_of_mrauk_u": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Kingdom of Mrauk U in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 88/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3023,7 +3031,7 @@
       "raw_score": 63
     },
     "kingdom_of_spain_bel": {
-      "score": 29,
+      "score": 27,
       "summary": "Active conflicts in 1524: France, Navarre-emperor, Spain, England, Italian states (from 1523),pope, 1521-25; Spain-Guatamala, 1522-24; Spain-Honduras, 1524-26. Maddison GDP/capita 2938 (NLD, 1524) — economy proxy for the territory. State-continuity 75/100 (BEL) — long-entrenched state (pre-democracy governance proxy). Health 32/100, anchored on life-expectancy data for the region. Religious tolerance 30/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 49,
@@ -3076,7 +3084,7 @@
       "raw_score": 50
     },
     "berar_sultanate": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Berar Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3120,13 +3128,13 @@
       "wikidata": "Q818666",
       "raw_score": 56
     },
-    "portuguese_empire": {
+    "portuguese_empire_bra": {
       "score": 1,
-      "summary": "Brecke records no major conflict touching Portuguese Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 13/100 (BRA) — fragmented / weak state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Portuguese Empire (BRA) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 13/100 (BRA) — fragmented / weak state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 13,
         "religious_tolerance": 26
       },
@@ -3166,12 +3174,12 @@
       "raw_score": 43
     },
     "kingdom_of_portugal_are": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Kingdom of Portugal (ARE) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -3207,7 +3215,7 @@
       "raw_score": 59
     },
     "hanthawaddy_kingdom": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Hanthawaddy Kingdom in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 88/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3252,7 +3260,7 @@
       "raw_score": 63
     },
     "michoac_n": {
-      "score": 29,
+      "score": 27,
       "summary": "Brecke records no major conflict touching Michoacán in 1524 (safety at the era baseline of 85). Maddison GDP/capita 574 (MEX, 1524) — economy proxy for the territory. State-continuity 62/100 (MEX) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3297,7 +3305,7 @@
       "raw_score": 50
     },
     "ahmadnagar_sultanate": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Ahmadnagar Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3342,7 +3350,7 @@
       "raw_score": 56
     },
     "sultanate_of_palembang": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Sultanate of Palembang in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3387,7 +3395,7 @@
       "raw_score": 61
     },
     "republic_of_venice": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Republic of Venice in 1524 (safety at the era baseline of 85). Maddison GDP/capita 2453 (ITA, 1524) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3432,7 +3440,7 @@
       "raw_score": 63
     },
     "electorate_of_brandenburg": {
-      "score": 68,
+      "score": 63,
       "summary": "Brecke records no major conflict touching Electorate of Brandenburg in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1725 (DEU, 1524) — economy proxy for the territory. State-continuity 100/100 (POL) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
@@ -3481,7 +3489,7 @@
       "raw_score": 60
     },
     "teutonic_order": {
-      "score": 68,
+      "score": 63,
       "summary": "Brecke records no major conflict touching Teutonic Order in 1524 (safety at the era baseline of 85). Maddison GDP/capita 979 (POL, 1524) — economy proxy for the territory. State-continuity 100/100 (POL) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 57,
@@ -3526,7 +3534,7 @@
       "raw_score": 60
     },
     "first_toungoo_empire": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching First Toungoo Empire in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 88/100 (MMR) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3571,12 +3579,12 @@
       "raw_score": 63
     },
     "shirvan": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Shirvan in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 50/100 (AZE) — established state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 50,
         "religious_tolerance": 52
       },
@@ -3616,7 +3624,7 @@
       "raw_score": 59
     },
     "house_of_bourbon": {
-      "score": 92,
+      "score": 85,
       "summary": "Brecke records no major conflict touching House of Bourbon in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1367 (FRA, 1524) — economy proxy for the territory. State-continuity 100/100 (FRA) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 34/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
@@ -3665,7 +3673,7 @@
       "raw_score": 66
     },
     "swiss_confederation": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Swiss Confederation in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~920 1990 int$). State-continuity 100/100 (CHE) — long-entrenched state (pre-democracy governance proxy). Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 27/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
@@ -3714,7 +3722,7 @@
       "raw_score": 63
     },
     "lan_na_kingdom": {
-      "score": 88,
+      "score": 82,
       "summary": "Brecke records no major conflict touching Lan Na Kingdom in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 100/100 (THA) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3759,7 +3767,7 @@
       "raw_score": 65
     },
     "papal_states": {
-      "score": 80,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Papal States in 1524 (safety at the era baseline of 85). Maddison GDP/capita 2453 (ITA, 1524) — economy proxy for the territory. State-continuity 56/100 (ITA) — established state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3804,7 +3812,7 @@
       "raw_score": 63
     },
     "sunda_kingdom": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Sunda Kingdom in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3849,7 +3857,7 @@
       "raw_score": 61
     },
     "electorate_of_saxony": {
-      "score": 33,
+      "score": 30,
       "summary": "Active conflicts in 1524: German states (peasants in Saxony), 1524-25. Maddison GDP/capita 1725 (DEU, 1524) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 43/100, anchored on life-expectancy data for the region. Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 48,
@@ -3902,7 +3910,7 @@
       "raw_score": 51
     },
     "duchy_of_bavaria": {
-      "score": 56,
+      "score": 52,
       "summary": "Brecke records no major conflict touching Duchy of Bavaria in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1725 (DEU, 1524) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
@@ -3951,7 +3959,7 @@
       "raw_score": 57
     },
     "county_of_savoy": {
-      "score": 96,
+      "score": 89,
       "summary": "Brecke records no major conflict touching County of Savoy in 1524 (safety at the era baseline of 85). Maddison GDP/capita 2453 (ITA, 1524) — economy proxy for the territory. State-continuity 100/100 (FRA) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 34/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
@@ -4000,7 +4008,7 @@
       "raw_score": 67
     },
     "portuguese_ceylon": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Portuguese Ceylon in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 75/100 (LKA) — long-entrenched state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -4045,7 +4053,7 @@
       "raw_score": 59
     },
     "demak_sultanate": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Demak Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -4090,7 +4098,7 @@
       "raw_score": 61
     },
     "qasim_khanate": {
-      "score": 49,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Qasim Khanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (RUS) — established state (pre-democracy governance proxy). Health 44/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 77,
@@ -4135,7 +4143,7 @@
       "raw_score": 55
     },
     "county_of_foix": {
-      "score": 92,
+      "score": 85,
       "summary": "Brecke records no major conflict touching County of Foix in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1367 (FRA, 1524) — economy proxy for the territory. State-continuity 100/100 (FRA) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 34/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 85,
@@ -4184,12 +4192,12 @@
       "raw_score": 66
     },
     "kingdom_of_georgia": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Kingdom of Georgia in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 41/100 (GEO) — established state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 41,
         "religious_tolerance": 52
       },
@@ -4229,7 +4237,7 @@
       "raw_score": 58
     },
     "portuguese_empire_mys": {
-      "score": 64,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Portuguese Empire (MYS) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 56/100 (MYS) — established state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -4274,7 +4282,7 @@
       "raw_score": 59
     },
     "bidar_sultanate": {
-      "score": 52,
+      "score": 49,
       "summary": "Brecke records no major conflict touching Bidar Sultanate in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 56/100 (IND) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -4319,12 +4327,12 @@
       "raw_score": 56
     },
     "kingdom_of_kakheti": {
-      "score": 60,
+      "score": 56,
       "summary": "Brecke records no major conflict touching Kingdom of Kakheti in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 41/100 (GEO) — established state (pre-democracy governance proxy). Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
         "health": 27,
-        "economy": 69,
+        "economy": 68,
         "governance": 41,
         "religious_tolerance": 52
       },
@@ -4364,7 +4372,7 @@
       "raw_score": 58
     },
     "blambangan_kingdom": {
-      "score": 72,
+      "score": 67,
       "summary": "Brecke records no major conflict touching Blambangan Kingdom in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 75/100 (IDN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -4409,7 +4417,7 @@
       "raw_score": 61
     },
     "electorate_of_trier": {
-      "score": 56,
+      "score": 52,
       "summary": "Brecke records no major conflict touching Electorate of Trier in 1524 (safety at the era baseline of 85). Maddison GDP/capita 1725 (DEU, 1524) — economy proxy for the territory. State-continuity 75/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 32/100 — lowered by recorded witch-trial persecution in this period.",
       "factors": {
         "safety": 65,
@@ -4458,12 +4466,12 @@
       "raw_score": 57
     },
     "spanish_empire_pan": {
-      "score": 21,
+      "score": 19,
       "summary": "Brecke records no major conflict touching Spanish Empire (PAN) in 1524 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 50/100 (PAN) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
         "health": 26,
-        "economy": 36,
+        "economy": 35,
         "governance": 50,
         "religious_tolerance": 26
       },
