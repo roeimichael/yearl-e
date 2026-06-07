@@ -643,6 +643,7 @@ const SOURCE_TAGS = {
   "lifeexp":  { label: "Life exp.", title: "Life expectancy (Our World in Data: Riley, Zijdeman, UN) — country or regional" },
   "modeled":  { label: "modeled",  title: "Modeled estimate from the era's regional pattern (no direct dataset)" },
   "witch-trials": { label: "Witch trials", title: "Leeson & Russ witch-trial database — recorded persecution lowers tolerance" },
+  "vdem-relig": { label: "V-Dem relig.", title: "V-Dem freedom-of-religion (v2clrelig) — measured religious tolerance, 1789+" },
 };
 
 // Per-year emphasis banner: what the dynamic weights leaned on this year, with a

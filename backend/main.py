@@ -189,7 +189,7 @@ _ARCHIVE_SOURCES = [
     {"factor": "Economy", "dataset": "Maddison Project 2023 + modeled regional baseline", "coverage": "real GDP/cap where available (39%), else modeled macro-region baseline"},
     {"factor": "Governance", "dataset": "V-Dem v15 + State Antiquity Index", "coverage": "V-Dem 1789+; State-continuity proxy before (92% statehist)"},
     {"factor": "Health", "dataset": "Our World in Data — life expectancy", "coverage": "country (Tier 1) + continental aggregate (Tier 2, from 1770)"},
-    {"factor": "Religious tolerance", "dataset": "Leeson-Russ Witch Trials + modeled regional baseline", "coverage": "real persecution penalty (Europe) over a modeled era baseline"},
+    {"factor": "Religious tolerance", "dataset": "V-Dem freedom-of-religion (1789+) + witch-trials + modeled baseline", "coverage": "real V-Dem religious freedom 1789+ (84% of modern cells); modeled baseline minus witch-trial penalty before"},
     {"factor": "Borders", "dataset": "Cliopatria / Seshat (CC-BY 4.0)", "coverage": "year-keyed historical polities, 3400 BCE-2024 CE"},
 ]
 _ARCHIVE_STORAGE = [

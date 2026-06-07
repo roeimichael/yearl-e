@@ -4,32 +4,32 @@
   "region_set": "modern_1880",
   "era_summary": "",
   "weights": {
-    "safety": 0.338,
-    "religious_tolerance": 0.266,
-    "governance": 0.132,
-    "economy": 0.132,
-    "health": 0.132
+    "safety": 0.303,
+    "religious_tolerance": 0.317,
+    "governance": 0.127,
+    "economy": 0.127,
+    "health": 0.127
   },
-  "emphasis": "a violent year — peace counted for most",
+  "emphasis": "an age of persecution — tolerance counted for most",
   "regions": {
     "russian_empire": {
-      "score": 42,
-      "summary": "Brecke records no major conflict touching Russian Empire in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1902 (FIN, 1873) — economy proxy for the territory. V-Dem polyarchy 24/100 (FIN, 1873) — limited representation. Health 41/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 39,
+      "summary": "Brecke records no major conflict touching Russian Empire in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1902 (FIN, 1873) — economy proxy for the territory. V-Dem polyarchy 24/100 (FIN, 1873) — limited representation. Health 41/100, anchored on life-expectancy data for the region. Religious tolerance 55/100 — V-Dem freedom-of-religion (RUS, 1873), measured.",
       "factors": {
         "safety": 57,
         "health": 41,
         "economy": 75,
         "governance": 24,
-        "religious_tolerance": 50
+        "religious_tolerance": 55
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -46,31 +46,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — RUS 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q34266",
-      "raw_score": 51
+      "raw_score": 52
     },
     "qing_dynasty": {
-      "score": 40,
-      "summary": "Brecke records no major conflict touching Qing Dynasty in 1873 (safety at the era baseline of 85). Maddison GDP/capita 979 (TWN, 1873) — economy proxy for the territory. V-Dem polyarchy 4/100 (CHN, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 52,
+      "summary": "Brecke records no major conflict touching Qing Dynasty in 1873 (safety at the era baseline of 85). Maddison GDP/capita 979 (TWN, 1873) — economy proxy for the territory. V-Dem polyarchy 4/100 (CHN, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 75/100 — V-Dem freedom-of-religion (CHN, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 25,
         "economy": 57,
         "governance": 4,
-        "religious_tolerance": 44
+        "religious_tolerance": 75
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -87,31 +91,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8733",
-      "raw_score": 50
+      "raw_score": 59
     },
     "united_states_of_america_usa": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching United States of America (USA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 5117 (USA, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (USA, 1873) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 84,
+      "summary": "Brecke records no major conflict touching United States of America (USA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 5117 (USA, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (USA, 1873) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (USA, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 65,
         "economy": 87,
         "governance": 34,
-        "religious_tolerance": 58
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -128,31 +136,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — USA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 69
+      "raw_score": 75
     },
     "empire_of_brazil": {
-      "score": 62,
-      "summary": "Brecke records no major conflict touching Empire of Brazil in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1089 (BRA, 1873) — economy proxy for the territory. V-Dem polyarchy 19/100 (BRA, 1873) — limited representation. Health 33/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 47,
+      "summary": "Brecke records no major conflict touching Empire of Brazil in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1089 (BRA, 1873) — economy proxy for the territory. V-Dem polyarchy 19/100 (BRA, 1873) — limited representation. Health 33/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 — V-Dem freedom-of-religion (BRA, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 33,
         "economy": 63,
         "governance": 19,
-        "religious_tolerance": 52
+        "religious_tolerance": 48
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -169,31 +181,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — BRA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q217230",
-      "raw_score": 58
+      "raw_score": 56
     },
     "british_colonial_empire_aus": {
-      "score": 100,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (AUS) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 6095 (AUS, 1873) — economy proxy for the territory. V-Dem polyarchy 58/100 (AUS, 1873) — early democratic. Health 94/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 94,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (AUS) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 6095 (AUS, 1873) — economy proxy for the territory. V-Dem polyarchy 58/100 (AUS, 1873) — early democratic. Health 94/100, anchored on life-expectancy data for the region. Religious tolerance 85/100 — V-Dem freedom-of-religion (AUS, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 94,
         "economy": 89,
         "governance": 58,
-        "religious_tolerance": 58
+        "religious_tolerance": 85
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -210,31 +226,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — AUS 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 72
+      "raw_score": 80
     },
     "british_colonial_empire_can": {
-      "score": 94,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (CAN) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2936 (CAN, 1873) — economy proxy for the territory. V-Dem polyarchy 40/100 (CAN, 1873) — early democratic. Health 73/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 88,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (CAN) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2936 (CAN, 1873) — economy proxy for the territory. V-Dem polyarchy 40/100 (CAN, 1873) — early democratic. Health 73/100, anchored on life-expectancy data for the region. Religious tolerance 85/100 — V-Dem freedom-of-religion (CAN, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 73,
         "economy": 80,
         "governance": 40,
-        "religious_tolerance": 58
+        "religious_tolerance": 85
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -251,31 +271,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CAN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 70
+      "raw_score": 77
     },
     "british_raj": {
-      "score": 23,
-      "summary": "Brecke records no major conflict touching British Raj in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1256 (LKA, 1873) — economy proxy for the territory. V-Dem polyarchy 6/100 (MMR, 1873) — highly autocratic. Health 20/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 45,
+      "summary": "Brecke records no major conflict touching British Raj in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1256 (LKA, 1873) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1873) — highly autocratic. Health 20/100, anchored on life-expectancy data for the region. Religious tolerance 83/100 — V-Dem freedom-of-religion (IND, 1873), measured.",
       "factors": {
         "safety": 57,
         "health": 20,
         "economy": 66,
-        "governance": 6,
-        "religious_tolerance": 46
+        "governance": 5,
+        "religious_tolerance": 83
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -286,37 +310,41 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
-          "label": "V-Dem v15 — MMR 1873 polyarchy=6",
+          "label": "V-Dem v15 — IND 1873 polyarchy=5",
           "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IND 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q129286",
-      "raw_score": 44
+      "raw_score": 55
     },
     "united_states_of_america_usa_1": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching United States of America (USA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 5117 (USA, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (USA, 1873) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 84,
+      "summary": "Brecke records no major conflict touching United States of America (USA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 5117 (USA, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (USA, 1873) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (USA, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 65,
         "economy": 87,
         "governance": 34,
-        "religious_tolerance": 58
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -333,31 +361,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — USA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 69
+      "raw_score": 75
     },
     "khedivate_of_egypt": {
-      "score": 1,
-      "summary": "Active conflicts in 1873: Egypt-Eritrea, 1868-78; Egypt-Sudan, Somalia, Ethiopia, 1870-76; Egypt-Darfur, 1873-75. Maddison GDP/capita 1228 (EGY, 1873) — economy proxy for the territory. V-Dem polyarchy 4/100 (EGY, 1873) — highly autocratic. Health 5/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Active conflicts in 1873: Egypt-Eritrea, 1868-78; Egypt-Sudan, Somalia, Ethiopia, 1870-76; Egypt-Darfur, 1873-75. Maddison GDP/capita 1228 (EGY, 1873) — economy proxy for the territory. V-Dem polyarchy 4/100 (EGY, 1873) — highly autocratic. Health 5/100, anchored on life-expectancy data for the region. Religious tolerance 54/100 — V-Dem freedom-of-religion (EGY, 1873), measured.",
       "factors": {
         "safety": 45,
         "health": 5,
         "economy": 66,
         "governance": 4,
-        "religious_tolerance": 40
+        "religious_tolerance": 54
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -378,31 +410,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — EGY 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q127861",
-      "raw_score": 36
+      "raw_score": 40
     },
     "ottoman_empire": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching Ottoman Empire in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2128 (GRC, 1873) — economy proxy for the territory. V-Dem polyarchy 27/100 (GRC, 1873) — limited representation. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Ottoman Empire in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2128 (GRC, 1873) — economy proxy for the territory. V-Dem polyarchy 27/100 (GRC, 1873) — limited representation. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 78/100 — V-Dem freedom-of-religion (TUR, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 55,
         "economy": 76,
         "governance": 27,
-        "religious_tolerance": 35
+        "religious_tolerance": 78
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -419,31 +455,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — TUR 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q12560",
-      "raw_score": 59
+      "raw_score": 71
     },
     "argentine_confederation": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Argentine Confederation in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2500 (ARG, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (ARG, 1873) — limited representation. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 82,
+      "summary": "Brecke records no major conflict touching Argentine Confederation in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2500 (ARG, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (ARG, 1873) — limited representation. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (ARG, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 45,
         "economy": 79,
         "governance": 34,
-        "religious_tolerance": 52
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -460,31 +500,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ARG 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q832554",
-      "raw_score": 63
+      "raw_score": 74
     },
     "mexico": {
-      "score": 56,
-      "summary": "Brecke records no major conflict touching Mexico in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1124 (MEX, 1873) — economy proxy for the territory. V-Dem polyarchy 20/100 (MEX, 1873) — limited representation. Health 14/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Mexico in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1124 (MEX, 1873) — economy proxy for the territory. V-Dem polyarchy 20/100 (MEX, 1873) — limited representation. Health 14/100, anchored on life-expectancy data for the region. Religious tolerance 59/100 — V-Dem freedom-of-religion (MEX, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 14,
         "economy": 64,
         "governance": 20,
-        "religious_tolerance": 52
+        "religious_tolerance": 59
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -501,31 +545,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MEX 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q5062192",
-      "raw_score": 56
+      "raw_score": 57
     },
     "qajar_dynasty": {
-      "score": 72,
-      "summary": "Brecke records no major conflict touching Qajar Dynasty in 1873 (safety at the era baseline of 85). Maddison GDP/capita 978 (IRN, 1873) — economy proxy for the territory. State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 56,
+      "summary": "Brecke records no major conflict touching Qajar Dynasty in 1873 (safety at the era baseline of 85). Maddison GDP/capita 978 (IRN, 1873) — economy proxy for the territory. State-continuity 100/100 (IRN) — long-entrenched state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 — V-Dem freedom-of-religion (IRN, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 25,
         "economy": 56,
         "governance": 100,
-        "religious_tolerance": 35
+        "religious_tolerance": 40
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "statehist",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -542,31 +590,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IRN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q189326",
-      "raw_score": 62
+      "raw_score": 61
     },
     "united_kingdoms_of_sweden_and_norway": {
-      "score": 97,
-      "summary": "Brecke records no major conflict touching United Kingdoms of Sweden and Norway in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2421 (NOR, 1873) — economy proxy for the territory. V-Dem polyarchy 31/100 (SWE, 1873) — limited representation. Health 91/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching United Kingdoms of Sweden and Norway in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2421 (NOR, 1873) — economy proxy for the territory. V-Dem polyarchy 31/100 (SWE, 1873) — limited representation. Health 91/100, anchored on life-expectancy data for the region. Religious tolerance 79/100 — V-Dem freedom-of-religion (SWE, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 91,
         "economy": 78,
         "governance": 31,
-        "religious_tolerance": 58
+        "religious_tolerance": 79
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -583,31 +635,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SWE 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62589",
-      "raw_score": 71
+      "raw_score": 76
     },
     "bolivia": {
-      "score": 62,
-      "summary": "Brecke records no major conflict touching Bolivia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1293 (BOL, 1873) — economy proxy for the territory. V-Dem polyarchy 20/100 (BOL, 1873) — limited representation. Health 33/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching Bolivia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1293 (BOL, 1873) — economy proxy for the territory. V-Dem polyarchy 20/100 (BOL, 1873) — limited representation. Health 33/100, anchored on life-expectancy data for the region. Religious tolerance 70/100 — V-Dem freedom-of-religion (PRY, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 33,
         "economy": 67,
         "governance": 20,
-        "religious_tolerance": 52
+        "religious_tolerance": 70
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -624,31 +680,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PRY 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q750",
-      "raw_score": 58
+      "raw_score": 63
     },
     "republic_of_peru": {
-      "score": 53,
-      "summary": "Active conflicts in 1873: Peru, 1873-74. Maddison GDP/capita 1757 (PER, 1873) — economy proxy for the territory. V-Dem polyarchy 25/100 (PER, 1873) — limited representation. Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 25,
+      "summary": "Active conflicts in 1873: Peru, 1873-74. Maddison GDP/capita 1757 (PER, 1873) — economy proxy for the territory. V-Dem polyarchy 25/100 (PER, 1873) — limited representation. Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 21/100 — V-Dem freedom-of-religion (PER, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 28,
         "economy": 73,
         "governance": 25,
-        "religious_tolerance": 52
+        "religious_tolerance": 21
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -669,31 +729,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PER 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q419",
-      "raw_score": 55
+      "raw_score": 45
     },
     "dutch_east_indies": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Dutch East Indies in 1873 (safety at the era baseline of 85). Maddison GDP/capita 813 (IDN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 9,
+      "summary": "Brecke records no major conflict touching Dutch East Indies in 1873 (safety at the era baseline of 85). Maddison GDP/capita 813 (IDN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 23/100 — V-Dem freedom-of-religion (IDN, 1873), measured.",
       "factors": {
         "safety": 69,
         "health": 24,
         "economy": 47,
         "governance": 2,
-        "religious_tolerance": 50
+        "religious_tolerance": 23
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -710,31 +774,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q188161",
-      "raw_score": 46
+      "raw_score": 37
     },
     "republic_of_colombia": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Republic of Colombia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2276 (PAN, 1873) — economy proxy for the territory. V-Dem polyarchy 26/100 (COL, 1873) — limited representation. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 74,
+      "summary": "Brecke records no major conflict touching Republic of Colombia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2276 (PAN, 1873) — economy proxy for the territory. V-Dem polyarchy 26/100 (COL, 1873) — limited representation. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 84/100 — V-Dem freedom-of-religion (COL, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 34,
         "economy": 77,
         "governance": 26,
-        "religious_tolerance": 52
+        "religious_tolerance": 84
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -751,15 +819,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — COL 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q739",
-      "raw_score": 61
+      "raw_score": 70
     },
     "british_cape_colony_zaf": {
-      "score": 64,
+      "score": 50,
       "summary": "Brecke records no major conflict touching British Cape Colony (ZAF) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1639 (ZAF, 1873) — economy proxy for the territory. State-continuity 50/100 (ZAF) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -797,10 +869,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q370736",
-      "raw_score": 59
+      "raw_score": 58
     },
     "ottoman_tripolitania": {
-      "score": 37,
+      "score": 31,
       "summary": "Brecke records no major conflict touching Ottoman Tripolitania in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~540 1990 int$). State-continuity 50/100 (LBY) — established state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -838,26 +910,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1529261",
-      "raw_score": 49
+      "raw_score": 48
     },
     "austria_hungary": {
       "score": 70,
-      "summary": "Brecke records no major conflict touching Austria-Hungary in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3049 (AUT, 1873) — economy proxy for the territory. V-Dem polyarchy 26/100 (HUN, 1873) — limited representation. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Austria-Hungary in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3049 (AUT, 1873) — economy proxy for the territory. V-Dem polyarchy 26/100 (HUN, 1873) — limited representation. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 74/100 — V-Dem freedom-of-religion (SRB, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 49,
         "economy": 81,
         "governance": 26,
-        "religious_tolerance": 50
+        "religious_tolerance": 74
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -874,31 +946,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SRB 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q28513",
-      "raw_score": 61
+      "raw_score": 68
     },
     "venezuela": {
-      "score": 62,
-      "summary": "Brecke records no major conflict touching Venezuela in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1884 (VEN, 1873) — economy proxy for the territory. V-Dem polyarchy 8/100 (VEN, 1873) — highly autocratic. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Venezuela in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1884 (VEN, 1873) — economy proxy for the territory. V-Dem polyarchy 8/100 (VEN, 1873) — highly autocratic. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 79/100 — V-Dem freedom-of-religion (VEN, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 34,
         "economy": 74,
         "governance": 8,
-        "religious_tolerance": 52
+        "religious_tolerance": 79
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -915,31 +991,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — VEN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q717",
-      "raw_score": 58
+      "raw_score": 66
     },
     "german_empire": {
-      "score": 81,
-      "summary": "Brecke records no major conflict touching German Empire in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3186 (DEU, 1873) — economy proxy for the territory. V-Dem polyarchy 23/100 (DEU, 1873) — limited representation. Health 61/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 72,
+      "summary": "Brecke records no major conflict touching German Empire in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3186 (DEU, 1873) — economy proxy for the territory. V-Dem polyarchy 23/100 (DEU, 1873) — limited representation. Health 61/100, anchored on life-expectancy data for the region. Religious tolerance 73/100 — V-Dem freedom-of-religion (DEU, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 61,
         "economy": 83,
         "governance": 23,
-        "religious_tolerance": 58
+        "religious_tolerance": 73
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -956,15 +1036,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q43287",
-      "raw_score": 65
+      "raw_score": 69
     },
     "sokoto_caliphate": {
-      "score": 56,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Sokoto Caliphate in 1873 (safety at the era baseline of 85). Maddison GDP/capita 810 (NGA, 1873) — economy proxy for the territory. State-continuity 56/100 (NGA) — established state (pre-democracy governance proxy). Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1002,26 +1086,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q600524",
-      "raw_score": 56
+      "raw_score": 55
     },
     "french_third_republic_fra": {
-      "score": 89,
-      "summary": "Brecke records no major conflict touching French Third Republic (FRA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3064 (FRA, 1873) — economy proxy for the territory. V-Dem polyarchy 48/100 (FRA, 1873) — early democratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 78,
+      "summary": "Brecke records no major conflict touching French Third Republic (FRA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3064 (FRA, 1873) — economy proxy for the territory. V-Dem polyarchy 48/100 (FRA, 1873) — early democratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 73/100 — V-Dem freedom-of-religion (FRA, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 71,
         "economy": 82,
         "governance": 48,
-        "religious_tolerance": 58
+        "religious_tolerance": 73
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1038,31 +1122,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — FRA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q70802",
-      "raw_score": 68
+      "raw_score": 72
     },
     "emirate_of_afghanistan": {
-      "score": 18,
-      "summary": "Active conflicts in 1873: Afghanistan (Kabul), 1873. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). V-Dem polyarchy 2/100 (AFG, 1873) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 7,
+      "summary": "Active conflicts in 1873: Afghanistan (Kabul), 1873. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). V-Dem polyarchy 2/100 (AFG, 1873) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 19/100 — V-Dem freedom-of-religion (AFG, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 18,
         "economy": 43,
         "governance": 2,
-        "religious_tolerance": 35
+        "religious_tolerance": 19
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1083,31 +1171,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — AFG 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1335260",
-      "raw_score": 42
+      "raw_score": 36
     },
     "kingdom_of_spain_esp": {
-      "score": 28,
-      "summary": "Active conflicts in 1873: Cubans-Spain, 1868-78; Spain (Carlists with Basque support), 1872-76. Maddison GDP/capita 2424 (ESP, 1873) — economy proxy for the territory. V-Dem polyarchy 27/100 (ESP, 1873) — limited representation. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 27,
+      "summary": "Active conflicts in 1873: Cubans-Spain, 1868-78; Spain (Carlists with Basque support), 1872-76. Maddison GDP/capita 2424 (ESP, 1873) — economy proxy for the territory. V-Dem polyarchy 27/100 (ESP, 1873) — limited representation. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 56/100 — V-Dem freedom-of-religion (ESP, 1873), measured.",
       "factors": {
         "safety": 40,
         "health": 22,
         "economy": 78,
         "governance": 27,
-        "religious_tolerance": 58
+        "religious_tolerance": 56
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1128,6 +1220,10 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ESP 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
@@ -1136,23 +1232,23 @@
       "raw_score": 46
     },
     "rattanakosin_kingdom": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Rattanakosin Kingdom in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1011 (THA, 1873) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Rattanakosin Kingdom in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1011 (THA, 1873) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 78/100 — V-Dem freedom-of-religion (THA, 1873), measured.",
       "factors": {
         "safety": 69,
         "health": 25,
         "economy": 58,
         "governance": 3,
-        "religious_tolerance": 50
+        "religious_tolerance": 78
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1169,31 +1265,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — THA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1155700",
-      "raw_score": 48
+      "raw_score": 57
     },
     "kingdom_of_great_britain": {
-      "score": 72,
-      "summary": "Active conflicts in 1873: Ashantis (Ghana)-Britain, Kpa-Mende, 1873-74. Maddison GDP/capita 5842 (GBR, 1873) — economy proxy for the territory. V-Dem polyarchy 35/100 (GBR, 1873) — early democratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 74,
+      "summary": "Active conflicts in 1873: Ashantis (Ghana)-Britain, Kpa-Mende, 1873-74. Maddison GDP/capita 5842 (GBR, 1873) — economy proxy for the territory. V-Dem polyarchy 35/100 (GBR, 1873) — early democratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 84/100 — V-Dem freedom-of-religion (GBR, 1873), measured.",
       "factors": {
         "safety": 61,
         "health": 71,
         "economy": 89,
         "governance": 35,
-        "religious_tolerance": 58
+        "religious_tolerance": 84
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1214,15 +1314,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GBR 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q23666",
-      "raw_score": 62
+      "raw_score": 70
     },
     "french_africa_dza": {
-      "score": 50,
+      "score": 39,
       "summary": "Brecke records no major conflict touching French Africa (DZA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1190 (DZA, 1873) — economy proxy for the territory. State-continuity 50/100 (DZA) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -1260,26 +1364,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q19951607",
-      "raw_score": 54
+      "raw_score": 52
     },
     "empire_of_japan": {
-      "score": 59,
-      "summary": "Brecke records no major conflict touching Empire of Japan in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1601 (JPN, 1873) — economy proxy for the territory. V-Dem polyarchy 8/100 (JPN, 1873) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Empire of Japan in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1601 (JPN, 1873) — economy proxy for the territory. V-Dem polyarchy 8/100 (JPN, 1873) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 — V-Dem freedom-of-religion (JPN, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 55,
         "economy": 69,
         "governance": 8,
-        "religious_tolerance": 44
+        "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1296,6 +1400,10 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — JPN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
@@ -1304,23 +1412,23 @@
       "raw_score": 57
     },
     "republic_of_chile": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Republic of Chile in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2024 (CHL, 1873) — economy proxy for the territory. V-Dem polyarchy 24/100 (CHL, 1873) — limited representation. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 56,
+      "summary": "Brecke records no major conflict touching Republic of Chile in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2024 (CHL, 1873) — economy proxy for the territory. V-Dem polyarchy 24/100 (CHL, 1873) — limited representation. Health 34/100, anchored on life-expectancy data for the region. Religious tolerance 57/100 — V-Dem freedom-of-religion (CHL, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 34,
         "economy": 75,
         "governance": 24,
-        "religious_tolerance": 52
+        "religious_tolerance": 57
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1337,31 +1445,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHL 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q298",
-      "raw_score": 60
+      "raw_score": 61
     },
     "burma": {
-      "score": 31,
-      "summary": "Brecke records no major conflict touching Burma in 1873 (safety at the era baseline of 85). Maddison GDP/capita 833 (MMR, 1873) — economy proxy for the territory. V-Dem polyarchy 6/100 (MMR, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 37,
+      "summary": "Brecke records no major conflict touching Burma in 1873 (safety at the era baseline of 85). Maddison GDP/capita 833 (MMR, 1873) — economy proxy for the territory. State-continuity 54/100 (MMR) — established state (pre-democracy governance proxy). Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 43/100 — V-Dem freedom-of-religion (MMR, 1873), measured.",
       "factors": {
         "safety": 69,
         "health": 25,
         "economy": 51,
-        "governance": 6,
-        "religious_tolerance": 50
+        "governance": 54,
+        "religious_tolerance": 43
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "governance": "statehist",
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1372,37 +1484,41 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
-          "label": "V-Dem v15 — MMR 1873 polyarchy=6",
-          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — MMR",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MMR 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q836",
-      "raw_score": 47
+      "raw_score": 51
     },
     "morocco": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Morocco in 1873 (safety at the era baseline of 85). Maddison GDP/capita 913 (MAR, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (MAR, 1873) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 15,
+      "summary": "Brecke records no major conflict touching Morocco in 1873 (safety at the era baseline of 85). Maddison GDP/capita 913 (MAR, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (MAR, 1873) — highly autocratic. Health 22/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 — V-Dem freedom-of-religion (MAR, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 22,
         "economy": 55,
         "governance": 1,
-        "religious_tolerance": 40
+        "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1419,31 +1535,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MAR 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1028",
-      "raw_score": 46
+      "raw_score": 40
     },
     "merina_kingdom": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Merina Kingdom in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). V-Dem polyarchy 2/100 (MDG, 1873) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 45,
+      "summary": "Brecke records no major conflict touching Merina Kingdom in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). V-Dem polyarchy 2/100 (MDG, 1873) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 77/100 — V-Dem freedom-of-religion (MDG, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 18,
         "economy": 25,
         "governance": 2,
-        "religious_tolerance": 48
+        "religious_tolerance": 77
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1460,31 +1580,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MDG 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1071439",
-      "raw_score": 46
+      "raw_score": 55
     },
     "british_colonial_empire_nzl": {
-      "score": 84,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (NZL) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 6107 (NZL, 1873) — economy proxy for the territory. V-Dem polyarchy 52/100 (NZL, 1873) — early democratic. Health 51/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (NZL) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 6107 (NZL, 1873) — economy proxy for the territory. V-Dem polyarchy 52/100 (NZL, 1873) — early democratic. Health 51/100, anchored on life-expectancy data for the region. Religious tolerance 94/100 — V-Dem freedom-of-religion (NZL, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 51,
         "economy": 90,
         "governance": 52,
-        "religious_tolerance": 58
+        "religious_tolerance": 94
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1501,31 +1625,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NZL 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 66
+      "raw_score": 76
     },
     "kingdom_of_italy": {
-      "score": 70,
-      "summary": "Brecke records no major conflict touching Kingdom of Italy in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2581 (ITA, 1873) — economy proxy for the territory. V-Dem polyarchy 24/100 (ITA, 1873) — limited representation. Health 41/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Kingdom of Italy in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2581 (ITA, 1873) — economy proxy for the territory. V-Dem polyarchy 24/100 (ITA, 1873) — limited representation. Health 41/100, anchored on life-expectancy data for the region. Religious tolerance 71/100 — V-Dem freedom-of-religion (ITA, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 41,
         "economy": 80,
         "governance": 24,
-        "religious_tolerance": 58
+        "religious_tolerance": 71
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1542,31 +1670,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ITA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q172579",
-      "raw_score": 61
+      "raw_score": 64
     },
     "emirate_of_nejd": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Emirate of Nejd in 1873 (safety at the era baseline of 85). Maddison GDP/capita 838 (SAU, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (SAU, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 9,
+      "summary": "Brecke records no major conflict touching Emirate of Nejd in 1873 (safety at the era baseline of 85). Maddison GDP/capita 838 (SAU, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (SAU, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 4/100 — V-Dem freedom-of-religion (SAU, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 25,
         "economy": 51,
         "governance": 1,
-        "religious_tolerance": 35
+        "religious_tolerance": 4
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1583,15 +1715,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SAU 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q146862",
-      "raw_score": 48
+      "raw_score": 37
     },
     "kingdom_of_spain_phl": {
-      "score": 12,
+      "score": 17,
       "summary": "Active conflicts in 1873: Cubans-Spain, 1868-78; Spain (Carlists with Basque support), 1872-76. Maddison GDP/capita 1002 (PHL, 1873) — economy proxy for the territory. State-continuity 50/100 (PHL) — established state (pre-democracy governance proxy). Health 13/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 32,
@@ -1633,10 +1769,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q29",
-      "raw_score": 40
+      "raw_score": 41
     },
     "french_africa_mli": {
-      "score": 48,
+      "score": 39,
       "summary": "Brecke records no major conflict touching French Africa (MLI) in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 56/100 (MLI) — established state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1674,10 +1810,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q19951607",
-      "raw_score": 53
+      "raw_score": 52
     },
     "british_colonial_empire_yem": {
-      "score": 45,
+      "score": 35,
       "summary": "Brecke records no major conflict touching British Colonial Empire (YEM) in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 38/100 (YEM) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1715,26 +1851,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 52
+      "raw_score": 50
     },
     "joseon": {
-      "score": 40,
-      "summary": "Brecke records no major conflict touching Joseon in 1873 (safety at the era baseline of 85). Maddison GDP/capita 841 (KOR, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (KOR, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 17,
+      "summary": "Brecke records no major conflict touching Joseon in 1873 (safety at the era baseline of 85). Maddison GDP/capita 841 (KOR, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (KOR, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 20/100 — V-Dem freedom-of-religion (KOR, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 25,
         "economy": 53,
         "governance": 2,
-        "religious_tolerance": 44
+        "religious_tolerance": 20
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1751,15 +1887,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — KOR 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q28405",
-      "raw_score": 50
+      "raw_score": 41
     },
     "wadai_empire": {
-      "score": 40,
+      "score": 33,
       "summary": "Brecke records no major conflict touching Wadai Empire in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 30/100 (TCD) — fragmented / weak state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -1797,10 +1937,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1132786",
-      "raw_score": 50
+      "raw_score": 49
     },
     "denmark_norway_isl": {
-      "score": 97,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Denmark-Norway (ISL) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1657 (ISL, 1873) — economy proxy for the territory. State-continuity 75/100 (ISL) — long-entrenched state (pre-democracy governance proxy). Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1838,26 +1978,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62651",
-      "raw_score": 71
+      "raw_score": 70
     },
     "republic_of_ecuador": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching Republic of Ecuador in 1873 (safety at the era baseline of 85). Maddison GDP/capita 760 (ECU, 1873) — economy proxy for the territory. V-Dem polyarchy 14/100 (ECU, 1873) — highly autocratic. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 21,
+      "summary": "Brecke records no major conflict touching Republic of Ecuador in 1873 (safety at the era baseline of 85). Maddison GDP/capita 760 (ECU, 1873) — economy proxy for the territory. V-Dem polyarchy 14/100 (ECU, 1873) — highly autocratic. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — V-Dem freedom-of-religion (ECU, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 31,
         "economy": 46,
         "governance": 14,
-        "religious_tolerance": 52
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1874,15 +2014,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ECU 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q736",
-      "raw_score": 55
+      "raw_score": 43
     },
     "nguy_n_dynasty": {
-      "score": 53,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Nguyễn dynasty in 1873 (safety at the era baseline of 85). Maddison GDP/capita 830 (VNM, 1873) — economy proxy for the territory. State-continuity 69/100 (VNM) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -1923,23 +2067,23 @@
       "raw_score": 55
     },
     "ethiopian_empire": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). V-Dem polyarchy 1/100 (ETH, 1873) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 17,
+      "summary": "Brecke records no major conflict touching Ethiopian Empire in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). V-Dem polyarchy 1/100 (ETH, 1873) — highly autocratic. Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 33/100 — V-Dem freedom-of-religion (ETH, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 18,
         "economy": 25,
         "governance": 1,
-        "religious_tolerance": 48
+        "religious_tolerance": 33
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1956,15 +2100,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ETH 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q207521",
-      "raw_score": 46
+      "raw_score": 41
     },
     "greenland": {
-      "score": 78,
+      "score": 60,
       "summary": "Brecke records no major conflict touching Greenland in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~820 1990 int$). Governance neutral (no state-history coverage for this territory). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -1998,10 +2146,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q223",
-      "raw_score": 64
+      "raw_score": 63
     },
     "bornu_empire": {
-      "score": 56,
+      "score": 45,
       "summary": "Brecke records no major conflict touching Bornu Empire in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 75/100 (NER) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2039,26 +2187,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1139762",
-      "raw_score": 56
+      "raw_score": 55
     },
     "oriental_republic_of_uruguay": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Oriental Republic of Uruguay in 1873 (safety at the era baseline of 85). Maddison GDP/capita 4403 (URY, 1873) — economy proxy for the territory. V-Dem polyarchy 32/100 (URY, 1873) — limited representation. Health 35/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Oriental Republic of Uruguay in 1873 (safety at the era baseline of 85). Maddison GDP/capita 4403 (URY, 1873) — economy proxy for the territory. V-Dem polyarchy 32/100 (URY, 1873) — limited representation. Health 35/100, anchored on life-expectancy data for the region. Religious tolerance 83/100 — V-Dem freedom-of-religion (URY, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 35,
         "economy": 85,
         "governance": 32,
-        "religious_tolerance": 52
+        "religious_tolerance": 83
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2075,31 +2223,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — URY 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q77",
-      "raw_score": 63
+      "raw_score": 71
     },
     "sultanate_of_oman": {
-      "score": 48,
-      "summary": "Brecke records no major conflict touching Sultanate of Oman in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 50,
+      "summary": "Brecke records no major conflict touching Sultanate of Oman in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 56/100 — V-Dem freedom-of-religion (OMN, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 24,
         "economy": 43,
         "governance": 50,
-        "religious_tolerance": 35
+        "religious_tolerance": 56
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "neutral",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2112,15 +2264,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — OMN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q842",
-      "raw_score": 53
+      "raw_score": 58
     },
     "british_colonial_empire_guy": {
-      "score": 59,
+      "score": 47,
       "summary": "Brecke records no major conflict touching British Colonial Empire (GUY) in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). State-continuity 50/100 (GUY) — established state (pre-democracy governance proxy). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2158,26 +2314,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 57
+      "raw_score": 56
     },
     "kashmir_and_jammu": {
-      "score": 31,
-      "summary": "Brecke records no major conflict touching Kashmir and Jammu in 1873 (safety at the era baseline of 85). Maddison GDP/capita 856 (IND, 1873) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1873) — highly autocratic. Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 50,
+      "summary": "Brecke records no major conflict touching Kashmir and Jammu in 1873 (safety at the era baseline of 85). Maddison GDP/capita 856 (IND, 1873) — economy proxy for the territory. V-Dem polyarchy 5/100 (IND, 1873) — highly autocratic. Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 83/100 — V-Dem freedom-of-religion (IND, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 19,
         "economy": 54,
         "governance": 5,
-        "religious_tolerance": 46
+        "religious_tolerance": 83
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2194,15 +2350,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IND 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q2571484",
-      "raw_score": 47
+      "raw_score": 58
     },
     "french_indochina": {
-      "score": 53,
+      "score": 45,
       "summary": "Brecke records no major conflict touching French Indochina in 1873 (safety at the era baseline of 85). Maddison GDP/capita 830 (VNM, 1873) — economy proxy for the territory. State-continuity 69/100 (VNM) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -2243,23 +2403,23 @@
       "raw_score": 55
     },
     "united_principalities_of_moldavia_and_wallachia": {
-      "score": 64,
-      "summary": "Brecke records no major conflict touching United Principalities of Moldavia and Wallachia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 908 (ROU, 1873) — economy proxy for the territory. V-Dem polyarchy 22/100 (ROU, 1873) — limited representation. Health 51/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 60,
+      "summary": "Brecke records no major conflict touching United Principalities of Moldavia and Wallachia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 908 (ROU, 1873) — economy proxy for the territory. V-Dem polyarchy 22/100 (ROU, 1873) — limited representation. Health 51/100, anchored on life-expectancy data for the region. Religious tolerance 65/100 — V-Dem freedom-of-religion (ROU, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 51,
         "economy": 55,
         "governance": 22,
-        "religious_tolerance": 50
+        "religious_tolerance": 65
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2276,31 +2436,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ROU 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q958291",
-      "raw_score": 59
+      "raw_score": 63
     },
     "paraguay": {
-      "score": 48,
-      "summary": "Brecke records no major conflict touching Paraguay in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 15/100 (PRY, 1873) — limited representation. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 50,
+      "summary": "Brecke records no major conflict touching Paraguay in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 15/100 (PRY, 1873) — limited representation. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 70/100 — V-Dem freedom-of-religion (PRY, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 29,
         "economy": 33,
         "governance": 15,
-        "religious_tolerance": 52
+        "religious_tolerance": 70
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2317,31 +2481,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PRY 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q733",
-      "raw_score": 53
+      "raw_score": 58
     },
     "nepal": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Nepal in 1873 (safety at the era baseline of 85). Maddison GDP/capita 657 (NPL, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (NPL, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 13,
+      "summary": "Brecke records no major conflict touching Nepal in 1873 (safety at the era baseline of 85). Maddison GDP/capita 657 (NPL, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (NPL, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 28/100 — V-Dem freedom-of-religion (NPL, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 24,
         "economy": 42,
         "governance": 1,
-        "religious_tolerance": 46
+        "religious_tolerance": 28
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2358,15 +2526,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NPL 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q837",
-      "raw_score": 46
+      "raw_score": 39
     },
     "kingdom_of_luang_phrabang": {
-      "score": 45,
+      "score": 39,
       "summary": "Brecke records no major conflict touching Kingdom of Luang Phrabang in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 56/100 (LAO) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -2407,7 +2579,7 @@
       "raw_score": 52
     },
     "ashanti_empire": {
-      "score": 53,
+      "score": 43,
       "summary": "Active conflicts in 1873: Ashantis (Ghana)-Britain, Kpa-Mende, 1873-74. Maddison GDP/capita 1042 (GHA, 1873) — economy proxy for the territory. State-continuity 56/100 (GHA) — established state (pre-democracy governance proxy). Health 17/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -2449,26 +2621,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q722071",
-      "raw_score": 55
+      "raw_score": 54
     },
     "emirate_of_jabal_shammar": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Emirate of Jabal Shammar in 1873 (safety at the era baseline of 85). Maddison GDP/capita 838 (SAU, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (SAU, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 9,
+      "summary": "Brecke records no major conflict touching Emirate of Jabal Shammar in 1873 (safety at the era baseline of 85). Maddison GDP/capita 838 (SAU, 1873) — economy proxy for the territory. V-Dem polyarchy 1/100 (SAU, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 4/100 — V-Dem freedom-of-religion (SAU, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 25,
         "economy": 51,
         "governance": 1,
-        "religious_tolerance": 35
+        "religious_tolerance": 4
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2485,15 +2657,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SAU 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q5362837",
-      "raw_score": 48
+      "raw_score": 37
     },
     "free_orange_state": {
-      "score": 64,
+      "score": 50,
       "summary": "Brecke records no major conflict touching Free Orange State in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1639 (ZAF, 1873) — economy proxy for the territory. State-continuity 50/100 (ZAF) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2531,10 +2707,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q218023",
-      "raw_score": 59
+      "raw_score": 58
     },
     "netherlands_antilles": {
-      "score": 59,
+      "score": 47,
       "summary": "Brecke records no major conflict touching Netherlands Antilles in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). Governance neutral (no state-history coverage for this territory). Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -2568,10 +2744,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q25227",
-      "raw_score": 57
+      "raw_score": 56
     },
     "sultanate_of_hobyo": {
-      "score": 59,
+      "score": 47,
       "summary": "Brecke records no major conflict touching Sultanate of Hobyo in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 82/100 (SOM) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2609,26 +2785,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q862404",
-      "raw_score": 57
+      "raw_score": 56
     },
     "kingdom_of_spain_cub": {
-      "score": 18,
-      "summary": "Active conflicts in 1873: Cubans-Spain, 1868-78; Spain (Carlists with Basque support), 1872-76. Maddison GDP/capita 1183 (CUB, 1873) — economy proxy for the territory. V-Dem polyarchy 5/100 (CUB, 1873) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 1,
+      "summary": "Active conflicts in 1873: Cubans-Spain, 1868-78; Spain (Carlists with Basque support), 1872-76. Maddison GDP/capita 1183 (CUB, 1873) — economy proxy for the territory. V-Dem polyarchy 5/100 (CUB, 1873) — highly autocratic. Health 21/100, anchored on life-expectancy data for the region. Religious tolerance 22/100 — V-Dem freedom-of-religion (CUB, 1873), measured.",
       "factors": {
         "safety": 48,
         "health": 21,
         "economy": 64,
         "governance": 5,
-        "religious_tolerance": 52
+        "religious_tolerance": 22
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2649,31 +2825,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CUB 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q29",
-      "raw_score": 42
+      "raw_score": 33
     },
     "honduras": {
-      "score": 45,
-      "summary": "Brecke records no major conflict touching Honduras in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 6/100 (HND, 1873) — highly autocratic. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching Honduras in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 6/100 (HND, 1873) — highly autocratic. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (HND, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 29,
         "economy": 33,
         "governance": 6,
-        "religious_tolerance": 52
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2690,31 +2870,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — HND 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q783",
-      "raw_score": 52
+      "raw_score": 60
     },
     "kingdom_of_portugal_prt": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching Kingdom of Portugal (PRT) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1575 (PRT, 1873) — economy proxy for the territory. V-Dem polyarchy 16/100 (PRT, 1873) — limited representation. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Kingdom of Portugal (PRT) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1575 (PRT, 1873) — economy proxy for the territory. V-Dem polyarchy 16/100 (PRT, 1873) — limited representation. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 73/100 — V-Dem freedom-of-religion (PRT, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 53,
         "economy": 69,
         "governance": 16,
-        "religious_tolerance": 58
+        "religious_tolerance": 73
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2731,31 +2915,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PRT 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q45670",
-      "raw_score": 60
+      "raw_score": 64
     },
     "republic_of_nicaragua": {
-      "score": 48,
-      "summary": "Brecke records no major conflict touching Republic of Nicaragua in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 18/100 (NIC, 1873) — limited representation. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 29,
+      "summary": "Brecke records no major conflict touching Republic of Nicaragua in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 18/100 (NIC, 1873) — limited representation. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 — V-Dem freedom-of-religion (NIC, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 29,
         "economy": 33,
         "governance": 18,
-        "religious_tolerance": 52
+        "religious_tolerance": 35
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2772,31 +2960,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NIC 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q811",
-      "raw_score": 53
+      "raw_score": 47
     },
     "guatemala": {
-      "score": 45,
-      "summary": "Brecke records no major conflict touching Guatemala in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 8/100 (GTM, 1873) — highly autocratic. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Guatemala in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 8/100 (GTM, 1873) — highly autocratic. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 62/100 — V-Dem freedom-of-religion (GTM, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 29,
         "economy": 33,
         "governance": 8,
-        "religious_tolerance": 52
+        "religious_tolerance": 62
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2813,15 +3005,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GTM 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q774",
-      "raw_score": 52
+      "raw_score": 54
     },
     "kingdom_of_lunda": {
-      "score": 45,
+      "score": 39,
       "summary": "Brecke records no major conflict touching Kingdom of Lunda in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 50/100 (AGO) — established state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2862,23 +3058,23 @@
       "raw_score": 52
     },
     "beylik_of_tunis": {
-      "score": 31,
-      "summary": "Brecke records no major conflict touching Beylik of Tunis in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1037 (TUN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (TUN, 1873) — highly autocratic. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 29,
+      "summary": "Brecke records no major conflict touching Beylik of Tunis in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1037 (TUN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (TUN, 1873) — highly autocratic. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 — V-Dem freedom-of-religion (TUN, 1873), measured.",
       "factors": {
         "safety": 73,
         "health": 23,
         "economy": 62,
         "governance": 2,
-        "religious_tolerance": 40
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2895,6 +3091,10 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — TUN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
@@ -2903,23 +3103,23 @@
       "raw_score": 47
     },
     "republic_of_liberia": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching Republic of Liberia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1398 (LBR, 1873) — economy proxy for the territory. V-Dem polyarchy 22/100 (LBR, 1873) — limited representation. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 66,
+      "summary": "Brecke records no major conflict touching Republic of Liberia in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1398 (LBR, 1873) — economy proxy for the territory. V-Dem polyarchy 22/100 (LBR, 1873) — limited representation. Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 86/100 — V-Dem freedom-of-religion (LBR, 1873), measured.",
       "factors": {
         "safety": 81,
         "health": 23,
         "economy": 67,
         "governance": 22,
-        "religious_tolerance": 48
+        "religious_tolerance": 86
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2936,15 +3136,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — LBR 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1014",
-      "raw_score": 55
+      "raw_score": 66
     },
     "majeerteen_sultanate": {
-      "score": 59,
+      "score": 47,
       "summary": "Brecke records no major conflict touching Majeerteen Sultanate in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 82/100 (SOM) — long-entrenched state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -2982,10 +3186,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q2257830",
-      "raw_score": 57
+      "raw_score": 56
     },
     "principality_of_bulgaria": {
-      "score": 89,
+      "score": 66,
       "summary": "Brecke records no major conflict touching Principality of Bulgaria in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1402 (BGR, 1873) — economy proxy for the territory. State-continuity 75/100 (BGR) — long-entrenched state (pre-democracy governance proxy). Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3023,26 +3227,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q815731",
-      "raw_score": 68
+      "raw_score": 66
     },
     "french_third_republic_fra_1": {
-      "score": 89,
-      "summary": "Brecke records no major conflict touching French Third Republic (FRA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3064 (FRA, 1873) — economy proxy for the territory. V-Dem polyarchy 48/100 (FRA, 1873) — early democratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 78,
+      "summary": "Brecke records no major conflict touching French Third Republic (FRA) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3064 (FRA, 1873) — economy proxy for the territory. V-Dem polyarchy 48/100 (FRA, 1873) — early democratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 73/100 — V-Dem freedom-of-religion (FRA, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 71,
         "economy": 82,
         "governance": 48,
-        "religious_tolerance": 58
+        "religious_tolerance": 73
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3059,31 +3263,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — FRA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q70802",
-      "raw_score": 68
+      "raw_score": 72
     },
     "denmark_norway_dnk": {
       "score": 100,
-      "summary": "Brecke records no major conflict touching Denmark-Norway (DNK) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3279 (DNK, 1873) — economy proxy for the territory. V-Dem polyarchy 36/100 (DNK, 1873) — early democratic. Health 89/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Denmark-Norway (DNK) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3279 (DNK, 1873) — economy proxy for the territory. V-Dem polyarchy 36/100 (DNK, 1873) — early democratic. Health 89/100, anchored on life-expectancy data for the region. Religious tolerance 96/100 — V-Dem freedom-of-religion (DNK, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 89,
         "economy": 84,
         "governance": 36,
-        "religious_tolerance": 58
+        "religious_tolerance": 96
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3100,15 +3308,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DNK 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q62651",
-      "raw_score": 72
+      "raw_score": 83
     },
     "kingdom_of_sarawak": {
-      "score": 50,
+      "score": 43,
       "summary": "Brecke records no major conflict touching Kingdom of Sarawak in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1031 (MYS, 1873) — economy proxy for the territory. State-continuity 50/100 (MYS) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -3149,7 +3361,7 @@
       "raw_score": 54
     },
     "trucial_states": {
-      "score": 48,
+      "score": 39,
       "summary": "Brecke records no major conflict touching Trucial States in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3183,10 +3395,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q1852345",
-      "raw_score": 53
+      "raw_score": 52
     },
     "british_cape_colony_sle": {
-      "score": 34,
+      "score": 29,
       "summary": "Brecke records no major conflict touching British Cape Colony (SLE) in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 18/100 (SLE) — fragmented / weak state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3224,26 +3436,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q370736",
-      "raw_score": 48
+      "raw_score": 47
     },
     "chiangmai": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Chiangmai in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1011 (THA, 1873) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 49,
+      "summary": "Brecke records no major conflict touching Chiangmai in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1011 (THA, 1873) — economy proxy for the territory. V-Dem polyarchy 3/100 (THA, 1873) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 78/100 — V-Dem freedom-of-religion (THA, 1873), measured.",
       "factors": {
         "safety": 69,
         "health": 25,
         "economy": 58,
         "governance": 3,
-        "religious_tolerance": 50
+        "religious_tolerance": 78
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3260,31 +3472,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — THA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q52028",
-      "raw_score": 48
+      "raw_score": 57
     },
     "kingdom_of_serbia": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching Kingdom of Serbia in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). V-Dem polyarchy 12/100 (SRB, 1873) — highly autocratic. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 58,
+      "summary": "Brecke records no major conflict touching Kingdom of Serbia in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). V-Dem polyarchy 12/100 (SRB, 1873) — highly autocratic. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 74/100 — V-Dem freedom-of-religion (SRB, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 49,
         "economy": 39,
         "governance": 12,
-        "religious_tolerance": 50
+        "religious_tolerance": 74
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3301,31 +3517,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SRB 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q241748",
-      "raw_score": 55
+      "raw_score": 62
     },
     "netherlands": {
-      "score": 84,
-      "summary": "Brecke records no major conflict touching Netherlands in 1873 (safety at the era baseline of 85). Maddison GDP/capita 4503 (NLD, 1873) — economy proxy for the territory. V-Dem polyarchy 37/100 (NLD, 1873) — early democratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching Netherlands in 1873 (safety at the era baseline of 85). Maddison GDP/capita 4503 (NLD, 1873) — economy proxy for the territory. V-Dem polyarchy 37/100 (NLD, 1873) — early democratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 91/100 — V-Dem freedom-of-religion (NLD, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 64,
         "economy": 86,
         "governance": 37,
-        "religious_tolerance": 58
+        "religious_tolerance": 91
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3342,15 +3562,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NLD 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q55",
-      "raw_score": 66
+      "raw_score": 76
     },
     "talpur_dynasty": {
-      "score": 45,
+      "score": 37,
       "summary": "Brecke records no major conflict touching Talpur Dynasty in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 50/100 (PAK) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -3388,26 +3612,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q19569014",
-      "raw_score": 52
+      "raw_score": 51
     },
     "swiss_confederation": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching Swiss Confederation in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3321 (CHE, 1873) — economy proxy for the territory. V-Dem polyarchy 54/100 (CHE, 1873) — early democratic. Health 67/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 90,
+      "summary": "Brecke records no major conflict touching Swiss Confederation in 1873 (safety at the era baseline of 85). Maddison GDP/capita 3321 (CHE, 1873) — economy proxy for the territory. V-Dem polyarchy 54/100 (CHE, 1873) — early democratic. Health 67/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (CHE, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 67,
         "economy": 84,
         "governance": 54,
-        "religious_tolerance": 58
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3424,31 +3648,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHE 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q39",
-      "raw_score": 69
+      "raw_score": 78
     },
     "first_hellenic_republic": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching First Hellenic Republic in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2128 (GRC, 1873) — economy proxy for the territory. V-Dem polyarchy 27/100 (GRC, 1873) — limited representation. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching First Hellenic Republic in 1873 (safety at the era baseline of 85). Maddison GDP/capita 2128 (GRC, 1873) — economy proxy for the territory. V-Dem polyarchy 27/100 (GRC, 1873) — limited representation. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — V-Dem freedom-of-religion (GRC, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 55,
         "economy": 76,
         "governance": 27,
-        "religious_tolerance": 50
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3465,15 +3693,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GRC 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q528546",
-      "raw_score": 63
+      "raw_score": 60
     },
     "kingdom_of_portugal_moz": {
-      "score": 48,
+      "score": 39,
       "summary": "Brecke records no major conflict touching Kingdom of Portugal (MOZ) in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 56/100 (MOZ) — established state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3511,26 +3743,26 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q45670",
-      "raw_score": 53
+      "raw_score": 52
     },
     "republic_of_costa_rica": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching Republic of Costa Rica in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 28/100 (CRI, 1873) — limited representation. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 56,
+      "summary": "Brecke records no major conflict touching Republic of Costa Rica in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 28/100 (CRI, 1873) — limited representation. Health 31/100, anchored on life-expectancy data for the region. Religious tolerance 74/100 — V-Dem freedom-of-religion (CRI, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 31,
         "economy": 33,
         "governance": 28,
-        "religious_tolerance": 52
+        "religious_tolerance": 74
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3547,31 +3779,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CRI 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q800",
-      "raw_score": 55
+      "raw_score": 61
     },
     "dominican_republic": {
-      "score": 48,
-      "summary": "Brecke records no major conflict touching Dominican Republic in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 17/100 (DOM, 1873) — limited representation. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching Dominican Republic in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 17/100 (DOM, 1873) — limited representation. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 76/100 — V-Dem freedom-of-religion (DOM, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 29,
         "economy": 33,
         "governance": 17,
-        "religious_tolerance": 52
+        "religious_tolerance": 76
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3588,31 +3824,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DOM 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q786",
-      "raw_score": 53
+      "raw_score": 60
     },
     "kingdom_of_belgium": {
-      "score": 86,
-      "summary": "Brecke records no major conflict touching Kingdom of Belgium in 1873 (safety at the era baseline of 85). Maddison GDP/capita 4495 (BEL, 1873) — economy proxy for the territory. V-Dem polyarchy 35/100 (BEL, 1873) — early democratic. Health 77/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 90,
+      "summary": "Brecke records no major conflict touching Kingdom of Belgium in 1873 (safety at the era baseline of 85). Maddison GDP/capita 4495 (BEL, 1873) — economy proxy for the territory. V-Dem polyarchy 35/100 (BEL, 1873) — early democratic. Health 77/100, anchored on life-expectancy data for the region. Religious tolerance 94/100 — V-Dem freedom-of-religion (BEL, 1873), measured.",
       "factors": {
         "safety": 77,
         "health": 77,
         "economy": 85,
         "governance": 35,
-        "religious_tolerance": 58
+        "religious_tolerance": 94
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3629,15 +3869,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — BEL 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q31",
-      "raw_score": 67
+      "raw_score": 78
     },
     "kingdom_of_bhutan": {
-      "score": 45,
+      "score": 37,
       "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). Governance neutral (no state-history coverage for this territory). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 73,
@@ -3671,10 +3915,10 @@
       "ruler": null,
       "sparse_data": true,
       "wikidata": "Q917",
-      "raw_score": 52
+      "raw_score": 51
     },
     "british_colonial_empire_mys": {
-      "score": 50,
+      "score": 43,
       "summary": "Brecke records no major conflict touching British Colonial Empire (MYS) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1031 (MYS, 1873) — economy proxy for the territory. State-continuity 50/100 (MYS) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -3715,23 +3959,23 @@
       "raw_score": 54
     },
     "sultanate_of_aceh": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1873 (safety at the era baseline of 85). Maddison GDP/capita 813 (IDN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 9,
+      "summary": "Brecke records no major conflict touching Sultanate of Aceh in 1873 (safety at the era baseline of 85). Maddison GDP/capita 813 (IDN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 23/100 — V-Dem freedom-of-religion (IDN, 1873), measured.",
       "factors": {
         "safety": 69,
         "health": 24,
         "economy": 47,
         "governance": 2,
-        "religious_tolerance": 50
+        "religious_tolerance": 23
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3748,15 +3992,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1061057",
-      "raw_score": 46
+      "raw_score": 37
     },
     "natalia_republic": {
-      "score": 64,
+      "score": 50,
       "summary": "Brecke records no major conflict touching Natalia Republic in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1639 (ZAF, 1873) — economy proxy for the territory. State-continuity 50/100 (ZAF) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -3794,10 +4042,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1029847",
-      "raw_score": 59
+      "raw_score": 58
     },
     "pahang_sultanate": {
-      "score": 50,
+      "score": 43,
       "summary": "Brecke records no major conflict touching Pahang Sultanate in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1031 (MYS, 1873) — economy proxy for the territory. State-continuity 50/100 (MYS) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -3838,7 +4086,7 @@
       "raw_score": 54
     },
     "british_colonial_empire_mys_1": {
-      "score": 50,
+      "score": 43,
       "summary": "Brecke records no major conflict touching British Colonial Empire (MYS) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1031 (MYS, 1873) — economy proxy for the territory. State-continuity 50/100 (MYS) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -3879,7 +4127,7 @@
       "raw_score": 54
     },
     "kingdom_of_champasak": {
-      "score": 45,
+      "score": 39,
       "summary": "Brecke records no major conflict touching Kingdom of Champasak in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~620 1990 int$). State-continuity 56/100 (LAO) — established state (pre-democracy governance proxy). Health 23/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -3920,23 +4168,23 @@
       "raw_score": 52
     },
     "empire_of_haiti": {
-      "score": 45,
-      "summary": "Brecke records no major conflict touching Empire of Haiti in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 10/100 (HTI, 1873) — highly autocratic. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 33,
+      "summary": "Brecke records no major conflict touching Empire of Haiti in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 10/100 (HTI, 1873) — highly autocratic. Health 29/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — V-Dem freedom-of-religion (HTI, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 29,
         "economy": 33,
         "governance": 10,
-        "religious_tolerance": 52
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3953,15 +4201,19 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — HTI 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q2006756",
-      "raw_score": 52
+      "raw_score": 49
     },
     "british_colonial_empire_jam": {
-      "score": 72,
+      "score": 56,
       "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1873 (safety at the era baseline of 85). Maddison GDP/capita 851 (JAM, 1873) — economy proxy for the territory. State-continuity 50/100 (JAM) — established state (pre-democracy governance proxy). Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 85,
@@ -3999,10 +4251,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 62
+      "raw_score": 61
     },
     "zululand": {
-      "score": 64,
+      "score": 50,
       "summary": "Brecke records no major conflict touching Zululand in 1873 (safety at the era baseline of 85). Maddison GDP/capita 1639 (ZAF, 1873) — economy proxy for the territory. State-continuity 50/100 (ZAF) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -4040,10 +4292,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q13558877",
-      "raw_score": 59
+      "raw_score": 58
     },
     "people_s_republic_of_zanzibar": {
-      "score": 26,
+      "score": 25,
       "summary": "Active conflicts in 1873: Gazi-Zanzibar, 1873. No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 30/100 (TZA) — fragmented / weak state (pre-democracy governance proxy). Health 12/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 69,
@@ -4088,7 +4340,7 @@
       "raw_score": 45
     },
     "kingdom_of_portugal_ago": {
-      "score": 45,
+      "score": 39,
       "summary": "Brecke records no major conflict touching Kingdom of Portugal (AGO) in 1873 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~430 1990 int$). State-continuity 50/100 (AGO) — established state (pre-democracy governance proxy). Health 18/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
       "factors": {
         "safety": 81,
@@ -4129,23 +4381,23 @@
       "raw_score": 52
     },
     "sultanate_of_jambi": {
-      "score": 28,
-      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1873 (safety at the era baseline of 85). Maddison GDP/capita 813 (IDN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 9,
+      "summary": "Brecke records no major conflict touching Sultanate of Jambi in 1873 (safety at the era baseline of 85). Maddison GDP/capita 813 (IDN, 1873) — economy proxy for the territory. V-Dem polyarchy 2/100 (IDN, 1873) — highly autocratic. Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 23/100 — V-Dem freedom-of-religion (IDN, 1873), measured.",
       "factors": {
         "safety": 69,
         "health": 24,
         "economy": 47,
         "governance": 2,
-        "religious_tolerance": 50
+        "religious_tolerance": 23
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -4162,31 +4414,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IDN 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1679856",
-      "raw_score": 46
+      "raw_score": 37
     },
     "kingdom_of_hawa_i": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching Kingdom of Hawaï'i in 1873 (safety at the era baseline of 85). Maddison GDP/capita 5117 (USA, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (USA, 1873) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 84,
+      "summary": "Brecke records no major conflict touching Kingdom of Hawaï'i in 1873 (safety at the era baseline of 85). Maddison GDP/capita 5117 (USA, 1873) — economy proxy for the territory. V-Dem polyarchy 34/100 (USA, 1873) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (USA, 1873), measured.",
       "factors": {
         "safety": 85,
         "health": 65,
         "economy": 87,
         "governance": 34,
-        "religious_tolerance": 58
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -4203,12 +4459,16 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — USA 1873 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q156418",
-      "raw_score": 69
+      "raw_score": 75
     }
   }
 }

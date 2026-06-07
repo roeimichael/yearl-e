@@ -4,8 +4,8 @@
   "region_set": "modern_1945",
   "era_summary": "",
   "weights": {
-    "safety": 0.372,
-    "religious_tolerance": 0.252,
+    "safety": 0.374,
+    "religious_tolerance": 0.251,
     "governance": 0.125,
     "economy": 0.125,
     "health": 0.125
@@ -13,23 +13,23 @@
   "emphasis": "a violent year — peace counted for most",
   "regions": {
     "union_of_soviet_socialist_republics": {
-      "score": 36,
-      "summary": "Active conflicts in 1950: Soviet Union, 1943-57 G; Soviet Union, 1944-68 G; Soviet Union, 1947-50 G. Maddison GDP/capita 13799 (EST, 1950) — economy proxy for the territory. V-Dem polyarchy 82/100 (DEU, 1950) — broadly democratic. Health 95/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 50,
+      "summary": "Active conflicts in 1950: Soviet Union, 1943-57 G; Soviet Union, 1944-68 G; Soviet Union, 1947-50 G. Maddison GDP/capita 13799 (EST, 1950) — economy proxy for the territory. V-Dem polyarchy 82/100 (DEU, 1950) — broadly democratic. Health 95/100, anchored on life-expectancy data for the region. Religious tolerance 97/100 — V-Dem freedom-of-religion (DEU, 1950), measured.",
       "factors": {
         "safety": 5,
         "health": 95,
         "economy": 86,
         "governance": 82,
-        "religious_tolerance": 50
+        "religious_tolerance": 97
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -50,31 +50,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q15180",
-      "raw_score": 47
+      "raw_score": 59
     },
     "canada": {
-      "score": 98,
-      "summary": "Brecke records no major conflict touching Canada in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11622 (CAN, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (CAN, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching Canada in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11622 (CAN, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (CAN, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 87/100 — V-Dem freedom-of-religion (CAN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 83,
         "governance": 75,
-        "religious_tolerance": 58
+        "religious_tolerance": 87
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -91,31 +95,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CAN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q16",
-      "raw_score": 79
+      "raw_score": 86
     },
     "french_africa_dza": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching French Africa (DZA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2958 (GAB, 1950) — economy proxy for the territory. V-Dem polyarchy 24/100 (SEN, 1950) — limited representation. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 72,
+      "summary": "Brecke records no major conflict touching French Africa (DZA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2958 (GAB, 1950) — economy proxy for the territory. V-Dem polyarchy 24/100 (SEN, 1950) — limited representation. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 90/100 — V-Dem freedom-of-religion (BFA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 71,
         "economy": 56,
         "governance": 24,
-        "religious_tolerance": 40
+        "religious_tolerance": 90
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -132,31 +140,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — BFA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q19951607",
-      "raw_score": 61
+      "raw_score": 73
     },
     "united_states_of_america_usa": {
-      "score": 94,
-      "summary": "Brecke records no major conflict touching United States of America (USA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 15240 (USA, 1950) — economy proxy for the territory. V-Dem polyarchy 58/100 (USA, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching United States of America (USA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 15240 (USA, 1950) — economy proxy for the territory. V-Dem polyarchy 58/100 (USA, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 93/100 — V-Dem freedom-of-religion (USA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 87,
         "governance": 58,
-        "religious_tolerance": 58
+        "religious_tolerance": 93
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -173,31 +185,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — USA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 77
+      "raw_score": 86
     },
     "commonwealth_of_australia": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Commonwealth of Australia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11815 (AUS, 1950) — economy proxy for the territory. V-Dem polyarchy 80/100 (AUS, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching Commonwealth of Australia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11815 (AUS, 1950) — economy proxy for the territory. V-Dem polyarchy 80/100 (AUS, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 94/100 — V-Dem freedom-of-religion (AUS, 1950), measured.",
       "factors": {
         "safety": 57,
         "health": 100,
         "economy": 85,
         "governance": 80,
-        "religious_tolerance": 58
+        "religious_tolerance": 94
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -214,31 +230,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — AUS 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q408",
-      "raw_score": 69
+      "raw_score": 78
     },
     "unitary_state_of_brazil": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching Unitary State of Brazil in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2236 (BRA, 1950) — economy proxy for the territory. V-Dem polyarchy 39/100 (BRA, 1950) — early democratic. Health 88/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 76,
+      "summary": "Brecke records no major conflict touching Unitary State of Brazil in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2236 (BRA, 1950) — economy proxy for the territory. V-Dem polyarchy 39/100 (BRA, 1950) — early democratic. Health 88/100, anchored on life-expectancy data for the region. Religious tolerance 88/100 — V-Dem freedom-of-religion (BRA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 88,
         "economy": 51,
         "governance": 39,
-        "religious_tolerance": 52
+        "religious_tolerance": 88
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -255,31 +275,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — BRA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q155",
-      "raw_score": 67
+      "raw_score": 76
     },
     "united_states_of_america_grl": {
-      "score": 88,
-      "summary": "Brecke records no major conflict touching United States of America (GRL) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8498 (ISL, 1950) — economy proxy for the territory. V-Dem polyarchy 80/100 (ISL, 1950) — broadly democratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 89,
+      "summary": "Brecke records no major conflict touching United States of America (GRL) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8498 (ISL, 1950) — economy proxy for the territory. V-Dem polyarchy 80/100 (ISL, 1950) — broadly democratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 98/100 — V-Dem freedom-of-religion (ISL, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 64,
         "economy": 77,
         "governance": 80,
-        "religious_tolerance": 58
+        "religious_tolerance": 98
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -296,31 +320,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ISL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 74
+      "raw_score": 84
     },
     "british_africa_sdn": {
-      "score": 40,
-      "summary": "Brecke records no major conflict touching British Africa (SDN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1309 (SDN, 1950) — economy proxy for the territory. V-Dem polyarchy 26/100 (ZWE, 1950) — limited representation. Health 78/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching British Africa (SDN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1309 (SDN, 1950) — economy proxy for the territory. V-Dem polyarchy 26/100 (ZWE, 1950) — limited representation. Health 78/100, anchored on life-expectancy data for the region. Religious tolerance 92/100 — V-Dem freedom-of-religion (UGA, 1950), measured.",
       "factors": {
         "safety": 57,
         "health": 78,
         "economy": 40,
         "governance": 26,
-        "religious_tolerance": 40
+        "religious_tolerance": 92
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -337,31 +365,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — UGA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q179848",
-      "raw_score": 49
+      "raw_score": 62
     },
     "empire_of_japan_chn": {
-      "score": 69,
-      "summary": "Brecke records no major conflict touching Empire of Japan (CHN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3062 (JPN, 1950) — economy proxy for the territory. V-Dem polyarchy 38/100 (JPN, 1950) — early democratic. Health 75/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching Empire of Japan (CHN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3062 (JPN, 1950) — economy proxy for the territory. V-Dem polyarchy 38/100 (JPN, 1950) — early democratic. Health 75/100, anchored on life-expectancy data for the region. Religious tolerance 98/100 — V-Dem freedom-of-religion (JPN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 75,
         "economy": 59,
         "governance": 38,
-        "religious_tolerance": 44
+        "religious_tolerance": 98
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -378,31 +410,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — JPN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q188712",
-      "raw_score": 64
+      "raw_score": 78
     },
     "republic_of_china": {
-      "score": 24,
-      "summary": "Active conflicts in 1950: China, 1950-51 G; China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 59/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 12,
+      "summary": "Active conflicts in 1950: China, 1950-51 G; China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 59/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — V-Dem freedom-of-religion (CHN, 1950), measured.",
       "factors": {
         "safety": 48,
         "health": 59,
         "economy": 30,
         "governance": 8,
-        "religious_tolerance": 44
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -423,31 +459,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q148",
-      "raw_score": 41
+      "raw_score": 35
     },
     "british_raj": {
-      "score": 73,
-      "summary": "Brecke records no major conflict touching British Raj in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1997 (LKA, 1950) — economy proxy for the territory. V-Dem polyarchy 68/100 (LKA, 1950) — broadly democratic. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 81,
+      "summary": "Brecke records no major conflict touching British Raj in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1997 (LKA, 1950) — economy proxy for the territory. V-Dem polyarchy 68/100 (LKA, 1950) — broadly democratic. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 98/100 — V-Dem freedom-of-religion (PAK, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 65,
         "economy": 48,
         "governance": 68,
-        "religious_tolerance": 46
+        "religious_tolerance": 98
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -464,31 +504,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PAK 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q129286",
-      "raw_score": 66
+      "raw_score": 79
     },
     "united_states_of_america_usa_1": {
-      "score": 94,
-      "summary": "Brecke records no major conflict touching United States of America (USA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 15240 (USA, 1950) — economy proxy for the territory. V-Dem polyarchy 58/100 (USA, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching United States of America (USA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 15240 (USA, 1950) — economy proxy for the territory. V-Dem polyarchy 58/100 (USA, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 93/100 — V-Dem freedom-of-religion (USA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 87,
         "governance": 58,
-        "religious_tolerance": 58
+        "religious_tolerance": 93
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -505,31 +549,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — USA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 77
+      "raw_score": 86
     },
     "argentine_republic": {
-      "score": 83,
-      "summary": "Brecke records no major conflict touching Argentine Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 7949 (ARG, 1950) — economy proxy for the territory. V-Dem polyarchy 35/100 (ARG, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Argentine Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 7949 (ARG, 1950) — economy proxy for the territory. V-Dem polyarchy 35/100 (ARG, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 84/100 — V-Dem freedom-of-religion (ARG, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 74,
         "governance": 35,
-        "religious_tolerance": 52
+        "religious_tolerance": 84
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -546,31 +594,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ARG 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q414",
-      "raw_score": 71
+      "raw_score": 79
     },
     "belgian_congo": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching Belgian Congo in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1020 (RWA, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (BDI, 1950) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching Belgian Congo in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1020 (RWA, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (BDI, 1950) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 75/100 — V-Dem freedom-of-religion (RWA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 55,
         "economy": 37,
         "governance": 2,
-        "religious_tolerance": 48
+        "religious_tolerance": 75
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -587,31 +639,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — RWA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q213510",
-      "raw_score": 56
+      "raw_score": 62
     },
     "south_africa": {
-      "score": 28,
-      "summary": "Active conflicts in 1950: South Yemen-Britain, 1950-63; North Korea (aided by Chinese)-South Korea (aided by UN forces), 1950-53; Indonesia (South Moluccas), 1950. Maddison GDP/capita 4041 (ZAF, 1950) — economy proxy for the territory. V-Dem polyarchy 20/100 (ZAF, 1950) — limited representation. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 29,
+      "summary": "Active conflicts in 1950: South Yemen-Britain, 1950-63; North Korea (aided by Chinese)-South Korea (aided by UN forces), 1950-53; Indonesia (South Moluccas), 1950. Maddison GDP/capita 4041 (ZAF, 1950) — economy proxy for the territory. V-Dem polyarchy 20/100 (ZAF, 1950) — limited representation. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 60/100 — V-Dem freedom-of-religion (NAM, 1950), measured.",
       "factors": {
         "safety": 36,
         "health": 55,
         "economy": 68,
         "governance": 20,
-        "religious_tolerance": 48
+        "religious_tolerance": 60
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -632,31 +688,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NAM 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q258",
-      "raw_score": 43
+      "raw_score": 46
     },
     "mongolian_people_s_republic": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Mongolian People's Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 677 (MNG, 1950) — economy proxy for the territory. V-Dem polyarchy 7/100 (MNG, 1950) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 29,
+      "summary": "Brecke records no major conflict touching Mongolian People's Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 677 (MNG, 1950) — economy proxy for the territory. V-Dem polyarchy 7/100 (MNG, 1950) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 11/100 — V-Dem freedom-of-religion (MNG, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 55,
         "economy": 29,
         "governance": 7,
-        "religious_tolerance": 44
+        "religious_tolerance": 11
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -673,31 +733,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MNG 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q212056",
-      "raw_score": 54
+      "raw_score": 46
     },
     "mexico": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Mexico in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3510 (MEX, 1950) — economy proxy for the territory. V-Dem polyarchy 20/100 (MEX, 1950) — limited representation. Health 75/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Mexico in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3510 (MEX, 1950) — economy proxy for the territory. V-Dem polyarchy 20/100 (MEX, 1950) — limited representation. Health 75/100, anchored on life-expectancy data for the region. Religious tolerance 62/100 — V-Dem freedom-of-religion (MEX, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 75,
         "economy": 65,
         "governance": 20,
-        "religious_tolerance": 52
+        "religious_tolerance": 62
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -714,31 +778,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MEX 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q5062192",
-      "raw_score": 65
+      "raw_score": 67
     },
     "communist_party_of_china_chn": {
-      "score": 15,
-      "summary": "Active conflicts in 1950: Burma (communists), 1948-54; China, 1950-51 G; China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 3,
+      "summary": "Active conflicts in 1950: Burma (communists), 1948-54; China, 1950-51 G; China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — V-Dem freedom-of-religion (CHN, 1950), measured.",
       "factors": {
         "safety": 36,
         "health": 53,
         "economy": 30,
         "governance": 8,
-        "religious_tolerance": 44
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -759,31 +827,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q17427",
-      "raw_score": 36
+      "raw_score": 29
     },
     "kingdom_of_saudi_arabia": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Kingdom of Saudi Arabia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3556 (SAU, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (SAU, 1950) — highly autocratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 29,
+      "summary": "Brecke records no major conflict touching Kingdom of Saudi Arabia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3556 (SAU, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (SAU, 1950) — highly autocratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 4/100 — V-Dem freedom-of-religion (SAU, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 64,
         "economy": 65,
         "governance": 1,
-        "religious_tolerance": 35
+        "religious_tolerance": 4
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -800,31 +872,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SAU 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q851",
-      "raw_score": 54
+      "raw_score": 46
     },
     "pahlavi_dynasty": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Pahlavi Dynasty in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2742 (IRN, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (IRN, 1950) — limited representation. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 51,
+      "summary": "Brecke records no major conflict touching Pahlavi Dynasty in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2742 (IRN, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (IRN, 1950) — limited representation. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 59/100 — V-Dem freedom-of-religion (IRN, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 57,
         "economy": 55,
         "governance": 16,
-        "religious_tolerance": 35
+        "religious_tolerance": 59
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -841,31 +917,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IRN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q207991",
-      "raw_score": 54
+      "raw_score": 60
     },
     "republic_of_peru": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Republic of Peru in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3679 (PER, 1950) — economy proxy for the territory. V-Dem polyarchy 12/100 (PER, 1950) — highly autocratic. Health 82/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 67,
+      "summary": "Brecke records no major conflict touching Republic of Peru in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3679 (PER, 1950) — economy proxy for the territory. V-Dem polyarchy 12/100 (PER, 1950) — highly autocratic. Health 82/100, anchored on life-expectancy data for the region. Religious tolerance 71/100 — V-Dem freedom-of-religion (PER, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 82,
         "economy": 66,
         "governance": 12,
-        "religious_tolerance": 52
+        "religious_tolerance": 71
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -882,31 +962,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PER 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q419",
-      "raw_score": 65
+      "raw_score": 70
     },
     "estado_novo_ago": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching Estado Novo (AGO) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1677 (AGO, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (AGO, 1950) — highly autocratic. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching Estado Novo (AGO) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1677 (AGO, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (AGO, 1950) — highly autocratic. Health 49/100, anchored on life-expectancy data for the region. Religious tolerance 73/100 — V-Dem freedom-of-religion (AGO, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 49,
         "economy": 44,
         "governance": 1,
-        "religious_tolerance": 48
+        "religious_tolerance": 73
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -923,31 +1007,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — AGO 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q824489",
-      "raw_score": 56
+      "raw_score": 62
     },
     "british_africa_nga": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching British Africa (NGA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1788 (GHA, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (NGA, 1950) — highly autocratic. Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 64,
+      "summary": "Brecke records no major conflict touching British Africa (NGA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1788 (GHA, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (NGA, 1950) — highly autocratic. Health 48/100, anchored on life-expectancy data for the region. Religious tolerance 91/100 — V-Dem freedom-of-religion (GHA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 48,
         "economy": 46,
         "governance": 14,
-        "religious_tolerance": 48
+        "religious_tolerance": 91
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -964,31 +1052,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GHA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q179848",
-      "raw_score": 57
+      "raw_score": 68
     },
     "kingdom_of_norway": {
-      "score": 96,
-      "summary": "Brecke records no major conflict touching Kingdom of Norway in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8655 (NOR, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (NOR, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 89,
+      "summary": "Brecke records no major conflict touching Kingdom of Norway in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8655 (NOR, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (NOR, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (NOR, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 78,
         "governance": 78,
-        "religious_tolerance": 58
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1005,31 +1097,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NOR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q20",
-      "raw_score": 78
+      "raw_score": 84
     },
     "republic_of_colombia": {
-      "score": 51,
-      "summary": "Active conflicts in 1950: Colombia, 1949-62. Maddison GDP/capita 3432 (COL, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (COL, 1950) — highly autocratic. Health 82/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 48,
+      "summary": "Active conflicts in 1950: Colombia, 1949-62. Maddison GDP/capita 3432 (COL, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (COL, 1950) — highly autocratic. Health 82/100, anchored on life-expectancy data for the region. Religious tolerance 63/100 — V-Dem freedom-of-religion (COL, 1950), measured.",
       "factors": {
         "safety": 60,
         "health": 82,
         "economy": 63,
         "governance": 14,
-        "religious_tolerance": 52
+        "religious_tolerance": 63
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1050,31 +1146,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — COL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q739",
-      "raw_score": 55
+      "raw_score": 58
     },
     "ethiopia": {
-      "score": 48,
-      "summary": "Brecke records no major conflict touching Ethiopia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 622 (ETH, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (ETH, 1950) — highly autocratic. Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 47,
+      "summary": "Brecke records no major conflict touching Ethiopia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 622 (ETH, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (ETH, 1950) — highly autocratic. Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 62/100 — V-Dem freedom-of-religion (ETH, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 46,
         "economy": 28,
         "governance": 1,
-        "religious_tolerance": 48
+        "religious_tolerance": 62
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1091,31 +1191,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ETH 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q115",
-      "raw_score": 53
+      "raw_score": 57
     },
     "bolivia": {
-      "score": 65,
-      "summary": "Brecke records no major conflict touching Bolivia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3011 (BOL, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (BOL, 1950) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 61,
+      "summary": "Brecke records no major conflict touching Bolivia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3011 (BOL, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (BOL, 1950) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 69/100 — V-Dem freedom-of-religion (BOL, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 65,
         "economy": 58,
         "governance": 16,
-        "religious_tolerance": 52
+        "religious_tolerance": 69
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1132,31 +1236,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — BOL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q750",
-      "raw_score": 62
+      "raw_score": 66
     },
     "kingdom_of_egypt": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Kingdom of Egypt in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1451 (EGY, 1950) — economy proxy for the territory. V-Dem polyarchy 18/100 (EGY, 1950) — limited representation. Health 43/100, anchored on life-expectancy data for the region. Religious tolerance 40/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 48,
+      "summary": "Brecke records no major conflict touching Kingdom of Egypt in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1451 (EGY, 1950) — economy proxy for the territory. V-Dem polyarchy 18/100 (EGY, 1950) — limited representation. Health 43/100, anchored on life-expectancy data for the region. Religious tolerance 54/100 — V-Dem freedom-of-religion (EGY, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 43,
         "economy": 41,
         "governance": 18,
-        "religious_tolerance": 40
+        "religious_tolerance": 54
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1173,31 +1281,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — EGY 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q124943",
-      "raw_score": 54
+      "raw_score": 58
     },
     "tibet": {
-      "score": 44,
-      "summary": "Active conflicts in 1950: China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 28,
+      "summary": "Active conflicts in 1950: China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — V-Dem freedom-of-religion (CHN, 1950), measured.",
       "factors": {
         "safety": 73,
         "health": 65,
         "economy": 30,
         "governance": 8,
-        "religious_tolerance": 44
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1218,31 +1330,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q521263",
-      "raw_score": 51
+      "raw_score": 45
     },
     "republic_of_chile": {
-      "score": 83,
-      "summary": "Brecke records no major conflict touching Republic of Chile in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5880 (CHL, 1950) — economy proxy for the territory. V-Dem polyarchy 42/100 (CHL, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Republic of Chile in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5880 (CHL, 1950) — economy proxy for the territory. V-Dem polyarchy 42/100 (CHL, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 82/100 — V-Dem freedom-of-religion (CHL, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 71,
         "governance": 42,
-        "religious_tolerance": 52
+        "religious_tolerance": 82
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1259,31 +1375,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q298",
-      "raw_score": 71
+      "raw_score": 79
     },
     "british_africa_irq": {
-      "score": 69,
-      "summary": "Brecke records no major conflict touching British Africa (IRQ) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 46031 (KWT, 1950) — economy proxy for the territory. V-Dem polyarchy 60/100 (ISR, 1950) — broadly democratic. Health 59/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching British Africa (IRQ) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 46031 (KWT, 1950) — economy proxy for the territory. V-Dem polyarchy 60/100 (ISR, 1950) — broadly democratic. Health 59/100, anchored on life-expectancy data for the region. Religious tolerance 92/100 — V-Dem freedom-of-religion (ISR, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 59,
         "economy": 89,
         "governance": 60,
-        "religious_tolerance": 35
+        "religious_tolerance": 92
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1300,31 +1420,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ISR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q179848",
-      "raw_score": 64
+      "raw_score": 78
     },
     "francoist_spain_esp": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Francoist Spain (ESP) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3459 (ESP, 1950) — economy proxy for the territory. V-Dem polyarchy 7/100 (ESP, 1950) — highly autocratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 48,
+      "summary": "Brecke records no major conflict touching Francoist Spain (ESP) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3459 (ESP, 1950) — economy proxy for the territory. V-Dem polyarchy 7/100 (ESP, 1950) — highly autocratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 30/100 — V-Dem freedom-of-religion (MAR, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 64,
         "governance": 7,
-        "religious_tolerance": 58
+        "religious_tolerance": 30
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1341,31 +1465,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MAR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q13474305",
-      "raw_score": 65
+      "raw_score": 58
     },
     "kingdom_of_sweden": {
-      "score": 96,
-      "summary": "Brecke records no major conflict touching Kingdom of Sweden in 1950 (safety at the era baseline of 85). Maddison GDP/capita 10742 (SWE, 1950) — economy proxy for the territory. V-Dem polyarchy 77/100 (SWE, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 91,
+      "summary": "Brecke records no major conflict touching Kingdom of Sweden in 1950 (safety at the era baseline of 85). Maddison GDP/capita 10742 (SWE, 1950) — economy proxy for the territory. V-Dem polyarchy 77/100 (SWE, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 85/100 — V-Dem freedom-of-religion (SWE, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 80,
         "governance": 77,
-        "religious_tolerance": 58
+        "religious_tolerance": 85
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1382,16 +1510,20 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SWE 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q34",
-      "raw_score": 78
+      "raw_score": 85
     },
     "republic_of_turkey": {
-      "score": 59,
-      "summary": "Brecke records no major conflict touching Republic of Turkey in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2079 (TUR, 1950) — economy proxy for the territory. V-Dem polyarchy 34/100 (TUR, 1950) — limited representation. Health 84/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 50,
+      "summary": "Brecke records no major conflict touching Republic of Turkey in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2079 (TUR, 1950) — economy proxy for the territory. V-Dem polyarchy 34/100 (TUR, 1950) — limited representation. Health 84/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 — V-Dem freedom-of-religion (TUR, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 84,
@@ -1404,9 +1536,9 @@
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1423,6 +1555,10 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — TUR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
@@ -1431,23 +1567,23 @@
       "raw_score": 59
     },
     "venezuela": {
-      "score": 77,
-      "summary": "Brecke records no major conflict touching Venezuela in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8462 (VEN, 1950) — economy proxy for the territory. V-Dem polyarchy 10/100 (VEN, 1950) — highly autocratic. Health 99/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 78,
+      "summary": "Brecke records no major conflict touching Venezuela in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8462 (VEN, 1950) — economy proxy for the territory. V-Dem polyarchy 10/100 (VEN, 1950) — highly autocratic. Health 99/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (VEN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 99,
         "economy": 77,
         "governance": 10,
-        "religious_tolerance": 52
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1464,31 +1600,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — VEN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q717",
-      "raw_score": 68
+      "raw_score": 77
     },
     "french_fourth_republic_fra": {
-      "score": 90,
-      "summary": "Brecke records no major conflict touching French Fourth Republic (FRA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8266 (FRA, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (FRA, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching French Fourth Republic (FRA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8266 (FRA, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (FRA, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (FRA, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 75,
         "governance": 75,
-        "religious_tolerance": 58
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1505,31 +1645,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — FRA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q69829",
-      "raw_score": 75
+      "raw_score": 82
     },
     "estado_novo_moz": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Estado Novo (MOZ) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1806 (MOZ, 1950) — economy proxy for the territory. V-Dem polyarchy 3/100 (MOZ, 1950) — highly autocratic. Health 54/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 39,
+      "summary": "Brecke records no major conflict touching Estado Novo (MOZ) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1806 (MOZ, 1950) — economy proxy for the territory. V-Dem polyarchy 3/100 (MOZ, 1950) — highly autocratic. Health 54/100, anchored on life-expectancy data for the region. Religious tolerance 29/100 — V-Dem freedom-of-religion (MOZ, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 54,
         "economy": 47,
         "governance": 3,
-        "religious_tolerance": 48
+        "religious_tolerance": 29
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1546,31 +1690,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MOZ 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q824489",
-      "raw_score": 57
+      "raw_score": 52
     },
     "republic_of_finland": {
-      "score": 96,
-      "summary": "Brecke records no major conflict touching Republic of Finland in 1950 (safety at the era baseline of 85). Maddison GDP/capita 6779 (FIN, 1950) — economy proxy for the territory. V-Dem polyarchy 82/100 (FIN, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 97,
+      "summary": "Brecke records no major conflict touching Republic of Finland in 1950 (safety at the era baseline of 85). Maddison GDP/capita 6779 (FIN, 1950) — economy proxy for the territory. V-Dem polyarchy 82/100 (FIN, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 99/100 — V-Dem freedom-of-religion (FIN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 73,
         "governance": 82,
-        "religious_tolerance": 58
+        "religious_tolerance": 99
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1587,31 +1735,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — FIN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q33",
-      "raw_score": 78
+      "raw_score": 89
     },
     "kingdom_of_afghanistan": {
-      "score": 36,
-      "summary": "Brecke records no major conflict touching Kingdom of Afghanistan in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1156 (AFG, 1950) — economy proxy for the territory. V-Dem polyarchy 10/100 (AFG, 1950) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 32,
+      "summary": "Brecke records no major conflict touching Kingdom of Afghanistan in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1156 (AFG, 1950) — economy proxy for the territory. V-Dem polyarchy 10/100 (AFG, 1950) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 42/100 — V-Dem freedom-of-religion (AFG, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 25,
         "economy": 38,
         "governance": 10,
-        "religious_tolerance": 35
+        "religious_tolerance": 42
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1628,31 +1780,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — AFG 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1138904",
-      "raw_score": 47
+      "raw_score": 48
     },
     "french_indochina": {
-      "score": 67,
-      "summary": "Brecke records no major conflict touching French Indochina in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1049 (VNM, 1950) — economy proxy for the territory. V-Dem polyarchy 26/100 (VNM, 1950) — limited representation. Health 85/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 64,
+      "summary": "Brecke records no major conflict touching French Indochina in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1049 (VNM, 1950) — economy proxy for the territory. V-Dem polyarchy 26/100 (VNM, 1950) — limited representation. Health 85/100, anchored on life-expectancy data for the region. Religious tolerance 71/100 — V-Dem freedom-of-religion (LAO, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 85,
         "economy": 38,
         "governance": 26,
-        "religious_tolerance": 50
+        "religious_tolerance": 71
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1669,31 +1825,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — LAO 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q185682",
-      "raw_score": 63
+      "raw_score": 68
     },
     "french_africa_mdg": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching French Africa (MDG) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1516 (MDG, 1950) — economy proxy for the territory. V-Dem polyarchy 5/100 (MDG, 1950) — highly autocratic. Health 60/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 48,
+      "summary": "Brecke records no major conflict touching French Africa (MDG) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1516 (MDG, 1950) — economy proxy for the territory. V-Dem polyarchy 5/100 (MDG, 1950) — highly autocratic. Health 60/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 — V-Dem freedom-of-religion (MDG, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 60,
         "economy": 42,
         "governance": 5,
-        "religious_tolerance": 48
+        "religious_tolerance": 52
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1710,31 +1870,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — MDG 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q19951607",
-      "raw_score": 57
+      "raw_score": 58
     },
     "kingdom_of_great_britain_gbr": {
       "score": 73,
-      "summary": "Active conflicts in 1950: Malayans-Britain, 1948-60; Yemen-Britain, 1949-50; South Yemen-Britain, 1950-63. Maddison GDP/capita 11061 (GBR, 1950) — economy proxy for the territory. V-Dem polyarchy 81/100 (GBR, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Active conflicts in 1950: Malayans-Britain, 1948-60; Yemen-Britain, 1949-50; South Yemen-Britain, 1950-63. Maddison GDP/capita 11061 (GBR, 1950) — economy proxy for the territory. V-Dem polyarchy 81/100 (GBR, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 91/100 — V-Dem freedom-of-religion (AUT, 1950), measured.",
       "factors": {
         "safety": 49,
         "health": 100,
         "economy": 81,
         "governance": 81,
-        "religious_tolerance": 58
+        "religious_tolerance": 91
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1755,31 +1919,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — AUT 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q23666",
-      "raw_score": 66
+      "raw_score": 74
     },
     "british_colonial_empire_can": {
-      "score": 98,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (CAN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11622 (CAN, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (CAN, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (CAN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11622 (CAN, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (CAN, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 87/100 — V-Dem freedom-of-religion (CAN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 83,
         "governance": 75,
-        "religious_tolerance": 58
+        "religious_tolerance": 87
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1796,31 +1964,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CAN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 79
+      "raw_score": 86
     },
     "kingdom_of_thailand": {
-      "score": 61,
-      "summary": "Brecke records no major conflict touching Kingdom of Thailand in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1302 (THA, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (THA, 1950) — highly autocratic. Health 76/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 62,
+      "summary": "Brecke records no major conflict touching Kingdom of Thailand in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1302 (THA, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (THA, 1950) — highly autocratic. Health 76/100, anchored on life-expectancy data for the region. Religious tolerance 76/100 — V-Dem freedom-of-religion (THA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 76,
         "economy": 39,
         "governance": 14,
-        "religious_tolerance": 50
+        "religious_tolerance": 76
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1837,31 +2009,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — THA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q869",
-      "raw_score": 60
+      "raw_score": 67
     },
     "british_colonial_empire_png": {
-      "score": 36,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (PNG) in 1950 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~420 1990 int$). V-Dem polyarchy 11/100 (PNG, 1950) — highly autocratic. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 45,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (PNG) in 1950 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~420 1990 int$). V-Dem polyarchy 11/100 (PNG, 1950) — highly autocratic. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 93/100 — V-Dem freedom-of-religion (PNG, 1950), measured.",
       "factors": {
         "safety": 57,
         "health": 57,
         "economy": 25,
         "governance": 11,
-        "religious_tolerance": 58
+        "religious_tolerance": 93
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1878,31 +2054,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PNG 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 47
+      "raw_score": 56
     },
     "paraguay": {
-      "score": 73,
-      "summary": "Brecke records no major conflict touching Paraguay in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2391 (PRY, 1950) — economy proxy for the territory. V-Dem polyarchy 15/100 (PRY, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Paraguay in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2391 (PRY, 1950) — economy proxy for the territory. V-Dem polyarchy 15/100 (PRY, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 72/100 — V-Dem freedom-of-religion (PRY, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 52,
         "governance": 15,
-        "religious_tolerance": 52
+        "religious_tolerance": 72
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1919,31 +2099,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PRY 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q733",
-      "raw_score": 66
+      "raw_score": 71
     },
     "kingdom_of_great_britain_yem": {
-      "score": 24,
-      "summary": "Active conflicts in 1950: Malayans-Britain, 1948-60; Yemen-Britain, 1949-50; South Yemen-Britain, 1950-63. Maddison GDP/capita 48436 (QAT, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (YEM, 1950) — highly autocratic. Health 16/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 21,
+      "summary": "Active conflicts in 1950: Malayans-Britain, 1948-60; Yemen-Britain, 1949-50; South Yemen-Britain, 1950-63. Maddison GDP/capita 48436 (QAT, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (YEM, 1950) — highly autocratic. Health 16/100, anchored on life-expectancy data for the region. Religious tolerance 36/100 — V-Dem freedom-of-religion (QAT, 1950), measured.",
       "factors": {
         "safety": 49,
         "health": 16,
         "economy": 90,
         "governance": 2,
-        "religious_tolerance": 35
+        "religious_tolerance": 36
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1964,6 +2148,10 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — QAT 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
@@ -1972,23 +2160,23 @@
       "raw_score": 41
     },
     "british_colonial_empire_nzl": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (NZL) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 13479 (NZL, 1950) — economy proxy for the territory. V-Dem polyarchy 80/100 (NZL, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 80,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (NZL) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 13479 (NZL, 1950) — economy proxy for the territory. V-Dem polyarchy 80/100 (NZL, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 94/100 — V-Dem freedom-of-religion (NZL, 1950), measured.",
       "factors": {
         "safety": 57,
         "health": 100,
         "economy": 86,
         "governance": 80,
-        "religious_tolerance": 58
+        "religious_tolerance": 94
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2005,31 +2193,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NZL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 69
+      "raw_score": 78
     },
     "kingdom_of_italy": {
-      "score": 86,
-      "summary": "Brecke records no major conflict touching Kingdom of Italy in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5582 (ITA, 1950) — economy proxy for the territory. V-Dem polyarchy 67/100 (ITA, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 84,
+      "summary": "Brecke records no major conflict touching Kingdom of Italy in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5582 (ITA, 1950) — economy proxy for the territory. V-Dem polyarchy 67/100 (ITA, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (ITA, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 70,
         "governance": 67,
-        "religious_tolerance": 58
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2046,31 +2238,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ITA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q172579",
-      "raw_score": 73
+      "raw_score": 81
     },
     "east_turkestan_republic": {
-      "score": 53,
-      "summary": "Brecke records no major conflict touching East Turkestan Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 36,
+      "summary": "Brecke records no major conflict touching East Turkestan Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — V-Dem freedom-of-religion (CHN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 71,
         "economy": 30,
         "governance": 8,
-        "religious_tolerance": 44
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2087,31 +2283,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q840601",
-      "raw_score": 56
+      "raw_score": 50
     },
     "british_colonial_empire_irn": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (IRN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2742 (IRN, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (IRN, 1950) — limited representation. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 51,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (IRN) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2742 (IRN, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (IRN, 1950) — limited representation. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 59/100 — V-Dem freedom-of-religion (IRN, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 57,
         "economy": 55,
         "governance": 16,
-        "religious_tolerance": 35
+        "religious_tolerance": 59
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2128,31 +2328,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IRN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 54
+      "raw_score": 60
     },
     "yugoslavia": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Yugoslavia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3934 (SVN, 1950) — economy proxy for the territory. V-Dem polyarchy 9/100 (SRB, 1950) — highly autocratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 51,
+      "summary": "Brecke records no major conflict touching Yugoslavia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3934 (SVN, 1950) — economy proxy for the territory. V-Dem polyarchy 9/100 (SRB, 1950) — highly autocratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 61/100 — V-Dem freedom-of-religion (SRB, 1950), measured.",
       "factors": {
         "safety": 61,
         "health": 100,
         "economy": 68,
         "governance": 9,
-        "religious_tolerance": 50
+        "religious_tolerance": 61
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2169,31 +2373,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SRB 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q83286",
-      "raw_score": 57
+      "raw_score": 60
     },
     "sultanate_of_muscat_and_oman": {
-      "score": 34,
-      "summary": "Brecke records no major conflict touching Sultanate of Muscat and Oman in 1950 (safety at the era baseline of 85). Maddison GDP/capita 993 (OMN, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (OMN, 1950) — highly autocratic. Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 37,
+      "summary": "Brecke records no major conflict touching Sultanate of Muscat and Oman in 1950 (safety at the era baseline of 85). Maddison GDP/capita 993 (OMN, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (OMN, 1950) — highly autocratic. Health 28/100, anchored on life-expectancy data for the region. Religious tolerance 56/100 — V-Dem freedom-of-religion (OMN, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 28,
         "economy": 36,
         "governance": 1,
-        "religious_tolerance": 35
+        "religious_tolerance": 56
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2210,31 +2418,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — OMN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q157734",
-      "raw_score": 46
+      "raw_score": 51
     },
     "united_states_of_america_phl": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching United States of America (PHL) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1706 (PHL, 1950) — economy proxy for the territory. V-Dem polyarchy 34/100 (PHL, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 73,
+      "summary": "Brecke records no major conflict touching United States of America (PHL) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1706 (PHL, 1950) — economy proxy for the territory. V-Dem polyarchy 34/100 (PHL, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 81/100 — V-Dem freedom-of-religion (PHL, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 45,
         "governance": 34,
-        "religious_tolerance": 50
+        "religious_tolerance": 81
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2251,31 +2463,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PHL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 67
+      "raw_score": 74
     },
     "republic_of_ecuador": {
-      "score": 77,
-      "summary": "Brecke records no major conflict touching Republic of Ecuador in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2970 (ECU, 1950) — economy proxy for the territory. V-Dem polyarchy 37/100 (ECU, 1950) — early democratic. Health 88/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 78,
+      "summary": "Brecke records no major conflict touching Republic of Ecuador in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2970 (ECU, 1950) — economy proxy for the territory. V-Dem polyarchy 37/100 (ECU, 1950) — early democratic. Health 88/100, anchored on life-expectancy data for the region. Religious tolerance 91/100 — V-Dem freedom-of-religion (ECU, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 88,
         "economy": 57,
         "governance": 37,
-        "religious_tolerance": 52
+        "religious_tolerance": 91
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2292,31 +2508,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ECU 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q736",
-      "raw_score": 68
+      "raw_score": 77
     },
     "french_mandate_for_syria_and_lebanon": {
-      "score": 57,
-      "summary": "Brecke records no major conflict touching French Mandate for Syria and Lebanon in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3838 (SYR, 1950) — economy proxy for the territory. V-Dem polyarchy 25/100 (SYR, 1950) — limited representation. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 51,
+      "summary": "Brecke records no major conflict touching French Mandate for Syria and Lebanon in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3838 (SYR, 1950) — economy proxy for the territory. V-Dem polyarchy 25/100 (SYR, 1950) — limited representation. Health 71/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 — V-Dem freedom-of-religion (SYR, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 71,
         "economy": 67,
         "governance": 25,
-        "religious_tolerance": 35
+        "religious_tolerance": 44
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2333,31 +2553,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SYR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q139708",
-      "raw_score": 58
+      "raw_score": 60
     },
     "british_colonial_empire_guy": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (GUY) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5856 (TTO, 1950) — economy proxy for the territory. V-Dem polyarchy 30/100 (TTO, 1950) — limited representation. Health 92/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 70,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (GUY) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5856 (TTO, 1950) — economy proxy for the territory. V-Dem polyarchy 30/100 (TTO, 1950) — limited representation. Health 92/100, anchored on life-expectancy data for the region. Religious tolerance 66/100 — V-Dem freedom-of-religion (GUY, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 92,
         "economy": 71,
         "governance": 30,
-        "religious_tolerance": 52
+        "religious_tolerance": 66
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2374,31 +2598,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GUY 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 69
+      "raw_score": 72
     },
     "oriental_republic_of_uruguay": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching Oriental Republic of Uruguay in 1950 (safety at the era baseline of 85). Maddison GDP/capita 7015 (URY, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (URY, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 94,
+      "summary": "Brecke records no major conflict touching Oriental Republic of Uruguay in 1950 (safety at the era baseline of 85). Maddison GDP/capita 7015 (URY, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (URY, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 95/100 — V-Dem freedom-of-religion (URY, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 74,
         "governance": 78,
-        "religious_tolerance": 52
+        "religious_tolerance": 95
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2415,31 +2643,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — URY 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q77",
-      "raw_score": 76
+      "raw_score": 87
     },
     "united_states_of_america_deu": {
-      "score": 96,
-      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 6186 (DEU, 1950) — economy proxy for the territory. V-Dem polyarchy 82/100 (DEU, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 95,
+      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 6186 (DEU, 1950) — economy proxy for the territory. V-Dem polyarchy 82/100 (DEU, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 97/100 — V-Dem freedom-of-religion (DEU, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 72,
         "governance": 82,
-        "religious_tolerance": 58
+        "religious_tolerance": 97
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2456,16 +2688,20 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DEU 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 78
+      "raw_score": 88
     },
     "nepal": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching Nepal in 1950 (safety at the era baseline of 85). Maddison GDP/capita 802 (NPL, 1950) — economy proxy for the territory. V-Dem polyarchy 3/100 (NPL, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 43,
+      "summary": "Brecke records no major conflict touching Nepal in 1950 (safety at the era baseline of 85). Maddison GDP/capita 802 (NPL, 1950) — economy proxy for the territory. V-Dem polyarchy 3/100 (NPL, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — V-Dem freedom-of-religion (NPL, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 53,
@@ -2478,9 +2714,9 @@
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2497,31 +2733,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NPL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q837",
-      "raw_score": 54
+      "raw_score": 55
     },
     "north_yemen": {
       "score": 1,
-      "summary": "Active conflicts in 1950: Yemen-Britain, 1949-50; South Yemen-Britain, 1950-63; North Korea (aided by Chinese)-South Korea (aided by UN forces), 1950-53. Maddison GDP/capita 1452 (YEM, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (YEM, 1950) — highly autocratic. Health 10/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Active conflicts in 1950: Yemen-Britain, 1949-50; South Yemen-Britain, 1950-63; North Korea (aided by Chinese)-South Korea (aided by UN forces), 1950-53. Maddison GDP/capita 1452 (YEM, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (YEM, 1950) — highly autocratic. Health 10/100, anchored on life-expectancy data for the region. Religious tolerance 31/100 — V-Dem freedom-of-religion (YEM, 1950), measured.",
       "factors": {
         "safety": 36,
         "health": 10,
         "economy": 41,
         "governance": 2,
-        "religious_tolerance": 35
+        "religious_tolerance": 31
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2542,31 +2782,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — YEM 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1998401",
-      "raw_score": 29
+      "raw_score": 28
     },
     "kingdom_of_greece": {
-      "score": 59,
-      "summary": "Brecke records no major conflict touching Kingdom of Greece in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3052 (GRC, 1950) — economy proxy for the territory. V-Dem polyarchy 31/100 (GRC, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching Kingdom of Greece in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3052 (GRC, 1950) — economy proxy for the territory. V-Dem polyarchy 31/100 (GRC, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 62/100 — V-Dem freedom-of-religion (GRC, 1950), measured.",
       "factors": {
         "safety": 61,
         "health": 100,
         "economy": 59,
         "governance": 31,
-        "religious_tolerance": 50
+        "religious_tolerance": 62
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2583,31 +2827,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GRC 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q209065",
-      "raw_score": 59
+      "raw_score": 62
     },
     "netherlands_antilles": {
       "score": 73,
-      "summary": "Brecke records no major conflict touching Netherlands Antilles in 1950 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 50/100 (SUR, 1950) — early democratic. Health 91/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Netherlands Antilles in 1950 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~560 1990 int$). V-Dem polyarchy 50/100 (SUR, 1950) — early democratic. Health 91/100, anchored on life-expectancy data for the region. Religious tolerance 86/100 — V-Dem freedom-of-religion (SUR, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 91,
         "economy": 27,
         "governance": 50,
-        "religious_tolerance": 52
+        "religious_tolerance": 86
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2624,31 +2872,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SUR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q25227",
-      "raw_score": 66
+      "raw_score": 74
     },
     "republic_of_nicaragua": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Republic of Nicaragua in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2565 (NIC, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (NIC, 1950) — highly autocratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 59,
+      "summary": "Brecke records no major conflict touching Republic of Nicaragua in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2565 (NIC, 1950) — economy proxy for the territory. V-Dem polyarchy 14/100 (NIC, 1950) — highly autocratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 69/100 — V-Dem freedom-of-religion (NIC, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 64,
         "economy": 53,
         "governance": 14,
-        "religious_tolerance": 52
+        "religious_tolerance": 69
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2665,31 +2917,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NIC 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q811",
-      "raw_score": 61
+      "raw_score": 65
     },
     "republic_of_cuba": {
-      "score": 79,
-      "summary": "Brecke records no major conflict touching Republic of Cuba in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2638 (CUB, 1950) — economy proxy for the territory. V-Dem polyarchy 42/100 (CUB, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Republic of Cuba in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2638 (CUB, 1950) — economy proxy for the territory. V-Dem polyarchy 42/100 (CUB, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (CUB, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 54,
         "governance": 42,
-        "religious_tolerance": 52
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2706,31 +2962,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CUB 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q241",
-      "raw_score": 69
+      "raw_score": 79
     },
     "ire": {
-      "score": 94,
-      "summary": "Brecke records no major conflict touching Éire in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5504 (IRL, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (IRL, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 87,
+      "summary": "Brecke records no major conflict touching Éire in 1950 (safety at the era baseline of 85). Maddison GDP/capita 5504 (IRL, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (IRL, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 81/100 — V-Dem freedom-of-religion (IRL, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 69,
         "governance": 78,
-        "religious_tolerance": 58
+        "religious_tolerance": 81
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2747,31 +3007,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IRL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q5306909",
-      "raw_score": 77
+      "raw_score": 83
     },
     "estado_novo_prt": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Estado Novo (PRT) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3325 (PRT, 1950) — economy proxy for the territory. V-Dem polyarchy 12/100 (PRT, 1950) — highly autocratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 64,
+      "summary": "Brecke records no major conflict touching Estado Novo (PRT) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3325 (PRT, 1950) — economy proxy for the territory. V-Dem polyarchy 12/100 (PRT, 1950) — highly autocratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 71/100 — V-Dem freedom-of-religion (PRT, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 62,
         "governance": 12,
-        "religious_tolerance": 58
+        "religious_tolerance": 71
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2788,31 +3052,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PRT 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q824489",
-      "raw_score": 65
+      "raw_score": 68
     },
     "honduras": {
       "score": 65,
-      "summary": "Brecke records no major conflict touching Honduras in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2018 (HND, 1950) — economy proxy for the territory. V-Dem polyarchy 25/100 (HND, 1950) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Honduras in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2018 (HND, 1950) — economy proxy for the territory. V-Dem polyarchy 25/100 (HND, 1950) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (HND, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 65,
         "economy": 49,
         "governance": 25,
-        "religious_tolerance": 52
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2829,31 +3097,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — HND 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q783",
-      "raw_score": 62
+      "raw_score": 69
     },
     "guatemala": {
-      "score": 71,
-      "summary": "Brecke records no major conflict touching Guatemala in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3323 (GTM, 1950) — economy proxy for the territory. V-Dem polyarchy 39/100 (GTM, 1950) — early democratic. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 70,
+      "summary": "Brecke records no major conflict touching Guatemala in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3323 (GTM, 1950) — economy proxy for the territory. V-Dem polyarchy 39/100 (GTM, 1950) — early democratic. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (GTM, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 57,
         "economy": 62,
         "governance": 39,
-        "religious_tolerance": 52
+        "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2870,31 +3142,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GTM 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q774",
-      "raw_score": 65
+      "raw_score": 72
     },
     "republic_of_liberia": {
-      "score": 65,
-      "summary": "Brecke records no major conflict touching Republic of Liberia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3151 (LBR, 1950) — economy proxy for the territory. V-Dem polyarchy 24/100 (LBR, 1950) — limited representation. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 69,
+      "summary": "Brecke records no major conflict touching Republic of Liberia in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3151 (LBR, 1950) — economy proxy for the territory. V-Dem polyarchy 24/100 (LBR, 1950) — limited representation. Health 57/100, anchored on life-expectancy data for the region. Religious tolerance 86/100 — V-Dem freedom-of-religion (LBR, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 57,
         "economy": 61,
         "governance": 24,
-        "religious_tolerance": 48
+        "religious_tolerance": 86
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2911,31 +3187,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — LBR 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1014",
-      "raw_score": 62
+      "raw_score": 71
     },
     "denmark": {
       "score": 100,
-      "summary": "Brecke records no major conflict touching Denmark in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11067 (DNK, 1950) — economy proxy for the territory. V-Dem polyarchy 91/100 (DNK, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Denmark in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11067 (DNK, 1950) — economy proxy for the territory. V-Dem polyarchy 91/100 (DNK, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 98/100 — V-Dem freedom-of-religion (DNK, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 82,
         "governance": 91,
-        "religious_tolerance": 58
+        "religious_tolerance": 98
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2952,31 +3232,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DNK 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q350186",
-      "raw_score": 80
+      "raw_score": 91
     },
     "british_africa_sle": {
-      "score": 50,
-      "summary": "Brecke records no major conflict touching British Africa (SLE) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 982 (GMB, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (GMB, 1950) — limited representation. Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 54,
+      "summary": "Brecke records no major conflict touching British Africa (SLE) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 982 (GMB, 1950) — economy proxy for the territory. V-Dem polyarchy 16/100 (GMB, 1950) — limited representation. Health 27/100, anchored on life-expectancy data for the region. Religious tolerance 82/100 — V-Dem freedom-of-religion (GMB, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 27,
         "economy": 35,
         "governance": 16,
-        "religious_tolerance": 48
+        "religious_tolerance": 82
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2993,31 +3277,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GMB 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q179848",
-      "raw_score": 54
+      "raw_score": 62
     },
     "french_fourth_republic_fra_1": {
-      "score": 90,
-      "summary": "Brecke records no major conflict touching French Fourth Republic (FRA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8266 (FRA, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (FRA, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching French Fourth Republic (FRA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8266 (FRA, 1950) — economy proxy for the territory. V-Dem polyarchy 75/100 (FRA, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (FRA, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 75,
         "governance": 75,
-        "religious_tolerance": 58
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3034,31 +3322,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — FRA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q69829",
-      "raw_score": 75
+      "raw_score": 82
     },
     "republic_of_panama": {
-      "score": 77,
-      "summary": "Brecke records no major conflict touching Republic of Panama in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2577 (PAN, 1950) — economy proxy for the territory. V-Dem polyarchy 32/100 (PAN, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 72,
+      "summary": "Brecke records no major conflict touching Republic of Panama in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2577 (PAN, 1950) — economy proxy for the territory. V-Dem polyarchy 32/100 (PAN, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 72/100 — V-Dem freedom-of-religion (PAN, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 53,
         "governance": 32,
-        "religious_tolerance": 52
+        "religious_tolerance": 72
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3075,31 +3367,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — PAN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q804",
-      "raw_score": 68
+      "raw_score": 73
     },
     "kingdom_of_bhutan": {
-      "score": 55,
-      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1950 (safety at the era baseline of 85). Maddison GDP/capita 987 (IND, 1950) — economy proxy for the territory. V-Dem polyarchy 27/100 (IND, 1950) — limited representation. Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 61,
+      "summary": "Brecke records no major conflict touching Kingdom of Bhutan in 1950 (safety at the era baseline of 85). Maddison GDP/capita 987 (IND, 1950) — economy proxy for the territory. V-Dem polyarchy 27/100 (IND, 1950) — limited representation. Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 83/100 — V-Dem freedom-of-religion (IND, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 46,
         "economy": 35,
         "governance": 27,
-        "religious_tolerance": 46
+        "religious_tolerance": 83
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3116,31 +3412,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — IND 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q917",
-      "raw_score": 57
+      "raw_score": 66
     },
     "netherlands": {
       "score": 92,
-      "summary": "Brecke records no major conflict touching Netherlands in 1950 (safety at the era baseline of 85). Maddison GDP/capita 9558 (NLD, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (NLD, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "summary": "Brecke records no major conflict touching Netherlands in 1950 (safety at the era baseline of 85). Maddison GDP/capita 9558 (NLD, 1950) — economy proxy for the territory. V-Dem polyarchy 78/100 (NLD, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 98/100 — V-Dem freedom-of-religion (NLD, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 80,
         "governance": 78,
-        "religious_tolerance": 58
+        "religious_tolerance": 98
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3157,31 +3457,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — NLD 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q55",
-      "raw_score": 76
+      "raw_score": 86
     },
     "swiss_confederation": {
-      "score": 88,
-      "summary": "Brecke records no major conflict touching Swiss Confederation in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11541 (CHE, 1950) — economy proxy for the territory. V-Dem polyarchy 62/100 (CHE, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 86,
+      "summary": "Brecke records no major conflict touching Swiss Confederation in 1950 (safety at the era baseline of 85). Maddison GDP/capita 11541 (CHE, 1950) — economy proxy for the territory. V-Dem polyarchy 62/100 (CHE, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 89/100 — V-Dem freedom-of-religion (CHE, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 83,
         "governance": 62,
-        "religious_tolerance": 58
+        "religious_tolerance": 89
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3198,31 +3502,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHE 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q39",
-      "raw_score": 74
+      "raw_score": 82
     },
     "republic_of_costa_rica": {
-      "score": 84,
-      "summary": "Brecke records no major conflict touching Republic of Costa Rica in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3129 (CRI, 1950) — economy proxy for the territory. V-Dem polyarchy 56/100 (CRI, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 83,
+      "summary": "Brecke records no major conflict touching Republic of Costa Rica in 1950 (safety at the era baseline of 85). Maddison GDP/capita 3129 (CRI, 1950) — economy proxy for the territory. V-Dem polyarchy 56/100 (CRI, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 85/100 — V-Dem freedom-of-religion (CRI, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 60,
         "governance": 56,
-        "religious_tolerance": 52
+        "religious_tolerance": 85
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3239,31 +3547,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CRI 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q800",
-      "raw_score": 72
+      "raw_score": 80
     },
     "dominican_republic": {
-      "score": 63,
-      "summary": "Brecke records no major conflict touching Dominican Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1637 (DOM, 1950) — economy proxy for the territory. V-Dem polyarchy 15/100 (DOM, 1950) — limited representation. Health 73/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 58,
+      "summary": "Brecke records no major conflict touching Dominican Republic in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1637 (DOM, 1950) — economy proxy for the territory. V-Dem polyarchy 15/100 (DOM, 1950) — limited representation. Health 73/100, anchored on life-expectancy data for the region. Religious tolerance 63/100 — V-Dem freedom-of-religion (DOM, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 73,
         "economy": 44,
         "governance": 15,
-        "religious_tolerance": 52
+        "religious_tolerance": 63
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3280,31 +3592,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — DOM 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q786",
-      "raw_score": 61
+      "raw_score": 64
     },
     "empire_of_japan_slb": {
-      "score": 36,
-      "summary": "Brecke records no major conflict touching Empire of Japan (SLB) in 1950 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~420 1990 int$). V-Dem polyarchy 5/100 (SLB, 1950) — highly autocratic. Health 63/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 37,
+      "summary": "Brecke records no major conflict touching Empire of Japan (SLB) in 1950 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~420 1990 int$). V-Dem polyarchy 5/100 (SLB, 1950) — highly autocratic. Health 63/100, anchored on life-expectancy data for the region. Religious tolerance 71/100 — V-Dem freedom-of-religion (SLB, 1950), measured.",
       "factors": {
         "safety": 57,
         "health": 63,
         "economy": 25,
         "governance": 5,
-        "religious_tolerance": 58
+        "religious_tolerance": 71
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3321,31 +3637,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — SLB 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q188712",
-      "raw_score": 47
+      "raw_score": 51
     },
     "kingdom_of_belgium": {
-      "score": 90,
-      "summary": "Brecke records no major conflict touching Kingdom of Belgium in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8706 (BEL, 1950) — economy proxy for the territory. V-Dem polyarchy 72/100 (BEL, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 91,
+      "summary": "Brecke records no major conflict touching Kingdom of Belgium in 1950 (safety at the era baseline of 85). Maddison GDP/capita 8706 (BEL, 1950) — economy proxy for the territory. V-Dem polyarchy 72/100 (BEL, 1950) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 97/100 — V-Dem freedom-of-religion (BEL, 1950), measured.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 79,
         "governance": 72,
-        "religious_tolerance": 58
+        "religious_tolerance": 97
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3362,31 +3682,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — BEL 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q31",
-      "raw_score": 75
+      "raw_score": 85
     },
     "communist_party_of_china_chn_1": {
-      "score": 15,
-      "summary": "Active conflicts in 1950: Burma (communists), 1948-54; China, 1950-51 G; China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 44/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 3,
+      "summary": "Active conflicts in 1950: Burma (communists), 1948-54; China, 1950-51 G; China-Tibet, 1950-51. Maddison GDP/capita 799 (CHN, 1950) — economy proxy for the territory. V-Dem polyarchy 8/100 (CHN, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 18/100 — V-Dem freedom-of-religion (CHN, 1950), measured.",
       "factors": {
         "safety": 36,
         "health": 53,
         "economy": 30,
         "governance": 8,
-        "religious_tolerance": 44
+        "religious_tolerance": 18
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3407,31 +3731,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — CHN 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q17427",
-      "raw_score": 36
+      "raw_score": 29
     },
     "albania": {
-      "score": 46,
-      "summary": "Brecke records no major conflict touching Albania in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1596 (ALB, 1950) — economy proxy for the territory. V-Dem polyarchy 17/100 (ALB, 1950) — limited representation. Health 75/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 29,
+      "summary": "Brecke records no major conflict touching Albania in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1596 (ALB, 1950) — economy proxy for the territory. V-Dem polyarchy 17/100 (ALB, 1950) — limited representation. Health 75/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 — V-Dem freedom-of-religion (ALB, 1950), measured.",
       "factors": {
         "safety": 61,
         "health": 75,
         "economy": 43,
         "governance": 17,
-        "religious_tolerance": 50
+        "religious_tolerance": 26
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3448,31 +3776,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — ALB 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q222",
-      "raw_score": 52
+      "raw_score": 46
     },
     "estado_novo_gnb": {
-      "score": 48,
-      "summary": "Brecke records no major conflict touching Estado Novo (GNB) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 462 (GNB, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (GNB, 1950) — highly autocratic. Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 37,
+      "summary": "Brecke records no major conflict touching Estado Novo (GNB) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 462 (GNB, 1950) — economy proxy for the territory. V-Dem polyarchy 1/100 (GNB, 1950) — highly autocratic. Health 46/100, anchored on life-expectancy data for the region. Religious tolerance 41/100 — V-Dem freedom-of-religion (GNB, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 46,
         "economy": 26,
         "governance": 1,
-        "religious_tolerance": 48
+        "religious_tolerance": 41
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3489,31 +3821,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GNB 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q824489",
-      "raw_score": 53
+      "raw_score": 51
     },
     "republic_of_haiti": {
-      "score": 59,
-      "summary": "Brecke records no major conflict touching Republic of Haiti in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1790 (HTI, 1950) — economy proxy for the territory. V-Dem polyarchy 10/100 (HTI, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 47,
+      "summary": "Brecke records no major conflict touching Republic of Haiti in 1950 (safety at the era baseline of 85). Maddison GDP/capita 1790 (HTI, 1950) — economy proxy for the territory. V-Dem polyarchy 10/100 (HTI, 1950) — highly autocratic. Health 53/100, anchored on life-expectancy data for the region. Religious tolerance 46/100 — V-Dem freedom-of-religion (HTI, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 53,
         "economy": 47,
         "governance": 10,
-        "religious_tolerance": 52
+        "religious_tolerance": 46
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3530,31 +3866,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — HTI 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q790",
-      "raw_score": 59
+      "raw_score": 57
     },
     "british_colonial_empire_jam": {
-      "score": 75,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2115 (JAM, 1950) — economy proxy for the territory. V-Dem polyarchy 30/100 (JAM, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 65,
+      "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 2115 (JAM, 1950) — economy proxy for the territory. V-Dem polyarchy 30/100 (JAM, 1950) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 59/100 — V-Dem freedom-of-religion (JAM, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 50,
         "governance": 30,
-        "religious_tolerance": 52
+        "religious_tolerance": 59
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3571,31 +3911,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — JAM 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 67
+      "raw_score": 69
     },
     "francoist_spain_gnq": {
-      "score": 51,
-      "summary": "Brecke records no major conflict touching Francoist Spain (GNQ) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 797 (GNQ, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (GNQ, 1950) — highly autocratic. Health 60/100, anchored on life-expectancy data for the region. Religious tolerance 48/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 31,
+      "summary": "Brecke records no major conflict touching Francoist Spain (GNQ) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 797 (GNQ, 1950) — economy proxy for the territory. V-Dem polyarchy 2/100 (GNQ, 1950) — highly autocratic. Health 60/100, anchored on life-expectancy data for the region. Religious tolerance 15/100 — V-Dem freedom-of-religion (GNQ, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 60,
         "economy": 29,
         "governance": 2,
-        "religious_tolerance": 48
+        "religious_tolerance": 15
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3612,31 +3956,35 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — GNQ 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q13474305",
-      "raw_score": 55
+      "raw_score": 47
     },
     "united_states_of_america_usa_2": {
-      "score": 94,
-      "summary": "Brecke records no major conflict touching United States of America (USA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 15240 (USA, 1950) — economy proxy for the territory. V-Dem polyarchy 58/100 (USA, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region).",
+      "score": 92,
+      "summary": "Brecke records no major conflict touching United States of America (USA) in 1950 (safety at the era baseline of 85). Maddison GDP/capita 15240 (USA, 1950) — economy proxy for the territory. V-Dem polyarchy 58/100 (USA, 1950) — early democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 93/100 — V-Dem freedom-of-religion (USA, 1950), measured.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 87,
         "governance": 58,
-        "religious_tolerance": 58
+        "religious_tolerance": 93
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
         "governance": "vdem",
-        "religious_tolerance": "modeled"
+        "religious_tolerance": "vdem-relig"
       },
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3653,12 +4001,16 @@
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
+        },
+        {
+          "label": "V-Dem v15 — USA 1950 freedom of religion",
+          "url": "https://www.v-dem.net/data/the-v-dem-dataset/"
         }
       ],
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 77
+      "raw_score": 86
     }
   }
 }

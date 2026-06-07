@@ -32,7 +32,8 @@ VDEM_TO_ISO3 = {
 
 @lru_cache(maxsize=1)
 def _load() -> dict[tuple[str, int], dict]:
-    """Return {(iso3, year): {polyarchy, libdem}}. Lazy + cached."""
+    """Return {(iso3, year): {polyarchy, libdem, relig}}. Lazy + cached.
+    `relig` is v2clrelig_osp (freedom of religion, 0–4)."""
     if not VDEM_PATH.exists():
         return {}
     out = {}
@@ -47,14 +48,16 @@ def _load() -> dict[tuple[str, int], dict]:
                 continue
             poly = row.get("v2x_polyarchy", "").strip()
             libd = row.get("v2x_libdem", "").strip()
-            if not poly and not libd:
+            relig = row.get("v2clrelig_osp", "").strip()
+            if not poly and not libd and not relig:
                 continue
-            try:
-                poly_f = float(poly) if poly else None
-                libd_f = float(libd) if libd else None
-            except ValueError:
-                continue
-            out[(iso, year)] = {"polyarchy": poly_f, "libdem": libd_f}
+            def _f(s):
+                try:
+                    return float(s) if s else None
+                except ValueError:
+                    return None
+            out[(iso, year)] = {"polyarchy": _f(poly), "libdem": _f(libd),
+                                "relig": _f(relig)}
     return out
 
 
@@ -75,6 +78,43 @@ def governance(iso3_members: list[str], year: int) -> tuple[int | None, str | No
     if best_iso is None:
         return None, None
     return round(best_val * 100), best_iso
+
+
+def religious_freedom(iso3_members: list[str], year: int) -> tuple[int | None, str | None]:
+    """Best V-Dem freedom-of-religion (v2clrelig_osp, 0–4) across member ISOs for
+    `year`, mapped to 0–100. Returns (score, source_iso) or (None, None)."""
+    data = _load()
+    if not data:
+        return None, None
+    best_iso, best_val = None, -1.0
+    for iso in iso3_members:
+        cell = data.get((iso, year))
+        if not cell or cell.get("relig") is None:
+            continue
+        if cell["relig"] > best_val:
+            best_iso, best_val = iso, cell["relig"]
+    if best_iso is None:
+        return None, None
+    return round(best_val / 4.0 * 100), best_iso
+
+
+@lru_cache(maxsize=1)
+def _repression_by_year() -> dict[int, float]:
+    """{year: mean global religious repression} = mean over all countries of
+    (4 - v2clrelig_osp)/4, i.e. 0 (everyone free) … 1 (no one free). A real,
+    time-varying global persecution signal for the dynamic year-weights, covering
+    the V-Dem era (1789+) where witch-trials no longer apply."""
+    by_year: dict[int, list[float]] = {}
+    for (_, year), cell in _load().items():
+        r = cell.get("relig")
+        if r is not None:
+            by_year.setdefault(year, []).append((4.0 - r) / 4.0)
+    return {y: sum(v) / len(v) for y, v in by_year.items() if v}
+
+
+def global_repression(year: int) -> float | None:
+    """Mean global religious repression for `year` (0–1), or None pre-V-Dem."""
+    return _repression_by_year().get(year)
 
 
 def available() -> bool:
