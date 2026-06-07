@@ -2,7 +2,7 @@
 
 Run: python scripts/rank_year.py 1719
 Reads:
-  data/raw/{year}_extract.json    (Maddison gdppc + Brecke conflicts)
+  data/raw/{year}_extract.json    (conflicts: Brecke ≤1999 / UCDP 2000+)
   data/raw/{year}_wiki.json       (era summary, optional)
   data/region_sets/{snapshot}.json (Cliopatria polities w/ member_iso3)
 Writes:
@@ -11,18 +11,25 @@ Writes:
 ## Model
 
 Regions come from Cliopatria (Seshat) — real historical polities, year-keyed,
-sampled at ~25-year snapshots. Each region already carries `member_iso3`
-(modern countries it spatially overlaps), so scoring keys off that:
+sampled at ~25-year snapshots. Each region carries `member_iso3` (modern
+countries it overlaps), so scoring keys off that. Each factor uses real data
+where it exists, then a tiered fallback (tagged honestly in factor_sources):
 
-  - safety   → Brecke conflicts attributed by polity-name keywords (precise)
-               + ISO3→Brecke macro-region code (coarse fallback)
-  - economy  → Maddison gdppc of the best-covered member country, percentile-ranked
-  - governance → V-Dem polyarchy (1789+) of best member, else neutral 50
-  - health   → era baseline 45 (no per-polity manual layer yet)
-  - religious_tolerance → neutral 50 (no global pre-modern source yet)
+  - safety   → Brecke (≤1999) / UCDP (2000-2024) conflicts, by polity-name
+               keyword (precise) + macro-region code (coarse); else baseline
+  - economy  → Maddison gdppc (best member, interpolated), else modeled
+               macro-region baseline; percentile-ranked across the year
+  - governance → V-Dem polyarchy (1789+), else State Antiquity Index, else neutral
+  - health   → OWID life expectancy (country → continental), adjusted for
+               war + wealth; else pre-modern baseline
+  - religious_tolerance → V-Dem freedom-of-religion (1789+), else era-aware
+               modeled baseline minus witch-trial persecution penalty
 
-Overall = 0.30*safety + 0.20*governance + 0.20*economy + 0.15*health + 0.15*tolerance,
-then normalized per-year so the year's worst region = 1, best = 100.
+Overall = Σ weight[f]·factor[f], where the WEIGHTS are dynamic per year:
+a violent year weights safety highest, an age of persecution weights tolerance
+highest (war/persecution scored as percentiles WITHIN their source regime —
+see _signal_distributions). The same weights apply to every region that year.
+Scores are then normalized per-year so the worst region = 1, best = 100.
 """
 from __future__ import annotations
 import bisect
@@ -163,6 +170,9 @@ REAL_SOURCES = frozenset({"brecke", "ucdp", "lifeexp", "maddison", "vdem",
 # Brecke's conflict catalog ends here; build_extracts switches to UCDP after it,
 # so safety provenance is tagged accordingly (kept in sync with build_extracts).
 BRECKE_LAST_YEAR = 1999
+# UCDP's last covered year. Past this, no conflict dataset backs safety — it sits
+# at the baseline and is tagged honestly (not counted as real data).
+CONFLICT_LAST_YEAR = 2024
 
 
 def score_region(year: int, region: dict, sorted_gdppc: list[float],
@@ -171,7 +181,15 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     members = region.get("member_iso3", [])
 
     safety, conflict_hits = compute_safety(name, members, conflicts)
-    safety_src = "brecke" if year <= BRECKE_LAST_YEAR else "ucdp"
+    # Honest safety provenance: a conflict catalog only backs the score where one
+    # covers the year (Brecke ≤1999, UCDP 2000–2024). Past that, safety rests on
+    # the baseline and is tagged 'baseline' (not counted as real data).
+    if year <= BRECKE_LAST_YEAR:
+        safety_src = "brecke"
+    elif year <= CONFLICT_LAST_YEAR:
+        safety_src = "ucdp"
+    else:
+        safety_src = "baseline"
     econ_val, econ_iso, econ_est_src = economy_estimate(members, year)
     econ_score, econ_src = compute_economy(econ_val, econ_est_src, sorted_gdppc)
 
@@ -240,13 +258,15 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
                     weights["religious_tolerance"] * relig)
 
     sources = [CLIO_SOURCE]
-    if conflict_hits:
-        if safety_src == "ucdp":
-            sources.append({"label": "UCDP/PRIO Armed Conflict Dataset v25.1",
-                            "url": "https://ucdp.uu.se/downloads/"})
-        else:
-            sources.append({"label": "Brecke Conflict Catalog 1400-2000",
-                            "url": "https://brecke.inta.gatech.edu/research/conflict/"})
+    # Cite the conflict catalog whenever it backed the safety score — even with no
+    # active conflict, "the catalog records no war here" is a real (consulted)
+    # signal, matching how safety_src/data_quality count it.
+    if safety_src == "ucdp":
+        sources.append({"label": "UCDP/PRIO Armed Conflict Dataset v25.1",
+                        "url": "https://ucdp.uu.se/downloads/"})
+    elif safety_src == "brecke":
+        sources.append({"label": "Brecke Conflict Catalog 1400-1999",
+                        "url": "https://brecke.inta.gatech.edu/research/conflict/"})
     if econ_src == "maddison":
         sources.append({
             "label": f"Maddison Project 2023 — {econ_iso} {year} gdppc={econ_val:.0f}",
@@ -337,43 +357,45 @@ def _war_raw(conflicts: list[dict]) -> int:
     return sum((c.get("fatalities") or 0) for c in conflicts)
 
 
-def era_of(year: int) -> str | None:
-    """Era name covering `year`, or None."""
-    for era, (lo, hi, _) in ERA_SNAPSHOTS.items():
-        if lo <= year <= hi:
-            return era
-    return None
+def war_regime(year: int) -> str:
+    """Which conflict source backs this year — they measure on different scales
+    (Brecke carries real death counts; UCDP is a flat intensity proxy), so their
+    percentiles must be taken separately. Mirrors build_extracts' handoff."""
+    return "ucdp" if year > BRECKE_LAST_YEAR else "brecke"
 
 
-def persecution_signal(year: int) -> float:
-    """How persecutory the world was in `year` — real V-Dem global religious
-    repression (1789+, 0–1) where available, else recorded witch-trial intensity
-    (pre-1789). Compared only WITHIN an era (see _era_distributions) so the two
-    sources never share a scale."""
+def persecution_signal(year: int) -> tuple[float, str]:
+    """How persecutory the world was in `year`, with its source regime: real
+    V-Dem global religious repression (1789+, 0–1) where available, else recorded
+    witch-trial intensity (pre-1789, counts). The two scales are incomparable, so
+    the regime is returned and percentiles are taken within it."""
     rep = vdem_lookup.global_repression(year)
-    return rep if rep is not None else float(factors.persecution_level(year))
+    if rep is not None:
+        return rep, "vdem"
+    return float(factors.persecution_level(year)), "witch"
 
 
 @lru_cache(maxsize=1)
-def _era_distributions() -> dict[str, tuple[list[float], list[float]]]:
-    """Per-era sorted (war, persecution) distributions. Percentiles are taken
-    within an era so a violent/persecuting year is judged against its OWN era —
-    avoiding the cross-era scale mismatch (Brecke vs UCDP fatalities; witch-trial
-    counts vs V-Dem repression)."""
-    tmp: dict[str, tuple[list[float], list[float]]] = {}
+def _signal_distributions() -> tuple[dict[str, list[float]], dict[str, list[float]]]:
+    """(war_by_regime, persecution_by_regime) sorted distributions. Percentiles
+    are taken WITHIN a source regime (Brecke vs UCDP fatalities; witch-trial
+    counts vs V-Dem repression) so signals on different scales are never compared
+    — the boundary is the data source (1789 for persecution, 1999 for war), not
+    the era boundary, so a year is ranked only against others measured the same
+    way."""
+    war: dict[str, list[float]] = {}
+    pers: dict[str, list[float]] = {}
     for p in RAW.glob("*_extract.json"):
         try:
             yr = int(p.name.split("_")[0])
         except ValueError:
             continue
-        era = era_of(yr)
-        if era is None:
-            continue
         d = json.loads(p.read_text(encoding="utf-8"))
-        wars, pers = tmp.setdefault(era, ([], []))
-        wars.append(_war_raw(d.get("conflicts", [])))
-        pers.append(persecution_signal(yr))
-    return {era: (sorted(w), sorted(pr)) for era, (w, pr) in tmp.items()}
+        war.setdefault(war_regime(yr), []).append(_war_raw(d.get("conflicts", [])))
+        val, reg = persecution_signal(yr)
+        pers.setdefault(reg, []).append(val)
+    return ({k: sorted(v) for k, v in war.items()},
+            {k: sorted(v) for k, v in pers.items()})
 
 
 def _pct(val: float, sorted_vals: list[float]) -> float:
@@ -399,10 +421,11 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
 
     era_summary = wiki.get("summary", "") if wiki else ""
 
-    dist_war, dist_pers = _era_distributions().get(era_of(year), ([], []))
+    war_dist, pers_dist = _signal_distributions()
+    pval, preg = persecution_signal(year)
     weights, emphasis = year_weights(
-        _pct(_war_raw(raw["conflicts"]), dist_war),
-        _pct(persecution_signal(year), dist_pers),
+        _pct(_war_raw(raw["conflicts"]), war_dist.get(war_regime(year), [])),
+        _pct(pval, pers_dist.get(preg, [])),
     )
 
     # Per-year economy percentile baseline: every region's GDP/cap estimate —

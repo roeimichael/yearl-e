@@ -637,9 +637,8 @@ const SOURCE_TAGS = {
   "ucdp":     { label: "UCDP",     title: "UCDP/PRIO Armed Conflict Dataset v25.1 (2000+ conflicts)" },
   "vdem":     { label: "V-Dem",    title: "Varieties of Democracy v15 — Electoral Democracy Index (polyarchy)" },
   "statehist": { label: "State Hist.", title: "State Antiquity Index (Borcan-Olsson-Putterman) — pre-1789 state-continuity governance proxy" },
-  "wiki":     { label: "Wiki",     title: "Wikipedia (manual context)" },
   "neutral":  { label: "neutral",  title: "No sourced data — held at 50" },
-  "baseline": { label: "era",      title: "Era baseline with manual adjustment" },
+  "baseline": { label: "baseline", title: "Default baseline — no dataset covers this cell" },
   "lifeexp":  { label: "Life exp.", title: "Life expectancy (Our World in Data: Riley, Zijdeman, UN) — country or regional" },
   "modeled":  { label: "modeled",  title: "Modeled estimate from the era's regional pattern (no direct dataset)" },
   "witch-trials": { label: "Witch trials", title: "Leeson & Russ witch-trial database — recorded persecution lowers tolerance" },
@@ -667,7 +666,7 @@ function renderEmphasis(emphasis, weights) {
 
 // Honest data-quality chip: how many of the 5 factors rest on real measured data.
 function qualityChip(dq) {
-  if (dq == null) return "";
+  if (!dq) return "";   // null/0 → no cell data; don't show a misleading chip
   const n = Number(dq) || 0;
   const cls = n >= 4 ? "dq-good" : n <= 2 ? "dq-thin" : "dq-mid";
   const title = `${n}/5 factors from real measured data (rest modeled/neutral)`;
@@ -746,9 +745,6 @@ function showReveal(p) {
   const score = g.score ?? 0;
   const rankText = (p.rank != null && p.total_regions != null)
     ? `rank ${p.rank} of ${p.total_regions}` : "";
-  // Legacy field (kept harmless if removed from DOM later).
-  const legacy = $("reveal-score");
-  if (legacy) legacy.textContent = `Your score: ${score} / 100 · ${rankText}`;
   const numEl = $("reveal-score-num");
   if (numEl) {
     numEl.textContent = "0";

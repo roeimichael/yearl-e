@@ -117,8 +117,6 @@ def today():
         "label": y["label"],
         "era_summary": y["era_summary"],
         "region_set": regions_mod.region_set_of(y),
-        # pre-guess hint: what this year weighted most (dynamic per-year weights)
-        "emphasis": y.get("emphasis"),
     }
 
 
@@ -194,7 +192,7 @@ _ARCHIVE_SOURCES = [
 ]
 _ARCHIVE_STORAGE = [
     {"path": "data/raw/", "what": "downloaded source datasets + per-year extracts", "ships": False},
-    {"path": "data/region_sets/", "what": "the 14 Cliopatria time-snapshots (borders + member_iso3)", "ships": True},
+    {"path": "data/region_sets/", "what": "Cliopatria time-snapshots (borders + member_iso3)", "ships": True},
     {"path": "data/year_scores/", "what": "scored year files (one per year)", "ships": True},
 ]
 
@@ -204,8 +202,6 @@ def _quality_summary() -> dict:
     """Per-factor real-vs-modeled fill and the data_quality histogram across every
     scored cell. Scans all year files once (cached) for the /archive page."""
     from collections import Counter
-    real = {"safety": "brecke", "health": "lifeexp", "economy": "maddison"}
-    real_gov = {"vdem", "statehist"}
     factors_fill = {f: Counter() for f in
                     ["safety", "health", "economy", "governance", "religious_tolerance"]}
     dq = Counter()

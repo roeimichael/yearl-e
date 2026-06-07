@@ -5,19 +5,10 @@ region set. Award `region.score` directly (0-100). The reveal also shows the
 top-ranked region for that year.
 """
 from __future__ import annotations
-from math import asin, cos, radians, sin, sqrt
 
 from shapely.geometry import Point
 
 from .regions import load_region_set, load_year, region_set_of
-
-
-def haversine_km(lat1: float, lon1: float, lat2: float, lon2: float) -> float:
-    r = 6371.0
-    dlat = radians(lat2 - lat1)
-    dlon = radians(lon2 - lon1)
-    a = sin(dlat / 2) ** 2 + cos(radians(lat1)) * cos(radians(lat2)) * sin(dlon / 2) ** 2
-    return 2 * r * asin(sqrt(a))
 
 
 # Beyond this distance (degrees) from EVERY land polygon, a click is open ocean
