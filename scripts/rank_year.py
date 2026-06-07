@@ -251,11 +251,34 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     else:
         parts.append(f"Religious tolerance {relig}/100 (modeled from the era's state-religion "
                      f"pattern for this region).")
-    summary = " ".join(parts)
+    factor_vals = {"safety": safety, "health": health, "economy": econ_score,
+                   "governance": gov, "religious_tolerance": relig}
+    factor_sources = {"safety": safety_src, "health": health_src, "economy": econ_src,
+                      "governance": gov_src, "religious_tolerance": relig_src}
 
-    overall = round(weights["safety"] * safety + weights["governance"] * gov +
-                    weights["economy"] * econ_score + weights["health"] * health +
-                    weights["religious_tolerance"] * relig)
+    # HONEST SCORING: the overall is a dynamic weighted average over ONLY the
+    # factors backed by real measured data for this (region, year). A factor with
+    # no record (modeled baseline / neutral / baseline) is NOT blended into the
+    # score — its weight is dropped and the rest renormalized — so the number
+    # never rests on a guess. The modeled estimate is still kept for display, but
+    # flagged as not scored. (Safety counts wherever a conflict catalog covers the
+    # year, since "no recorded war" is itself real information.)
+    scored_factors = [f for f, s in factor_sources.items() if s in REAL_SOURCES]
+    if scored_factors:
+        wsum = sum(weights[f] for f in scored_factors) or 1.0
+        overall = round(sum(weights[f] * factor_vals[f] for f in scored_factors) / wsum)
+    else:  # no real data at all (not reached in current coverage) — neutral
+        overall = 50
+
+    # Append a transparency line naming what was / wasn't counted.
+    missing = [f for f in factor_vals if f not in scored_factors]
+    if missing:
+        parts.append("Scored on %d of 5 factors with recorded data (%s); %s had no "
+                     "record for this region and year and were left out of the score."
+                     % (len(scored_factors),
+                        ", ".join(f.replace("_", " ") for f in scored_factors),
+                        ", ".join(f.replace("_", " ") for f in missing)))
+    summary = " ".join(parts)
 
     sources = [CLIO_SOURCE]
     # Cite the conflict catalog whenever it backed the safety score — even with no
@@ -303,29 +326,16 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
             "url": "https://github.com/JakeRuss/witch-trials",
         })
 
-    factor_sources = {
-        "safety": safety_src,
-        "health": health_src,
-        "economy": econ_src,
-        "governance": gov_src,
-        "religious_tolerance": relig_src,
-    }
-    # Honest data quality: how many of the 5 factors rest on real measured data
-    # (vs a modeled baseline / neutral fallback). 'sparse_data' now means the cell
-    # genuinely leans on assumptions (≤2 real), not a blanket era flag.
-    real_count = sum(1 for s in factor_sources.values() if s in REAL_SOURCES)
+    # data_quality = how many of the 5 factors actually backed the score.
+    # 'sparse_data' = the score rests on ≤2 real factors.
+    real_count = len(scored_factors)
 
     return {
         "score": overall,
         "summary": summary,
-        "factors": {
-            "safety": safety,
-            "health": health,
-            "economy": econ_score,
-            "governance": gov,
-            "religious_tolerance": relig,
-        },
+        "factors": factor_vals,
         "factor_sources": factor_sources,
+        "scored_factors": scored_factors,   # which factors the score is computed from
         "data_quality": real_count,
         "sources": sources,
         "ruler": None,

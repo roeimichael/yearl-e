@@ -664,28 +664,44 @@ function renderEmphasis(emphasis, weights) {
   el.classList.remove("hidden");
 }
 
-// Honest data-quality chip: how many of the 5 factors rest on real measured data.
+// How many of the 5 factors actually backed the score (the rest had no record
+// and were left out — see renderFactors).
 function qualityChip(dq) {
   if (!dq) return "";   // null/0 → no cell data; don't show a misleading chip
   const n = Number(dq) || 0;
   const cls = n >= 4 ? "dq-good" : n <= 2 ? "dq-thin" : "dq-mid";
-  const title = `${n}/5 factors from real measured data (rest modeled/neutral)`;
-  return ` <span class="dq-chip ${cls}" title="${escapeHtml(title)}">data ${n}/5</span>`;
+  const title = `Score computed from ${n} of 5 factors that have recorded data; the rest had no record and were left out.`;
+  return ` <span class="dq-chip ${cls}" title="${escapeHtml(title)}">scored on ${n}/5</span>`;
 }
 
-function renderFactors(factors, factorSources) {
+// Factors NOT in `scored` had no recorded data for this region/year — they are
+// shown greyed and labelled "no data", never blended into the score.
+function renderFactors(factors, factorSources, scored) {
   if (!factors || !Object.keys(factors).length) return "";
+  const scoredSet = (scored && scored.length) ? new Set(scored)
+    : null;  // fallback: infer from source if the list wasn't sent
+  const MODELED = new Set(["modeled", "neutral", "baseline"]);
   return Object.entries(factors).map(([k, v]) => {
     const num = Number(v) || 0;
+    const srcKey = factorSources?.[k];
+    const isScored = scoredSet ? scoredSet.has(k) : !MODELED.has(srcKey);
+    const tag = SOURCE_TAGS[srcKey];
+    const label = escapeHtml(String(k).replace(/_/g, " "));
+    if (!isScored) {
+      // no recorded data — transparent placeholder, not a fabricated score
+      return `<div class="factor not-scored" title="No recorded data for this region in this year — left out of the score">
+        <span class="factor-label">${label}<span class="ns-chip">no data</span></span>
+        <span class="factor-bar"><span style="width:0%"></span></span>
+        <span class="factor-val">—</span>
+      </div>`;
+    }
     const cls = num >= 70 ? "high" : num <= 35 ? "low" : "";
     const pct = Math.max(0, Math.min(100, num));
-    const srcKey = factorSources?.[k];
-    const tag = SOURCE_TAGS[srcKey];
     const srcChip = tag
       ? `<span class="src-chip src-${escapeHtml(srcKey)}" title="${escapeHtml(tag.title)}">${escapeHtml(tag.label)}</span>`
       : "";
     return `<div class="factor">
-      <span class="factor-label">${escapeHtml(String(k).replace(/_/g, " "))}${srcChip}</span>
+      <span class="factor-label">${label}${srcChip}</span>
       <span class="factor-bar ${cls}"><span style="width:${pct}%"></span></span>
       <span class="factor-val">${num}</span>
     </div>`;
@@ -761,14 +777,14 @@ function showReveal(p) {
   setHtml("reveal-pick",
     `<strong>You picked: ${escapeHtml(pickName)}</strong>${qualityChip(g.data_quality)}` +
     `<div>${escapeHtml(g.summary || "")}</div>`);
-  setHtml("reveal-pick-factors", renderFactors(g.factors, g.factor_sources));
+  setHtml("reveal-pick-factors", renderFactors(g.factors, g.factor_sources, g.scored_factors));
   setHtml("reveal-pick-sources", renderSources(g.sources));
   const top = p.top || {};
   const topName = displayNameFor(top.region_name, top.region_id);
   setHtml("reveal-top",
     `<strong>${escapeHtml(topName)} · ${top.score ?? 0}/100</strong>${qualityChip(top.data_quality)}` +
     `<div>${escapeHtml(top.summary || "")}</div>`);
-  setHtml("reveal-top-factors", renderFactors(top.factors, top.factor_sources));
+  setHtml("reveal-top-factors", renderFactors(top.factors, top.factor_sources, top.scored_factors));
   setHtml("reveal-top-sources", renderSources(top.sources));
   renderStats();
   $("reveal-card")?.classList.remove("hidden");
@@ -801,7 +817,7 @@ function showExploreDetail(rid) {
      </div>` +
     rulerLine +
     `<p class="ed-summary">${escapeHtml(cell.summary || "")}</p>` +
-    `<div class="factors ed-factors">${renderFactors(cell.factors, cell.factor_sources)}</div>` +
+    `<div class="factors ed-factors">${renderFactors(cell.factors, cell.factor_sources, cell.scored_factors)}</div>` +
     (cell.sources?.length
       ? `<div class="ed-sources"><span class="ed-sources-label">Sources</span>${renderSources(cell.sources)}</div>`
       : "");

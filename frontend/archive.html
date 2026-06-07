@@ -95,6 +95,10 @@
           border-radius:4px; background:rgba(139,107,58,.18); color:var(--accent);
           border:1px solid rgba(139,107,58,.34); cursor:help; white-space:nowrap; }
   .chip.modeled, .chip.neutral, .chip.baseline { opacity:.6; }
+  .factor.not-scored { opacity:.5; }
+  .ns-chip { font-size:8.5px; letter-spacing:.04em; text-transform:uppercase; padding:1px 4px;
+             border-radius:4px; background:rgba(110,82,38,.1); color:var(--accent);
+             border:1px dashed rgba(110,82,38,.45); white-space:nowrap; }
   .d-sources { margin-top:12px; font-size:12px; }
   .d-sources a, .d-sources span { display:block; margin:2px 0; }
 
@@ -284,13 +288,23 @@ async function openYear(year, btn){
   panel.scrollIntoView({behavior:"smooth", block:"nearest"});
 }
 
-function factorRows(factors, sources){
+function factorRows(factors, sources, scored){
+  const scoredSet = (scored && scored.length) ? new Set(scored) : null;
+  const MODELED = new Set(["modeled","neutral","baseline"]);
   return FACTORS.map(k => {
     const v = factors?.[k] ?? 0;
+    const src = sources?.[k];
+    const isScored = scoredSet ? scoredSet.has(k) : !MODELED.has(src);
+    const label = esc(k.replace(/_/g," "));
+    if (!isScored){
+      return `<div class="factor not-scored" title="No recorded data for this region/year — left out of the score">`+
+             `<span class="factor-label">${label}<span class="ns-chip">no data</span></span>`+
+             `<span class="bar"><span style="width:0%"></span></span><span class="fval">—</span></div>`;
+    }
     const cls = v>=70?"high":v<=35?"low":"";
-    const src = sources?.[k]; const tag = TAGS[src];
+    const tag = TAGS[src];
     const chip = tag ? `<span class="chip ${esc(src)}" title="${esc(tag.t)}">${esc(tag.l)}</span>` : "";
-    return `<div class="factor"><span class="factor-label">${esc(k.replace(/_/g," "))}${chip}</span>`+
+    return `<div class="factor"><span class="factor-label">${label}${chip}</span>`+
            `<span class="bar ${cls}"><span style="width:${Math.max(0,Math.min(100,v))}%"></span></span>`+
            `<span class="fval">${v}</span></div>`;
   }).join("");
@@ -304,8 +318,8 @@ function showRegion(i){
   }).join("") || `<span class="muted">No sources cited.</span>`;
   $("detail-body").innerHTML =
     `<h3>${esc(r.name)}</h3>`+
-    `<div class="d-score">${r.score}/100 · ${r.data_quality}/5 factors from real data${r.sparse_data?" · sparse":""}</div>`+
-    factorRows(r.factors, r.factor_sources)+
+    `<div class="d-score">${r.score}/100 · scored on ${r.data_quality}/5 factors with recorded data${r.sparse_data?" · sparse":""}</div>`+
+    factorRows(r.factors, r.factor_sources, r.scored_factors)+
     `<div class="d-summary">${esc(r.summary||"")}</div>`+
     `<div class="d-sources">${srcs}</div>`;
   $("detail-overlay").classList.remove("hidden");

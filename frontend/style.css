@@ -553,6 +553,17 @@ button:active {
   transform: translateY(-1px);
 }
 
+/* a factor with no recorded data — shown for transparency, not in the score */
+.factor.not-scored { opacity: 0.5; }
+.factor.not-scored .factor-bar { background: rgba(110, 82, 38, 0.10); }
+.factor.not-scored .factor-val { color: var(--ink-soft); }
+.ns-chip {
+  display: inline-block; font-size: 9px; letter-spacing: 0.05em; text-transform: uppercase;
+  padding: 1px 5px; border-radius: 6px; white-space: nowrap;
+  background: rgba(110, 82, 38, 0.12); color: var(--ink-soft);
+  border: 1px dashed rgba(110, 82, 38, 0.4);
+}
+
 .src-chip.src-maddison { background: rgba(58, 139, 94, 0.18); color: var(--good); border-color: rgba(58, 139, 94, 0.4); }
 .src-chip.src-brecke   { background: rgba(139, 58, 58, 0.18); color: var(--danger); border-color: rgba(139, 58, 58, 0.4); }
 .src-chip.src-vdem     { background: rgba(74, 90, 160, 0.18); color: #5a6cb0; border-color: rgba(74, 90, 160, 0.4); }
