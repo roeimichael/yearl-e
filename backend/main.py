@@ -140,11 +140,15 @@ def today_guess(body: GuessIn):
     if not ranking:
         raise HTTPException(500, "year file has no scored regions")
     top_id, top = ranking[0]
-    rank_idx = next((i for i, (rid, _) in enumerate(ranking) if rid == pick["region_id"]), -1)
+    # Open-ocean miss has no region_id, so it has no rank in the year's ranking.
+    is_miss = pick.get("region_id") is None
+    rank_idx = -1 if is_miss else next(
+        (i for i, (rid, _) in enumerate(ranking) if rid == pick["region_id"]), -1)
     return {
         "guess": pick,
-        "rank": rank_idx + 1,
+        "rank": None if is_miss else rank_idx + 1,
         "total_regions": len(ranking),
+        "miss": is_miss,
         "top": {
             "region_id": top_id,
             "region_name": set_regions[top_id]["name"],

@@ -11,6 +11,7 @@ const escapeHtml = (s) =>
 
 const state = {
   date: null,
+  dayNumber: null,
   year: null,
   label: null,
   era: null,
@@ -80,6 +81,7 @@ async function boot() {
 
   const today = await todayP;
   state.date = today?.date ?? null;
+  state.dayNumber = today?.day_number ?? null;
   state.year = today?.year ?? null;
   state.label = today?.label ?? "";
   state.era = today?.era_summary ?? "";
@@ -331,6 +333,14 @@ async function onMapClick(e) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ year: state.year, lat, lon: lng }),
       });
+      // Open-ocean / Antarctica miss: don't lock the day — let them try land.
+      if (payload?.miss) {
+        state.mode = "playing";
+        clearPick();
+        showToast("That's open water — click on land to make your guess.", 2600);
+        return;
+      }
+      recordStats(state.dayNumber, payload?.guess?.score ?? 0);
       try {
         localStorage.setItem(`yearle:v1:guess:${state.date}`, JSON.stringify(payload));
       } catch (e) { /* private mode / quota — non-fatal, reveal still shows */ }
@@ -430,6 +440,50 @@ function attachHoverHandlers() {
   map.on("touchmove", () => { clearPress(); state._longPress = true; });
 }
 
+// ─── streak + stats ────────────────────────────────────────────────────────
+// One row in localStorage, updated once per day (guarded by lastDay so a reload
+// of an already-played day never double-counts). Streak = consecutive day_numbers.
+const STATS_KEY = "yearle:v1:stats";
+
+function loadStats() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STATS_KEY) || "{}");
+    return {
+      games: s.games || 0, streak: s.streak || 0, maxStreak: s.maxStreak || 0,
+      lastDay: s.lastDay ?? null, scoreSum: s.scoreSum || 0,
+    };
+  } catch (e) { return { games: 0, streak: 0, maxStreak: 0, lastDay: null, scoreSum: 0 }; }
+}
+
+function recordStats(dayNumber, score) {
+  if (dayNumber == null) return loadStats();
+  const s = loadStats();
+  if (s.lastDay === dayNumber) return s;            // already counted today
+  s.streak = (s.lastDay === dayNumber - 1) ? s.streak + 1 : 1;
+  s.maxStreak = Math.max(s.maxStreak, s.streak);
+  s.games += 1;
+  s.scoreSum += Number(score) || 0;
+  s.lastDay = dayNumber;
+  try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) { /* non-fatal */ }
+  return s;
+}
+
+function renderStats() {
+  const el = $("reveal-stats");
+  if (!el) return;
+  const s = loadStats();
+  if (!s.games) { el.classList.add("hidden"); el.innerHTML = ""; return; }
+  const avg = Math.round(s.scoreSum / s.games);
+  const cell = (label, val) => `<div class="stat-cell"><div class="stat-num">${val}</div>` +
+    `<div class="stat-lbl">${label}</div></div>`;
+  el.innerHTML =
+    cell("Played", s.games) +
+    cell("🔥 Streak", s.streak) +
+    cell("Max", s.maxStreak) +
+    cell("Avg", avg);
+  el.classList.remove("hidden");
+}
+
 // ─── share ───────────────────────────────────────────────────────────────────
 
 function scoreEmoji(v) {
@@ -450,9 +504,11 @@ function buildShareText(payload) {
   const url = location.origin || "yearl-e";
   const where = displayNameFor(g.region_name, g.region_id) || "?";
   const rank = (p.rank != null && p.total_regions != null) ? ` · rank ${p.rank}/${p.total_regions}` : "";
+  const st = loadStats();
+  const streak = st.streak > 1 ? `\n🔥 ${st.streak}-day streak` : "";
   return `yearl-e ${dayTag} · ${state.label}
 ${score}/100${rank} · ${where}
-${grid}
+${grid}${streak}
 ${url}`;
 }
 
@@ -717,6 +773,7 @@ function showReveal(p) {
     `<div>${escapeHtml(top.summary || "")}</div>`);
   setHtml("reveal-top-factors", renderFactors(top.factors, top.factor_sources));
   setHtml("reveal-top-sources", renderSources(top.sources));
+  renderStats();
   $("reveal-card")?.classList.remove("hidden");
 }
 

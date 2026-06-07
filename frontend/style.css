@@ -599,6 +599,32 @@ button:active {
   font-weight: 600;
 }
 
+/* streak + stats row on the reveal card */
+.reveal-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 8px;
+  margin: 14px 0 4px;
+  padding: 12px 8px;
+  border-top: 1px solid rgba(139, 107, 58, 0.25);
+  border-bottom: 1px solid rgba(139, 107, 58, 0.25);
+}
+.reveal-stats .stat-cell { text-align: center; flex: 1; }
+.reveal-stats .stat-num {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--ink);
+}
+.reveal-stats .stat-lbl {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 4px;
+}
+
 /* honest per-cell data-quality chip */
 .dq-chip {
   display: inline-block;
