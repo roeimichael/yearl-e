@@ -199,22 +199,37 @@ _ARCHIVE_STORAGE = [
 
 @lru_cache(maxsize=1)
 def _quality_summary() -> dict:
-    """Per-factor real-vs-modeled fill and the data_quality histogram across every
-    scored cell. Scans all year files once (cached) for the /archive page."""
+    """Per-factor real-vs-modeled fill, the data_quality histogram, AND a per-year
+    grid (region count + average real-factor fraction + emphasis) across every
+    scored cell. One scan of all year files, cached, for the /archive page."""
     from collections import Counter
     factors_fill = {f: Counter() for f in
                     ["safety", "health", "economy", "governance", "religious_tolerance"]}
     dq = Counter()
     cells = 0
+    year_grid = []
     for yr in regions_mod.available_years():
         y = regions_mod.load_year(yr)
         if not y:
             continue
-        for c in y["regions"].values():
+        yr_cells = y["regions"].values()
+        dq_sum = 0
+        for c in yr_cells:
             cells += 1
-            dq[c.get("data_quality", 0)] += 1
+            d = c.get("data_quality", 0)
+            dq[d] += 1
+            dq_sum += d
             for f, fill in factors_fill.items():
                 fill[c.get("factor_sources", {}).get(f, "?")] += 1
+        n = len(y["regions"])
+        year_grid.append({
+            "year": yr,
+            "regions": n,
+            # mean real-factor fraction 0–1 (how much of this year rests on real data)
+            "quality": round(dq_sum / n / 5, 3) if n else 0,
+            "emphasis": y.get("emphasis"),
+            "set": y.get("region_set"),
+        })
     if not cells:
         return {}
     def pct(counter):
@@ -225,6 +240,7 @@ def _quality_summary() -> dict:
         "data_quality_hist": {str(k): round(100 * v / cells) for k, v in sorted(dq.items())},
         "note": "factor_fill = % of cells per source; data_quality = how many of the 5 "
                 "factors rest on real measured data (vs modeled/neutral fallback).",
+        "year_grid": year_grid,
     }
 
 
@@ -259,6 +275,48 @@ def archive():
         "sources": _ARCHIVE_SOURCES,
         "storage": _ARCHIVE_STORAGE,
         "quality": _quality_summary(),
+    }
+
+
+@app.get("/api/archive/year/{year}")
+def archive_year(year: int):
+    """Read-only 'play from archive' view of one year: every region with its name,
+    score, the 5 factors + their sources, summary and citations, sorted best-first.
+    Joins region names from the snapshot onto the scored cells."""
+    y = regions_mod.load_year(year)
+    if not y:
+        raise HTTPException(404, f"no data for {year}")
+    set_name = regions_mod.region_set_of(y)
+    try:
+        rs = regions_mod.load_region_set(set_name)
+    except FileNotFoundError:
+        rs = {}
+    out = []
+    for rid, cell in y["regions"].items():
+        meta = rs.get(rid, {})
+        out.append({
+            "id": rid,
+            "name": meta.get("name", rid),
+            "member_iso3": meta.get("member_iso3", []),
+            "score": cell.get("score"),
+            "raw_score": cell.get("raw_score"),
+            "factors": cell.get("factors", {}),
+            "factor_sources": cell.get("factor_sources", {}),
+            "summary": cell.get("summary", ""),
+            "sources": cell.get("sources", []),
+            "data_quality": cell.get("data_quality", 0),
+            "sparse_data": cell.get("sparse_data", True),
+            "ruler": cell.get("ruler"),
+        })
+    out.sort(key=lambda r: (r["score"] is None, -(r["score"] or 0)))
+    return {
+        "year": year,
+        "label": y["label"],
+        "region_set": set_name,
+        "era_summary": y.get("era_summary", ""),
+        "emphasis": y.get("emphasis"),
+        "weights": y.get("weights", {}),
+        "regions": out,
     }
 
 

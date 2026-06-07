@@ -5,27 +5,105 @@
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>yearl-e — data archive</title>
 <style>
-  :root { --bg:#1a1410; --paper:#ede4cf; --ink:#2a1f12; --accent:#7a5a30; }
+  :root {
+    --bg:#1a1410; --panel:#241b11; --paper:#ede4cf; --ink:#2a1f12;
+    --accent:#7a5a30; --gold:#d8c075; --line:#3a2f22; --muted:#9a8b6a;
+    --good:#5f8a3f; --danger:#b06a4a;
+  }
   * { box-sizing: border-box; }
   body { margin:0; background:var(--bg); color:var(--paper);
          font-family:'Iowan Old Style','Palatino','Georgia',serif; line-height:1.5; }
-  .wrap { max-width: 980px; margin: 0 auto; padding: 28px 20px 80px; }
-  a { color:#d8c075; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 26px 18px 90px; }
+  a { color:var(--gold); }
   h1 { font-size: 30px; margin: 0 0 2px; }
-  h2 { font-size: 20px; margin: 34px 0 10px; border-bottom:1px solid #4a3924; padding-bottom:6px; }
-  .sub { color:#c9b89a; margin: 0 0 6px; }
+  h2 { font-size: 19px; margin: 30px 0 8px; border-bottom:1px solid var(--line); padding-bottom:6px; }
+  .sub { color:#c9b89a; margin: 0 0 4px; }
   .back { font-size:14px; }
-  table { width:100%; border-collapse: collapse; font-size:14px; margin-top:6px; background:rgba(237,228,207,0.03); }
-  th, td { text-align:left; padding:7px 10px; border-bottom:1px solid #3a2f22; vertical-align:top; }
-  th { color:#d8c075; font-weight:600; }
-  code { background:rgba(237,228,207,0.10); padding:1px 5px; border-radius:3px; font-size:13px; }
-  .pill { display:inline-block; background:rgba(122,90,48,0.35); border:1px solid #7a5a30;
-          border-radius:10px; padding:1px 8px; margin:2px 3px 2px 0; font-size:12px; }
-  details { margin:6px 0; }
-  summary { cursor:pointer; color:#d8c075; padding:4px 0; }
-  .muted { color:#9a8b6a; }
-  .stat { font-size:15px; }
+  .muted { color:var(--muted); }
   .err { color:#e0a0a0; }
+  code { background:rgba(237,228,207,0.10); padding:1px 5px; border-radius:3px; font-size:13px; }
+
+  /* coverage banner */
+  .coverage { display:flex; flex-wrap:wrap; gap:10px; margin:14px 0 8px; }
+  .cov-card { flex:1; min-width:200px; background:var(--panel); border:1px solid var(--line);
+              border-radius:8px; padding:10px 13px; }
+  .cov-card .big { font-size:22px; font-weight:600; color:var(--gold); }
+  .cov-card.have { border-left:3px solid var(--good); }
+  .cov-card.missing { border-left:3px solid var(--danger); opacity:0.85; }
+
+  /* legend */
+  .legend { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin:10px 0 6px; font-size:12.5px; color:var(--muted); }
+  .legend .scale { display:flex; height:12px; width:160px; border-radius:3px; overflow:hidden; border:1px solid var(--line); }
+  .legend .scale span { flex:1; }
+
+  /* year matrix */
+  .era-block { margin: 8px 0 18px; }
+  .era-block h3 { font-size:15px; margin:14px 0 8px; color:var(--gold); font-weight:600; }
+  .matrix { display:grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap:4px; }
+  .yr {
+    aspect-ratio: 1.5 / 1; border:none; border-radius:4px; cursor:pointer;
+    color:#1a1410; font-family:inherit; font-size:12px; font-weight:600;
+    display:flex; align-items:center; justify-content:center;
+    transition: transform .08s, box-shadow .08s; padding:0;
+  }
+  .yr:hover { transform: translateY(-2px); box-shadow:0 3px 8px rgba(0,0,0,.4); }
+  .yr.sel { outline:2px solid var(--gold); outline-offset:1px; }
+
+  /* year panel */
+  #year-panel { margin-top:18px; background:var(--panel); border:1px solid var(--line);
+                border-radius:10px; padding:16px 18px; }
+  #year-panel.hidden, .hidden { display:none; }
+  .yp-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
+  .yp-head .yr-big { font-size:26px; font-weight:700; color:var(--paper); }
+  .yp-emph { font-style:italic; color:var(--gold); font-size:14px; }
+  .yp-weights { display:flex; flex-wrap:wrap; gap:5px; margin:8px 0 4px; }
+  .yp-weights .w { font-size:10px; text-transform:capitalize; padding:1px 6px; border-radius:5px;
+                   background:rgba(216,192,117,0.14); color:#cdbd8c; }
+  .yp-weights .w:first-child { background:rgba(216,192,117,0.32); color:var(--paper); font-weight:600; }
+  .yp-era { color:var(--muted); font-size:13px; margin:6px 0 12px; }
+
+  .region-grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap:7px; }
+  .rg {
+    display:flex; align-items:center; gap:10px; text-align:left; cursor:pointer;
+    background:rgba(237,228,207,0.04); border:1px solid var(--line); border-radius:7px;
+    padding:7px 10px; color:var(--paper); font-family:inherit; transition:background .1s;
+  }
+  .rg:hover { background:rgba(237,228,207,0.10); }
+  .rg .sc { font-size:20px; font-weight:700; min-width:34px; text-align:center; }
+  .rg .nm { flex:1; font-size:13.5px; line-height:1.25; }
+  .rg .dq { font-size:9px; letter-spacing:.04em; text-transform:uppercase; padding:1px 5px;
+            border-radius:5px; white-space:nowrap; }
+
+  /* region detail modal */
+  #detail-overlay { position:fixed; inset:0; background:rgba(10,7,4,.7); display:flex;
+                    align-items:center; justify-content:center; padding:18px; z-index:50; }
+  #detail-card { background:linear-gradient(160deg,#efe6d0,#e4d8bc); color:var(--ink);
+                 border-radius:12px; max-width:520px; width:100%; max-height:88vh; overflow:auto;
+                 padding:22px 24px; box-shadow:0 16px 50px rgba(0,0,0,.6); position:relative; }
+  #detail-card h3 { margin:0 0 2px; font-size:22px; }
+  #detail-card .d-score { font-size:15px; color:var(--accent); margin-bottom:10px; }
+  #detail-card .close { position:absolute; top:12px; right:14px; background:none; border:none;
+                        font-size:24px; cursor:pointer; color:var(--ink); line-height:1; }
+  .d-summary { font-size:13.5px; color:#4a3924; margin:10px 0 14px; }
+  .factor { display:grid; grid-template-columns: 130px 1fr 30px; align-items:center; gap:8px; margin:5px 0; }
+  .factor-label { font-size:12.5px; text-transform:capitalize; display:flex; gap:6px; align-items:center; }
+  .bar { height:9px; background:rgba(110,82,38,.16); border-radius:3px; overflow:hidden; }
+  .bar > span { display:block; height:100%; background:var(--accent); }
+  .bar.high > span { background:var(--good); } .bar.low > span { background:var(--danger); }
+  .fval { font-size:12px; text-align:right; font-variant-numeric:tabular-nums; }
+  .chip { font-size:8.5px; letter-spacing:.04em; text-transform:uppercase; padding:1px 4px;
+          border-radius:4px; background:rgba(139,107,58,.18); color:var(--accent);
+          border:1px solid rgba(139,107,58,.34); cursor:help; white-space:nowrap; }
+  .chip.modeled, .chip.neutral, .chip.baseline { opacity:.6; }
+  .d-sources { margin-top:12px; font-size:12px; }
+  .d-sources a, .d-sources span { display:block; margin:2px 0; }
+
+  details { margin:8px 0; } summary { cursor:pointer; color:var(--gold); padding:5px 0; font-size:15px; }
+  table { width:100%; border-collapse:collapse; font-size:13.5px; margin-top:6px; }
+  th,td { text-align:left; padding:6px 9px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { color:var(--gold); font-weight:600; }
+  .pill { display:inline-block; background:rgba(122,90,48,.3); border:1px solid var(--accent);
+          border-radius:9px; padding:1px 7px; margin:2px 3px 2px 0; font-size:11.5px; }
 </style>
 </head>
 <body>
@@ -33,75 +111,211 @@
   <p class="back"><a href="/">← back to the game</a></p>
   <h1 id="title">yearl-e data archive</h1>
   <p class="sub" id="subtitle">loading…</p>
+
   <div id="content"></div>
 </div>
 
-<script>
-const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+<div id="detail-overlay" class="hidden">
+  <div id="detail-card">
+    <button class="close" id="detail-close" aria-label="close">×</button>
+    <div id="detail-body"></div>
+  </div>
+</div>
 
-async function load() {
-  const el = document.getElementById("content");
+<script>
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const $ = id => document.getElementById(id);
+
+// factor source → friendly chip (kept in sync with the game's SOURCE_TAGS)
+const TAGS = {
+  maddison:{l:"Maddison",t:"Maddison Project 2023 GDP/capita"},
+  brecke:{l:"Brecke",t:"Brecke Conflict Catalog 1400-1999"},
+  ucdp:{l:"UCDP",t:"UCDP/PRIO Armed Conflict Dataset (2000+)"},
+  vdem:{l:"V-Dem",t:"V-Dem Electoral Democracy Index"},
+  "vdem-relig":{l:"V-Dem relig.",t:"V-Dem freedom of religion (1789+)"},
+  statehist:{l:"State Hist.",t:"State Antiquity Index (pre-1789 governance proxy)"},
+  lifeexp:{l:"Life exp.",t:"Life expectancy (Our World in Data)"},
+  "witch-trials":{l:"Witch trials",t:"Leeson-Russ witch-trial persecution"},
+  modeled:{l:"modeled",t:"Modeled regional baseline (no direct dataset)"},
+  neutral:{l:"neutral",t:"No sourced data — held at 50"},
+  baseline:{l:"baseline",t:"Default baseline — no dataset covers this cell"},
+};
+const FACTORS = ["safety","health","economy","governance","religious_tolerance"];
+
+// quality (0–1 real-factor fraction) → muted terracotta→olive colour
+function qcolor(q){
+  const lo=[166,96,58], hi=[95,138,63];
+  const c=lo.map((v,i)=>Math.round(v+(hi[i]-v)*q));
+  return `rgb(${c[0]},${c[1]},${c[2]})`;
+}
+function dqStyle(dq){
+  if (dq>=4) return "background:rgba(95,138,63,.2);color:#3d6b2a;border:1px solid rgba(95,138,63,.4)";
+  if (dq<=2) return "background:rgba(176,106,74,.2);color:#a04a2a;border:1px solid rgba(176,106,74,.4)";
+  return "background:rgba(139,107,58,.18);color:#7a5a30;border:1px solid rgba(139,107,58,.34)";
+}
+
+let GRID = [];          // year_grid from /api/archive
+let curYear = null;     // {regions:[...], ...} of the open year
+
+async function boot(){
   let d;
   try {
     const r = await fetch("/api/archive");
-    if (!r.ok) throw new Error("HTTP " + r.status);
+    if (!r.ok) throw new Error("HTTP "+r.status);
     d = await r.json();
-  } catch (e) {
-    el.innerHTML = `<p class="err">Couldn't load archive: ${esc(e.message)}. Is the backend running?</p>`;
+  } catch(e){
+    $("content").innerHTML = `<p class="err">Couldn't load archive: ${esc(e.message)}. Is the backend running?</p>`;
     return;
   }
-  document.getElementById("title").textContent = d.title || "yearl-e data archive";
+  $("title").textContent = d.title || "yearl-e data archive";
   const y = d.years || {};
-  document.getElementById("subtitle").textContent =
-    `${d.era || ""} · ${y.count || 0} years (${y.min ?? "?"}–${y.max ?? "?"}) · ${(d.snapshots||[]).length} border snapshots`;
-
-  let html = "";
-
-  // Storage layout
-  html += `<h2>Where the data lives</h2><table><tr><th>Path</th><th>Contents</th><th>Ships to prod?</th></tr>`;
-  for (const s of d.storage || [])
-    html += `<tr><td><code>${esc(s.path)}</code></td><td>${esc(s.what)}</td><td>${s.ships ? "✔ yes" : "— local only"}</td></tr>`;
-  html += `</table>`;
-
-  // Sources
-  html += `<h2>Scoring data sources</h2><table><tr><th>Factor</th><th>Dataset</th><th>Coverage</th></tr>`;
-  for (const s of d.sources || [])
-    html += `<tr><td><strong>${esc(s.factor)}</strong></td><td>${esc(s.dataset)}</td><td class="muted">${esc(s.coverage)}</td></tr>`;
-  html += `</table>`;
-
-  // Data quality — real vs modeled fill across every (year × region) cell
-  const q = d.quality || {};
-  if (q.cells) {
-    html += `<h2>Data quality</h2>`;
-    html += `<p class="muted">${esc(q.note || "")} ${q.cells.toLocaleString()} cells total (year × region).</p>`;
-    html += `<table><tr><th>Factor</th><th>Source breakdown (% of cells)</th></tr>`;
-    for (const [f, fill] of Object.entries(q.factor_fill || {})) {
-      const parts = Object.entries(fill).map(([k, v]) => `${esc(k)} ${v}%`).join(" · ");
-      html += `<tr><td><strong>${esc(f.replace(/_/g, " "))}</strong></td><td class="muted">${parts}</td></tr>`;
-    }
-    html += `</table>`;
-    const dh = q.data_quality_hist || {};
-    const bars = Object.entries(dh).map(([k, v]) =>
-      `<span class="pill">${esc(k)}/5 real → ${v}%</span>`).join("");
-    html += `<p class="muted" style="margin-top:8px">How many of the 5 factors per cell rest on real measured data:</p><div>${bars}</div>`;
-  }
-
-  // Snapshots
-  html += `<h2>Border snapshots &amp; regions</h2>`;
-  html += `<p class="muted">Each game-year uses the nearest snapshot's borders. Region names below are exactly how the game labels them.</p>`;
-  html += `<table><tr><th>Snapshot set</th><th>Year</th><th>Regions</th><th>Years using it</th></tr>`;
-  for (const s of d.snapshots || [])
-    html += `<tr><td><code>${esc(s.set)}</code></td><td>${esc(s.snapshot_year)}</td><td>${s.region_count}</td><td>${s.years_using}</td></tr>`;
-  html += `</table>`;
-
-  for (const s of d.snapshots || []) {
-    const pills = (s.regions || []).map(n => `<span class="pill">${esc(n)}</span>`).join("");
-    html += `<details><summary>${esc(s.set)} — ${s.region_count} regions</summary><div>${pills}</div></details>`;
-  }
-
-  el.innerHTML = html;
+  $("subtitle").textContent = `${d.era||""} · ${y.count||0} years · ${(d.snapshots||[]).length} border snapshots`;
+  GRID = (d.quality && d.quality.year_grid) || [];
+  render(d);
 }
-load();
+
+function render(d){
+  let h = "";
+
+  // ── coverage: what we have / what's missing ──
+  const q = d.quality || {};
+  const yrs = d.years || {};
+  const dh = q.data_quality_hist || {};
+  const richPct = (dh["4"]||0) + (dh["5"]||0);
+  h += `<h2>Coverage</h2><div class="coverage">`;
+  h += `<div class="cov-card have"><div class="big">${yrs.count||0}</div>years implemented<br/><span class="muted">${yrs.min}–${yrs.max}, two eras</span></div>`;
+  h += `<div class="cov-card have"><div class="big">${(q.cells||0).toLocaleString()}</div>region-year cells<br/><span class="muted">${richPct}% have ≥4/5 real factors</span></div>`;
+  h += `<div class="cov-card missing"><div class="big">pre-1500</div>not yet implemented<br/><span class="muted">ancient + medieval (back to 1000 BCE)</span></div>`;
+  h += `<div class="cov-card missing"><div class="big">post-2026</div>not generated<br/><span class="muted">future years</span></div>`;
+  h += `</div>`;
+
+  // ── the year matrix ──
+  h += `<h2>Year matrix — click a year to read it</h2>`;
+  h += `<div class="legend"><span>data completeness:</span>`;
+  h += `<span class="scale">${[0,.25,.5,.75,1].map(v=>`<span style="background:${qcolor(v)}"></span>`).join("")}</span>`;
+  h += `<span>thin / mostly modeled → rich / mostly real</span></div>`;
+
+  const eras = [
+    {name:"Early Modern", lo:1500, hi:1815},
+    {name:"Modern", lo:1816, hi:2026},
+  ];
+  for (const e of eras){
+    const cells = GRID.filter(g => g.year>=e.lo && g.year<=e.hi);
+    if (!cells.length) continue;
+    h += `<div class="era-block"><h3>${e.name} (${e.lo}–${e.hi}) · ${cells.length} years</h3><div class="matrix">`;
+    for (const g of cells){
+      const c = qcolor(g.quality);
+      h += `<button class="yr" data-year="${g.year}" style="background:${c}" `+
+           `title="${g.year} · ${g.regions} regions · ${Math.round(g.quality*100)}% real · ${esc(g.emphasis||"")}">${g.year}</button>`;
+    }
+    h += `</div></div>`;
+  }
+
+  // ── year panel (filled on click) ──
+  h += `<div id="year-panel" class="hidden"></div>`;
+
+  // ── collapsible reference: storage / sources / data quality / snapshots ──
+  h += `<h2>Reference</h2>`;
+
+  h += `<details><summary>Where the data lives</summary><table><tr><th>Path</th><th>Contents</th><th>Ships?</th></tr>`;
+  for (const s of d.storage||[]) h += `<tr><td><code>${esc(s.path)}</code></td><td>${esc(s.what)}</td><td>${s.ships?"✔ yes":"— local only"}</td></tr>`;
+  h += `</table></details>`;
+
+  h += `<details><summary>Scoring data sources</summary><table><tr><th>Factor</th><th>Dataset</th><th>Coverage</th></tr>`;
+  for (const s of d.sources||[]) h += `<tr><td><strong>${esc(s.factor)}</strong></td><td>${esc(s.dataset)}</td><td class="muted">${esc(s.coverage)}</td></tr>`;
+  h += `</table></details>`;
+
+  if (q.cells){
+    h += `<details><summary>Data quality — real vs modeled across ${q.cells.toLocaleString()} cells</summary>`;
+    h += `<p class="muted">${esc(q.note||"")}</p><table><tr><th>Factor</th><th>Source breakdown (% of cells)</th></tr>`;
+    for (const [f,fill] of Object.entries(q.factor_fill||{})){
+      h += `<tr><td><strong>${esc(f.replace(/_/g," "))}</strong></td><td class="muted">${Object.entries(fill).map(([k,v])=>`${esc(k)} ${v}%`).join(" · ")}</td></tr>`;
+    }
+    h += `</table><p class="muted" style="margin-top:8px">Real factors per cell (of 5):</p><div>`;
+    h += Object.entries(dh).map(([k,v])=>`<span class="pill">${esc(k)}/5 → ${v}%</span>`).join("");
+    h += `</div></details>`;
+  }
+
+  h += `<details><summary>Border snapshots (${(d.snapshots||[]).length}) &amp; their regions</summary>`;
+  for (const s of d.snapshots||[]){
+    const pills = (s.regions||[]).map(n=>`<span class="pill">${esc(n)}</span>`).join("");
+    h += `<details style="margin-left:14px"><summary>${esc(s.set)} — ${s.region_count} regions (${s.years_using} years)</summary><div>${pills}</div></details>`;
+  }
+  h += `</details>`;
+
+  $("content").innerHTML = h;
+  $("content").querySelectorAll(".yr").forEach(b => b.addEventListener("click", () => openYear(+b.dataset.year, b)));
+}
+
+async function openYear(year, btn){
+  document.querySelectorAll(".yr.sel").forEach(b=>b.classList.remove("sel"));
+  if (btn) btn.classList.add("sel");
+  const panel = $("year-panel");
+  panel.classList.remove("hidden");
+  panel.innerHTML = `<p class="muted">loading ${year}…</p>`;
+  let d;
+  try {
+    const r = await fetch(`/api/archive/year/${year}`);
+    if (!r.ok) throw new Error("HTTP "+r.status);
+    d = await r.json();
+  } catch(e){ panel.innerHTML = `<p class="err">Couldn't load ${year}: ${esc(e.message)}</p>`; return; }
+  curYear = d;
+
+  const weights = Object.entries(d.weights||{}).sort((a,b)=>b[1]-a[1])
+    .map(([k,v])=>`<span class="w">${esc(k.replace(/_/g," "))} ${Math.round(v*100)}%</span>`).join("");
+  let h = `<div class="yp-head"><span class="yr-big">${d.year}</span>`;
+  if (d.emphasis) h += `<span class="yp-emph">⚖ ${esc(d.emphasis)}</span>`;
+  h += `</div>`;
+  if (weights) h += `<div class="yp-weights">${weights}</div>`;
+  if (d.era_summary) h += `<div class="yp-era">${esc(d.era_summary)}</div>`;
+  h += `<p class="muted" style="font-size:12.5px">${d.regions.length} regions · click one to read its stats — best-scoring first</p>`;
+  h += `<div class="region-grid">`;
+  d.regions.forEach((r,i) => {
+    const sc = r.score ?? 0;
+    h += `<button class="rg" data-i="${i}">`+
+         `<span class="sc" style="color:${qcolor(sc/100)}">${sc}</span>`+
+         `<span class="nm">${esc(r.name)}</span>`+
+         `<span class="dq" style="${dqStyle(r.data_quality)}">${r.data_quality}/5</span>`+
+         `</button>`;
+  });
+  h += `</div>`;
+  panel.innerHTML = h;
+  panel.querySelectorAll(".rg").forEach(b => b.addEventListener("click", () => showRegion(+b.dataset.i)));
+  panel.scrollIntoView({behavior:"smooth", block:"nearest"});
+}
+
+function factorRows(factors, sources){
+  return FACTORS.map(k => {
+    const v = factors?.[k] ?? 0;
+    const cls = v>=70?"high":v<=35?"low":"";
+    const src = sources?.[k]; const tag = TAGS[src];
+    const chip = tag ? `<span class="chip ${esc(src)}" title="${esc(tag.t)}">${esc(tag.l)}</span>` : "";
+    return `<div class="factor"><span class="factor-label">${esc(k.replace(/_/g," "))}${chip}</span>`+
+           `<span class="bar ${cls}"><span style="width:${Math.max(0,Math.min(100,v))}%"></span></span>`+
+           `<span class="fval">${v}</span></div>`;
+  }).join("");
+}
+
+function showRegion(i){
+  const r = curYear?.regions?.[i]; if (!r) return;
+  const srcs = (r.sources||[]).map(s => {
+    const label = esc(s.label||s.url||"source");
+    return /^https?:\/\//.test(s.url||"") ? `<a href="${esc(s.url)}" target="_blank" rel="noopener">↗ ${label}</a>` : `<span class="muted">↗ ${label}</span>`;
+  }).join("") || `<span class="muted">No sources cited.</span>`;
+  $("detail-body").innerHTML =
+    `<h3>${esc(r.name)}</h3>`+
+    `<div class="d-score">${r.score}/100 · ${r.data_quality}/5 factors from real data${r.sparse_data?" · sparse":""}</div>`+
+    factorRows(r.factors, r.factor_sources)+
+    `<div class="d-summary">${esc(r.summary||"")}</div>`+
+    `<div class="d-sources">${srcs}</div>`;
+  $("detail-overlay").classList.remove("hidden");
+}
+
+$("detail-close").addEventListener("click", () => $("detail-overlay").classList.add("hidden"));
+$("detail-overlay").addEventListener("click", e => { if (e.target.id==="detail-overlay") $("detail-overlay").classList.add("hidden"); });
+document.addEventListener("keydown", e => { if (e.key==="Escape") $("detail-overlay").classList.add("hidden"); });
+
+boot();
 </script>
 </body>
 </html>
