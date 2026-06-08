@@ -633,6 +633,7 @@ document.addEventListener("keydown", (e) => {
 // Friendly tags for factor_sources values (which dataset/source produced the score).
 const SOURCE_TAGS = {
   "maddison": { label: "Maddison", title: "Maddison Project 2023 GDP/cap" },
+  "hced":     { label: "HCED",     title: "Historical Conflict Event Dataset (Dincecco et al.) — geolocated battles, used before 1400" },
   "brecke":   { label: "Brecke",   title: "Brecke Conflict Catalog 1400-1999" },
   "ucdp":     { label: "UCDP",     title: "UCDP/PRIO Armed Conflict Dataset v25.1 (2000+ conflicts)" },
   "vdem":     { label: "V-Dem",    title: "Varieties of Democracy v15 — Electoral Democracy Index (polyarchy)" },

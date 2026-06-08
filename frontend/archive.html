@@ -134,6 +134,7 @@ const $ = id => document.getElementById(id);
 // factor source → friendly chip (kept in sync with the game's SOURCE_TAGS)
 const TAGS = {
   maddison:{l:"Maddison",t:"Maddison Project 2023 GDP/capita"},
+  hced:{l:"HCED",t:"Historical Conflict Event Dataset (battles, used before 1400)"},
   brecke:{l:"Brecke",t:"Brecke Conflict Catalog 1400-1999"},
   ucdp:{l:"UCDP",t:"UCDP/PRIO Armed Conflict Dataset (2000+)"},
   vdem:{l:"V-Dem",t:"V-Dem Electoral Democracy Index"},
@@ -188,9 +189,9 @@ function render(d){
   const dh = q.data_quality_hist || {};
   const richPct = (dh["4"]||0) + (dh["5"]||0);
   h += `<h2>Coverage</h2><div class="coverage">`;
-  h += `<div class="cov-card have"><div class="big">${yrs.count||0}</div>years implemented<br/><span class="muted">${yrs.min}–${yrs.max}, two eras</span></div>`;
+  h += `<div class="cov-card have"><div class="big">${yrs.count||0}</div>years implemented<br/><span class="muted">${yrs.min}–${yrs.max}, three eras</span></div>`;
   h += `<div class="cov-card have"><div class="big">${(q.cells||0).toLocaleString()}</div>region-year cells<br/><span class="muted">${richPct}% have ≥4/5 real factors</span></div>`;
-  h += `<div class="cov-card missing"><div class="big">pre-1500</div>not yet implemented<br/><span class="muted">ancient + medieval (back to 1000 BCE)</span></div>`;
+  h += `<div class="cov-card missing"><div class="big">pre-1000</div>not yet implemented<br/><span class="muted">ancient + early medieval (back to 1000 BCE)</span></div>`;
   h += `<div class="cov-card missing"><div class="big">post-2026</div>not generated<br/><span class="muted">future years</span></div>`;
   h += `</div>`;
 
@@ -201,6 +202,7 @@ function render(d){
   h += `<span>thin / mostly modeled → rich / mostly real</span></div>`;
 
   const eras = [
+    {name:"Medieval", lo:1000, hi:1499},
     {name:"Early Modern", lo:1500, hi:1815},
     {name:"Modern", lo:1816, hi:2026},
   ];
