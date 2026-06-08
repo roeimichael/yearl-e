@@ -22,25 +22,24 @@ STATEHIST = ROOT / "data" / "raw" / "statehist.xlsx"
 
 @lru_cache(maxsize=1)
 def _table() -> dict[str, dict[int, float]]:
-    """iso3 -> {period_end_year: state-antiquity score 0-50}, for the standard
-    statext block (1401-1450 … 1951-2000)."""
+    """iso3 -> {period_end_year: state-antiquity score 0-50}.
+
+    The summary sheet is a contiguous block of 50-year bins running back from
+    1951-2000. We map them POSITIONALLY — the first range column = period-end
+    2000, each next column −50 — so the BCE half is exposed too. (Its labels
+    switch to ascending BCE ranges, e.g. '451-500' = 500-451 BCE; a label parser
+    misreads those and stops at the CE↔BCE duplicate, which is why governance
+    used to cut off at 1 CE.) Spans ~3450 BCE → 2000 CE."""
     import openpyxl
+    import re
     wb = openpyxl.load_workbook(STATEHIST, read_only=True, data_only=True)
     rows = list(wb["statehist summary"].iter_rows(values_only=True))
     labels = rows[0]
-    # column index -> period_end_year, for the first contiguous statext block
-    col_end: dict[int, int] = {}
-    seen: set[int] = set()
-    for i, lab in enumerate(labels):
-        if isinstance(lab, str) and "-" in lab:
-            try:
-                end = int(lab.split("-")[1])
-            except ValueError:
-                continue
-            if end in seen:        # stop at the second (duplicate) block
-                break
-            seen.add(end)
-            col_end[i] = end
+    period_re = re.compile(r"^\s*\d+\s*-\s*\d+\s*$")
+    period_cols = [i for i, lab in enumerate(labels)
+                   if isinstance(lab, str) and period_re.match(lab)]
+    # contiguous 50-year bins, newest first: col k → period-end 2000 − 50k
+    col_end = {col: 2000 - 50 * k for k, col in enumerate(period_cols)}
     out: dict[str, dict[int, float]] = {}
     for r in rows[2:]:
         iso = r[0]

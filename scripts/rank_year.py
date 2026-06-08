@@ -56,6 +56,11 @@ YEAR_OUT = ROOT / "data" / "year_scores"
 # data/region_sets/{era}_{snapshot_year}.json. To add an era, build its
 # snapshots with build_cliopatria_era.py then add a row here.
 ERA_SNAPSHOTS: dict[str, tuple[int, int, list[int]]] = {
+    # Ancient era: 1000 BCE - 999 CE on a 100-year grid (borders + sources are
+    # coarse this far back). Governance from the State Antiquity Index (real, back
+    # to 3500 BCE); safety from HCED (sparse); economy only at the 1 CE Maddison
+    # benchmark; health/tolerance unrecorded -> honestly omitted. No year 0.
+    "ancient": (-1000, 999, list(range(-1000, 0, 100)) + [1] + list(range(100, 1000, 100))),
     # Medieval era: borders move slowly, so a 50-year grid is plenty. Safety here
     # comes from HCED (Brecke's catalog starts 1400); governance from the State
     # Antiquity Index (full 50-yr coverage); economy from sparse Maddison
@@ -478,7 +483,7 @@ def rank(year: int, raw: dict, wiki: dict | None = None) -> dict:
 
     return {
         "year": year,
-        "label": f"{year} CE",
+        "label": f"{year} CE" if year > 0 else f"{abs(year)} BCE",
         "region_set": set_name,
         "era_summary": era_summary,
         "weights": {k: round(v, 3) for k, v in weights.items()},
@@ -503,7 +508,9 @@ def build_year_file(year: int) -> Path | None:
         for cell in out["regions"].values():
             cell.setdefault("sources", []).append(wiki_src)
     YEAR_OUT.mkdir(parents=True, exist_ok=True)
-    out_path = YEAR_OUT / f"{year:04d}.json"
+    # BCE years are stored "-0500.json" (sign + 4-digit abs) to match the backend
+    # loader (backend/regions.py); positive years stay "1607.json".
+    out_path = YEAR_OUT / (f"-{abs(year):04d}.json" if year < 0 else f"{year:04d}.json")
     # newline="\n": keep LF on every platform so re-runs match the committed data
     # byte-for-byte (Windows would otherwise rewrite all files with CRLF).
     out_path.write_text(json.dumps(out, indent=2, ensure_ascii=False),
