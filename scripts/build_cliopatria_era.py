@@ -169,14 +169,18 @@ def build_regions(feats: list[dict], ne_isos, ne_shapes, tree, idx_to_iso,
             continue
         if len(clusters) > 1:
             split_count += 1
-        # largest cluster keeps the bare name; ocean-separated parts get the
-        # dominant modern country appended so the id stays unique + meaningful.
+        # When a polity is ocean-split into multiple guess-regions, tag EVERY part
+        # with its dominant modern country — including the largest. Otherwise the
+        # biggest cluster keeps the bare imperial name and reads misleadingly
+        # (e.g. the British Empire's Australian landmass labelled just "British
+        # Colonial Empire"). Single-cluster polities keep their plain name.
         clusters.sort(key=lambda g: -g.area)
+        multi = len(clusters) > 1
         for k, geom in enumerate(clusters):
             iso = members_for(geom, ne_isos, ne_shapes, tree, idx_to_iso)
             name = p["Name"]
             base = slugify(name)
-            if k > 0:
+            if multi:
                 tag = iso[0] if iso else f"part{k}"
                 name = f"{name} ({tag})"
                 base = f"{base}_{slugify(tag)}"
@@ -192,7 +196,8 @@ def build_regions(feats: list[dict], ne_isos, ne_shapes, tree, idx_to_iso,
                 "geometry": mapping(geom),
             })
 
-    # min_zoom by area rank (thirds), same convention as build_region_polygons.
+    # min_zoom by area rank (thirds): big regions stay labelled when zoomed out,
+    # small ones surface only as you zoom in.
     regions.sort(key=lambda r: -r["_area"])
     n = len(regions)
     for i, r in enumerate(regions):

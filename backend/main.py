@@ -11,6 +11,7 @@ import hashlib
 import logging
 import os
 import random
+from functools import lru_cache
 from datetime import date, datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
@@ -95,7 +96,7 @@ def get_regions(set_name: str | None = Query(None, alias="set")):
     resolves to TODAY's rolled year's snapshot so the globe matches the puzzle."""
     if not set_name:
         y = regions_mod.load_year(_roll_year(_today_iso()))
-        set_name = y.get("region_set", "early_modern") if y else "early_modern"
+        set_name = regions_mod.region_set_of(y) if y else regions_mod.DEFAULT_REGION_SET
     try:
         return {"set": set_name, "regions": regions_mod.region_set_for_serving(set_name)}
     except FileNotFoundError:
@@ -115,7 +116,7 @@ def today():
         "year": year,
         "label": y["label"],
         "era_summary": y["era_summary"],
-        "region_set": y.get("region_set", "early_modern"),
+        "region_set": regions_mod.region_set_of(y),
     }
 
 
@@ -130,18 +131,22 @@ def today_guess(body: GuessIn):
     y = regions_mod.load_year(body.year)
     if not y:
         raise HTTPException(400, f"unknown year {body.year}")
-    set_name = y.get("region_set", "early_modern")
+    set_name = regions_mod.region_set_of(y)
     set_regions = regions_mod.load_region_set(set_name)
     pick = score_guess(body.year, body.lat, body.lon)
     ranking = regions_mod.ranked(body.year)
     if not ranking:
         raise HTTPException(500, "year file has no scored regions")
     top_id, top = ranking[0]
-    rank_idx = next((i for i, (rid, _) in enumerate(ranking) if rid == pick["region_id"]), -1)
+    # Open-ocean miss has no region_id, so it has no rank in the year's ranking.
+    is_miss = pick.get("region_id") is None
+    rank_idx = -1 if is_miss else next(
+        (i for i, (rid, _) in enumerate(ranking) if rid == pick["region_id"]), -1)
     return {
         "guess": pick,
-        "rank": rank_idx + 1,
+        "rank": None if is_miss else rank_idx + 1,
         "total_regions": len(ranking),
+        "miss": is_miss,
         "top": {
             "region_id": top_id,
             "region_name": set_regions[top_id]["name"],
@@ -149,11 +154,17 @@ def today_guess(body: GuessIn):
             "summary": top["summary"],
             "factors": top.get("factors", {}),
             "factor_sources": top.get("factor_sources", {}),
+            "scored_factors": top.get("scored_factors", []),
             "sources": top.get("sources", []),
             "ruler": top.get("ruler"),
+            "data_quality": top.get("data_quality", 0),
+            "sparse_data": top.get("sparse_data", True),
         },
         "era_summary": y["era_summary"],
         "label": y["label"],
+        # how this year's score was weighted (dynamic per-year weights)
+        "emphasis": y.get("emphasis"),
+        "weights": y.get("weights", {}),
     }
 
 
@@ -171,6 +182,146 @@ def year_regions(year: int):
     }
 
 
+# Factor → dataset, for the archive page (kept in sync with scripts/rank_year + factors).
+_ARCHIVE_SOURCES = [
+    {"factor": "Safety", "dataset": "Brecke Conflict Catalog (to 1999) + UCDP/PRIO (2000+)", "coverage": "active wars/rebellions per region-year"},
+    {"factor": "Economy", "dataset": "Maddison Project 2023 + modeled regional baseline", "coverage": "real GDP/cap where available (39%), else modeled macro-region baseline"},
+    {"factor": "Governance", "dataset": "V-Dem v15 + State Antiquity Index", "coverage": "V-Dem 1789+; State-continuity proxy before (92% statehist)"},
+    {"factor": "Health", "dataset": "Our World in Data — life expectancy", "coverage": "country (Tier 1) + continental aggregate (Tier 2, from 1770)"},
+    {"factor": "Religious tolerance", "dataset": "V-Dem freedom-of-religion (1789+) + witch-trials + modeled baseline", "coverage": "real V-Dem religious freedom 1789+ (84% of modern cells); modeled baseline minus witch-trial penalty before"},
+    {"factor": "Borders", "dataset": "Cliopatria / Seshat (CC-BY 4.0)", "coverage": "year-keyed historical polities, 3400 BCE-2024 CE"},
+]
+_ARCHIVE_STORAGE = [
+    {"path": "data/raw/", "what": "downloaded source datasets + per-year extracts", "ships": False},
+    {"path": "data/region_sets/", "what": "Cliopatria time-snapshots (borders + member_iso3)", "ships": True},
+    {"path": "data/year_scores/", "what": "scored year files (one per year)", "ships": True},
+]
+
+
+@lru_cache(maxsize=1)
+def _quality_summary() -> dict:
+    """Per-factor real-vs-modeled fill, the data_quality histogram, AND a per-year
+    grid (region count + average real-factor fraction + emphasis) across every
+    scored cell. One scan of all year files, cached, for the /archive page."""
+    from collections import Counter
+    factors_fill = {f: Counter() for f in
+                    ["safety", "health", "economy", "governance", "religious_tolerance"]}
+    dq = Counter()
+    cells = 0
+    year_grid = []
+    for yr in regions_mod.available_years():
+        y = regions_mod.load_year(yr)
+        if not y:
+            continue
+        yr_cells = y["regions"].values()
+        dq_sum = 0
+        for c in yr_cells:
+            cells += 1
+            d = c.get("data_quality", 0)
+            dq[d] += 1
+            dq_sum += d
+            for f, fill in factors_fill.items():
+                fill[c.get("factor_sources", {}).get(f, "?")] += 1
+        n = len(y["regions"])
+        year_grid.append({
+            "year": yr,
+            "regions": n,
+            # mean real-factor fraction 0–1 (how much of this year rests on real data)
+            "quality": round(dq_sum / n / 5, 3) if n else 0,
+            "emphasis": y.get("emphasis"),
+            "set": y.get("region_set"),
+        })
+    if not cells:
+        return {}
+    def pct(counter):
+        return {k: round(100 * v / cells) for k, v in counter.most_common()}
+    return {
+        "cells": cells,
+        "factor_fill": {f: pct(c) for f, c in factors_fill.items()},
+        "data_quality_hist": {str(k): round(100 * v / cells) for k, v in sorted(dq.items())},
+        "note": "factor_fill = % of cells per source; data_quality = how many of the 5 "
+                "factors rest on real measured data (vs modeled/neutral fallback).",
+        "year_grid": year_grid,
+    }
+
+
+@app.get("/api/archive")
+def archive():
+    """Inventory of everything the game ships: snapshots, regions, years, sources.
+    Powers the /archive data-browser page."""
+    import re
+    from collections import Counter
+    rs_dir = ROOT / "data" / "region_sets"
+    snaps = []
+    for p in sorted(rs_dir.glob("*.json")):
+        m = re.search(r"_(-?\d+)\.json$", p.name)
+        snap_year = int(m.group(1)) if m else None
+        regions = regions_mod.load_region_set(p.stem)
+        snaps.append({
+            "set": p.stem,
+            "snapshot_year": snap_year,
+            "region_count": len(regions),
+            "regions": sorted(r["name"] for r in regions.values()),
+        })
+    years = regions_mod.available_years()
+    snap_years = [s["snapshot_year"] for s in snaps if s["snapshot_year"] is not None]
+    usage = Counter(min(snap_years, key=lambda s: abs(s - y)) for y in years) if snap_years else Counter()
+    for s in snaps:
+        s["years_using"] = usage.get(s["snapshot_year"], 0)
+    return {
+        "title": "yearl-e data archive",
+        "era": "early modern + modern (1500–2026)",
+        "years": {"count": len(years), "min": min(years), "max": max(years)} if years else {},
+        "snapshots": snaps,
+        "sources": _ARCHIVE_SOURCES,
+        "storage": _ARCHIVE_STORAGE,
+        "quality": _quality_summary(),
+    }
+
+
+@app.get("/api/archive/year/{year}")
+def archive_year(year: int):
+    """Read-only 'play from archive' view of one year: every region with its name,
+    score, the 5 factors + their sources, summary and citations, sorted best-first.
+    Joins region names from the snapshot onto the scored cells."""
+    y = regions_mod.load_year(year)
+    if not y:
+        raise HTTPException(404, f"no data for {year}")
+    set_name = regions_mod.region_set_of(y)
+    try:
+        rs = regions_mod.load_region_set(set_name)
+    except FileNotFoundError:
+        rs = {}
+    out = []
+    for rid, cell in y["regions"].items():
+        meta = rs.get(rid, {})
+        out.append({
+            "id": rid,
+            "name": meta.get("name", rid),
+            "member_iso3": meta.get("member_iso3", []),
+            "score": cell.get("score"),
+            "raw_score": cell.get("raw_score"),
+            "factors": cell.get("factors", {}),
+            "factor_sources": cell.get("factor_sources", {}),
+            "scored_factors": cell.get("scored_factors", []),
+            "summary": cell.get("summary", ""),
+            "sources": cell.get("sources", []),
+            "data_quality": cell.get("data_quality", 0),
+            "sparse_data": cell.get("sparse_data", True),
+            "ruler": cell.get("ruler"),
+        })
+    out.sort(key=lambda r: (r["score"] is None, -(r["score"] or 0)))
+    return {
+        "year": year,
+        "label": y["label"],
+        "region_set": set_name,
+        "era_summary": y.get("era_summary", ""),
+        "emphasis": y.get("emphasis"),
+        "weights": y.get("weights", {}),
+        "regions": out,
+    }
+
+
 # ─── static (local dev) ──────────────────────────────────────────────────────
 
 if SERVE_FRONTEND and FRONTEND.exists():
@@ -179,5 +330,9 @@ if SERVE_FRONTEND and FRONTEND.exists():
     @app.get("/")
     def index():
         return FileResponse(FRONTEND / "index.html")
+
+    @app.get("/archive")
+    def archive_page():
+        return FileResponse(FRONTEND / "archive.html")
 else:
     log.info("frontend mount disabled (SERVE_FRONTEND=%s)", SERVE_FRONTEND)

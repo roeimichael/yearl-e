@@ -14,7 +14,10 @@ ROOT = Path(__file__).parent.parent
 SRC = ROOT / "data" / "raw" / "vdem_v15_core.csv"
 DST = ROOT / "data" / "raw" / "vdem_governance.csv"
 
-WANT = ["country_name", "country_text_id", "year", "v2x_polyarchy", "v2x_libdem"]
+# v2clrelig_osp = freedom of religion, linearized 0–4 ordinal (real per-country
+# tolerance signal, 1789+). Used by the religious-tolerance factor.
+WANT = ["country_name", "country_text_id", "year", "v2x_polyarchy", "v2x_libdem",
+        "v2clrelig_osp"]
 
 
 def main() -> int:

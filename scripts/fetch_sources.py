@@ -24,6 +24,8 @@ SOURCES = {
     "owid_life_exp.csv": "https://ourworldindata.org/grapher/life-expectancy.csv?csvType=full&useColumnShortNames=true",
     # tolerance factor: 10,940 European witch-trial records 1300-1850 (Leeson & Russ 2018)
     "witch_trials.csv": "https://raw.githubusercontent.com/JakeRuss/witch-trials/master/data/trials.csv",
+    # governance pre-1789: State Antiquity Index v4.0 (Borcan-Olsson-Putterman), 3500 BCE-2000 CE
+    "statehist.xlsx": "https://drive.google.com/uc?export=download&id=1OExJ70t0YBzlV1vhUE11bbQTW8tJH7cW",
     # ── Mid (~few MB each) ────────────────────────────────────────────────
     "ucdp_acd.zip": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zip",
     "cshapes2.zip": "https://icr.ethz.ch/data/cshapes/CShapes-2.0.zip",

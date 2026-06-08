@@ -35,42 +35,51 @@ RAW = ROOT / "data" / "raw"
 # ─── Brecke macro-regions (shared with rank_year safety) ─────────────────────
 # 1 British Isles, 2 W Europe, 3 Central Europe, 4 E Europe, 5 Middle East,
 # 6 N Africa, 7 Sub-Saharan, 8 South Asia, 9 SE Asia, 10 East Asia,
-# 11 Oceania, 12 Central Asia, 13 Latin America, 14 N America.
+# 11 Oceania, 12 Central Asia, 13 Latin America, 14 N America,
+# 15 Northern Europe (Nordics — added so they get a real baseline instead of
+#    falling through to the global default; ISO3 variants folded into existing
+#    regions so modern countries are fully covered).
 BRECKE_MEMBERS = {
     1: "GBR IRL",
     2: "FRA ESP PRT ITA BEL LUX NLD CHE MCO AND",
     3: "DEU AUT CZE SVK HUN POL SVN HRV LIE",
-    4: "RUS UKR BLR LTU LVA EST ROU MDA BGR GRC SRB BIH MKD ALB MNE",
-    5: "TUR IRN IRQ SYR LBN ISR PSE JOR SAU YEM OMN ARE KWT QAT BHR AZE ARM GEO AFG",
-    6: "MAR DZA TUN LBY EGY SDN SSD MRT ESH",
+    4: "RUS UKR BLR LTU LVA EST ROU MDA BGR GRC SRB BIH MKD ALB MNE KOS",
+    5: "TUR IRN IRQ SYR LBN ISR PSE PSX JOR SAU YEM OMN ARE KWT QAT BHR AZE ARM GEO AFG CYP CYN",
+    6: "MAR DZA TUN LBY EGY SDN SSD SDS MRT ESH SAH",
     7: ("ETH ERI SOM DJI KEN TZA UGA RWA BDI COD COG AGO ZMB ZWE MOZ MWI MDG "
         "ZAF NAM BWA LSO SWZ NGA NER TCD CMR CAF GAB GNQ BEN TGO GHA CIV BFA "
         "MLI SEN GMB GNB GIN SLE LBR"),
     8: "IND PAK BGD NPL BTN LKA MDV",
     9: "MMR THA LAO KHM VNM MYS SGP IDN PHL BRN TLS",
     10: "CHN MNG TWN JPN KOR PRK",
-    11: "AUS NZL PNG FJI",
+    11: "AUS NZL PNG FJI SLB SOL",
     12: "KAZ UZB TKM TJK KGZ",
     13: ("MEX GTM BLZ HND SLV NIC CRI PAN CUB JAM HTI DOM BHS TTO COL VEN ECU "
-         "PER BOL BRA PRY URY ARG CHL GUY SUR"),
+         "PER BOL BRA PRY URY ARG CHL GUY SUR PRI"),
     14: "USA CAN",
+    15: "SWE NOR DNK FIN ISL GRL",
 }
 ISO3_TO_BRECKE = {iso: code for code, isos in BRECKE_MEMBERS.items() for iso in isos.split()}
 
 # Brecke code -> continent bucket for the OWID life-exp regional fallback.
 BRECKE_TO_CONT = {
-    1: "EUR", 2: "EUR", 3: "EUR", 4: "EUR",
+    1: "EUR", 2: "EUR", 3: "EUR", 4: "EUR", 15: "EUR",
     5: "ASI", 6: "AFR", 7: "AFR", 8: "ASI", 9: "ASI", 10: "ASI", 12: "ASI",
     11: "OCE", 13: "AMR", 14: "AMR",
 }
 CONT_TO_OWID = {"EUR": "OWID_EUR", "AFR": "OWID_AFR", "ASI": "OWID_ASI",
                 "OCE": "OWID_OCE", "AMR": "OWID_WRL"}  # no American aggregate in OWID
 
-# ─── early-modern tolerance baseline by macro-region ─────────────────────────
-# Modeled (not measured): typical degree of state-religion enforcement / minority
-# treatment, 1500-1815. Coarse by design; refined by real witch-trial penalties
-# for Europe. Higher = more tolerant. Rationale in comments.
-TOLERANCE_BASELINE = {
+# ─── tolerance baseline by macro-region, ERA-AWARE ───────────────────────────
+# Modeled (not measured) degree of state-religion enforcement / minority
+# treatment. Two tables because the religious landscape inverts across the eras:
+# early-modern Europe is a patchwork of confessional states (low, divergent),
+# while the modern West secularizes and converges on religious freedom (high,
+# similar). A single static table mis-scores one era or the other — and because
+# the developed-world race is bunched within ~3 pts, a static tolerance constant
+# silently decides every modern winner. Refined by real witch-trial penalties
+# (Europe, to 1850). Higher = more tolerant.
+TOLERANCE_BASELINE_EARLY = {  # 1500-1815, confessional era
     1:  42,  # British Isles — Protestant establishment, Catholic disabilities
     2:  40,  # W Europe — France revokes Edict of Nantes 1685; Spain Inquisition
     3:  44,  # Central Europe — HRE cuius-regio coexistence after Westphalia
@@ -81,12 +90,62 @@ TOLERANCE_BASELINE = {
     8:  50,  # South Asia — Mughal swings Akbar(tolerant)->Aurangzeb(harsh)
     9:  55,  # SE Asia — syncretic, cosmopolitan trade ports
     10: 44,  # East Asia — China folk-tolerant but anti-Christian; Japan crushes Christianity
-    11: 60,  # Oceania — indigenous, no state religion
+    11: 60,  # Oceania — indigenous Pacific, no state-religion enforcement
     12: 48,  # Central Asia — Islamic khanates
     13: 26,  # Latin America — colonial Inquisition + forced conversion
     14: 46,  # N America — Puritan intolerance vs Pennsylvania/Rhode Island pluralism
+    15: 48,  # N Europe — Lutheran state churches, moderate
+}
+TOLERANCE_BASELINE_MODERN = {  # 1816+, secularizing era
+    # The developed democracies (Europe, Oceania, N America) converge to the same
+    # high value so tolerance no longer silently decides their bunched race —
+    # variety then comes from real factors + the per-year dynamic weights.
+    1:  58, 2:  58, 3:  58, 15: 58, 11: 58, 14: 58,  # Western/developed club, equal
+    4:  50,  # E Europe — post-imperial / post-Soviet, mixed
+    13: 52,  # Latin America — Catholic but broadly tolerant now
+    9:  50,  # SE Asia — plural, some restriction
+    7:  48,  # Sub-Saharan — mixed; communal tension in places
+    8:  46,  # South Asia — communal tensions, rising majoritarianism
+    10: 44,  # East Asia — China restricts religion; Japan/Korea freer
+    6:  40,  # N Africa — Islamic states, limited minority rights
+    12: 40,  # Central Asia — authoritarian secular / restricted
+    5:  35,  # Middle East — theocratic states, low minority rights
 }
 GLOBAL_TOL = 45
+
+
+def tolerance_baseline(code: int | None, year: int) -> int:
+    """Modeled tolerance baseline for a macro-region in a given year (era-aware)."""
+    table = TOLERANCE_BASELINE_MODERN if year >= 1816 else TOLERANCE_BASELINE_EARLY
+    return table.get(code, GLOBAL_TOL) if code is not None else GLOBAL_TOL
+
+# ─── early-modern economy baseline by macro-region ───────────────────────────
+# Modeled GDP/capita (1990 int$, Maddison units) for the early-modern era,
+# 1500-1815 — a fallback for regions Maddison's sparse benchmark data never
+# reaches (most of the world outside the European core). Grounded in Maddison's
+# regional aggregates and the established economic-history ordering (NW Europe
+# pulls ahead 1600+, Asia mid, Sub-Saharan/indigenous lowest). Coarse and static
+# by design: it gives a region a sensible *position* in the year's spread instead
+# of a flat neutral 50. Real per-country Maddison always wins over this. Higher
+# = richer. Keyed by Brecke macro-region code (see BRECKE_MEMBERS).
+ECONOMY_BASELINE = {
+    1:  1050,  # British Isles — leading edge by 1700
+    2:   920,  # W Europe — Low Countries/France core
+    3:   780,  # Central Europe — HRE, war-battered
+    4:   600,  # E Europe — serf agrarian, Russia/Balkans
+    5:   680,  # Middle East — Ottoman/Safavid, declining from medieval peak
+    6:   540,  # N Africa — Maghreb, oasis/coastal
+    7:   430,  # Sub-Saharan — mostly subsistence, pre-cash-crop
+    8:   600,  # South Asia — Mughal India, rich elite / poor mass
+    9:   620,  # SE Asia — trade-port wealth, spice islands
+    10:  650,  # East Asia — Ming/Qing China, Tokugawa Japan
+    11:  420,  # Oceania — indigenous subsistence
+    12:  520,  # Central Asia — steppe/oasis khanates
+    13:  560,  # Latin America — silver economy + subsistence
+    14:  640,  # N America — colonial cash crops / indigenous
+    15:  820,  # N Europe — Nordics, modest early-modern; real Maddison drives modern
+}
+GLOBAL_ECON = 550  # modeled GDP/cap when even the macro-region is unknown
 
 # witch-trial country name (gadm.adm0) -> ISO3
 WT_NAME_TO_ISO = {
@@ -107,7 +166,7 @@ def _life_exp() -> dict[str, tuple[list[int], list[float]]]:
     Keeps ISO3 countries and OWID_* aggregates."""
     out: dict[str, list[tuple[int, float]]] = {}
     p = RAW / "owid_life_exp.csv"
-    with open(p, encoding="utf-8") as f:
+    with p.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             code = row.get("code") or ""
             le = row.get("life_expectancy_0") or ""
@@ -152,7 +211,7 @@ def _witch_intensity() -> dict[tuple[str, int], int]:
     """(iso3, decade) -> total persons tried. Persecution-intensity signal."""
     out: dict[tuple[str, int], int] = {}
     p = RAW / "witch_trials.csv"
-    with open(p, encoding="utf-8") as f:
+    with p.open(encoding="utf-8", newline="") as f:
         for row in csv.DictReader(f):
             iso = WT_NAME_TO_ISO.get((row.get("gadm.adm0") or "").strip())
             dec = row.get("decade") or ""
@@ -202,11 +261,29 @@ def health(member_iso3: list[str], year: int, conflict_hits: int,
     return max(1, min(100, round(base))), source
 
 
+def economy_baseline(member_iso3: list[str]) -> float:
+    """Modeled GDP/cap (1990 int$) for the region's dominant macro-region — the
+    economy fallback when Maddison has no real per-country point. Mirrors the
+    tolerance baseline pattern; tagged 'modeled' by the caller."""
+    for iso in member_iso3:
+        code = ISO3_TO_BRECKE.get(iso)
+        if code in ECONOMY_BASELINE:
+            return float(ECONOMY_BASELINE[code])
+    return float(GLOBAL_ECON)
+
+
+def persecution_level(year: int) -> int:
+    """Total recorded witch-trial prosecutions worldwide in `year`'s decade —
+    a global 'how persecutory was this period' signal for dynamic weighting."""
+    decade = (year // 10) * 10
+    return sum(v for (iso, dec), v in _witch_intensity().items() if dec == decade)
+
+
 def tolerance(member_iso3: list[str], year: int) -> tuple[int, str, int]:
     """Modeled regional baseline minus real witch-trial persecution penalty.
     Returns (score, source, witch_penalty_applied)."""
     codes = [ISO3_TO_BRECKE[i] for i in member_iso3 if i in ISO3_TO_BRECKE]
-    base = TOLERANCE_BASELINE[codes[0]] if codes else GLOBAL_TOL
+    base = tolerance_baseline(codes[0] if codes else None, year)
 
     # real penalty: peak witch-trial intensity among member countries this decade
     decade = (year // 10) * 10

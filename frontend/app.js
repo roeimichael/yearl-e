@@ -2,8 +2,16 @@
 
 const $ = (id) => document.getElementById(id);
 
+// Escape text before injecting into innerHTML. Dataset-supplied strings
+// (region names, summaries, ruler names, source labels) flow through here.
+const escapeHtml = (s) =>
+  String(s ?? "").replace(/[&<>"']/g, (c) => ({
+    "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+  })[c]);
+
 const state = {
   date: null,
+  dayNumber: null,
   year: null,
   label: null,
   era: null,
@@ -12,53 +20,46 @@ const state = {
   mode: "start",       // start | playing | reveal | explore
 };
 
-// Display names for early_modern region IDs — the raw IDs in the data are
-// programmatic ("rome_italy"); these are what we actually paint on the globe.
-const DISPLAY_NAMES = {
-  rome_italy: "Italy",
-  andalusia_iberia: "Iberia",
-  francia: "France",
-  england: "Britain",
-  rus: "Russia",
-  constantinople_balkans: "Ottoman Empire",
-  persia: "Persia",
-  central_asia: "Central Asia",
-  egypt_nile: "Egypt",
-  arabia: "Arabia",
-  ethiopia: "Ethiopia",
-  han_china: "China",
-  japan: "Japan",
-  north_america_east: "N. America",
-  andes: "Andes",
-  brazil_amazon: "Brazil",
-  sweden_empire: "Sweden",
-  denmark_norway: "Denmark-Norway",
-  swedish_baltic: "Baltic",
-  habsburg_austria: "Austria",
-  prussia_brandenburg: "Prussia",
-  german_princes: "German States",
-  polish_lithuanian_commonwealth: "Poland-Lithuania",
-  mughal_north: "Mughal India",
-  maratha_confederacy: "Marathas",
-  bengal: "Bengal",
-  deccan_sultanates: "Deccan",
-  voc_indonesia: "Dutch Indies",
-  siam_vietnam_burma: "SE Asia",
-  spanish_philippines: "Philippines",
-  kongo_angola: "Kongo",
-  southern_africa: "S. Africa",
-  asante_coast: "Gold Coast",
-  sahel_interior: "Sahel",
-  new_spain: "New Spain",
-  caribbean: "Caribbean",
-};
+// Region names come from the Cliopatria dataset and are already human-readable
+// ("Dutch Republic"). Ocean-split polities carry a trailing ISO-code suffix
+// ("Dutch Republic (NLD)") to disambiguate the fragments — strip it for display.
+const stripIsoSuffix = (name) =>
+  typeof name === "string" ? name.replace(/\s*\([A-Z]{3}\)\s*$/, "") : "";
 
-const displayName = (r) => DISPLAY_NAMES[r.id] || r.name.split(" (")[0];
+// Humanize a raw slug id as a last resort (e.g. "dutch_republic_nld" →
+// "Dutch Republic Nld"). Only reached when no clean name field is available.
+const humanizeId = (id) =>
+  typeof id === "string"
+    ? id.split("_").map(w => w ? w[0].toUpperCase() + w.slice(1) : w).join(" ")
+    : "";
 
-// Same lookup but by raw id string (for backend payloads that don't carry the
-// region object). Falls back to a humanized version of the id.
-const displayNameById = (id) =>
-  DISPLAY_NAMES[id] || id.split("_").map(w => w[0].toUpperCase() + w.slice(1)).join(" ");
+// Clean display name from a region geometry object (carries its own .name).
+const displayName = (r) => stripIsoSuffix(r?.name) || humanizeId(r?.id) || "(no region)";
+
+// Clean display name from a backend payload that carries region_name (+ id).
+// Prefer the dataset name field; fall back to a humanized id.
+const displayNameFor = (name, id) =>
+  stripIsoSuffix(name) || humanizeId(id) || "(no region)";
+
+// Fetch + parse JSON with non-200 detection and a clear error message.
+// Throws Error on network failure, non-2xx, or malformed JSON.
+async function fetchJson(url, opts) {
+  let res;
+  try {
+    res = await fetch(url, opts);
+  } catch (e) {
+    throw new Error(`Network error reaching ${url}. Is the backend running?`);
+  }
+  if (!res.ok) {
+    const body = await res.text().catch(() => "");
+    throw new Error(`HTTP ${res.status} ${res.statusText}${body ? ` — ${body.slice(0, 200)}` : ""}`);
+  }
+  try {
+    return await res.json();
+  } catch (e) {
+    throw new Error(`Bad response from ${url} (not JSON).`);
+  }
+}
 
 const REGION_SRC = "regions-src";
 const REGION_FILL = "regions-fill";
@@ -74,35 +75,54 @@ let map;
 
 async function boot() {
   // Kick API fetches in parallel with map load.
-  const [todayP, regionsP] = [fetch("/api/today").then(r => r.json()),
-                              fetch("/api/regions").then(r => r.json())];
+  const todayP = fetchJson("/api/today");
+  const regionsP = fetchJson("/api/regions");
   initMap();
+
   const today = await todayP;
-  state.date = today.date;
-  state.year = today.year;
-  state.label = today.label;
-  state.era = today.era_summary;
-  $("day-tag").textContent = `Day ${today.day_number}`;
+  state.date = today?.date ?? null;
+  state.dayNumber = today?.day_number ?? null;
+  state.year = today?.year ?? null;
+  state.label = today?.label ?? "";
+  state.era = today?.era_summary ?? "";
+  const dayTag = $("day-tag");
+  if (dayTag && today?.day_number != null) dayTag.textContent = `Day ${today.day_number}`;
+  const yearLabel = $("year-label");
+  if (yearLabel) yearLabel.textContent = state.label;
   const btn = $("btn-start");
-  btn.disabled = false;
-  btn.textContent = "Spin the globe →";
-  $("year-label").textContent = today.label;
+  if (btn) {
+    btn.disabled = false;
+    btn.textContent = "Spin the globe →";
+  }
 
   const regions = await regionsP;
-  state.regions = regions.regions;
+  state.regions = Array.isArray(regions?.regions) ? regions.regions : [];
 
   await whenMapReady();
   addRegionLayer();
   attachHoverHandlers();
 
   // Restore "already played today" from localStorage.
-  const saved = localStorage.getItem(`yearle:v1:guess:${state.date}`);
-  if (saved) {
-    state.played = true;
-    const payload = JSON.parse(saved);
-    $("start-card").classList.add("hidden");
-    showReveal(payload);
+  if (state.date) restoreSavedGuess();
+}
+
+// Restore a previously-submitted guess for today, if any. Tolerates corrupt
+// localStorage by clearing the bad entry instead of crashing boot.
+function restoreSavedGuess() {
+  const key = `yearle:v1:guess:${state.date}`;
+  const saved = localStorage.getItem(key);
+  if (!saved) return;
+  let payload;
+  try {
+    payload = JSON.parse(saved);
+  } catch (e) {
+    console.warn("discarding corrupt saved guess:", e);
+    localStorage.removeItem(key);
+    return;
   }
+  state.played = true;
+  $("start-card")?.classList.add("hidden");
+  showReveal(payload);
 }
 
 function initMap() {
@@ -141,7 +161,7 @@ function initMap() {
         color: "rgba(214, 184, 125, 0.10)",
         "high-color": "rgba(60, 36, 18, 0.7)",
         "horizon-blend": 0.15,
-        "space-color": "#0a0805",
+        "space-color": "#3a2e1f",
         "star-intensity": 0.0,
       });
     } catch (e) {}
@@ -162,15 +182,31 @@ function whenMapReady() {
 function regionsAsGeoJSON(scoreLookup) {
   return {
     type: "FeatureCollection",
-    features: state.regions.map(r => ({
-      type: "Feature",
-      properties: {
-        id: r.id,
-        name: displayName(r),
-        score: scoreLookup ? (scoreLookup[r.id]?.score ?? null) : null,
-      },
-      geometry: r.geometry,
-    })),
+    features: state.regions
+      .filter(r => r && r.geometry)
+      .map(r => ({
+        type: "Feature",
+        properties: {
+          id: r.id,
+          name: displayName(r),
+          score: scoreLookup ? (scoreLookup[r.id]?.score ?? null) : null,
+        },
+        geometry: r.geometry,
+      })),
+  };
+}
+
+// Point features at region centroids for the on-globe labels.
+function regionLabelsGeoJSON() {
+  return {
+    type: "FeatureCollection",
+    features: state.regions
+      .filter(r => Array.isArray(r?.centroid) && r.centroid.length >= 2)
+      .map(r => ({
+        type: "Feature",
+        properties: { name: displayName(r) },
+        geometry: { type: "Point", coordinates: [r.centroid[1], r.centroid[0]] },
+      })),
   };
 }
 
@@ -233,17 +269,7 @@ function addRegionLayer() {
     },
   });
   // Region names rendered at centroids — replaces demotiles country labels.
-  map.addSource(REGION_LABELS_SRC, {
-    type: "geojson",
-    data: {
-      type: "FeatureCollection",
-      features: state.regions.map(r => ({
-        type: "Feature",
-        properties: { name: displayName(r) },
-        geometry: { type: "Point", coordinates: [r.centroid[1], r.centroid[0]] },
-      })),
-    },
-  });
+  map.addSource(REGION_LABELS_SRC, { type: "geojson", data: regionLabelsGeoJSON() });
   map.addLayer({
     id: REGION_LABELS,
     type: "symbol",
@@ -293,31 +319,62 @@ function setPick(lat, lon) {
 async function onMapClick(e) {
   if (state.mode === "playing") {
     if (state._longPress) { state._longPress = false; return; }
+    if (state.year == null) {
+      showToast("Still loading today's year — try again in a moment.", 2400);
+      return;
+    }
     const { lat, lng } = e.lngLat;
     setPick(lat, lng);
     state.mode = "submitting";
+    setHudBusy(true);
     try {
-      const res = await fetch("/api/today/guess", {
+      const payload = await fetchJson("/api/today/guess", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ year: state.year, lat, lon: lng }),
       });
-      if (!res.ok) {
-        const body = await res.text().catch(() => "");
-        throw new Error(`HTTP ${res.status} ${res.statusText} — ${body.slice(0, 200)}`);
+      // Open-ocean / Antarctica miss: don't lock the day — let them try land.
+      if (payload?.miss) {
+        state.mode = "playing";
+        clearPick();
+        showToast("That's open water — click on land to make your guess.", 2600);
+        return;
       }
-      const payload = await res.json();
-      localStorage.setItem(`yearle:v1:guess:${state.date}`, JSON.stringify(payload));
+      recordStats(state.dayNumber, payload?.guess?.score ?? 0);
+      try {
+        localStorage.setItem(`yearle:v1:guess:${state.date}`, JSON.stringify(payload));
+      } catch (e) { /* private mode / quota — non-fatal, reveal still shows */ }
       showReveal(payload);
     } catch (err) {
       console.error("guess submit failed:", err);
       state.mode = "playing";
-      alert(`Couldn't submit guess.\n${err.message || err}\n\nIs the backend running?`);
+      clearPick();
+      showToast(`Couldn't submit guess. ${err.message || err}`, 4000);
+    } finally {
+      setHudBusy(false);
     }
   } else if (state.mode === "explore") {
     const feats = map.queryRenderedFeatures(e.point, { layers: [REGION_FILL] });
-    if (feats.length) showExploreDetail(feats[0].properties.id);
+    if (feats.length && feats[0]?.properties?.id) showExploreDetail(feats[0].properties.id);
   }
+}
+
+// Reflect a busy submit on the HUD hint (no new DOM; reuses the hover-region span).
+function setHudBusy(busy) {
+  const el = $("hud-hover-region");
+  if (!el) return;
+  if (busy) {
+    el.dataset.prev = el.textContent;
+    el.textContent = "Scoring your guess…";
+  } else if (el.dataset.prev != null) {
+    el.textContent = el.dataset.prev;
+    delete el.dataset.prev;
+  }
+}
+
+function clearPick() {
+  const src = map?.getSource(PICK_SRC);
+  if (src) src.setData({ type: "FeatureCollection", features: [] });
 }
 
 // Hover state — drives both the HUD hint and the per-region "pop" via
@@ -383,6 +440,50 @@ function attachHoverHandlers() {
   map.on("touchmove", () => { clearPress(); state._longPress = true; });
 }
 
+// ─── streak + stats ────────────────────────────────────────────────────────
+// One row in localStorage, updated once per day (guarded by lastDay so a reload
+// of an already-played day never double-counts). Streak = consecutive day_numbers.
+const STATS_KEY = "yearle:v1:stats";
+
+function loadStats() {
+  try {
+    const s = JSON.parse(localStorage.getItem(STATS_KEY) || "{}");
+    return {
+      games: s.games || 0, streak: s.streak || 0, maxStreak: s.maxStreak || 0,
+      lastDay: s.lastDay ?? null, scoreSum: s.scoreSum || 0,
+    };
+  } catch (e) { return { games: 0, streak: 0, maxStreak: 0, lastDay: null, scoreSum: 0 }; }
+}
+
+function recordStats(dayNumber, score) {
+  if (dayNumber == null) return loadStats();
+  const s = loadStats();
+  if (s.lastDay === dayNumber) return s;            // already counted today
+  s.streak = (s.lastDay === dayNumber - 1) ? s.streak + 1 : 1;
+  s.maxStreak = Math.max(s.maxStreak, s.streak);
+  s.games += 1;
+  s.scoreSum += Number(score) || 0;
+  s.lastDay = dayNumber;
+  try { localStorage.setItem(STATS_KEY, JSON.stringify(s)); } catch (e) { /* non-fatal */ }
+  return s;
+}
+
+function renderStats() {
+  const el = $("reveal-stats");
+  if (!el) return;
+  const s = loadStats();
+  if (!s.games) { el.classList.add("hidden"); el.innerHTML = ""; return; }
+  const avg = Math.round(s.scoreSum / s.games);
+  const cell = (label, val) => `<div class="stat-cell"><div class="stat-num">${val}</div>` +
+    `<div class="stat-lbl">${label}</div></div>`;
+  el.innerHTML =
+    cell("Played", s.games) +
+    cell("🔥 Streak", s.streak) +
+    cell("Max", s.maxStreak) +
+    cell("Avg", avg);
+  el.classList.remove("hidden");
+}
+
 // ─── share ───────────────────────────────────────────────────────────────────
 
 function scoreEmoji(v) {
@@ -394,21 +495,29 @@ function scoreEmoji(v) {
 }
 
 function buildShareText(payload) {
-  const g = payload.guess || {};
+  const p = payload || {};
+  const g = p.guess || {};
   const score = g.score ?? 0;
   const dayTag = $("day-tag")?.textContent || "";
   const factorOrder = ["safety", "health", "economy", "governance", "religious_tolerance"];
   const grid = factorOrder.map(k => scoreEmoji(g.factors?.[k] ?? 0)).join("");
   const url = location.origin || "yearl-e";
+  const where = displayNameFor(g.region_name, g.region_id) || "?";
+  const rank = (p.rank != null && p.total_regions != null) ? ` · rank ${p.rank}/${p.total_regions}` : "";
+  const st = loadStats();
+  const streak = st.streak > 1 ? `\n🔥 ${st.streak}-day streak` : "";
   return `yearl-e ${dayTag} · ${state.label}
-${score}/100 · rank ${payload.rank}/${payload.total_regions} · ${g.region_name || "?"}
-${grid}
+${score}/100${rank} · ${where}
+${grid}${streak}
 ${url}`;
 }
 
 function showToast(msg, ms = 1800) {
   const t = $("toast");
   if (!t) return;
+  // Announce toasts (incl. errors) to assistive tech.
+  t.setAttribute("role", "status");
+  t.setAttribute("aria-live", "polite");
   t.textContent = msg;
   t.classList.remove("hidden");
   clearTimeout(showToast._h);
@@ -418,7 +527,9 @@ function showToast(msg, ms = 1800) {
 async function shareResult() {
   const saved = localStorage.getItem(`yearle:v1:guess:${state.date}`);
   if (!saved) return;
-  const text = buildShareText(JSON.parse(saved));
+  let payload;
+  try { payload = JSON.parse(saved); } catch (e) { return; }
+  const text = buildShareText(payload);
   // Prefer native share on mobile; fall back to clipboard.
   if (navigator.share) {
     try { await navigator.share({ text }); return; } catch (e) { /* fall through */ }
@@ -435,41 +546,86 @@ async function shareResult() {
   }
 }
 
-$("btn-share").addEventListener("click", shareResult);
+// Null-safe event binding — tolerates a missing DOM id without crashing init.
+const on = (id, evt, fn) => { const el = $(id); if (el) el.addEventListener(evt, fn); };
+
+// Track the element to restore focus to when a modal/card closes.
+let lastFocused = null;
+function openCard(id, focusId) {
+  lastFocused = document.activeElement;
+  const card = $(id);
+  if (!card) return;
+  card.classList.remove("hidden");
+  const focusTarget = focusId ? $(focusId) : card;
+  if (focusTarget && typeof focusTarget.focus === "function") {
+    focusTarget.focus({ preventScroll: true });
+  }
+}
+function closeCard(id) {
+  $(id)?.classList.add("hidden");
+  if (lastFocused && typeof lastFocused.focus === "function") {
+    lastFocused.focus({ preventScroll: true });
+  }
+  lastFocused = null;
+}
+
+on("btn-share", "click", shareResult);
 
 // ─── about modal ─────────────────────────────────────────────────────────────
 
-$("link-about").addEventListener("click", (e) => {
+on("link-about", "click", (e) => {
   e.preventDefault();
-  $("about-card").classList.remove("hidden");
+  openCard("about-card", "btn-about-close");
 });
-$("btn-about-close").addEventListener("click", () => {
-  $("about-card").classList.add("hidden");
-});
+on("btn-about-close", "click", () => closeCard("about-card"));
 
-$("btn-start").addEventListener("click", () => {
-  $("start-card").classList.add("hidden");
-  $("hud").classList.remove("hidden");
+on("btn-start", "click", () => {
+  $("start-card")?.classList.add("hidden");
+  $("hud")?.classList.remove("hidden");
   state.mode = "playing";
 });
 
-$("btn-explore").addEventListener("click", async () => {
-  $("reveal-card").classList.add("hidden");
-  $("explore-card").classList.remove("hidden");
-  $("explore-year").textContent = state.label;
-  $("overlay").classList.add("explore-mode");
+on("btn-explore", "click", async () => {
+  if (state.year == null) {
+    showToast("Year data isn't available right now.", 2400);
+    return;
+  }
+  $("reveal-card")?.classList.add("hidden");
+  $("explore-card")?.classList.remove("hidden");
+  const yearEl = $("explore-year");
+  if (yearEl) yearEl.textContent = state.label;
+  $("overlay")?.classList.add("explore-mode");
   state.mode = "explore";
+  const btn = $("btn-explore");
+  if (btn) btn.disabled = true;
   // Fetch full year data + recolor by score.
-  const res = await fetch(`/api/year/${state.year}/regions`).then(r => r.json());
-  state._yearData = res.regions;
-  recolorRegions(res.regions);
+  try {
+    const res = await fetchJson(`/api/year/${state.year}/regions`);
+    state._yearData = res?.regions || {};
+    recolorRegions(state._yearData);
+  } catch (err) {
+    console.error("year regions fetch failed:", err);
+    showToast(`Couldn't load the year's regions. ${err.message || err}`, 4000);
+  } finally {
+    if (btn) btn.disabled = false;
+  }
 });
 
-$("btn-explore-close").addEventListener("click", () => {
-  $("explore-card").classList.add("hidden");
-  $("overlay").classList.remove("explore-mode");
-  $("reveal-card").classList.remove("hidden");
+on("btn-explore-close", "click", () => {
+  $("explore-card")?.classList.add("hidden");
+  $("overlay")?.classList.remove("explore-mode");
+  $("reveal-card")?.classList.remove("hidden");
   state.mode = "reveal";
+});
+
+// Esc closes whichever overlay card is open (about → explore).
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  if (!$("about-card")?.classList.contains("hidden")) {
+    closeCard("about-card");
+  } else if (!$("explore-card")?.classList.contains("hidden")) {
+    $("btn-explore-close")?.click();
+  }
 });
 
 // ─── rendering ───────────────────────────────────────────────────────────────
@@ -477,112 +633,191 @@ $("btn-explore-close").addEventListener("click", () => {
 // Friendly tags for factor_sources values (which dataset/source produced the score).
 const SOURCE_TAGS = {
   "maddison": { label: "Maddison", title: "Maddison Project 2023 GDP/cap" },
-  "brecke":   { label: "Brecke",   title: "Brecke Conflict Catalog 1400-2000" },
+  "brecke":   { label: "Brecke",   title: "Brecke Conflict Catalog 1400-1999" },
+  "ucdp":     { label: "UCDP",     title: "UCDP/PRIO Armed Conflict Dataset v25.1 (2000+ conflicts)" },
   "vdem":     { label: "V-Dem",    title: "Varieties of Democracy v15 — Electoral Democracy Index (polyarchy)" },
-  "wiki":     { label: "Wiki",     title: "Wikipedia (manual context)" },
+  "statehist": { label: "State Hist.", title: "State Antiquity Index (Borcan-Olsson-Putterman) — pre-1789 state-continuity governance proxy" },
   "neutral":  { label: "neutral",  title: "No sourced data — held at 50" },
-  "baseline": { label: "era",      title: "Era baseline with manual adjustment" },
+  "baseline": { label: "baseline", title: "Default baseline — no dataset covers this cell" },
   "lifeexp":  { label: "Life exp.", title: "Life expectancy (Our World in Data: Riley, Zijdeman, UN) — country or regional" },
   "modeled":  { label: "modeled",  title: "Modeled estimate from the era's regional pattern (no direct dataset)" },
   "witch-trials": { label: "Witch trials", title: "Leeson & Russ witch-trial database — recorded persecution lowers tolerance" },
+  "vdem-relig": { label: "V-Dem relig.", title: "V-Dem freedom-of-religion (v2clrelig) — measured religious tolerance, 1789+" },
 };
 
-function renderFactors(factors, factorSources) {
+// Per-year emphasis banner: what the dynamic weights leaned on this year, with a
+// compact readout of the (uniform, world-wide) factor weights.
+function renderEmphasis(emphasis, weights) {
+  const el = $("reveal-emphasis");
+  if (!el) return;
+  if (!emphasis) { el.classList.add("hidden"); el.innerHTML = ""; return; }
+  let bars = "";
+  if (weights && Object.keys(weights).length) {
+    bars = `<div class="emphasis-weights">` + Object.entries(weights)
+      .sort((a, b) => b[1] - a[1])
+      .map(([k, v]) =>
+        `<span class="ew" title="${escapeHtml(k.replace(/_/g, " "))}: ${Math.round(v * 100)}% weight">` +
+        `${escapeHtml(k.replace(/_/g, " "))} ${Math.round(v * 100)}%</span>`)
+      .join("") + `</div>`;
+  }
+  el.innerHTML = `<span class="emphasis-mark">⚖</span> <em>${escapeHtml(emphasis)}</em>${bars}`;
+  el.classList.remove("hidden");
+}
+
+// How many of the 5 factors actually backed the score (the rest had no record
+// and were left out — see renderFactors).
+function qualityChip(dq) {
+  if (!dq) return "";   // null/0 → no cell data; don't show a misleading chip
+  const n = Number(dq) || 0;
+  const cls = n >= 4 ? "dq-good" : n <= 2 ? "dq-thin" : "dq-mid";
+  const title = `Score computed from ${n} of 5 factors that have recorded data; the rest had no record and were left out.`;
+  return ` <span class="dq-chip ${cls}" title="${escapeHtml(title)}">scored on ${n}/5</span>`;
+}
+
+// Factors NOT in `scored` had no recorded data for this region/year — they are
+// shown greyed and labelled "no data", never blended into the score.
+function renderFactors(factors, factorSources, scored) {
   if (!factors || !Object.keys(factors).length) return "";
+  const scoredSet = (scored && scored.length) ? new Set(scored)
+    : null;  // fallback: infer from source if the list wasn't sent
+  const MODELED = new Set(["modeled", "neutral", "baseline"]);
   return Object.entries(factors).map(([k, v]) => {
-    const cls = v >= 70 ? "high" : v <= 35 ? "low" : "";
-    const pct = Math.max(0, Math.min(100, v));
+    const num = Number(v) || 0;
     const srcKey = factorSources?.[k];
+    const isScored = scoredSet ? scoredSet.has(k) : !MODELED.has(srcKey);
     const tag = SOURCE_TAGS[srcKey];
+    const label = escapeHtml(String(k).replace(/_/g, " "));
+    if (!isScored) {
+      // no recorded data — transparent placeholder, not a fabricated score
+      return `<div class="factor not-scored" title="No recorded data for this region in this year — left out of the score">
+        <span class="factor-label">${label}<span class="ns-chip">no data</span></span>
+        <span class="factor-bar"><span style="width:0%"></span></span>
+        <span class="factor-val">—</span>
+      </div>`;
+    }
+    const cls = num >= 70 ? "high" : num <= 35 ? "low" : "";
+    const pct = Math.max(0, Math.min(100, num));
     const srcChip = tag
-      ? `<span class="src-chip src-${srcKey}" title="${tag.title}">${tag.label}</span>`
+      ? `<span class="src-chip src-${escapeHtml(srcKey)}" title="${escapeHtml(tag.title)}">${escapeHtml(tag.label)}</span>`
       : "";
     return `<div class="factor">
-      <span class="factor-label">${k.replace(/_/g, " ")}${srcChip}</span>
+      <span class="factor-label">${label}${srcChip}</span>
       <span class="factor-bar ${cls}"><span style="width:${pct}%"></span></span>
-      <span class="factor-val">${v}</span>
+      <span class="factor-val">${num}</span>
     </div>`;
   }).join("");
 }
 
+// Only http(s) links are rendered as anchors; anything else is escaped text.
+function safeUrl(url) {
+  try {
+    const u = new URL(url, location.origin);
+    return (u.protocol === "http:" || u.protocol === "https:") ? u.href : null;
+  } catch (e) {
+    return null;
+  }
+}
+
 function renderSources(sources) {
   if (!sources || !sources.length) return `<div class="muted">No sources cited yet.</div>`;
-  return sources.map(s => `<a href="${s.url}" target="_blank" rel="noopener">↗ ${s.label}</a>`).join("");
+  return sources.map(s => {
+    const label = escapeHtml(s?.label || s?.url || "source");
+    const href = safeUrl(s?.url);
+    return href
+      ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener">↗ ${label}</a>`
+      : `<span class="muted">↗ ${label}</span>`;
+  }).join("");
 }
+
+const prefersReducedMotion = () =>
+  window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
 
 function countUp(el, target, duration = 700) {
   if (!el) return;
+  const final = Number(target) || 0;
+  // Respect reduced-motion: jump straight to the final value.
+  if (prefersReducedMotion()) { el.textContent = String(final); return; }
   const start = performance.now();
   const from = 0;
   const tick = (t) => {
     const k = Math.min(1, (t - start) / duration);
     // ease-out cubic
     const eased = 1 - Math.pow(1 - k, 3);
-    el.textContent = Math.round(from + (target - from) * eased);
+    el.textContent = Math.round(from + (final - from) * eased);
     if (k < 1) requestAnimationFrame(tick);
-    else el.textContent = String(target);
+    else el.textContent = String(final);
   };
   requestAnimationFrame(tick);
 }
 
+// Null-safe innerHTML write.
+const setHtml = (id, html) => { const el = $(id); if (el) el.innerHTML = html; };
+
 function showReveal(p) {
+  if (!p || typeof p !== "object") return;
   state.mode = "reveal";
-  $("hud").classList.add("hidden");
+  $("hud")?.classList.add("hidden");
   const g = p.guess || {};
   const score = g.score ?? 0;
-  // Legacy field (kept harmless if removed from DOM later).
-  const legacy = $("reveal-score");
-  if (legacy) legacy.textContent = `Your score: ${score} / 100 · rank ${p.rank}/${p.total_regions}`;
+  const rankText = (p.rank != null && p.total_regions != null)
+    ? `rank ${p.rank} of ${p.total_regions}` : "";
   const numEl = $("reveal-score-num");
   if (numEl) {
     numEl.textContent = "0";
     countUp(numEl, score);
   }
   const rankEl = $("reveal-score-rank");
-  if (rankEl) rankEl.textContent = `rank ${p.rank} of ${p.total_regions}`;
+  if (rankEl) rankEl.textContent = rankText;
   const eraYearEl = $("reveal-era-year");
   const eraSumEl = $("reveal-era-summary");
   if (eraYearEl) eraYearEl.textContent = p.label || state.label || "";
   if (eraSumEl) eraSumEl.textContent = p.era_summary || state.era || "";
-  const pickName = g.region_id ? displayNameById(g.region_id) : (g.region_name || "(no region)");
-  $("reveal-pick").innerHTML =
-    `<strong>You picked: ${pickName}</strong>` +
-    `<div>${g.summary || ""}</div>`;
-  $("reveal-pick-factors").innerHTML = renderFactors(g.factors, g.factor_sources);
-  $("reveal-pick-sources").innerHTML = renderSources(g.sources);
-  const topName = p.top.region_id ? displayNameById(p.top.region_id) : p.top.region_name;
-  $("reveal-top").innerHTML =
-    `<strong>${topName} · ${p.top.score}/100</strong>` +
-    `<div>${p.top.summary}</div>`;
-  $("reveal-top-factors").innerHTML = renderFactors(p.top.factors, p.top.factor_sources);
-  $("reveal-top-sources").innerHTML = renderSources(p.top.sources);
-  $("reveal-card").classList.remove("hidden");
+  renderEmphasis(p.emphasis, p.weights);
+  const pickName = displayNameFor(g.region_name, g.region_id);
+  setHtml("reveal-pick",
+    `<strong>You picked: ${escapeHtml(pickName)}</strong>${qualityChip(g.data_quality)}` +
+    `<div>${escapeHtml(g.summary || "")}</div>`);
+  setHtml("reveal-pick-factors", renderFactors(g.factors, g.factor_sources, g.scored_factors));
+  setHtml("reveal-pick-sources", renderSources(g.sources));
+  const top = p.top || {};
+  const topName = displayNameFor(top.region_name, top.region_id);
+  setHtml("reveal-top",
+    `<strong>${escapeHtml(topName)} · ${top.score ?? 0}/100</strong>${qualityChip(top.data_quality)}` +
+    `<div>${escapeHtml(top.summary || "")}</div>`);
+  setHtml("reveal-top-factors", renderFactors(top.factors, top.factor_sources, top.scored_factors));
+  setHtml("reveal-top-sources", renderSources(top.sources));
+  renderStats();
+  $("reveal-card")?.classList.remove("hidden");
 }
 
 function showExploreDetail(rid) {
   const cell = state._yearData?.[rid];
   if (!cell) return;
   const region = state.regions.find(r => r.id === rid);
-  const ranking = Object.entries(state._yearData).sort((a,b) => b[1].score - a[1].score);
+  const name = displayName(region || { id: rid });
+  const ranking = Object.entries(state._yearData).sort((a, b) => (b[1].score ?? 0) - (a[1].score ?? 0));
   const rankIdx = ranking.findIndex(([id]) => id === rid) + 1;
-  const scoreCls = cell.score >= 65 ? "high" : cell.score <= 40 ? "low" : "";
+  const cellScore = cell.score ?? 0;
+  const scoreCls = cellScore >= 65 ? "high" : cellScore <= 40 ? "low" : "";
   const isWinner = rankIdx === 1;
   const rankPill = `<span class="ed-rank${isWinner ? " ed-rank-winner" : ""}">` +
     (isWinner ? "🏛 " : "") + `#${rankIdx} of ${ranking.length}</span>`;
   const rulerLine = cell.ruler
-    ? `<div class="ed-ruler"><span class="ed-ruler-icon">👑</span>${cell.ruler}</div>` : "";
-  $("explore-detail").className = "";
-  $("explore-detail").innerHTML =
+    ? `<div class="ed-ruler"><span class="ed-ruler-icon">👑</span>${escapeHtml(cell.ruler)}</div>` : "";
+  const detail = $("explore-detail");
+  if (!detail) return;
+  detail.className = "";
+  detail.innerHTML =
     `<div class="ed-header">
        <div class="ed-header-l">
-         <div class="ed-name">${displayName(region)}</div>
+         <div class="ed-name">${escapeHtml(name)}</div>
          ${rankPill}
        </div>
-       <div class="ed-score ${scoreCls}">${cell.score}<span class="ed-score-denom">/100</span></div>
+       <div class="ed-score ${scoreCls}">${cellScore}<span class="ed-score-denom">/100</span></div>
      </div>` +
     rulerLine +
-    `<p class="ed-summary">${cell.summary || ""}</p>` +
-    `<div class="factors ed-factors">${renderFactors(cell.factors, cell.factor_sources)}</div>` +
+    `<p class="ed-summary">${escapeHtml(cell.summary || "")}</p>` +
+    `<div class="factors ed-factors">${renderFactors(cell.factors, cell.factor_sources, cell.scored_factors)}</div>` +
     (cell.sources?.length
       ? `<div class="ed-sources"><span class="ed-sources-label">Sources</span>${renderSources(cell.sources)}</div>`
       : "");
@@ -591,7 +826,15 @@ function showExploreDetail(rid) {
 // ─── go ──────────────────────────────────────────────────────────────────────
 
 boot().catch(err => {
-  console.error(err);
+  console.error("boot failed:", err);
   const btn = $("btn-start");
-  if (btn) btn.textContent = `Failed to load — ${err.message || err}`;
+  if (btn) {
+    btn.disabled = true;
+    btn.textContent = "Couldn't load — tap to retry";
+    btn.classList.remove("hidden");
+    btn.disabled = false;
+    btn.onclick = () => location.reload();
+    btn.setAttribute("aria-label", "Reload the page to retry loading");
+  }
+  showToast(`Couldn't load today's puzzle. ${err.message || err}`, 6000);
 });
