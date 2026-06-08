@@ -21,12 +21,17 @@ from pathlib import Path
 
 import openpyxl
 
+import hced_lookup
 import ucdp_lookup
 
 warnings.filterwarnings("ignore", category=UserWarning)
 
 ROOT = Path(__file__).parent.parent
 RAW = ROOT / "data" / "raw"
+
+# Brecke's catalog starts here; before it, HCED supplies conflicts (kept in sync
+# with rank_year.BRECKE_FIRST_YEAR / war_regime).
+BRECKE_FIRST_YEAR = 1400
 
 
 def maddison_by_year() -> dict[int, dict]:
@@ -79,8 +84,10 @@ def main() -> int:
     conflicts = brecke_all()
     brecke_max = max(c["ey"] for c in conflicts)
     ucdp_lo, ucdp_hi = ucdp_lookup.coverage()
-    print(f"  Maddison years: {min(madd)}..{max(madd)} | Brecke conflicts: "
-          f"{len(conflicts)} (ends {brecke_max}) | UCDP: {ucdp_lo}..{ucdp_hi}")
+    hced_lo, hced_hi = hced_lookup.coverage()
+    print(f"  Maddison years: {min(madd)}..{max(madd)} | HCED: {hced_lo}..{hced_hi} "
+          f"(used <{BRECKE_FIRST_YEAR}) | Brecke: {len(conflicts)} (ends {brecke_max}) "
+          f"| UCDP: {ucdp_lo}..{ucdp_hi}")
 
     wrote = skipped = 0
     for year in range(args.start, args.end + 1):
@@ -88,9 +95,11 @@ def main() -> int:
         if p.exists() and not args.force:
             skipped += 1
             continue
-        # Brecke through 1999, UCDP from 2000 on (the year Brecke stops). No
-        # double-count: each source owns its half of the timeline.
-        if year <= brecke_max:
+        # Each source owns its slice of the timeline (no double-count): HCED
+        # before 1400, Brecke 1400-1999, UCDP from 2000 on.
+        if year < BRECKE_FIRST_YEAR:
+            active = hced_lookup.active_in(year)
+        elif year <= brecke_max:
             active = [c for c in conflicts if c["sy"] <= year <= c["ey"]]
         else:
             active = ucdp_lookup.active_in(year)
