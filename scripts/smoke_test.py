@@ -26,7 +26,7 @@ from backend.scoring import region_for_point, score_guess
 from backend.main import _roll_year, _day_number  # daily roll
 
 FACTORS = ["safety", "health", "economy", "governance", "religious_tolerance"]
-REAL = {"brecke", "ucdp", "lifeexp", "maddison", "vdem", "vdem-relig",
+REAL = {"hced", "brecke", "ucdp", "lifeexp", "maddison", "vdem", "vdem-relig",
         "statehist", "witch-trials"}
 
 fails: list[str] = []

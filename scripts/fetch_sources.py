@@ -27,6 +27,12 @@ SOURCES = {
     # governance pre-1789: State Antiquity Index v4.0 (Borcan-Olsson-Putterman), 3500 BCE-2000 CE
     "statehist.xlsx": "https://drive.google.com/uc?export=download&id=1OExJ70t0YBzlV1vhUE11bbQTW8tJH7cW",
     # ── Mid (~few MB each) ────────────────────────────────────────────────
+    # safety pre-1400: Historical Conflict Event Dataset (Dincecco et al.) —
+    # geolocated, dated battles 1468 BCE-2003 CE with the Lehmann-Zhukov
+    # intensity scale. v3 = events table; seshat_codes = same events tagged with
+    # Seshat polity codes (joins to our Cliopatria region backbone).
+    "hced_v3.csv": "https://dataverse.harvard.edu/api/access/datafile/13390255?format=original",
+    "hced_seshat_codes.tab": "https://dataverse.harvard.edu/api/access/datafile/11018172?format=original",
     "ucdp_acd.zip": "https://ucdp.uu.se/downloads/ucdpprio/ucdp-prio-acd-251-csv.zip",
     "cshapes2.zip": "https://icr.ethz.ch/data/cshapes/CShapes-2.0.zip",
     "polity5.xls": "https://www.systemicpeace.org/inscr/p5v2018.xls",

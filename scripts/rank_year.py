@@ -56,6 +56,11 @@ YEAR_OUT = ROOT / "data" / "year_scores"
 # data/region_sets/{era}_{snapshot_year}.json. To add an era, build its
 # snapshots with build_cliopatria_era.py then add a row here.
 ERA_SNAPSHOTS: dict[str, tuple[int, int, list[int]]] = {
+    # Medieval era: borders move slowly, so a 50-year grid is plenty. Safety here
+    # comes from HCED (Brecke's catalog starts 1400); governance from the State
+    # Antiquity Index (full 50-yr coverage); economy from sparse Maddison
+    # benchmarks; health/tolerance usually have no record and are honestly omitted.
+    "medieval": (1000, 1499, list(range(1000, 1500, 50))),
     "early_modern": (1500, 1815, list(range(1500, 1801, 25)) + [1815]),
     # Modern era: snapshots denser where borders move fast (WWI redraw, WW2,
     # decolonization, Soviet collapse). Cliopatria runs to 2024, so 2025/2026
@@ -164,11 +169,12 @@ CLIO_SOURCE = {
 
 # factor_source tags that rest on real measured data (not modeled/neutral). Used
 # to compute per-cell data_quality / sparse_data honestly.
-REAL_SOURCES = frozenset({"brecke", "ucdp", "lifeexp", "maddison", "vdem",
+REAL_SOURCES = frozenset({"hced", "brecke", "ucdp", "lifeexp", "maddison", "vdem",
                           "vdem-relig", "statehist", "witch-trials"})
 
-# Brecke's conflict catalog ends here; build_extracts switches to UCDP after it,
-# so safety provenance is tagged accordingly (kept in sync with build_extracts).
+# Conflict-catalog handoffs (kept in sync with build_extracts): HCED supplies
+# safety before Brecke's catalog begins, then Brecke, then UCDP.
+BRECKE_FIRST_YEAR = 1400
 BRECKE_LAST_YEAR = 1999
 # UCDP's last covered year. Past this, no conflict dataset backs safety — it sits
 # at the baseline and is tagged honestly (not counted as real data).
@@ -184,7 +190,9 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     # Honest safety provenance: a conflict catalog only backs the score where one
     # covers the year (Brecke ≤1999, UCDP 2000–2024). Past that, safety rests on
     # the baseline and is tagged 'baseline' (not counted as real data).
-    if year <= BRECKE_LAST_YEAR:
+    if year < BRECKE_FIRST_YEAR:
+        safety_src = "hced"
+    elif year <= BRECKE_LAST_YEAR:
         safety_src = "brecke"
     elif year <= CONFLICT_LAST_YEAR:
         safety_src = "ucdp"
@@ -213,7 +221,8 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     else:
         relig, relig_src, witch_pen = factors.tolerance(members, year)
 
-    conflict_db = "UCDP" if year > BRECKE_LAST_YEAR else "Brecke"
+    conflict_db = ("HCED" if year < BRECKE_FIRST_YEAR else
+                   "UCDP" if year > BRECKE_LAST_YEAR else "Brecke")
     parts = []
     if conflict_hits:
         parts.append(f"Active conflicts in {year}: " + "; ".join(conflict_hits[:3]) + ".")
@@ -290,6 +299,9 @@ def score_region(year: int, region: dict, sorted_gdppc: list[float],
     elif safety_src == "brecke":
         sources.append({"label": "Brecke Conflict Catalog 1400-1999",
                         "url": "https://brecke.inta.gatech.edu/research/conflict/"})
+    elif safety_src == "hced":
+        sources.append({"label": "Historical Conflict Event Dataset (Dincecco et al.) — battles 1468 BCE-2003 CE",
+                        "url": "https://doi.org/10.7910/DVN/6ZFC0V"})
     if econ_src == "maddison":
         sources.append({
             "label": f"Maddison Project 2023 — {econ_iso} {year} gdppc={econ_val:.0f}",
@@ -369,8 +381,11 @@ def _war_raw(conflicts: list[dict]) -> int:
 
 def war_regime(year: int) -> str:
     """Which conflict source backs this year — they measure on different scales
-    (Brecke carries real death counts; UCDP is a flat intensity proxy), so their
-    percentiles must be taken separately. Mirrors build_extracts' handoff."""
+    (HCED is a battle count with a major-flag proxy; Brecke carries real death
+    counts; UCDP is a flat intensity proxy), so their percentiles must be taken
+    separately. Mirrors build_extracts' handoff."""
+    if year < BRECKE_FIRST_YEAR:
+        return "hced"
     return "ucdp" if year > BRECKE_LAST_YEAR else "brecke"
 
 
