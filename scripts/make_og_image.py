@@ -75,7 +75,7 @@ def make_og():
 
     # bottom tagline
     f_tag = font(SERIF, 28)
-    d.text((96, 500), "a daily history game · 1000–2026 · real data, cited",
+    d.text((96, 500), "a daily history game · 1000 BCE – 2026 CE · real data, cited",
            font=f_tag, fill=OLIVE)
 
     img.save(OUT_OG, "PNG")

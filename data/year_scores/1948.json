@@ -4,11 +4,11 @@
   "region_set": "modern_1945",
   "era_summary": "",
   "weights": {
-    "safety": 0.377,
-    "religious_tolerance": 0.246,
-    "governance": 0.126,
-    "economy": 0.126,
-    "health": 0.126
+    "safety": 0.379,
+    "religious_tolerance": 0.245,
+    "governance": 0.125,
+    "economy": 0.125,
+    "health": 0.125
   },
   "emphasis": "a violent year — peace counted for most",
   "regions": {
@@ -1637,7 +1637,7 @@
       "raw_score": 56
     },
     "republic_of_chile": {
-      "score": 76,
+      "score": 77,
       "summary": "Brecke records no major conflict touching Republic of Chile in 1948 (safety at the era baseline of 85). Maddison GDP/capita 5939 (CHL, 1948) — economy proxy for the territory. V-Dem polyarchy 36/100 (CHL, 1948) — early democratic. Health 88/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (CHL, 1948), measured.",
       "factors": {
         "safety": 85,
@@ -1690,7 +1690,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q298",
-      "raw_score": 76
+      "raw_score": 77
     },
     "british_africa_irq": {
       "score": 58,
@@ -3260,28 +3260,29 @@
       "raw_score": 87
     },
     "united_states_of_america_deu": {
-      "score": 86,
-      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1948 (safety at the era baseline of 85). Maddison GDP/capita 4517 (DEU, 1948) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, economy); governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 91,
+      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1948 (safety at the era baseline of 85). Maddison GDP/capita 4517 (DEU, 1948) — economy proxy for the territory. State-continuity 97/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 4 of 5 factors with recorded data (safety, health, economy, governance); religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 81,
         "health": 100,
         "economy": 69,
-        "governance": 50,
+        "governance": 97,
         "religious_tolerance": 58
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
         "health",
-        "economy"
+        "economy",
+        "governance"
       ],
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3296,6 +3297,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
@@ -3303,10 +3308,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 82
+      "raw_score": 85
     },
     "nepal": {
-      "score": 29,
+      "score": 31,
       "summary": "Brecke records no major conflict touching Nepal in 1948 (safety at the era baseline of 85). Maddison GDP/capita 806 (NPL, 1948) — economy proxy for the territory. V-Dem polyarchy 2/100 (NPL, 1948) — highly autocratic. Health 52/100, anchored on life-expectancy data for the region. Religious tolerance 34/100 — V-Dem freedom-of-religion (NPL, 1948), measured.",
       "factors": {
         "safety": 81,
@@ -3359,7 +3364,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q837",
-      "raw_score": 49
+      "raw_score": 50
     },
     "north_yemen": {
       "score": 3,
@@ -4816,7 +4821,7 @@
       "raw_score": 64
     },
     "francoist_spain_gnq": {
-      "score": 24,
+      "score": 25,
       "summary": "Brecke records no major conflict touching Francoist Spain (GNQ) in 1948 (safety at the era baseline of 85). Maddison GDP/capita 797 (GNQ, 1948) — economy proxy for the territory. V-Dem polyarchy 2/100 (GNQ, 1948) — highly autocratic. Health 60/100, anchored on life-expectancy data for the region. Religious tolerance 12/100 — V-Dem freedom-of-religion (GNQ, 1948), measured.",
       "factors": {
         "safety": 85,
@@ -4869,7 +4874,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q13474305",
-      "raw_score": 46
+      "raw_score": 47
     },
     "united_states_of_america_usa_2": {
       "score": 93,

@@ -154,6 +154,9 @@ function qcolor(q){
   const c=lo.map((v,i)=>Math.round(v+(hi[i]-v)*q));
   return `rgb(${c[0]},${c[1]},${c[2]})`;
 }
+// BCE-aware year formatting (year files use negative ints for BCE; no year 0).
+function yrLabel(y){ return y<0 ? (-y)+" BCE" : y+" CE"; }
+function yrShort(y){ return y<0 ? (-y)+" BC" : ""+y; }
 function dqStyle(dq){
   if (dq>=4) return "background:rgba(95,138,63,.2);color:#3d6b2a;border:1px solid rgba(95,138,63,.4)";
   if (dq<=2) return "background:rgba(176,106,74,.2);color:#a04a2a;border:1px solid rgba(176,106,74,.4)";
@@ -189,9 +192,9 @@ function render(d){
   const dh = q.data_quality_hist || {};
   const richPct = (dh["4"]||0) + (dh["5"]||0);
   h += `<h2>Coverage</h2><div class="coverage">`;
-  h += `<div class="cov-card have"><div class="big">${yrs.count||0}</div>years implemented<br/><span class="muted">${yrs.min}–${yrs.max}, three eras</span></div>`;
+  h += `<div class="cov-card have"><div class="big">${yrs.count||0}</div>years implemented<br/><span class="muted">${yrLabel(yrs.min)}–${yrLabel(yrs.max)}, four eras</span></div>`;
   h += `<div class="cov-card have"><div class="big">${(q.cells||0).toLocaleString()}</div>region-year cells<br/><span class="muted">${richPct}% have ≥4/5 real factors</span></div>`;
-  h += `<div class="cov-card missing"><div class="big">pre-1000</div>not yet implemented<br/><span class="muted">ancient + early medieval (back to 1000 BCE)</span></div>`;
+  h += `<div class="cov-card missing"><div class="big">pre-1000 BCE</div>not yet implemented<br/><span class="muted">deep antiquity (Cliopatria borders reach 3400 BCE)</span></div>`;
   h += `<div class="cov-card missing"><div class="big">post-2026</div>not generated<br/><span class="muted">future years</span></div>`;
   h += `</div>`;
 
@@ -202,6 +205,7 @@ function render(d){
   h += `<span>thin / mostly modeled → rich / mostly real</span></div>`;
 
   const eras = [
+    {name:"Ancient", lo:-1000, hi:999},
     {name:"Medieval", lo:1000, hi:1499},
     {name:"Early Modern", lo:1500, hi:1815},
     {name:"Modern", lo:1816, hi:2026},
@@ -209,11 +213,11 @@ function render(d){
   for (const e of eras){
     const cells = GRID.filter(g => g.year>=e.lo && g.year<=e.hi);
     if (!cells.length) continue;
-    h += `<div class="era-block"><h3>${e.name} (${e.lo}–${e.hi}) · ${cells.length} years</h3><div class="matrix">`;
+    h += `<div class="era-block"><h3>${e.name} (${yrLabel(e.lo)}–${yrLabel(e.hi)}) · ${cells.length} years</h3><div class="matrix">`;
     for (const g of cells){
       const c = qcolor(g.quality);
       h += `<button class="yr" data-year="${g.year}" style="background:${c}" `+
-           `title="${g.year} · ${g.regions} regions · ${Math.round(g.quality*100)}% real · ${esc(g.emphasis||"")}">${g.year}</button>`;
+           `title="${yrLabel(g.year)} · ${g.regions} regions · ${Math.round(g.quality*100)}% real · ${esc(g.emphasis||"")}">${yrShort(g.year)}</button>`;
     }
     h += `</div></div>`;
   }
@@ -270,7 +274,7 @@ async function openYear(year, btn){
 
   const weights = Object.entries(d.weights||{}).sort((a,b)=>b[1]-a[1])
     .map(([k,v])=>`<span class="w">${esc(k.replace(/_/g," "))} ${Math.round(v*100)}%</span>`).join("");
-  let h = `<div class="yp-head"><span class="yr-big">${d.year}</span>`;
+  let h = `<div class="yp-head"><span class="yr-big">${esc(d.label || yrLabel(d.year))}</span>`;
   if (d.emphasis) h += `<span class="yp-emph">⚖ ${esc(d.emphasis)}</span>`;
   h += `</div>`;
   if (weights) h += `<div class="yp-weights">${weights}</div>`;

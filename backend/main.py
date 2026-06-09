@@ -138,12 +138,15 @@ def today_guess(body: GuessIn):
     if not ranking:
         raise HTTPException(500, "year file has no scored regions")
     # Headline "best place that year": the highest-scoring region we actually have
-    # data for — real data on >=3 of 5 factors — so a barely-documented region
-    # (scored on a single factor and floated to the top by per-year normalization)
-    # never headlines. Falls back to the overall top if nothing clears the bar.
-    # The player's rank below still uses the full, unfiltered ranking.
+    # data for — so a barely-documented region (scored on a single factor and
+    # floated to the top by per-year normalization) never headlines. Prefer >=3 of
+    # 5 real factors, but in thin eras (ancient years rarely reach 3) drop only to
+    # the best data quality actually available that year, never to dq=1 when dq=2
+    # exists. The player's rank below still uses the full, unfiltered ranking.
+    _max_dq = max((c.get("data_quality", 0) for _, c in ranking), default=0)
+    _floor = min(3, _max_dq)
     top_id, top = next(
-        ((rid, c) for rid, c in ranking if c.get("data_quality", 0) >= 3),
+        ((rid, c) for rid, c in ranking if c.get("data_quality", 0) >= _floor),
         ranking[0])
     # Open-ocean miss has no region_id, so it has no rank in the year's ranking.
     is_miss = pick.get("region_id") is None

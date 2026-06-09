@@ -3260,28 +3260,29 @@
       "raw_score": 87
     },
     "united_states_of_america_deu": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1945 (safety at the era baseline of 85). Maddison GDP/capita 7195 (DEU, 1945) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, economy); governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 95,
+      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1945 (safety at the era baseline of 85). Maddison GDP/capita 7195 (DEU, 1945) — economy proxy for the territory. State-continuity 97/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 4 of 5 factors with recorded data (safety, health, economy, governance); religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 77,
         "health": 100,
         "economy": 79,
-        "governance": 50,
+        "governance": 97,
         "religious_tolerance": 58
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
         "health",
-        "economy"
+        "economy",
+        "governance"
       ],
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3296,6 +3297,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
@@ -3303,7 +3308,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 82
+      "raw_score": 84
     },
     "nepal": {
       "score": 40,

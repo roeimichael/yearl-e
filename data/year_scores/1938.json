@@ -4256,29 +4256,30 @@
       "raw_score": 72
     },
     "honduras": {
-      "score": 74,
-      "summary": "Brecke records no major conflict touching Honduras in 1938 (safety at the era baseline of 85). Maddison GDP/capita 1698 (HND, 1938) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (HND, 1938), measured. Scored on 4 of 5 factors with recorded data (safety, health, economy, religious tolerance); governance had no record for this region and year and were left out of the score.",
+      "score": 81,
+      "summary": "Brecke records no major conflict touching Honduras in 1938 (safety at the era baseline of 85). Maddison GDP/capita 1698 (HND, 1938) — economy proxy for the territory. State-continuity 100/100 (HND) — long-entrenched state (pre-democracy governance proxy). Health 50/100, anchored on life-expectancy data for the region. Religious tolerance 80/100 — V-Dem freedom-of-religion (HND, 1938), measured.",
       "factors": {
         "safety": 85,
         "health": 50,
         "economy": 46,
-        "governance": 50,
+        "governance": 100,
         "religious_tolerance": 80
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "vdem-relig"
       },
       "scored_factors": [
         "safety",
         "health",
         "economy",
+        "governance",
         "religious_tolerance"
       ],
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -4293,6 +4294,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — HND",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         },
@@ -4304,7 +4309,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q783",
-      "raw_score": 73
+      "raw_score": 77
     },
     "estado_novo_prt": {
       "score": 71,

@@ -1190,7 +1190,7 @@
     },
     "italian_africa_lby": {
       "score": 39,
-      "summary": "Brecke records no major conflict touching Italian Africa (LBY) in 1918 (safety at the era baseline of 85). Maddison GDP/capita 620 (LBY, 1918) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — V-Dem freedom-of-religion (LBY, 1918), measured. Scored on 4 of 5 factors with recorded data (safety, health, economy, religious tolerance); governance had no record for this region and year and were left out of the score.",
+      "summary": "Brecke records no major conflict touching Italian Africa (LBY) in 1918 (safety at the era baseline of 85). Maddison GDP/capita 620 (LBY, 1918) — economy proxy for the territory. State-continuity 50/100 (LBY) — established state (pre-democracy governance proxy). Health 19/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — V-Dem freedom-of-religion (LBY, 1918), measured.",
       "factors": {
         "safety": 81,
         "health": 19,
@@ -1202,16 +1202,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "vdem-relig"
       },
       "scored_factors": [
         "safety",
         "health",
         "economy",
+        "governance",
         "religious_tolerance"
       ],
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1224,6 +1225,10 @@
         {
           "label": "Maddison Project 2023 — LBY 1918 gdppc=620",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LBY",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -2415,27 +2420,28 @@
     },
     "british_colonial_empire_irq": {
       "score": 57,
-      "summary": "Brecke records no major conflict touching British Colonial Empire (IRQ) in 1918 (safety at the era baseline of 85). Maddison GDP/capita 1396 (IRQ, 1918) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, economy); governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "summary": "Brecke records no major conflict touching British Colonial Empire (IRQ) in 1918 (safety at the era baseline of 85). Maddison GDP/capita 1396 (IRQ, 1918) — economy proxy for the territory. State-continuity 66/100 (IRQ) — established state (pre-democracy governance proxy). Health 26/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region). Scored on 4 of 5 factors with recorded data (safety, health, economy, governance); religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 81,
         "health": 26,
         "economy": 50,
-        "governance": 50,
+        "governance": 66,
         "religious_tolerance": 35
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
         "health",
-        "economy"
+        "economy",
+        "governance"
       ],
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2448,6 +2454,10 @@
         {
           "label": "Maddison Project 2023 — IRQ 1918 gdppc=1396",
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
+        },
+        {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — IRQ",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
         },
         {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
@@ -3233,7 +3243,7 @@
       "raw_score": 64
     },
     "republic_of_ecuador": {
-      "score": 67,
+      "score": 69,
       "summary": "Brecke records no major conflict touching Republic of Ecuador in 1918 (safety at the era baseline of 85). Maddison GDP/capita 1615 (ECU, 1918) — economy proxy for the territory. V-Dem polyarchy 26/100 (ECU, 1918) — limited representation. Health 45/100, anchored on life-expectancy data for the region. Religious tolerance 91/100 — V-Dem freedom-of-religion (ECU, 1918), measured.",
       "factors": {
         "safety": 85,
@@ -3286,7 +3296,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q736",
-      "raw_score": 70
+      "raw_score": 71
     },
     "british_colonial_empire_guy": {
       "score": 64,
@@ -4070,27 +4080,28 @@
       "raw_score": 66
     },
     "republic_of_latvia": {
-      "score": 52,
-      "summary": "Brecke records no major conflict touching Republic of Latvia in 1918 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). Governance neutral (no state-history coverage for this territory). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region). Scored on 2 of 5 factors with recorded data (safety, health); economy, governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 55,
+      "summary": "Brecke records no major conflict touching Republic of Latvia in 1918 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~600 1990 int$). State-continuity 71/100 (LVA) — long-entrenched state (pre-democracy governance proxy). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 50/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, governance); economy, religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 49,
         "health": 100,
         "economy": 28,
-        "governance": 50,
+        "governance": 71,
         "religious_tolerance": 50
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
-        "health"
+        "health",
+        "governance"
       ],
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -4105,14 +4116,18 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LVA",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q211",
-      "raw_score": 61
+      "raw_score": 63
     },
     "portuguese_republic_prt": {
       "score": 74,
@@ -4506,27 +4521,28 @@
       "raw_score": 63
     },
     "georgia": {
-      "score": 62,
-      "summary": "Brecke records no major conflict touching Georgia in 1918 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). Governance neutral (no state-history coverage for this territory). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region). Scored on 2 of 5 factors with recorded data (safety, health); economy, governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 57,
+      "summary": "Brecke records no major conflict touching Georgia in 1918 (safety at the era baseline of 85). No direct Maddison point — economy modeled from the early-modern GDP/capita baseline for this macro-region (~680 1990 int$). State-continuity 53/100 (GEO) — established state (pre-democracy governance proxy). Health 24/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, governance); economy, religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 81,
         "health": 24,
         "economy": 32,
-        "governance": 50,
+        "governance": 53,
         "religious_tolerance": 35
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "modeled",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
-        "health"
+        "health",
+        "governance"
       ],
-      "data_quality": 2,
+      "data_quality": 3,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -4541,14 +4557,18 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — GEO",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
       ],
       "ruler": null,
-      "sparse_data": true,
+      "sparse_data": false,
       "wikidata": "Q4962",
-      "raw_score": 67
+      "raw_score": 64
     },
     "estonia": {
       "score": 44,
@@ -5266,7 +5286,7 @@
       "raw_score": 44
     },
     "british_colonial_empire_jam": {
-      "score": 46,
+      "score": 47,
       "summary": "Brecke records no major conflict touching British Colonial Empire (JAM) in 1918 (safety at the era baseline of 85). Maddison GDP/capita 1017 (JAM, 1918) — economy proxy for the territory. V-Dem polyarchy 20/100 (JAM, 1918) — limited representation. Health 20/100, anchored on life-expectancy data for the region. Religious tolerance 61/100 — V-Dem freedom-of-religion (JAM, 1918), measured.",
       "factors": {
         "safety": 85,
@@ -5319,7 +5339,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 57
+      "raw_score": 58
     },
     "kingdom_of_spain_gnq": {
       "score": 13,

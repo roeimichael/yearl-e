@@ -4,8 +4,8 @@
   "region_set": "modern_1945",
   "era_summary": "",
   "weights": {
-    "safety": 0.378,
-    "religious_tolerance": 0.243,
+    "safety": 0.38,
+    "religious_tolerance": 0.242,
     "governance": 0.126,
     "economy": 0.126,
     "health": 0.126
@@ -461,7 +461,7 @@
       "raw_score": 52
     },
     "empire_of_japan_chn": {
-      "score": 73,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Empire of Japan (CHN) in 1946 (safety at the era baseline of 85). Maddison GDP/capita 2771 (JPN, 1946) — economy proxy for the territory. V-Dem polyarchy 31/100 (JPN, 1946) — limited representation. Health 66/100, anchored on life-expectancy data for the region. Religious tolerance 98/100 — V-Dem freedom-of-religion (JPN, 1946), measured.",
       "factors": {
         "safety": 77,
@@ -514,7 +514,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q188712",
-      "raw_score": 72
+      "raw_score": 73
     },
     "republic_of_china": {
       "score": 38,
@@ -2029,7 +2029,7 @@
       "raw_score": 79
     },
     "estado_novo_moz": {
-      "score": 42,
+      "score": 44,
       "summary": "Brecke records no major conflict touching Estado Novo (MOZ) in 1946 (safety at the era baseline of 85). Maddison GDP/capita 1806 (MOZ, 1946) — economy proxy for the territory. V-Dem polyarchy 3/100 (MOZ, 1946) — highly autocratic. Health 54/100, anchored on life-expectancy data for the region. Religious tolerance 29/100 — V-Dem freedom-of-religion (MOZ, 1946), measured.",
       "factors": {
         "safety": 85,
@@ -2082,7 +2082,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q824489",
-      "raw_score": 52
+      "raw_score": 53
     },
     "republic_of_finland": {
       "score": 92,
@@ -2365,7 +2365,7 @@
       "raw_score": 64
     },
     "british_colonial_empire_can": {
-      "score": 80,
+      "score": 79,
       "summary": "Active conflicts in 1946: Jews-Palestinians, British, 1940-48; Vietnam-France (with British and Chinese support), 1945-46. Maddison GDP/capita 11048 (CAN, 1946) — economy proxy for the territory. V-Dem polyarchy 72/100 (CAN, 1946) — broadly democratic. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 87/100 — V-Dem freedom-of-religion (CAN, 1946), measured.",
       "factors": {
         "safety": 61,
@@ -2418,7 +2418,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q8680",
-      "raw_score": 77
+      "raw_score": 76
     },
     "kingdom_of_thailand": {
       "score": 63,
@@ -3260,28 +3260,29 @@
       "raw_score": 87
     },
     "united_states_of_america_deu": {
-      "score": 91,
-      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1946 (safety at the era baseline of 85). Maddison GDP/capita 3534 (DEU, 1946) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, economy); governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 94,
+      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1946 (safety at the era baseline of 85). Maddison GDP/capita 3534 (DEU, 1946) — economy proxy for the territory. State-continuity 97/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 4 of 5 factors with recorded data (safety, health, economy, governance); religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 67,
-        "governance": 50,
+        "governance": 97,
         "religious_tolerance": 58
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
         "health",
-        "economy"
+        "economy",
+        "governance"
       ],
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3296,6 +3297,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
@@ -3303,10 +3308,10 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 84
+      "raw_score": 86
     },
     "nepal": {
-      "score": 35,
+      "score": 36,
       "summary": "Brecke records no major conflict touching Nepal in 1946 (safety at the era baseline of 85). Maddison GDP/capita 809 (NPL, 1946) — economy proxy for the territory. V-Dem polyarchy 1/100 (NPL, 1946) — highly autocratic. Health 52/100, anchored on life-expectancy data for the region. Religious tolerance 26/100 — V-Dem freedom-of-religion (NPL, 1946), measured.",
       "factors": {
         "safety": 81,
@@ -3359,7 +3364,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q837",
-      "raw_score": 47
+      "raw_score": 48
     },
     "north_yemen": {
       "score": 28,
@@ -3529,7 +3534,7 @@
       "raw_score": 70
     },
     "republic_of_nicaragua": {
-      "score": 62,
+      "score": 63,
       "summary": "Brecke records no major conflict touching Republic of Nicaragua in 1946 (safety at the era baseline of 85). Maddison GDP/capita 2377 (NIC, 1946) — economy proxy for the territory. V-Dem polyarchy 14/100 (NIC, 1946) — highly autocratic. Health 64/100, anchored on life-expectancy data for the region. Religious tolerance 69/100 — V-Dem freedom-of-religion (NIC, 1946), measured.",
       "factors": {
         "safety": 85,
@@ -3582,7 +3587,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q811",
-      "raw_score": 65
+      "raw_score": 66
     },
     "republic_of_cuba": {
       "score": 82,
@@ -4089,7 +4094,7 @@
       "raw_score": 79
     },
     "republic_of_panama": {
-      "score": 73,
+      "score": 74,
       "summary": "Brecke records no major conflict touching Republic of Panama in 1946 (safety at the era baseline of 85). Maddison GDP/capita 2899 (PAN, 1946) — economy proxy for the territory. V-Dem polyarchy 21/100 (PAN, 1946) — limited representation. Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 72/100 — V-Dem freedom-of-religion (PAN, 1946), measured.",
       "factors": {
         "safety": 85,
@@ -4142,7 +4147,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q804",
-      "raw_score": 72
+      "raw_score": 73
     },
     "kingdom_of_bhutan": {
       "score": 60,

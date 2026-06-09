@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>yearl-e — daily history puzzle</title>
-<meta name="description" content="Each day, a random year of world history (1000–2026). Click the globe where you'd want to live. Score based on actual living conditions that year, with cited sources." />
+<meta name="description" content="Each day, a random year of world history (1000 BCE–2026 CE). Click the globe where you'd want to live. Score based on actual living conditions that year, with cited sources." />
 
 <link rel="icon" type="image/png" href="/favicon.png" />
 <link rel="apple-touch-icon" href="/favicon.png" />
@@ -30,7 +30,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet" />
 
-<link href="/static/style.css?v=24" rel="stylesheet" />
+<link href="/static/style.css?v=25" rel="stylesheet" />
 </head>
 <body>
 
@@ -62,7 +62,7 @@
     <span class="card-eyebrow">a daily history puzzle</span>
     <h1>yearl-e</h1>
     <p class="tagline-lead">Where on Earth would you want to live that year?</p>
-    <p class="tagline">Each day, one year of world history — anywhere from 1000 to 2026.<br/>
+    <p class="tagline">Each day, one year of world history — anywhere from 1000 BCE to 2026 CE.<br/>
     Click the globe where you'd want to live that year.<br/>
     Scored on real living conditions: peace, health, economy, governance, tolerance.</p>
     <button id="btn-start" disabled><span class="btn-spinner" aria-hidden="true"></span>Loading today's year…</button>
@@ -81,7 +81,7 @@
     <h3>The 5 factors</h3>
     <ul class="about-list">
       <li><strong>Safety</strong> — active wars/rebellions that year: the Historical Conflict Event Dataset before 1400, the Brecke Conflict Catalog (1400–1999), and UCDP/PRIO (2000+). Each conflict touching a region costs points.</li>
-      <li><strong>Health</strong> — life expectancy (Our World in Data): the region's country where known, else its continental aggregate; adjusted for war and wealth.</li>
+      <li><strong>Health</strong> — life expectancy (Our World in Data): the region's country where known (from ~1543), else its continental aggregate (from 1770); adjusted for war and wealth. Before that there's no life-expectancy record, so health is left out of the score.</li>
       <li><strong>Economy</strong> — Maddison Project 2023 GDP/capita where available, else a modeled regional baseline; ranked into a percentile across the year.</li>
       <li><strong>Governance</strong> — V-Dem v15 Electoral Democracy Index from 1789; the State Antiquity Index (state-continuity) as a proxy before that.</li>
       <li><strong>Religious tolerance</strong> — V-Dem's measured freedom-of-religion index from 1789; before that, a modeled regional baseline lowered by recorded persecution (Leeson-Russ witch-trial database, Europe 1300–1850).</li>
@@ -108,7 +108,7 @@
       <li>Regions are real historical polities from Cliopatria, with borders sampled every ~25 years — so the map shifts as the centuries pass.</li>
       <li>Each region's economy/governance/health are read from the modern country it overlaps, so they're proxies, not exact figures. The reveal labels each factor real vs modeled.</li>
       <li>Pre-1789 governance uses a state-continuity proxy (it rewards stable, established states); religious tolerance outside Europe is a modeled regional baseline.</li>
-      <li>Covers 1000–2026 across three eras (medieval, early-modern, modern). Medieval years lean on fewer measured factors — the reveal always shows how many of the five it scored on. Earlier eras (back to 1000 BCE) are coming next.</li>
+      <li>Covers 1000 BCE–2026 CE across four eras (ancient, medieval, early-modern, modern). Ancient and medieval years lean on fewer measured factors — often just safety and governance — and the reveal always shows how many of the five it scored on. Deeper antiquity (back toward 3400 BCE, where Cliopatria's borders begin) may come later.</li>
     </ul>
   </div>
 
@@ -153,6 +153,6 @@
 </div>
 
 <script src="https://unpkg.com/maplibre-gl@5.0.0/dist/maplibre-gl.js"></script>
-<script src="/static/app.js?v=24"></script>
+<script src="/static/app.js?v=25"></script>
 </body>
 </html>
