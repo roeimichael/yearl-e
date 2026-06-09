@@ -1413,8 +1413,8 @@
       "raw_score": 55
     },
     "italian_africa_lby": {
-      "score": 15,
-      "summary": "Active conflicts in 1917: Britain, India, South Africa-Germany (Tanzania), 1914-17. Maddison GDP/capita 620 (LBY, 1917) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 13/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — V-Dem freedom-of-religion (LBY, 1917), measured. Scored on 4 of 5 factors with recorded data (safety, health, economy, religious tolerance); governance had no record for this region and year and were left out of the score.",
+      "score": 17,
+      "summary": "Active conflicts in 1917: Britain, India, South Africa-Germany (Tanzania), 1914-17. Maddison GDP/capita 620 (LBY, 1917) — economy proxy for the territory. State-continuity 50/100 (LBY) — established state (pre-democracy governance proxy). Health 13/100, anchored on life-expectancy data for the region. Religious tolerance 38/100 — V-Dem freedom-of-religion (LBY, 1917), measured.",
       "factors": {
         "safety": 53,
         "health": 13,
@@ -1426,16 +1426,17 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "vdem-relig"
       },
       "scored_factors": [
         "safety",
         "health",
         "economy",
+        "governance",
         "religious_tolerance"
       ],
-      "data_quality": 4,
+      "data_quality": 5,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -1450,6 +1451,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — LBY",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         },
@@ -1461,7 +1466,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q926295",
-      "raw_score": 40
+      "raw_score": 41
     },
     "kingdom_of_sweden": {
       "score": 84,
@@ -2471,8 +2476,8 @@
       "raw_score": 40
     },
     "kingdom_of_great_britain_yem": {
-      "score": 20,
-      "summary": "Active conflicts in 1917: Britain-Somalis (Dervishes), 1913-20; Britain-Germany (Tanzania, Zambia), 1914-18; Britain, India, South Africa-Germany (Tanzania), 1914-17. Maddison GDP/capita 25182 (ARE, 1917) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 13/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, economy); governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 22,
+      "summary": "Active conflicts in 1917: Britain-Somalis (Dervishes), 1913-20; Britain-Germany (Tanzania, Zambia), 1914-18; Britain, India, South Africa-Germany (Tanzania), 1914-17. Maddison GDP/capita 25182 (ARE, 1917) — economy proxy for the territory. State-continuity 50/100 (YEM) — established state (pre-democracy governance proxy). Health 13/100, anchored on life-expectancy data for the region. Religious tolerance 35/100 (modeled from the era's state-religion pattern for this region). Scored on 4 of 5 factors with recorded data (safety, health, economy, governance); religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 37,
         "health": 13,
@@ -2484,15 +2489,16 @@
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
         "health",
-        "economy"
+        "economy",
+        "governance"
       ],
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -2507,6 +2513,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — YEM",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
@@ -2514,7 +2524,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q23666",
-      "raw_score": 43
+      "raw_score": 44
     },
     "british_colonial_empire_nzl": {
       "score": 98,

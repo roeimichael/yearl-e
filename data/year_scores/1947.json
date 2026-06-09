@@ -4,11 +4,11 @@
   "region_set": "modern_1945",
   "era_summary": "",
   "weights": {
-    "safety": 0.381,
-    "religious_tolerance": 0.239,
-    "governance": 0.127,
-    "economy": 0.127,
-    "health": 0.127
+    "safety": 0.382,
+    "religious_tolerance": 0.238,
+    "governance": 0.126,
+    "economy": 0.126,
+    "health": 0.126
   },
   "emphasis": "a violent year — peace counted for most",
   "regions": {
@@ -853,7 +853,7 @@
       "raw_score": 67
     },
     "mongolian_people_s_republic": {
-      "score": 18,
+      "score": 19,
       "summary": "Brecke records no major conflict touching Mongolian People's Republic in 1947 (safety at the era baseline of 85). Maddison GDP/capita 677 (MNG, 1947) — economy proxy for the territory. V-Dem polyarchy 7/100 (MNG, 1947) — highly autocratic. Health 55/100, anchored on life-expectancy data for the region. Religious tolerance 11/100 — V-Dem freedom-of-religion (MNG, 1947), measured.",
       "factors": {
         "safety": 69,
@@ -906,7 +906,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q212056",
-      "raw_score": 40
+      "raw_score": 41
     },
     "mexico": {
       "score": 64,
@@ -1469,7 +1469,7 @@
       "raw_score": 57
     },
     "bolivia": {
-      "score": 60,
+      "score": 62,
       "summary": "Brecke records no major conflict touching Bolivia in 1947 (safety at the era baseline of 85). Maddison GDP/capita 2797 (BOL, 1947) — economy proxy for the territory. V-Dem polyarchy 16/100 (BOL, 1947) — limited representation. Health 65/100, anchored on life-expectancy data for the region. Religious tolerance 69/100 — V-Dem freedom-of-religion (BOL, 1947), measured.",
       "factors": {
         "safety": 85,
@@ -1522,7 +1522,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q750",
-      "raw_score": 66
+      "raw_score": 67
     },
     "kingdom_of_egypt": {
       "score": 49,
@@ -2141,7 +2141,7 @@
       "raw_score": 86
     },
     "kingdom_of_afghanistan": {
-      "score": 31,
+      "score": 32,
       "summary": "Brecke records no major conflict touching Kingdom of Afghanistan in 1947 (safety at the era baseline of 85). Maddison GDP/capita 1156 (AFG, 1947) — economy proxy for the territory. V-Dem polyarchy 9/100 (AFG, 1947) — highly autocratic. Health 25/100, anchored on life-expectancy data for the region. Religious tolerance 42/100 — V-Dem freedom-of-religion (AFG, 1947), measured.",
       "factors": {
         "safety": 77,
@@ -2194,7 +2194,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q1138904",
-      "raw_score": 48
+      "raw_score": 49
     },
     "french_indochina": {
       "score": 65,
@@ -2253,7 +2253,7 @@
       "raw_score": 69
     },
     "french_africa_mdg": {
-      "score": 47,
+      "score": 49,
       "summary": "Brecke records no major conflict touching French Africa (MDG) in 1947 (safety at the era baseline of 85). Maddison GDP/capita 1516 (MDG, 1947) — economy proxy for the territory. V-Dem polyarchy 5/100 (MDG, 1947) — highly autocratic. Health 60/100, anchored on life-expectancy data for the region. Religious tolerance 52/100 — V-Dem freedom-of-religion (MDG, 1947), measured.",
       "factors": {
         "safety": 85,
@@ -2306,7 +2306,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q19951607",
-      "raw_score": 58
+      "raw_score": 59
     },
     "kingdom_of_great_britain_gbr": {
       "score": 80,
@@ -3260,28 +3260,29 @@
       "raw_score": 87
     },
     "united_states_of_america_deu": {
-      "score": 92,
-      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1947 (safety at the era baseline of 85). Maddison GDP/capita 3883 (DEU, 1947) — economy proxy for the territory. Governance neutral (no state-history coverage for this territory). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 3 of 5 factors with recorded data (safety, health, economy); governance, religious tolerance had no record for this region and year and were left out of the score.",
+      "score": 95,
+      "summary": "Brecke records no major conflict touching United States of America (DEU) in 1947 (safety at the era baseline of 85). Maddison GDP/capita 3883 (DEU, 1947) — economy proxy for the territory. State-continuity 97/100 (DEU) — long-entrenched state (pre-democracy governance proxy). Health 100/100, anchored on life-expectancy data for the region. Religious tolerance 58/100 (modeled from the era's state-religion pattern for this region). Scored on 4 of 5 factors with recorded data (safety, health, economy, governance); religious tolerance had no record for this region and year and were left out of the score.",
       "factors": {
         "safety": 85,
         "health": 100,
         "economy": 68,
-        "governance": 50,
+        "governance": 97,
         "religious_tolerance": 58
       },
       "factor_sources": {
         "safety": "brecke",
         "health": "lifeexp",
         "economy": "maddison",
-        "governance": "neutral",
+        "governance": "statehist",
         "religious_tolerance": "modeled"
       },
       "scored_factors": [
         "safety",
         "health",
-        "economy"
+        "economy",
+        "governance"
       ],
-      "data_quality": 3,
+      "data_quality": 4,
       "sources": [
         {
           "label": "Cliopatria (Seshat) — historical political boundaries, CC-BY 4.0",
@@ -3296,6 +3297,10 @@
           "url": "https://www.rug.nl/ggdc/historicaldevelopment/maddison/releases/maddison-project-database-2023"
         },
         {
+          "label": "State Antiquity Index (Borcan-Olsson-Putterman) — DEU",
+          "url": "https://sites.google.com/site/econolaols/extended-state-history-index"
+        },
+        {
           "label": "Our World in Data — life expectancy (Riley; Zijdeman; UN)",
           "url": "https://ourworldindata.org/life-expectancy"
         }
@@ -3303,7 +3308,7 @@
       "ruler": null,
       "sparse_data": false,
       "wikidata": "Q30",
-      "raw_score": 85
+      "raw_score": 87
     },
     "nepal": {
       "score": 34,

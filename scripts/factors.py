@@ -242,13 +242,17 @@ def health(member_iso3: list[str], year: int, conflict_hits: int,
         if v is not None:
             le, source = v, "lifeexp"
             break
-    # Tier 2: continental aggregate for the dominant member's region.
-    if le is None and member_iso3:
+    # Tier 2: continental aggregate for the dominant member's region — only from
+    # 1770 on, where OWID's aggregates actually begin. We do NOT floor earlier
+    # years to 1770 and call the result measured: before 1770 there is no real
+    # life-expectancy record, so health falls through to the modeled baseline and
+    # is honestly excluded from the score.
+    if le is None and member_iso3 and year >= 1770:
         code = ISO3_TO_BRECKE.get(member_iso3[0])
         cont = BRECKE_TO_CONT.get(code) if code else None
         owid = CONT_TO_OWID.get(cont) if cont else None
         if owid:
-            v = _nearest_le(owid, max(year, 1770))  # floor: aggregates start 1770
+            v = _nearest_le(owid, year)
             if v is not None:
                 le, source = v, "lifeexp"
     if le is None:
