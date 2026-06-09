@@ -53,7 +53,8 @@ FRONTEND = ROOT / "frontend"
 SERVE_FRONTEND = os.environ.get("SERVE_FRONTEND", "0") == "1"
 
 IL_TZ = ZoneInfo("Asia/Jerusalem")
-EPOCH = date(2026, 5, 22)  # day 1
+EPOCH = date(2026, 6, 9)   # day 1 (launch reset)
+DAY_ONE_YEAR = 1966        # puzzle #1 always rolls this year
 
 
 def _today_iso() -> str:
@@ -76,6 +77,10 @@ def _roll_year(d_iso: str) -> int:
     years = regions_mod.available_years()
     if not years:
         raise HTTPException(500, "no year data on disk")
+    # Puzzle #1 is pinned to DAY_ONE_YEAR (launch year); every later day rolls
+    # deterministically from the date (same date → same year for everyone).
+    if _day_number(d_iso) == 1 and DAY_ONE_YEAR in years:
+        return DAY_ONE_YEAR
     seed = int(hashlib.sha256(d_iso.encode("utf-8")).hexdigest(), 16)
     rng = random.Random(seed)
     return rng.choice(years)
