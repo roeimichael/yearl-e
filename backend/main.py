@@ -278,9 +278,20 @@ def archive():
     usage = Counter(min(snap_years, key=lambda s: abs(s - y)) for y in years) if snap_years else Counter()
     for s in snaps:
         s["years_using"] = usage.get(s["snapshot_year"], 0)
+    # Build the era label from the snapshots actually present, ordered by age, with
+    # BCE/CE formatting — so it stays correct as eras are added.
+    def _yr(y: int) -> str:
+        return f"{abs(y)} BCE" if y < 0 else f"{y} CE"
+    prefixes = sorted(
+        {s["set"].rsplit("_", 1)[0] for s in snaps if s["snapshot_year"] is not None},
+        key=lambda pre: min(s["snapshot_year"] for s in snaps
+                            if s["set"].startswith(pre + "_") and s["snapshot_year"] is not None))
+    era_names = " · ".join(p.replace("_", " ") for p in prefixes)
+    era = (f"{era_names} ({_yr(min(years))}–{_yr(max(years))})"
+           if years and prefixes else "")
     return {
         "title": "yearl-e data archive",
-        "era": "early modern + modern (1500–2026)",
+        "era": era,
         "years": {"count": len(years), "min": min(years), "max": max(years)} if years else {},
         "snapshots": snaps,
         "sources": _ARCHIVE_SOURCES,

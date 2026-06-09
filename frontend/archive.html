@@ -40,6 +40,11 @@
   /* year matrix */
   .era-block { margin: 8px 0 18px; }
   .era-block h3 { font-size:15px; margin:14px 0 8px; color:var(--gold); font-weight:600; }
+  details.era-block > summary { font-size:15px; margin:14px 0 8px; color:var(--gold); font-weight:600; cursor:pointer; list-style:none; }
+  details.era-block > summary::-webkit-details-marker { display:none; }
+  details.era-block > summary::before { content:"▸ "; color:var(--accent); }
+  details.era-block[open] > summary::before { content:"▾ "; }
+  details.era-block > summary:hover { color:var(--paper); }
   .matrix { display:grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap:4px; }
   .yr {
     aspect-ratio: 1.5 / 1; border:none; border-radius:4px; cursor:pointer;
@@ -53,7 +58,7 @@
   /* year panel */
   #year-panel { margin-top:18px; background:var(--panel); border:1px solid var(--line);
                 border-radius:10px; padding:16px 18px; }
-  #year-panel.hidden, .hidden { display:none; }
+  #year-panel.hidden, #detail-overlay.hidden, .hidden { display:none !important; }
   .yp-head { display:flex; align-items:baseline; gap:12px; flex-wrap:wrap; }
   .yp-head .yr-big { font-size:26px; font-weight:700; color:var(--paper); }
   .yp-emph { font-style:italic; color:var(--gold); font-size:14px; }
@@ -213,13 +218,14 @@ function render(d){
   for (const e of eras){
     const cells = GRID.filter(g => g.year>=e.lo && g.year<=e.hi);
     if (!cells.length) continue;
-    h += `<div class="era-block"><h3>${e.name} (${yrLabel(e.lo)}–${yrLabel(e.hi)}) · ${cells.length} years</h3><div class="matrix">`;
+    const open = (e.name === "Modern") ? " open" : "";
+    h += `<details class="era-block"${open}><summary>${e.name} (${yrLabel(e.lo)}–${yrLabel(e.hi)}) · ${cells.length} years</summary><div class="matrix">`;
     for (const g of cells){
       const c = qcolor(g.quality);
       h += `<button class="yr" data-year="${g.year}" style="background:${c}" `+
            `title="${yrLabel(g.year)} · ${g.regions} regions · ${Math.round(g.quality*100)}% real · ${esc(g.emphasis||"")}">${yrShort(g.year)}</button>`;
     }
-    h += `</div></div>`;
+    h += `</div></details>`;
   }
 
   // ── year panel (filled on click) ──
